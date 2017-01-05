@@ -1,0 +1,11 @@
+@startuml
+!include ./property.uml
+class Field{
+   + void constructor(Object)
+   - void process()
+   + string getValidator()
+   + boolean isOptional()
+   + string getDefaultValue()
+}
+Field --|> Property
+@enduml

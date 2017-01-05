@@ -1,0 +1,5 @@
+@startuml
+!include ./filewriter.uml
+class umlgen << (P,orchid) >> {
+}
+@enduml

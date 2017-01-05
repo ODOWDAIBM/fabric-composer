@@ -1,0 +1,7 @@
+@startuml
+!include ./classdeclaration.uml
+class TransactionDeclaration{
+   + void constructor(ModelFile,Object)
+}
+TransactionDeclaration --|> ClassDeclaration
+@enduml

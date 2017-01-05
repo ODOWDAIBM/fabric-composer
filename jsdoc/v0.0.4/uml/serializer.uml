@@ -1,0 +1,9 @@
+@startuml
+!include ./model/resource.uml
+!include ./globalize.uml
+class Serializer{
+   + void constructor(Factory,ModelManager)
+   + string toJSON(Resource,Object)
+   + Resource fromJSON(string,Object)
+}
+@enduml

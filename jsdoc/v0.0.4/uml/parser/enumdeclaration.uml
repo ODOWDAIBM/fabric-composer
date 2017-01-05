@@ -1,0 +1,7 @@
+@startuml
+!include ./classdeclaration.uml
+class EnumDeclaration{
+   + void constructor(ModelFile,Object)
+}
+EnumDeclaration --|> ClassDeclaration
+@enduml

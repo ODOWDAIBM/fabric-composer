@@ -1,0 +1,15 @@
+@startuml
+!include ./modelutil.uml
+!include ./parser/modelfile.uml
+!include ./parser/illegalmodelexception.uml
+class ModelManager{
+   + void constructor()
+   - Object accept(Object,Object)
+   + void addModelFile(string)
+   + ModelFile[] getModelFiles()
+   - string resolveType(string,string)
+   + void clearModelFiles()
+   + ModelFile getModelFile(string)
+   + ClassDeclaration getType(string)
+}
+@enduml

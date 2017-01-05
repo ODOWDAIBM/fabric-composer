@@ -1,0 +1,10 @@
+@startuml
+!include ./globalize.uml
+class ModelUtil{
+   - string getShortName(string)
+   - string getNamespace(string)
+   - boolean isPrimitiveType(string)
+   - boolean isAssignableTo(ModelFile,string,Property)
+   - string capitalizeFirstLetter(string)
+}
+@enduml

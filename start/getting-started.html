@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta charset="utf-8">
+
+  
+    <title>Getting Started with the IBM Blockchain Framework | IBM Blockchain Framework</title>
+  
+  <meta name="viewport" content="width=device-width">
+  <link rel="icon" type="image/x-icon" href="/favicon.ico">
+
+  <meta name="google-site-verification" content="fBQRJ6h7MV7_TJ7grbgq4P-d-07NRfDWPe4pqEEoH5w">
+
+  <link href="//fonts.googleapis.com/css?family=Roboto+Slab:400,700%7CRoboto:400,700,700italic,400italic" rel="stylesheet" type="text/css">
+
+
+  
+    <link href="assets/css/normalize.css" rel="stylesheet">
+    <link href="assets/css/main.css" rel="stylesheet">
+    <link href="assets/css/footer.css" rel="stylesheet">
+    <link href="assets/css/prettify.css" rel="stylesheet">
+  
+
+  
+
+  <link href="/blog/atom.xml" type="application/atom+xml" rel="alternate" title="Concerto Blog Atom Feed">
+</head>
+
+<body class="">
+
+  
+  
+
+
+
+
+<header class="page-header">
+  <div class="container">
+    <div class="mobile-bar">
+      <h1 class="logo">
+        <a href="/Blockchain-WW-Labs/Concerto/index.html"><img src="/Blockchain-WW-Labs/Concerto/assets/img/logo.png" alt=""></a>
+      </h1>
+      <button class="mobile-menu-toggle ir">open</button>
+    </div>
+    <nav class="main-menu">
+      <ul class="main-nav">
+        <li>
+          <a href="/Blockchain-WW-Labs/Concerto/overview/overview.html">Overview</a>
+        </li>
+        <li>
+          <a href="/Blockchain-WW-Labs/Concerto/start/getting-started.html">Getting Started</a>
+        </li>
+        <li>
+          <a href="/Blockchain-WW-Labs/Concerto/concepts/">Concepts</a>
+          <ul>
+<li><a href="/Blockchain-WW-Labs/Concerto/concepts/businessnetwork.html">Business Network</a></li>
+<li><a href="/Blockchain-WW-Labs/Concerto/concepts/businessnetworkdefinition.html">Business Network Definition</a></li>
+<li><a href="/Blockchain-WW-Labs/Concerto/concepts/participantsandidentities.html">Participants and Identities</a></li>
+</ul>
+
+        </li>
+        <li>
+          <a href="/Blockchain-WW-Labs/Concerto/tasks/">Tasks</a>
+          <ul>
+<li><a href="/Blockchain-WW-Labs/Concerto/tasks/prerequisites.html">Installing Pre-requisites</a></li>
+<li><a href="/Blockchain-WW-Labs/Concerto/tasks/deploybusinessnetwork.html">Deploy Business Network</a></li>
+<li><a href="/Blockchain-WW-Labs/Concerto/tasks/createconnectionprofile.html">Create Connection Profile</a></li>
+<li><a href="/Blockchain-WW-Labs/Concerto/tasks/bnd-define.html">Create a Business Network Definition</a></li>
+<li><a href="/Blockchain-WW-Labs/Concerto/tasks/bnd-publish.html">Publish a Business Network Definition</a></li>
+<li><a href="/Blockchain-WW-Labs/Concerto/tasks/genapp.html">Generating an Application</a></li>
+<li><a href="/Blockchain-WW-Labs/Concerto/tasks/model-define.html">Create a Business Domain Model</a></li>
+<li><a href="/Blockchain-WW-Labs/Concerto/tasks/model-publish.html">Publish a Business Domain Model</a></li>
+<li><a href="/Blockchain-WW-Labs/Concerto/tasks/runtime-start.html">Start a Fabric Runtime</a></li>
+<li><a href="/Blockchain-WW-Labs/Concerto/tasks/testing.html">Test a Business Network Definition</a></li>
+<li><a href="/Blockchain-WW-Labs/Concerto/tasks/runtime-update.html">Update a Business Network Definition on Fabric</a></li>
+<li><a href="/Blockchain-WW-Labs/Concerto/tasks/participant-add.html">Add a Participant</a></li>
+<li><a href="/Blockchain-WW-Labs/Concerto/tasks/identity-issue.html">Issue an Identity for a Participant</a></li>
+<li><a href="/Blockchain-WW-Labs/Concerto/tasks/identity-revoke.html">Revoke an Identity for a Participant</a></li>
+<li><a href="/Blockchain-WW-Labs/Concerto/tasks/current-participant.html">Implementing access control using the current Participant</a></li>
+<li><a href="/Blockchain-WW-Labs/Concerto/tasks/diagnostics.html">Diagnosing Problems</a></li>
+</ul>
+
+        </li>
+        <li>
+          <a href="/Blockchain-WW-Labs/Concerto/reference/">Reference</a>
+          <ul>
+<li><a href="/Blockchain-WW-Labs/Concerto/reference/MeetTheModules.html">Meet the Modules</a></li>
+<li><a href="/Blockchain-WW-Labs/Concerto/reference/platforms.html">Supported Platforms</a></li>
+<li><a href="/Blockchain-WW-Labs/Concerto/reference/cto_language.html">Concerto Modeling Language</a></li>
+<li><a href="/Blockchain-WW-Labs/Concerto/reference/connectionprofile.html">Connection Profile</a></li>
+<li><a href="/Blockchain-WW-Labs/Concerto/reference/js_scripts.html">Transaction Processor Functions</a></li>
+<li><a href="/Blockchain-WW-Labs/Concerto/reference/commands.html">Concerto Command Line</a></li>
+<li><a href="/Blockchain-WW-Labs/Concerto/reference/concerto.generator.tests.html">Concerto Generator</a></li>
+<li><a href="/Blockchain-WW-Labs/Concerto/reference/concerto.participant.add.html">Concerto CLI Add Participant</a></li>
+<li><a href="/Blockchain-WW-Labs/Concerto/reference/concerto.identity.issue.html">Concerto CLI Issue Identity</a></li>
+<li><a href="/Blockchain-WW-Labs/Concerto/reference/concerto.identity.revoke.html">Concerto CLI Revoke Identity</a></li>
+<li><a target="_blank" href="/Blockchain-WW-Labs/Concerto/jsdoc/develop/index.html">API Documentation</a></li>
+<li><a href="/Blockchain-WW-Labs/Concerto/reference/glossary.html">Glossary</a></li>
+</ul>
+
+        </li>
+        <li>
+          <a href="/Blockchain-WW-Labs/Concerto/support/index.html">Support</a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+<!-- /.container -->
+</header><!-- /.page-header -->
+
+  
+
+  <div class="SiteWrapper">
+    
+      <div id="content">
+  <h2 class="page-title">
+    <span class="container">Getting Started with the IBM Blockchain Framework</span>
+  </h2>
+
+  <div class="container clearfix has-sidebar">
+    
+      <nav class="context-nav">
+        
+        
+          <ul>
+<li><a href="/Blockchain-WW-Labs/Concerto/start/getting-started.html">Getting Started</a></li>
+</ul>
+
+        
+      </nav>
+    
+
+    <article class="main">
+      
+
+      <section class="content-chunk">
+        
+          <h1 id="introduction">Introduction</h1>
+
+<p>This guide will talk you through downloading Concerto, starting a Fabric, deploying a simple sample business network and submitting transactions.</p>
+
+<h2 id="check-prerequisites">Check Prerequisites</h2>
+
+<p>First check that you are running on a <a href="../reference/platforms.html">supported system</a> and install the required development <a href="../tasks/prerequisites.html">prerequisites</a>.</p>
+
+<h2 id="install-the-concerto-cli">Install the Concerto CLI</h2>
+
+<p>Installing the Concerto CLI tools module is the first step. This gives you commands to deploy, update and list business networks.</p>
+<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span></span>npm install -g @ibm/ibm-concerto-cli
+</code></pre></div>
+<h2 id="clone-the-getting-started-repository">Clone the Getting Started Repository</h2>
+
+<p>Next you need to pull down the code for the Getting Started sample.</p>
+<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span></span>git clone git@github.ibm.com:Blockchain-WW-Labs/Concerto-GettingStarted.git
+</code></pre></div>
+<h2 id="install-the-dependencies-start-fabric-and-deploy">Install the Dependencies, Start Fabric and Deploy</h2>
+
+<p>Next you can run the following commands to install all the dependent Node modules for the sample, pull down the Docker images for Hyperledger Fabric, start the Fabric and then deploy a Business Network Definition.</p>
+<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span></span><span class="nb">cd</span> Concerto-GettingStarted
+npm install
+</code></pre></div>
+<h2 id="create-assets-and-submit-a-transaction">Create Assets and Submit a Transaction</h2>
+
+<p>There are some simple applications included that will create some assets, list the current assets and submit a transaction.
+First, the assets are created and the newly created assets are listed. Then a transaction is submited to update one of the assets 'for sale'. A final asset listed is then queried to show the update has taken place.</p>
+<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span></span>npm <span class="nb">test</span>
+</code></pre></div>
+<h2 id="list-the-deployed-business-network-definitions">List the Deployed Business Network Definitions</h2>
+
+<p>You can list the deployed business network definitions using:</p>
+<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span></span>concerto network list -n @ibm/digitalproperty-network --enrollId WebAppAdmin --enrollSecret DJY27pEnl16d
+</code></pre></div>
+<h2 id="modify-the-business-network-definition">Modify the Business Network Definition</h2>
+
+<p>We are going to make a simple change to the business logic for the business network definition.</p>
+
+<h3 id="clone-the-repository-and-install-dependencies">Clone the Repository and Install Dependencies</h3>
+
+<p>First clone the repository:</p>
+<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span></span>git clone git@github.ibm.com:Blockchain-WW-Labs/DigitalProperty-Network.git
+<span class="nb">cd</span> DigitalProperty-Network
+npm install
+</code></pre></div>
+<h3 id="update-the-transaction-processor-function">Update the Transaction Processor Function</h3>
+
+<p>Open the file <code>lib/DigitalLandTitle.js</code> in a text editor and replace the contents with:</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text"><span></span>'use strict';
+
+/** Process a property that is held for sale
+ * @param {net.biz.digitalPropertyNetwork.RegisterPropertyForSale} propertyForSale the property to be sold
+ * @transaction
+ */
+function onRegisterPropertyForSale(propertyForSale) {
+    console.log('### onRegisterPropertyForSale ' + propertyForSale.toString());
+    propertyForSale.title.forSale = true;
+    propertyForSale.title.information = propertyForSale.title.information + ' Updated at: ' + new Date().toDateString();
+
+    return getAssetRegistry('net.biz.digitalPropertyNetwork.LandTitle').then(function(result) {
+            return result.update(propertyForSale.title);
+        }
+    );
+}
+</code></pre></div>
+<h3 id="publish-updated-business-network-definition-to-npm">Publish Updated Business Network Definition to npm</h3>
+
+<p>Edit <code>package.json</code> to increment the version number in the <code>DigitalProperty-Network</code> directory.</p>
+<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span></span>npm publish
+</code></pre></div>
+<h3 id="update-the-dependencies-for-getting-started-and-restart">Update the Dependencies for Getting Started and Restart</h3>
+<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span></span><span class="nb">cd</span> Concerto-GettingStarted
+npm update
+npm install
+</code></pre></div>
+<h3 id="rerun-the-test">Rerun the Test</h3>
+<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span></span>npm <span class="nb">test</span>
+</code></pre></div>
+<p>You should now see:</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text"><span></span>info: [Handel]
+┌──────────┬────────────────┬────────────┬─────────┬──────────────────────────────────────────────────────────┬─────────┐
+│ TitleID  │ OwnerID        │ First Name │ Surname │ Description                                              │ ForSale │
+├──────────┼────────────────┼────────────┼─────────┼──────────────────────────────────────────────────────────┼─────────┤
+│ LID:1148 │ PID:1234567890 │ Fred       │ Bloggs  │ A nice house in the country Updated at: Wed, 14 Dec 2016 │ Yes     │
+├──────────┼────────────────┼────────────┼─────────┼──────────────────────────────────────────────────────────┼─────────┤
+│ LID:6789 │ PID:1234567890 │ Fred       │ Bloggs  │ A small flat in the city                                 │ No      │
+└──────────┴────────────────┴────────────┴─────────┴──────────────────────────────────────────────────────────┴─────────┘
+</code></pre></div>
+<h2 id="generating-an-application">Generating an Application</h2>
+<div class="highlight"><pre><code class="language-text" data-lang="text"><span></span>git clone git@github.ibm.com:Blockchain-WW-Labs/generator-concerto.git
+cd generator-concerto
+npm install
+npm link
+cd ..
+yo concerto
+</code></pre></div>
+<p>Answer the questions... Code is generated, and then to run:</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text"><span></span>cd concerto-sample-app/
+npm install
+node index.js
+</code></pre></div>
+<h2 id="deploying-to-a-remote-server">Deploying to a Remote Server</h2>
+
+<p>Connection Profiles are used to store the connection information required to access a Fabric instance.</p>
+
+<p>Connection profiles are stored in the user home directory under <code>.concerto-connection-profiles</code>. To deploy to a remote server we are going to create a connection profile called <code>hsbn</code>:</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text"><span></span>mkdir ~/.concerto-connection-profiles/hsbn
+</code></pre></div>
+<p>Then copy the following into a file called <code>connection.json</code> and store in the <code>hsbn</code> directory created above.</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text"><span></span>{
+    "type": "hlf",
+    "membershipServicesURL": "grpc://IP_ADD:20000",
+    "peerURL": "grpc://IP_ADD:20002",
+    "eventHubURL": "grpc://IP_ADD:20003",
+    "keyValStore": "~/hsbn-keyValStore",
+    "deployWaitTime": "300",
+    "invokeWaitTime": "100"
+}
+</code></pre></div>
+<p>You can then list the business networks that are deployed on the remote Fabric using:</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text"><span></span>concerto network list -p hsbn -n @ibm/digitalproperty-network --enrollId WebAppAdmin --enrollSecret DJY27pEnl16d
+</code></pre></div>
+<h2 id="digging-deeper">Digging Deeper</h2>
+
+<p>Both <code>npm install</code> and <code>npm test</code> run commands defined in <code>package.json</code>. If you open <code>package.json</code> you will see that it uses the following utility scripts and commands.</p>
+
+<h3 id="archive-the-business-network-definition">Archive the Business Network Definition</h3>
+<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span></span>gulp --archiveFile DigitalLandTitle.zip
+</code></pre></div>
+<h3 id="update-the-business-network-on-the-fabric">Update the Business Network on the Fabric</h3>
+<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span></span>concerto network update --archiveFile  DigitalLandTitle.zip  --enrollId WebAppAdmin --enrollSecret DJY27pEnl16d
+</code></pre></div>
+<h3 id="start-and-stop-fabric">Start and Stop Fabric</h3>
+
+<p>The <code>./scripts/setup.sh</code> script is used to download the Fabric images and start them using Docker Compose. The <code>./scripts/teardown.sh</code> script is used to stop the Fabric. The <code>/scripts/docker-compose.yml</code> file configures a simple Fabric topology consisting of a single peer node <code>vp0</code> and a single member services node <code>membersrvc</code>.</p>
+
+<h3 id="deploy-business-network-definition">Deploy Business Network Definition</h3>
+
+<p>The business network definition is deployed to the running Fabric using:</p>
+<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span></span>concerto network deploy --archiveFile  DigitalLandTitle.zip  --enrollId WebAppAdmin --enrollSecret DJY27pEnl16d
+</code></pre></div>
+<h3 id="create-sample-assets">Create Sample Assets</h3>
+
+<p>To create the assets run:</p>
+<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span></span>npm run listAssets
+</code></pre></div>
+<h3 id="list-sample-assets">List Sample Assets</h3>
+<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span></span>node cli.js landregistry list
+</code></pre></div>
+<h3 id="submit-sample-transaction">Submit Sample Transaction</h3>
+
+<p>To submit transactions using the API:</p>
+<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span></span>npm run submitTransaction
+</code></pre></div>
+<p>Or using the CLI:</p>
+<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span></span>concerto transaction submit -n @ibm/digitalproperty-network  --enrollId WebAppAdmin --enrollSecret DJY27pEnl16d -d <span class="s1">'{"$class" : "net.biz.digitalPropertyNetwork.RegisterPropertyForSale", "seller" : "PID:1234567890", "title" : "LID:6789" }'</span>
+</code></pre></div>
+<h1 id="generating-a-test">Generating a Test</h1>
+<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span></span>concerto generator tests -d . -a DigitalLandTitle.zip -i WebAppAdmin -s DJY27pEnl16d
+</code></pre></div>
+<h1 id="diving-into-the-code">Diving into the Code</h1>
+
+<p>The file <code>./lib/landregistry.js</code> contains the code for the sample. It uses the <code>BusinessNetworkConnection</code> API to interact with the deployed business network definition (creating assets and submitting transactions.)</p>
+
+<h1 id="useful-references">Useful References</h1>
+
+<p>The following links are helpful for getting up to speed with different technologies used by the Concerto project.  </p>
+
+<p><a href="https://scotch.io/tutorials/understanding-javascript-promises-pt-i-background-basics">JavaScript Promises</a></p>
+
+        
+
+        
+      </section>
+    </article>
+  </div>
+</div>
+
+    
+
+    
+    
+<footer class="SiteFooter">
+  <ul class="SiteFooter-links">
+    <li>
+      <a href="https://twitter.com/ibmblockchain" class="icon">
+        <img src="assets/img/social-twitter.svg" class="SiteFooter-icon" alt="Twitter">
+      </a>
+    </li>
+    <li>
+      <a href="https://github.ibm.com/Blockchain-WW-Labs/Concerto/" class="icon">
+        <img src="assets/img/social-github.svg" class="SiteFooter-icon" alt="Github">
+      </a>
+    </li>
+    <li>
+      <a href="/blog/atom.xml" class="icon">
+        <img src="assets/img/social-feed.svg" class="SiteFooter-icon" alt="Feed">
+      </a>
+    </li>
+    <li class="mobile-ln">
+    </li>
+<li>
+      <a href="https://pages.github.ibm.com/Blockchain-WW-Labs/Concerto/jsdoc/develop/index.html" class="SiteFooter-button SiteFooter-button--light">APIs</a>
+    </li>
+  </ul>
+</footer><!-- /.footer-links -->
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>
+
+<script src="assets/js/libs/prettify.js"></script>
+<script src="assets/js/script.js"></script>
+
+
+
+<script>
+  // $script.js - github.com/ded/script.js
+  (function(a,b,c){typeof c["module"]!="undefined"&&c.module.exports?c.module.exports=b():typeof c["define"]!="undefined"&&c["define"]=="function"&&c.define.amd?define(a,b):c[a]=b()})("$script",function(){function p(a,b){for(var c=0,d=a.length;c<d;++c)if(!b(a[c]))return j;return 1}function q(a,b){p(a,function(a){return!b(a)})}function r(a,b,i){function o(a){return a.call?a():d[a]}function t(){if(!--n){d[m]=1,l&&l();for(var a in f)p(a.split("|"),o)&&!q(f[a],o)&&(f[a]=[])}}a=a[k]?a:[a];var j=b&&b.call,l=j?b:i,m=j?a.join(""):b,n=a.length;return setTimeout(function(){q(a,function(a){if(h[a])return m&&(e[m]=1),h[a]==2&&t();h[a]=1,m&&(e[m]=1),s(!c.test(a)&&g?g+a+".js":a,t)})},0),r}function s(c,d){var e=a.createElement("script"),f=j;e.onload=e.onerror=e[o]=function(){if(e[m]&&!/^c|loade/.test(e[m])||f)return;e.onload=e[o]=null,f=1,h[c]=2,d()},e.async=1,e.src=c,b.insertBefore(e,b.firstChild)}var a=document,b=a.getElementsByTagName("head")[0],c=/^https?:\/\//,d={},e={},f={},g,h={},i="string",j=!1,k="push",l="DOMContentLoaded",m="readyState",n="addEventListener",o="onreadystatechange";return!a[m]&&a[n]&&(a[n](l,function t(){a.removeEventListener(l,t,j),a[m]="complete"},j),a[m]="loading"),r.get=s,r.order=function(a,b,c){(function d(e){e=a.shift(),a.length?r(e,d):r(e,b,c)})()},r.path=function(a){g=a},r.ready=function(a,b,c){a=a[k]?a:[a];var e=[];return!q(a,function(a){d[a]||e[k](a)})&&p(a,function(a){return d[a]})?b():!function(a){f[a]=f[a]||[],f[a][k](b),c&&c(e)}(a.join("|")),r},r},this)
+  var _gaq=[
+    ['_setAccount','100000-1'],
+    ['_setDomainName', '.ibm.com'],
+    ['_trackPageview'],['_trackPageLoadTime']
+  ];
+  $script('http://www.google-analytics.com/ga.js');
+  $script('https://apis.google.com/js/plusone.js');
+  $script("//platform.twitter.com/widgets.js");
+</script>
+
+    
+  </div>
+</body>
+</html>

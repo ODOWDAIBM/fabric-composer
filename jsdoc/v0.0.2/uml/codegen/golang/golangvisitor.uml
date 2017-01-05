@@ -1,0 +1,13 @@
+@startuml
+class GoLangVisitor{
+   - Object visit(Object,Object)
+   - Object visitModelManager(ModelManager,Object)
+   - Object visitModelFile(ModelFile,Object)
+   - Object visitClassDeclaration(ClassDeclaration,Object)
+   - Object visitField(Field,Object)
+   - Object visitRelationship(Relationship,Object)
+   - boolean containsDateTimeField(ModelFile)
+   - string toGoType(string)
+   - string toGoPackageName(string)
+}
+@enduml

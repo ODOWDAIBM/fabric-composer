@@ -1,0 +1,10 @@
+@startuml
+class CBase{
+   - void constructor(ModelManager,string,string,string)
+   + string getIdentifier()
+   + string getFullyQualifiedIdentifier()
+   + string getType()
+   + string getFullyQualifiedType()
+   + string getNamespace()
+}
+@enduml

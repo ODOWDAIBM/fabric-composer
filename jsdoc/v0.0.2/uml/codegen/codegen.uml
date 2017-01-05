@@ -1,0 +1,4 @@
+@startuml
+!include ./golang/golangvisitor.uml
+!include ./filewriter.uml
+@enduml

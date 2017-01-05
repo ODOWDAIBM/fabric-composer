@@ -1,0 +1,35 @@
+@startuml
+!include ./parser.uml
+!include ./assetdeclaration.uml
+!include ./participantdeclaration.uml
+!include ./transactiondeclaration.uml
+!include ./illegalmodelexception.uml
+class ModelFile{
+   + ModelFile fromJSON(ModelManager,string)
+   + void constructor(ModelManager,string,string,string)
+   - Object accept(Object,Object)
+   + ModelManager getModelManager()
+   + string[] getImports()
+   - void validate()
+   - string resolveType(string,string)
+   - boolean isLocalType(string)
+   - boolean isImportedType(string)
+   - string resolveImport(string)
+   + boolean isDefined(string)
+   + ClassDeclaration getType(string)
+   + AssetDeclaration getAssetDeclaration(string)
+   + TransactionDeclaration getTransactionDeclaration(string)
+   + ParticipantDeclaration getParticipantDeclaration(string)
+   + string getNamespace()
+   + AssetDeclaration[] getAssetDeclarations()
+   + TransactionDeclaration[] getTransactionDeclarations()
+   + ParticipantDeclaration[] getParticipantDeclarations()
+   + ClassDeclaration[] getDeclarations(Function)
+   + ClassDeclaration[] getAllDeclarations()
+   + string getIdentifier()
+   + string getName()
+   + string getDefinitions()
+   + Object toJSON()
+   + string toJSONString()
+}
+@enduml

@@ -1,0 +1,7 @@
+@startuml
+!include ./classdeclaration.uml
+class ParticipantDeclaration{
+   + void constructor(ModelFile,Object)
+}
+ParticipantDeclaration --|> ClassDeclaration
+@enduml

@@ -1,0 +1,7 @@
+@startuml
+!include ./baseexception.uml
+class SecurityException{
+   + void constructor(string)
+}
+SecurityException --|> BaseException
+@enduml

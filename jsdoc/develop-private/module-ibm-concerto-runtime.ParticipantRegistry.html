@@ -1,0 +1,1807 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
+	<title>IBM Concerto Class: ParticipantRegistry</title>
+
+	<!--[if lt IE 9]>
+	<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+	<link type="text/css" rel="stylesheet" href="styles/sunlight.default.css">
+
+	<link type="text/css" rel="stylesheet" href="styles/site.spacelab.css">
+
+</head>
+
+<body>
+
+<div class="navbar navbar-default navbar-fixed-top navbar-inverse">
+<div class="container">
+	<div class="navbar-header">
+		<a class="navbar-brand" href="index.html">IBM Concerto</a>
+		<button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#topNavigation">
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+        </button>
+	</div>
+	<div class="navbar-collapse collapse" id="topNavigation">
+		<ul class="nav navbar-nav">
+			
+			<li class="dropdown">
+				<a href="modules.list.html" class="dropdown-toggle" data-toggle="dropdown">Modules<b class="caret"></b></a>
+				<ul class="dropdown-menu ">
+					<li><a href="module-ibm-concerto-admin.html">ibm-concerto-admin</a></li><li><a href="module-ibm-concerto-client.html">ibm-concerto-client</a></li><li><a href="module-ibm-concerto-common.html">ibm-concerto-common</a></li><li><a href="module-ibm-concerto-runtime.html">ibm-concerto-runtime</a></li>
+				</ul>
+			</li>
+			
+			<li class="dropdown">
+				<a href="classes.list.html" class="dropdown-toggle" data-toggle="dropdown">Classes<b class="caret"></b></a>
+				<ul class="dropdown-menu ">
+					<li><a href="AssetRegistry.html">AssetRegistry</a></li><li><a href="Factory.html">Factory</a></li><li><a href="IdentityManager.html">IdentityManager</a></li><li><a href="module-ibm-concerto-admin.AdminConnection.html">ibm-concerto-admin.AdminConnection</a></li><li><a href="module-ibm-concerto-client.AssetRegistry.html">ibm-concerto-client.AssetRegistry</a></li><li><a href="module-ibm-concerto-client.BusinessNetworkConnection.html">ibm-concerto-client.BusinessNetworkConnection</a></li><li><a href="module-ibm-concerto-client.ParticipantRegistry.html">ibm-concerto-client.ParticipantRegistry</a></li><li><a href="module-ibm-concerto-client.Registry.html">ibm-concerto-client.Registry</a></li><li><a href="module-ibm-concerto-client.TransactionRegistry.html">ibm-concerto-client.TransactionRegistry</a></li><li><a href="module-ibm-concerto-common.AclFile.html">ibm-concerto-common.AclFile</a></li><li><a href="module-ibm-concerto-common.AclRule.html">ibm-concerto-common.AclRule</a></li><li><a href="module-ibm-concerto-common.APISignatureGenerator.html">ibm-concerto-common.APISignatureGenerator</a></li><li><a href="module-ibm-concerto-common.AssetDeclaration.html">ibm-concerto-common.AssetDeclaration</a></li><li><a href="module-ibm-concerto-common.BaseException.html">ibm-concerto-common.BaseException</a></li><li><a href="module-ibm-concerto-common.BusinessNetworkDefinition.html">ibm-concerto-common.BusinessNetworkDefinition</a></li><li><a href="module-ibm-concerto-common.ClassDeclaration.html">ibm-concerto-common.ClassDeclaration</a></li><li><a href="module-ibm-concerto-common.Connection.html">ibm-concerto-common.Connection</a></li><li><a href="module-ibm-concerto-common.ConnectionManager.html">ibm-concerto-common.ConnectionManager</a></li><li><a href="module-ibm-concerto-common.ConnectionProfileManager.html">ibm-concerto-common.ConnectionProfileManager</a></li><li><a href="module-ibm-concerto-common.ConnectionProfileStore.html">ibm-concerto-common.ConnectionProfileStore</a></li><li><a href="module-ibm-concerto-common.EnumDeclaration.html">ibm-concerto-common.EnumDeclaration</a></li><li><a href="module-ibm-concerto-common.EnumValueDeclaration.html">ibm-concerto-common.EnumValueDeclaration</a></li><li><a href="module-ibm-concerto-common.Factory.html">ibm-concerto-common.Factory</a></li><li><a href="module-ibm-concerto-common.Field.html">ibm-concerto-common.Field</a></li><li><a href="module-ibm-concerto-common.FileWriter.html">ibm-concerto-common.FileWriter</a></li><li><a href="module-ibm-concerto-common.FSConnectionProfileStore.html">ibm-concerto-common.FSConnectionProfileStore</a></li><li><a href="module-ibm-concerto-common.FunctionDeclaration.html">ibm-concerto-common.FunctionDeclaration</a></li><li><a href="module-ibm-concerto-common.GoLangVisitor.html">ibm-concerto-common.GoLangVisitor</a></li><li><a href="module-ibm-concerto-common.Identifiable.html">ibm-concerto-common.Identifiable</a></li><li><a href="module-ibm-concerto-common.IllegalModelException.html">ibm-concerto-common.IllegalModelException</a></li><li><a href="module-ibm-concerto-common.Introspector.html">ibm-concerto-common.Introspector</a></li><li><a href="module-ibm-concerto-common.JavaScriptParser.html">ibm-concerto-common.JavaScriptParser</a></li><li><a href="module-ibm-concerto-common.JSONGenerator.html">ibm-concerto-common.JSONGenerator</a></li><li><a href="module-ibm-concerto-common.JSONPopulator.html">ibm-concerto-common.JSONPopulator</a></li><li><a href="module-ibm-concerto-common.JSONSchemaVisitor.html">ibm-concerto-common.JSONSchemaVisitor</a></li><li><a href="module-ibm-concerto-common.JSONWriter.html">ibm-concerto-common.JSONWriter</a></li><li><a href="module-ibm-concerto-common.Logger.html">ibm-concerto-common.Logger</a></li><li><a href="module-ibm-concerto-common.LoopbackVisitor.html">ibm-concerto-common.LoopbackVisitor</a></li><li><a href="module-ibm-concerto-common.MemoryConnectionProfileStore.html">ibm-concerto-common.MemoryConnectionProfileStore</a></li><li><a href="module-ibm-concerto-common.ModelBinding.html">ibm-concerto-common.ModelBinding</a></li><li><a href="module-ibm-concerto-common.ModelFile.html">ibm-concerto-common.ModelFile</a></li><li><a href="module-ibm-concerto-common.ModelManager.html">ibm-concerto-common.ModelManager</a></li><li><a href="module-ibm-concerto-common.ModelUtil.html">ibm-concerto-common.ModelUtil</a></li><li><a href="module-ibm-concerto-common.Node.html">ibm-concerto-common.Node</a></li><li><a href="module-ibm-concerto-common.ParseException.html">ibm-concerto-common.ParseException</a></li><li><a href="module-ibm-concerto-common.ParticipantDeclaration.html">ibm-concerto-common.ParticipantDeclaration</a></li><li><a href="module-ibm-concerto-common.PlantUMLGenerator.html">ibm-concerto-common.PlantUMLGenerator</a></li><li><a href="module-ibm-concerto-common.PlantUMLVisitor.html">ibm-concerto-common.PlantUMLVisitor</a></li><li><a href="module-ibm-concerto-common.Predicate.html">ibm-concerto-common.Predicate</a></li><li><a href="module-ibm-concerto-common.Property.html">ibm-concerto-common.Property</a></li><li><a href="module-ibm-concerto-common.Relationship.html">ibm-concerto-common.Relationship</a></li><li><a href="module-ibm-concerto-common.RelationshipDeclaration.html">ibm-concerto-common.RelationshipDeclaration</a></li><li><a href="module-ibm-concerto-common.Resource.html">ibm-concerto-common.Resource</a></li><li><a href="module-ibm-concerto-common.ResourceValidator.html">ibm-concerto-common.ResourceValidator</a></li><li><a href="module-ibm-concerto-common.Script.html">ibm-concerto-common.Script</a></li><li><a href="module-ibm-concerto-common.ScriptManager.html">ibm-concerto-common.ScriptManager</a></li><li><a href="module-ibm-concerto-common.SecurityContext.html">ibm-concerto-common.SecurityContext</a></li><li><a href="module-ibm-concerto-common.SecurityException.html">ibm-concerto-common.SecurityException</a></li><li><a href="module-ibm-concerto-common.Serializer.html">ibm-concerto-common.Serializer</a></li><li><a href="module-ibm-concerto-common.TransactionDeclaration.html">ibm-concerto-common.TransactionDeclaration</a></li><li><a href="module-ibm-concerto-common.TypedStack.html">ibm-concerto-common.TypedStack</a></li><li><a href="module-ibm-concerto-common.TypescriptVisitor.html">ibm-concerto-common.TypescriptVisitor</a></li><li><a href="module-ibm-concerto-common.Util.html">ibm-concerto-common.Util</a></li><li><a href="module-ibm-concerto-common.ValidatedResource.html">ibm-concerto-common.ValidatedResource</a></li><li><a href="module-ibm-concerto-common.ValidationException.html">ibm-concerto-common.ValidationException</a></li><li><a href="module-ibm-concerto-common.VersionChecker.html">ibm-concerto-common.VersionChecker</a></li><li><a href="module-ibm-concerto-common.Writer.html">ibm-concerto-common.Writer</a></li><li><a href="module-ibm-concerto-runtime.Api.html">ibm-concerto-runtime.Api</a></li><li><a href="module-ibm-concerto-runtime.AssetRegistry.html">ibm-concerto-runtime.AssetRegistry</a></li><li><a href="module-ibm-concerto-runtime.Container.html">ibm-concerto-runtime.Container</a></li><li><a href="module-ibm-concerto-runtime.Context.html">ibm-concerto-runtime.Context</a></li><li><a href="module-ibm-concerto-runtime.DataCollection.html">ibm-concerto-runtime.DataCollection</a></li><li><a href="module-ibm-concerto-runtime.DataService.html">ibm-concerto-runtime.DataService</a></li><li><a href="module-ibm-concerto-runtime.Engine.html">ibm-concerto-runtime.Engine</a></li><li><a href="module-ibm-concerto-runtime.EngineBusinessNetworks.html">ibm-concerto-runtime.EngineBusinessNetworks</a></li><li><a href="module-ibm-concerto-runtime.EngineIdentities.html">ibm-concerto-runtime.EngineIdentities</a></li><li><a href="module-ibm-concerto-runtime.EngineRegistries.html">ibm-concerto-runtime.EngineRegistries</a></li><li><a href="module-ibm-concerto-runtime.EngineResources.html">ibm-concerto-runtime.EngineResources</a></li><li><a href="module-ibm-concerto-runtime.EngineTransactions.html">ibm-concerto-runtime.EngineTransactions</a></li><li><a href="module-ibm-concerto-runtime.Factory.html">ibm-concerto-runtime.Factory</a></li><li><a href="module-ibm-concerto-runtime.IdentityService.html">ibm-concerto-runtime.IdentityService</a></li><li><a href="module-ibm-concerto-runtime.LoggingService.html">ibm-concerto-runtime.LoggingService</a></li><li><a href="module-ibm-concerto-runtime.ParticipantRegistry.html">ibm-concerto-runtime.ParticipantRegistry</a></li><li><a href="module-ibm-concerto-runtime.Resolver.html">ibm-concerto-runtime.Resolver</a></li><li><a href="module-ibm-concerto-runtime.TransactionLogger.html">ibm-concerto-runtime.TransactionLogger</a></li><li><a href="ParticipantRegistry.html">ParticipantRegistry</a></li><li><a href="QueryExecutor.html">QueryExecutor</a></li><li><a href="Registry.html">Registry</a></li><li><a href="RegistryManager.html">RegistryManager</a></li>
+				</ul>
+			</li>
+			
+			<li class="dropdown">
+				<a href="events.list.html" class="dropdown-toggle" data-toggle="dropdown">Events<b class="caret"></b></a>
+				<ul class="dropdown-menu ">
+					<li><a href="module-ibm-concerto-client.AssetRegistry.html#event:resourceadded">ibm-concerto-client.AssetRegistry#event:resourceadded</a></li><li><a href="module-ibm-concerto-client.AssetRegistry.html#event:resourceremoved">ibm-concerto-client.AssetRegistry#event:resourceremoved</a></li><li><a href="module-ibm-concerto-client.AssetRegistry.html#event:resourceupdated">ibm-concerto-client.AssetRegistry#event:resourceupdated</a></li><li><a href="module-ibm-concerto-client.ParticipantRegistry.html#event:resourceadded">ibm-concerto-client.ParticipantRegistry#event:resourceadded</a></li><li><a href="module-ibm-concerto-client.ParticipantRegistry.html#event:resourceremoved">ibm-concerto-client.ParticipantRegistry#event:resourceremoved</a></li><li><a href="module-ibm-concerto-client.ParticipantRegistry.html#event:resourceupdated">ibm-concerto-client.ParticipantRegistry#event:resourceupdated</a></li><li><a href="module-ibm-concerto-client.TransactionRegistry.html#event:resourceadded">ibm-concerto-client.TransactionRegistry#event:resourceadded</a></li><li><a href="module-ibm-concerto-client.TransactionRegistry.html#event:resourceremoved">ibm-concerto-client.TransactionRegistry#event:resourceremoved</a></li><li><a href="module-ibm-concerto-client.TransactionRegistry.html#event:resourceupdated">ibm-concerto-client.TransactionRegistry#event:resourceupdated</a></li><li><a href="Registry.html#event:resourceadded">Registry#event:resourceadded</a></li><li><a href="Registry.html#event:resourceremoved">Registry#event:resourceremoved</a></li><li><a href="Registry.html#event:resourceupdated">Registry#event:resourceupdated</a></li><li><a href="RegistryManager.html#event:registryadded">RegistryManager#event:registryadded</a></li>
+				</ul>
+			</li>
+			
+			<li class="dropdown">
+				<a href="global.html" class="dropdown-toggle" data-toggle="dropdown">Global<b class="caret"></b></a>
+				<ul class="dropdown-menu ">
+					<li><a href="global.html#findCommentBefore">findCommentBefore</a></li><li><a href="global.html#formatMessage">formatMessage</a></li><li><a href="global.html#getDecorators">getDecorators</a></li><li><a href="global.html#getExample">getExample</a></li><li><a href="global.html#getLogger">getLogger</a></li><li><a href="global.html#getMethodArguments">getMethodArguments</a></li><li><a href="global.html#getReturnType">getReturnType</a></li><li><a href="global.html#getText">getText</a></li><li><a href="global.html#getThrows">getThrows</a></li><li><a href="global.html#getVisibility">getVisibility</a></li><li><a href="global.html#Globalize">Globalize</a></li><li><a href="global.html#messageFormatter">messageFormatter</a></li><li><a href="global.html#mixin">mixin</a></li><li><a href="global.html#paramsToString">paramsToString</a></li><li><a href="global.html#processDirectory">processDirectory</a></li><li><a href="global.html#processFile">processFile</a></li><li><a href="global.html#toUMLFilename">toUMLFilename</a></li>
+				</ul>
+			</li>
+			
+		</ul>
+        
+            <div class="col-sm-3 col-md-3">
+                <form class="navbar-form" role="search">
+                    <div class="input-group">
+                        <input type="text" class="form-control" placeholder="Search" name="q" id="search-input">
+                        <div class="input-group-btn">
+                            <button class="btn btn-default" id="search-submit"><i class="glyphicon glyphicon-search"></i></button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        
+	</div>
+
+</div>
+</div>
+
+
+<div class="container" id="toc-content">
+<div class="row">
+
+	
+	<div class="col-md-8">
+	
+		<div id="main">
+			
+
+	<h1 class="page-title">Class: ParticipantRegistry</h1>
+<section>
+
+<header>
+    
+        <h2>
+            <span class="ancestors"><a href="module-ibm-concerto-runtime.html">ibm-concerto-runtime</a>.</span>
+        
+        ParticipantRegistry
+        </h2>
+        
+            <div class="class-description">An participant registry manages a set of participants.</div>
+        
+    
+</header>
+
+
+<article>
+    <div class="container-overview">
+    
+        
+<hr>
+<dt>
+    <h4 class="name" id="ParticipantRegistry"><span class="type-signature"></span>new ParticipantRegistry()</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        Do not attempt to create an instance of this class.<br>
+You must use the <a href="module-ibm-concerto-runtime.html#getParticipantRegistry">getParticipantRegistry</a>
+method instead.
+    </div>
+    
+
+    
+
+    
+
+    
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
+	<dd class="tag-source">
+		<ul class="dummy">
+			<li>
+				<a href="ibm-concerto-runtime_lib_api_participantregistry.js.html">ibm-concerto-runtime/lib/api/participantregistry.js</a>,
+				 <a href="ibm-concerto-runtime_lib_api_participantregistry.js.html#sunlight-1-line-17">line 17</a>
+			</li>
+		</ul>
+	</dd>
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dd>
+
+    
+    </div>
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+        <h3 class="subsection-title">Methods</h3>
+
+        <dl>
+            
+<hr>
+<dt>
+    <h4 class="name" id="add"><span class="type-signature"></span>add(participant)</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        Add the specified participant to this participant registry.
+    </div>
+    
+
+    
+
+    
+
+    
+    
+        <h5>Parameters:</h5>
+        
+
+<table class="params table table-striped">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>participant</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Resource</span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">The participants to add to this participant registry.</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
+	<dd class="tag-source">
+		<ul class="dummy">
+			<li>
+				<a href="ibm-concerto-runtime_lib_api_participantregistry.js.html">ibm-concerto-runtime/lib/api/participantregistry.js</a>,
+				 <a href="ibm-concerto-runtime_lib_api_participantregistry.js.html#sunlight-1-line-138">line 138</a>
+			</li>
+		</ul>
+	</dd>
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <h5>Returns:</h5>
+    
+            
+<div class="param-desc">
+    A promise. The promise is resolved when the participant has
+been added to this participant registry. If the participant cannot be added to this
+participant registry, or if the participant already exists in the participant registry,
+then the promise will be rejected with an error that describes the problem.
+</div>
+
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">Promise</span>
+
+
+
+    </dd>
+</dl>
+
+
+        
+
+    
+        <h5>Example</h5>
+        
+    <pre class="sunlight-highlight-javascript">// Get the driver participant registry.
+return getParticipantRegistry(&#x27;org.acme.Driver&#x27;)
+  .then(function (driverParticipantRegistry) {
+    // Get the factory for creating new participant instances.
+    var factory = getFactory();
+    // Create the driver.
+    var driver = factory.newInstance(&#x27;org.acme&#x27;, &#x27;Driver&#x27;, &#x27;VEHICLE_1&#x27;);
+    driver.location = &#x27;Southampton&#x27;;
+    // Add the driver to the driver participant registry.
+    return driverParticipantRegistry.add(driver);
+  })
+  .catch(function (error) {
+    // Add optional error handling here.
+  });</pre>
+
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt>
+    <h4 class="name" id="addAll"><span class="type-signature"></span>addAll(participants)</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        Add all of the specified participants to this participant registry.
+    </div>
+    
+
+    
+
+    
+
+    
+    
+        <h5>Parameters:</h5>
+        
+
+<table class="params table table-striped">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>participants</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Array.&lt;Resource></span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">The participants to add to this participant registry.</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
+	<dd class="tag-source">
+		<ul class="dummy">
+			<li>
+				<a href="ibm-concerto-runtime_lib_api_participantregistry.js.html">ibm-concerto-runtime/lib/api/participantregistry.js</a>,
+				 <a href="ibm-concerto-runtime_lib_api_participantregistry.js.html#sunlight-1-line-105">line 105</a>
+			</li>
+		</ul>
+	</dd>
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <h5>Returns:</h5>
+    
+            
+<div class="param-desc">
+    A promise. The promise is resolved when all of the
+participants have been added to this participant registry. If the participants cannot be
+added to this participant registry, or if the participants already exist in the
+participant registry, then the promise will be rejected with an error
+that describes the problem.
+</div>
+
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">Promise</span>
+
+
+
+    </dd>
+</dl>
+
+
+        
+
+    
+        <h5>Example</h5>
+        
+    <pre class="sunlight-highlight-javascript">// Get the driver participant registry.
+return getParticipantRegistry(&#x27;org.acme.Driver&#x27;)
+  .then(function (driverParticipantRegistry) {
+    // Get the factory for creating new participant instances.
+    var factory = getFactory();
+    // Create the first driver.
+    var driver1 = factory.newInstance(&#x27;org.acme&#x27;, &#x27;Driver&#x27;, &#x27;VEHICLE_1&#x27;);
+    driver1.location = &#x27;Southampton&#x27;;
+    // Create the second driver.
+    var driver2 = factory.newInstance(&#x27;org.acme&#x27;, &#x27;Driver&#x27;, &#x27;VEHICLE_2&#x27;);
+    driver2.location = &#x27;GREEN&#x27;;
+    // Add the drivers to the driver participant registry.
+    return driverParticipantRegistry.addAll([driver1, driver2]);
+  })
+  .catch(function (error) {
+    // Add optional error handling here.
+  });</pre>
+
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt>
+    <h4 class="name" id="get"><span class="type-signature"></span>get(id)</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        Get the specified participant in this participant registry using the unique identifier
+of the participant.
+    </div>
+    
+
+    
+
+    
+
+    
+    
+        <h5>Parameters:</h5>
+        
+
+<table class="params table table-striped">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>id</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">The ID of the participant.</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
+	<dd class="tag-source">
+		<ul class="dummy">
+			<li>
+				<a href="ibm-concerto-runtime_lib_api_participantregistry.js.html">ibm-concerto-runtime/lib/api/participantregistry.js</a>,
+				 <a href="ibm-concerto-runtime_lib_api_participantregistry.js.html#sunlight-1-line-75">line 75</a>
+			</li>
+		</ul>
+	</dd>
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <h5>Returns:</h5>
+    
+            
+<div class="param-desc">
+    A promise. The promise is resolved with a Resource
+instance representing the specified participant in this participant registry. If the
+specified participant does not exist, or the current user does not have access
+to the specified participant, then the promise will be rejected with an error
+that describes the problem.
+</div>
+
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">Promise</span>
+
+
+
+    </dd>
+</dl>
+
+
+        
+
+    
+        <h5>Example</h5>
+        
+    <pre class="sunlight-highlight-javascript">// Get the driver participant registry.
+return getParticipantRegistry(&#x27;org.acme.Driver&#x27;)
+  .then(function (driverParticipantRegistry) {
+    // Get the specific driver from the driver participant registry.
+    return participantRegistry.get(&#x27;VEHICLE_1&#x27;);
+  })
+  .then(function (driver) {
+    // Process the the driver object.
+    console.log(driver.driverId);
+  })
+  .catch(function (error) {
+    // Add optional error handling here.
+  });</pre>
+
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt>
+    <h4 class="name" id="getAll"><span class="type-signature"></span>getAll()</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        Get a list of all of the existing participants in this participant registry.
+    </div>
+    
+
+    
+
+    
+
+    
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
+	<dd class="tag-source">
+		<ul class="dummy">
+			<li>
+				<a href="ibm-concerto-runtime_lib_api_participantregistry.js.html">ibm-concerto-runtime/lib/api/participantregistry.js</a>,
+				 <a href="ibm-concerto-runtime_lib_api_participantregistry.js.html#sunlight-1-line-45">line 45</a>
+			</li>
+		</ul>
+	</dd>
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <h5>Returns:</h5>
+    
+            
+<div class="param-desc">
+    A promise. The promise is resolved with an array of
+Resource instances representing all of the participants stored in this
+participant registry. If the participant registry does not exist, or the current
+user does not have access to the participant registry, then the promise will
+be rejected with an error that describes the problem.
+</div>
+
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">Promise</span>
+
+
+
+    </dd>
+</dl>
+
+
+        
+
+    
+        <h5>Example</h5>
+        
+    <pre class="sunlight-highlight-javascript">// Get the driver participant registry.
+return getParticipantRegistry(&#x27;org.acme.Driver&#x27;)
+  .then(function (driverParticipantRegistry) {
+    // Get all of the drivers in the driver participant registry.
+    return participantRegistry.getAll();
+  })
+  .then(function (drivers) {
+    // Process the array of driver objects.
+    drivers.forEach(function (driver) {
+      console.log(driver.driverId);
+    });
+  })
+  .catch(function (error) {
+    // Add optional error handling here.
+  });</pre>
+
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt>
+    <h4 class="name" id="remove"><span class="type-signature"></span>remove(participant)</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        Remove the specified participant from this participant registry.
+    </div>
+    
+
+    
+
+    
+
+    
+    
+        <h5>Parameters:</h5>
+        
+
+<table class="params table table-striped">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>participant</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+|
+
+<span class="param-type">Resource</span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">The participant, or ID of the participant, to remove
+from this participant registry.</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
+	<dd class="tag-source">
+		<ul class="dummy">
+			<li>
+				<a href="ibm-concerto-runtime_lib_api_participantregistry.js.html">ibm-concerto-runtime/lib/api/participantregistry.js</a>,
+				 <a href="ibm-concerto-runtime_lib_api_participantregistry.js.html#sunlight-1-line-264">line 264</a>
+			</li>
+		</ul>
+	</dd>
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <h5>Returns:</h5>
+    
+            
+<div class="param-desc">
+    A promise. The promise is resolved when the participant
+has been removed from this participant registry. If the participant cannot be
+removed from this participant registry, or if the participant does not exist in the
+participant registry, then the promise will be rejected with an error that
+describes the problem.
+</div>
+
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">Promise</span>
+
+
+
+    </dd>
+</dl>
+
+
+        
+
+    
+        <h5>Example</h5>
+        
+    <pre class="sunlight-highlight-javascript">// The existing driver that has come from elsewhere.
+var driver;
+// Get the driver participant registry.
+return getParticipantRegistry(&#x27;org.acme.Driver&#x27;)
+  .then(function (driverParticipantRegistry) {
+    // Get the factory for creating new participant instances.
+    var factory = getFactory();
+    // Remove the driver from the driver participant registry.
+    return driverParticipantRegistry.remove(driver);
+  })
+  .catch(function (error) {
+    // Add optional error handling here.
+  });</pre>
+
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt>
+    <h4 class="name" id="removeAll"><span class="type-signature"></span>removeAll(participants)</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        Remove all of the specified participants from this participant registry.
+    </div>
+    
+
+    
+
+    
+
+    
+    
+        <h5>Parameters:</h5>
+        
+
+<table class="params table table-striped">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>participants</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Array.&lt;string></span>
+|
+
+<span class="param-type">Array.&lt;Resource></span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">The participants, or the IDs of the participants,
+to remove from this participant registry.</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
+	<dd class="tag-source">
+		<ul class="dummy">
+			<li>
+				<a href="ibm-concerto-runtime_lib_api_participantregistry.js.html">ibm-concerto-runtime/lib/api/participantregistry.js</a>,
+				 <a href="ibm-concerto-runtime_lib_api_participantregistry.js.html#sunlight-1-line-232">line 232</a>
+			</li>
+		</ul>
+	</dd>
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <h5>Returns:</h5>
+    
+            
+<div class="param-desc">
+    A promise. The promise is resolved when all of the
+participants have been removed from this participant registry. If the participants cannot be
+removed from this participant registry, or if the participants do not exist in the
+participant registry, then the promise will be rejected with an error that
+describes the problem.
+</div>
+
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">Promise</span>
+
+
+
+    </dd>
+</dl>
+
+
+        
+
+    
+        <h5>Example</h5>
+        
+    <pre class="sunlight-highlight-javascript">// The existing drivers that have come from elsewhere.
+var driver1;
+// Get the driver participant registry.
+return getParticipantRegistry(&#x27;org.acme.Driver&#x27;)
+  .then(function (driverParticipantRegistry) {
+    // Get the factory for creating new participant instances.
+    var factory = getFactory();
+    // Remove the drivers from the driver participant registry. Note that
+    // one driver is specified as a driver instance, and the other
+    // driver is specified by the ID of the driver.
+    return driverParticipantRegistry.removeAll([driver1, &#x27;VEHICLE_2&#x27;]);
+  })
+  .catch(function (error) {
+    // Add optional error handling here.
+  });</pre>
+
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt>
+    <h4 class="name" id="update"><span class="type-signature"></span>update(participant)</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        Update the specified participant in this participant registry.
+    </div>
+    
+
+    
+
+    
+
+    
+    
+        <h5>Parameters:</h5>
+        
+
+<table class="params table table-striped">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>participant</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Resource</span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">The participant to update in this participant registry.</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
+	<dd class="tag-source">
+		<ul class="dummy">
+			<li>
+				<a href="ibm-concerto-runtime_lib_api_participantregistry.js.html">ibm-concerto-runtime/lib/api/participantregistry.js</a>,
+				 <a href="ibm-concerto-runtime_lib_api_participantregistry.js.html#sunlight-1-line-201">line 201</a>
+			</li>
+		</ul>
+	</dd>
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <h5>Returns:</h5>
+    
+            
+<div class="param-desc">
+    A promise. The promise is resolved when the participant
+have been updated in this participant registry. If the participant cannot be
+updated in this participant registry, or if the participant does not exist in the
+participant registry, then the promise will be rejected with an error that
+describes the problem.
+</div>
+
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">Promise</span>
+
+
+
+    </dd>
+</dl>
+
+
+        
+
+    
+        <h5>Example</h5>
+        
+    <pre class="sunlight-highlight-javascript">// The existing driver that has come from elsewhere.
+var driver;
+// Get the driver participant registry.
+return getParticipantRegistry(&#x27;org.acme.Driver&#x27;)
+  .then(function (driverParticipantRegistry) {
+    // Get the factory for creating new participant instances.
+    var factory = getFactory();
+    // Modify the properties of the driver.
+    driver.location = &#x27;Hursley&#x27;;
+    // Update the driver in the driver participant registry.
+    return driverParticipantRegistry.update(driver);
+  })
+  .catch(function (error) {
+    // Add optional error handling here.
+  });</pre>
+
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt>
+    <h4 class="name" id="updateAll"><span class="type-signature"></span>updateAll(participants)</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        Update all of the specified participants in this participant registry.
+    </div>
+    
+
+    
+
+    
+
+    
+    
+        <h5>Parameters:</h5>
+        
+
+<table class="params table table-striped">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>participants</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Array.&lt;Resource></span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">The participants to update in this participant registry.</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
+	<dd class="tag-source">
+		<ul class="dummy">
+			<li>
+				<a href="ibm-concerto-runtime_lib_api_participantregistry.js.html">ibm-concerto-runtime/lib/api/participantregistry.js</a>,
+				 <a href="ibm-concerto-runtime_lib_api_participantregistry.js.html#sunlight-1-line-167">line 167</a>
+			</li>
+		</ul>
+	</dd>
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <h5>Returns:</h5>
+    
+            
+<div class="param-desc">
+    A promise. The promise is resolved when all of the
+participants have been updated in this participant registry. If the participants cannot be
+updated in this participant registry, or if the participants do not exist in the
+participant registry, then the promise will be rejected with an error that
+describes the problem.
+</div>
+
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">Promise</span>
+
+
+
+    </dd>
+</dl>
+
+
+        
+
+    
+        <h5>Example</h5>
+        
+    <pre class="sunlight-highlight-javascript">// The existing drivers that have come from elsewhere.
+var driver1;
+var driver2;
+// Get the driver participant registry.
+return getParticipantRegistry(&#x27;org.acme.Driver&#x27;)
+  .then(function (driverParticipantRegistry) {
+    // Get the factory for creating new participant instances.
+    var factory = getFactory();
+    // Modify the properties of the first driver.
+    driver1.location = &#x27;Hursley&#x27;;
+    // Modify the properties of the second driver.
+    driver2.location = &#x27;London&#x27;;
+    // Update the drivers in the driver participant registry.
+    return driverParticipantRegistry.updateAll([driver1, driver2]);
+  })
+  .catch(function (error) {
+    // Add optional error handling here.
+  });</pre>
+
+
+    
+</dd>
+
+        </dl>
+    
+
+    
+
+    
+</article>
+
+</section>
+
+
+
+
+		</div>
+	</div>
+
+	<div class="clearfix"></div>
+
+	
+		<div class="col-md-3">
+			<div id="toc" class="col-md-3 hidden-xs hidden-sm hidden-md"></div>
+		</div>
+	
+
+</div>
+</div>
+
+
+    <div class="modal fade" id="searchResults">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h4 class="modal-title">Search results</h4>
+          </div>
+          <div class="modal-body"></div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          </div>
+        </div><!-- /.modal-content -->
+      </div><!-- /.modal-dialog -->
+    </div>
+
+
+<footer>
+
+
+	<span class="copyright">
+	Copyright IBM Corp. 2016
+	</span>
+
+<span class="jsdoc-message">
+	Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.4.3</a>
+	
+		on Thu Jan 5th 2017
+	
+	using the <a href="https://github.com/docstrap/docstrap">DocStrap template</a>.
+</span>
+</footer>
+
+<script src="scripts/docstrap.lib.js"></script>
+<script src="scripts/toc.js"></script>
+
+    <script type="text/javascript" src="scripts/fulltext-search-ui.js"></script>
+
+
+<script>
+$( function () {
+	$( "[id*='$']" ).each( function () {
+		var $this = $( this );
+
+		$this.attr( "id", $this.attr( "id" ).replace( "$", "__" ) );
+	} );
+
+	$( ".tutorial-section pre, .readme-section pre, pre.prettyprint.source" ).each( function () {
+		var $this = $( this );
+
+		var example = $this.find( "code" );
+		exampleText = example.html();
+		var lang = /{@lang (.*?)}/.exec( exampleText );
+		if ( lang && lang[1] ) {
+			exampleText = exampleText.replace( lang[0], "" );
+			example.html( exampleText );
+			lang = lang[1];
+		} else {
+			var langClassMatch = example.parent()[0].className.match(/lang\-(\S+)/);
+			lang = langClassMatch ? langClassMatch[1] : "javascript";
+		}
+
+		if ( lang ) {
+
+			$this
+			.addClass( "sunlight-highlight-" + lang )
+			.addClass( "linenums" )
+			.html( example.html() );
+
+		}
+	} );
+
+	Sunlight.highlightAll( {
+		lineNumbers : true,
+		showMenu : true,
+		enableDoclinks : true
+	} );
+
+	$.catchAnchorLinks( {
+        navbarOffset: 10
+	} );
+	$( "#toc" ).toc( {
+		anchorName  : function ( i, heading, prefix ) {
+			return $( heading ).attr( "id" ) || ( prefix + i );
+		},
+		selectors   : "#toc-content h1,#toc-content h2,#toc-content h3,#toc-content h4",
+		showAndHide : false,
+		smoothScrolling: true
+	} );
+
+	$( "#main span[id^='toc']" ).addClass( "toc-shim" );
+	$( '.dropdown-toggle' ).dropdown();
+
+    $( "table" ).each( function () {
+      var $this = $( this );
+      $this.addClass('table');
+    } );
+
+} );
+</script>
+
+
+
+<!--Navigation and Symbol Display-->
+
+
+<!--Google Analytics-->
+
+
+
+    <script type="text/javascript">
+        $(document).ready(function() {
+            SearcherDisplay.init();
+        });
+    </script>
+
+
+</body>
+</html>

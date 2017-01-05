@@ -1,0 +1,10 @@
+@startuml
+!include ./model/cobject.uml
+!include ./model/crelationship.uml
+!include ./util.uml
+class Factory{
+   + void constructor(ModelManager)
+   + CObject newInstance(SecurityContext,string,string,string)
+   + Relationship newRelationship(SecurityContext,string,string,string)
+}
+@enduml

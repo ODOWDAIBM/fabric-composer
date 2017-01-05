@@ -1,0 +1,15 @@
+@startuml
+!include ./cbase.uml
+!include ./crelationship.uml
+class CObject{
+   - void constructor(ModelManager,string,string,string)
+   + void setFieldValue(string,string)
+   - void assignFieldDefaults()
+   - ClassDeclaration getClassDeclaration()
+   - void validate()
+   - void validateField(string,Field,*)
+   - void reportModelViolation(string,string,*,Field)
+   - void reportMissingRequiredField(string,Field)
+}
+CObject --|> CBase
+@enduml

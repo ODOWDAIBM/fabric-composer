@@ -1,0 +1,11 @@
+@startuml
+!include ./util.uml
+class Registry{
+   + void constructor(ModelManager,Factory,Serializer,string,string)
+   + Promise add(SecurityContext,CObject)
+   + Promise update(SecurityContext,CObject)
+   + Promise remove(SecurityContext,string)
+   + Promise getAll(SecurityContext)
+   + Promise get(SecurityContext,string)
+}
+@enduml

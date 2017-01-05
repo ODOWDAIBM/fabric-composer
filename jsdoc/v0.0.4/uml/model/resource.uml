@@ -1,0 +1,17 @@
+@startuml
+!include ./identifiable.uml
+!include ./relationship.uml
+class Resource{
+   - void constructor(ModelManager,string,string,string)
+   + void setPropertyValue(string,string)
+   + void addArrayValue(string,string)
+   - void assignFieldDefaults()
+   - ClassDeclaration getClassDeclaration()
+   - void validate()
+   - void validateProperty(string,Field,*)
+   - void validateNonArrayProperty(string,Property,*)
+   - void reportModelViolation(string,string,*,Field)
+   - void reportMissingRequiredProperty(string,Field)
+}
+Resource --|> Identifiable
+@enduml

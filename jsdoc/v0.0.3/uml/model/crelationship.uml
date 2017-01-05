@@ -1,0 +1,7 @@
+@startuml
+!include ./cbase.uml
+class CRelationship{
+   - void constructor(ModelManager,string,string,string)
+}
+CRelationship --|> CBase
+@enduml

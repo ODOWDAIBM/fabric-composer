@@ -1,0 +1,7 @@
+@startuml
+!include ./property.uml
+class Relationship{
+   + void constructor(Object)
+}
+Relationship --|> Property
+@enduml

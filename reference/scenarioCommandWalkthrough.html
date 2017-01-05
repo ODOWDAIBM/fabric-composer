@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta charset="utf-8">
+
+  
+    <title>Concerto Scenario - Command line Walkthrough | IBM Blockchain Framework</title>
+  
+  <meta name="viewport" content="width=device-width">
+  <link rel="icon" type="image/x-icon" href="/favicon.ico">
+
+  <meta name="google-site-verification" content="fBQRJ6h7MV7_TJ7grbgq4P-d-07NRfDWPe4pqEEoH5w">
+
+  <link href="//fonts.googleapis.com/css?family=Roboto+Slab:400,700%7CRoboto:400,700,700italic,400italic" rel="stylesheet" type="text/css">
+
+
+  
+    <link href="assets/css/normalize.css" rel="stylesheet">
+    <link href="assets/css/main.css" rel="stylesheet">
+    <link href="assets/css/footer.css" rel="stylesheet">
+    <link href="assets/css/prettify.css" rel="stylesheet">
+  
+
+  
+
+  <link href="/blog/atom.xml" type="application/atom+xml" rel="alternate" title="Concerto Blog Atom Feed">
+</head>
+
+<body class="">
+
+  
+  
+
+
+
+
+<header class="page-header">
+  <div class="container">
+    <div class="mobile-bar">
+      <h1 class="logo">
+        <a href="/Blockchain-WW-Labs/Concerto/index.html"><img src="/Blockchain-WW-Labs/Concerto/assets/img/logo.png" alt=""></a>
+      </h1>
+      <button class="mobile-menu-toggle ir">open</button>
+    </div>
+    <nav class="main-menu">
+      <ul class="main-nav">
+        <li>
+          <a href="/Blockchain-WW-Labs/Concerto/overview/overview.html">Overview</a>
+        </li>
+        <li>
+          <a href="/Blockchain-WW-Labs/Concerto/start/getting-started.html">Getting Started</a>
+        </li>
+        <li>
+          <a href="/Blockchain-WW-Labs/Concerto/concepts/">Concepts</a>
+          <ul>
+<li><a href="/Blockchain-WW-Labs/Concerto/concepts/businessnetwork.html">Business Network</a></li>
+<li><a href="/Blockchain-WW-Labs/Concerto/concepts/businessnetworkdefinition.html">Business Network Definition</a></li>
+</ul>
+
+        </li>
+        <li>
+          <a href="/Blockchain-WW-Labs/Concerto/tasks/">Tasks</a>
+          <ul>
+<li><a href="/Blockchain-WW-Labs/Concerto/tasks/prerequisites.html">Installing Pre-requisites</a></li>
+<li><a href="/Blockchain-WW-Labs/Concerto/tasks/deploybusinessnetwork.html">Deploy Business Network</a></li>
+<li><a href="/Blockchain-WW-Labs/Concerto/tasks/createconnectionprofile.html">Create Connection Profile</a></li>
+<li><a href="/Blockchain-WW-Labs/Concerto/tasks/bnd-define.html">Create a Business Network Definition</a></li>
+<li><a href="/Blockchain-WW-Labs/Concerto/tasks/bnd-publish.html">Publish a Business Network Definition</a></li>
+<li><a href="/Blockchain-WW-Labs/Concerto/tasks/genapp.html">Generating an Application</a></li>
+<li><a href="/Blockchain-WW-Labs/Concerto/tasks/model-define.html">Create a Business Domain Model</a></li>
+<li><a href="/Blockchain-WW-Labs/Concerto/tasks/model-publish.html">Publish a Business Domain Model</a></li>
+<li><a href="/Blockchain-WW-Labs/Concerto/tasks/runtime-deploy.html">Deploy Business Network Definition to Fabric</a></li>
+<li><a href="/Blockchain-WW-Labs/Concerto/tasks/runtime-start.html">Start a Fabric Runtime</a></li>
+<li><a href="/Blockchain-WW-Labs/Concerto/tasks/testing.html">Test a Business Network Definition</a></li>
+<li><a href="/Blockchain-WW-Labs/Concerto/tasks/runtime-update.html">Update a Business Network Definition on Fabric</a></li>
+</ul>
+
+        </li>
+        <li>
+          <a href="/Blockchain-WW-Labs/Concerto/reference/">Reference</a>
+          <ul>
+<li><a href="/Blockchain-WW-Labs/Concerto/reference/cto_language.html">Concerto Modeling Language</a></li>
+<li><a href="/Blockchain-WW-Labs/Concerto/reference/MeetTheModules.html">Meet the Modules</a></li>
+<li><a href="/Blockchain-WW-Labs/Concerto/reference/scenarioCommandWalkthrough.html">Concerto Scenario Walkthrough</a></li>
+<li><a href="/Blockchain-WW-Labs/Concerto/jsdoc/develop/index.html">Concerto JSDocs</a></li>
+<li><a href="/Blockchain-WW-Labs/Concerto/reference/connectionprofile.html">Connection Profile</a></li>
+<li><a href="/Blockchain-WW-Labs/Concerto/reference/js_scripts.html">Transaction Processor Functions</a></li>
+<li><a href="/Blockchain-WW-Labs/Concerto/reference/platforms.html">Platforms  &amp; Supported Platforms</a></li>
+<li><a href="/Blockchain-WW-Labs/Concerto/reference/cli-generator.html">Generator CLI</a></li>
+<li><a href="/Blockchain-WW-Labs/Concerto/reference/glossary.html">Glossary</a></li>
+</ul>
+
+        </li>
+        <li>
+          <a href="/Blockchain-WW-Labs/Concerto/support/index.html">Support</a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+<!-- /.container -->
+</header><!-- /.page-header -->
+
+  
+
+  <div class="SiteWrapper">
+    
+      <div id="content">
+  <h2 class="page-title">
+    <span class="container">Concerto Scenario - Command line Walkthrough</span>
+  </h2>
+
+  <div class="container clearfix has-sidebar">
+    
+      <nav class="context-nav">
+        
+        
+          <ul>
+<li><a href="/Blockchain-WW-Labs/Concerto/reference/cto_language.html">Concerto Modeling Language</a></li>
+<li><a href="/Blockchain-WW-Labs/Concerto/reference/MeetTheModules.html">Meet the Modules</a></li>
+<li><a href="/Blockchain-WW-Labs/Concerto/reference/scenarioCommandWalkthrough.html">Concerto Scenario Walkthrough</a></li>
+<li><a href="/Blockchain-WW-Labs/Concerto/jsdoc/develop/index.html">Concerto JSDocs</a></li>
+<li><a href="/Blockchain-WW-Labs/Concerto/reference/connectionprofile.html">Connection Profile</a></li>
+<li><a href="/Blockchain-WW-Labs/Concerto/reference/js_scripts.html">Transaction Processor Functions</a></li>
+<li><a href="/Blockchain-WW-Labs/Concerto/reference/platforms.html">Platforms  &amp; Supported Platforms</a></li>
+<li><a href="/Blockchain-WW-Labs/Concerto/reference/cli-generator.html">Generator CLI</a></li>
+<li><a href="/Blockchain-WW-Labs/Concerto/reference/glossary.html">Glossary</a></li>
+</ul>
+
+        
+      </nav>
+    
+
+    <article class="main">
+      
+
+      <section class="content-chunk">
+        
+          <h1 id="walkthough-of-the-command-line-for-a-typical-concerto-scenario">Walkthough of the command line for a typical Concerto Scenario</h1>
+
+<p>We have two people here, Mae who is the overall application architect, and Lewis a full stack developer.
+Lewis will take on various roles through-out this; these are indentified by for example  <code>@devops</code></p>
+
+<h2 id="step1-creating-a-local-fabric-for-the-team">Step1: Creating a local fabric for the team</h2>
+<div class="highlight"><pre><code class="language-text" data-lang="text"><span></span>lewis@devops $ npm install -g Concerto-cli
+lewis@devops $ concerto setupTestHlf --default --profile devFabric1
+Downloading Hyperledger docker images...downloaded
+Setting up the images...setup
+Starting images...started
+Configuration for Hyperledger Fabric written to '~/.concerto-connections-profiles'
+
+lewis@devops $ tree ~/.concerto-connections-profiles
+.concerto-connections-profiles
+└── devFabric1
+    └── connection.json
+
+lewis@devops $ cat ~/.concerto-connections-profiles/devFabric1/connection.json
+{
+   "type" : "hyperledger",
+   "hfcConnection": {
+     "version": "0.6.0",
+     "keyvalstore
+     "membershipServicesURL": ["grpc://localhost:7054"],
+     "peerURL": ["grpc://localhost:7051"],
+     "eventHubURL": ["grpc://localhost:7053"]
+}        
+
+lewis@devops $ cat 'Mae, I've setup a test development fabric.' | mail mae@architect
+</code></pre></div>
+<ul>
+<li>? correct options for the setup of the default test fabric.  This is being targetted at developers.</li>
+</ul>
+
+<h2 id="step2-mae-updates-the-model-for-a-new-transaction-type">Step2: Mae updates the model for a new transaction type</h2>
+
+<p>(we're assuming here that two models have already been created for the model and network. The process there would be
+to setup the git repo and create the initial npm module.)</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text"><span></span>mae@architect $ git clone git@git.ibm.com:Blockchain-WW-Labs/AnimalTracking-Model.git
+mae@architect $ # make updates to add a 'Child Birth Transaction'
+mae@architect $ vi AnimalTracking-Model/models/mozart.cto
+mae@architect $ git commit -a -m 'added a Child Birth Transaction'
+mae@architect $ git push
+
+mae@architect $ git clone git@git.ibm.com:Blockchain-WW-Labs/AnimalTracking-Network.git
+mae@architect $ # add stub implementation of the 'Child Birth Transaction'
+mae@architect $ vi AnimalTracking-Network/lib/mozart.cto.js
+mae@architect $ git commit -a -m 'added a stub Child Birth Transaction'
+mae@architect $ git push
+
+mae@architect $ # Check the Travis Build results to the company's internal NPM
+mae@architect $ npm publish @ibm/AnimalTracking-Model
+
+mae@architect $ # publish stub transactions to the company's internal NPM
+mae@architect $ npm publish @ibm/AnimalTracking-Network
+
+mae@architect $ cat 'Lewis, published the network and model NPMs' &gt; mail lewis@appdev,lewis@systemdev
+</code></pre></div>
+<h2 id="step3-lewis-implements-the-new-transaction">Step3: Lewis implements the new transaction</h2>
+
+<p>(showing Lewis cloning the repos on each step - may not actually be need in practice if he's kept it)</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text"><span></span>lewis@systemdev $ git clone git@git.ibm.com:Blockchain-WW-Labs/AnimalTracking-Network.git
+lewis@systemdev $ npm install
+Installing dependancies....
+
+lewis@systemdev $ vi AnimalTracking-Network/lib/mozart.cto.js
+lewis@systemdev $ git commit -a -m 'added a impl of Child Birth Transaction'
+lewis@systemdev $ git push
+
+lewis@systemdev $ # run travis build and tests and publish NPM to private NPM repository
+
+lewis@systemdev $ cat 'Lewis, please deploy the business network to our test Hyperledger fabric' &gt; mail lewis@devops
+</code></pre></div>
+<h2 id="step4-business-network-definition-now-needs-to-be-deployed">Step4: Business Network Definition now needs to be deployed</h2>
+<div class="highlight"><pre><code class="language-text" data-lang="text"><span></span>lewis@devops $ git clone git@git.ibm.com:Blockchain-WW-Labs/AnimalTracking-Network.git
+lewis@devops $ npm install
+Installing dependancies
+
+lewis@devops $ npm install -g concerto-cli
+lewis@devops $ tree ~/.concerto-connections-profiles
+.concerto-connections-profiles
+└── devFabric1
+    └── connection.json
+
+lewis@devops $ cat ~/.concerto-connections-profiles/devFabric1/connection.json
+{
+   "type" : "hyperledger",
+   "hfcConnection": {
+     "version": "0.6.0",
+     "keyvalstore
+     "membershipServicesURL": ["grpc://localhost:7054"],
+     "peerURL": ["grpc://localhost:7051"],
+     "eventHubURL": ["grpc://localhost:7053"]
+}    
+
+lews@devops $ concerto deploy --profile devFabric1 --inputdir AnimalTracking-Network --enrollementId webadmin --enrollmentSecret a23sdf43asdf
+Network 'AnimalTracking' deployed sucessully at version 1.2.0/20161123 - config written to AnimalTracking-Network-default.json
+
+lewis@devops $ tree ~/.concerto-*
+.concerto-connections-profiles
+└── devFabric1
+    └── connection.json
+
+.concerto-credentials
+└── devFabric1
+    └── member.userid
+
+lewis@devops $ cat ~/.concertio-connections-profiles/devFabric1/connection.json
+{
+   "type" : "hyperledger",
+  "hfcConnection": {
+    "version": "0.6.0",
+    "keyvalstore
+    "membershipServicesURL": ["grpc://localhost:7054"],
+    "peerURL": ["grpc://localhost:7051"],
+    "eventHubURL": ["grpc://localhost:7053"]
+  },
+  "networks" : {
+    "AnimalTracking-Network" : "123928347523490875_chaincodeid"
+  }
+}   
+
+lewis@devops $ cat ~/.concerto-config-profiles/fabrics/devFabric1/connection.json &gt; mail
+</code></pre></div>
+<ul>
+<li>? optimal argument for input of the business network definition</li>
+</ul>
+
+<h2 id="step5-write-the-application">Step5: Write the application</h2>
+<div class="highlight"><pre><code class="language-text" data-lang="text"><span></span>lewis@appdev $ npm init myNewApplication
+lewis@appdev $ npm install --save concerto-client
+lewis@appdev $ npm install concerto-tools --save-dev
+lewis@appdev $ npm install AnimalTracking-Network --save-dev
+lewis@devops $ npm install
+Installing dependancies...
+
+lewis@appdev $ concertoTools create --typescript --inputdir AnimalTracking-Network
+Creating typescript definitions...
+
+lewis@appdev $ # move above command into a build script
+
+lewis@appdev $ vi typescript/bindings etc...............
+lewis@appdev $ # &lt;time passes and pizza&gt;
+
+lewis@appdev $ node myNewApplication
+lewis@appdev $ # create Travis pipeline to test application
+lewis@appdev $ git commit -a -m 'myNewApplication ready for integration testing'
+lewis@appdev $ git push
+lewis@devops $ cat ~/concertio-config/fabrics/devFabric1/connection.json
+{
+  "name" : "devFabric1",    
+  "hfcConnection": {
+    "version": "0.6.0",
+    "keyvalstore
+    "membershipServicesURL": ["grpc://localhost:7054"],
+    "peerURL": ["grpc://localhost:7051"],
+    "eventHubURL": ["grpc://localhost:7053"]
+  },
+  "networks" : {
+    "AnimalTracking-Network" : "123"
+    "DigitalProperty-Network" : "23458745692473856"
+  }
+
+}
+</code></pre></div>
+<p>??? how does the app get the keyval store - how does the app managed the participants??? user mapping to participants.</p>
+
+        
+
+        
+      </section>
+    </article>
+  </div>
+</div>
+
+    
+
+    
+    
+<footer class="SiteFooter">
+  <ul class="SiteFooter-links">
+    <li>
+      <a href="https://twitter.com/ibmblockchain" class="icon">
+        <img src="assets/img/social-twitter.svg" class="SiteFooter-icon" alt="Twitter">
+      </a>
+    </li>
+    <li>
+      <a href="https://github.ibm.com/Blockchain-WW-Labs/Concerto/" class="icon">
+        <img src="assets/img/social-github.svg" class="SiteFooter-icon" alt="Github">
+      </a>
+    </li>
+    <li>
+      <a href="/blog/atom.xml" class="icon">
+        <img src="assets/img/social-feed.svg" class="SiteFooter-icon" alt="Feed">
+      </a>
+    </li>
+    <li class="mobile-ln">
+    </li>
+<li>
+      <a href="https://pages.github.ibm.com/Blockchain-WW-Labs/Concerto/jsdoc/develop/index.html" class="SiteFooter-button SiteFooter-button--light">APIs</a>
+    </li>
+  </ul>
+</footer><!-- /.footer-links -->
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>
+
+<script src="assets/js/libs/prettify.js"></script>
+<script src="assets/js/script.js"></script>
+
+
+
+<script>
+  // $script.js - github.com/ded/script.js
+  (function(a,b,c){typeof c["module"]!="undefined"&&c.module.exports?c.module.exports=b():typeof c["define"]!="undefined"&&c["define"]=="function"&&c.define.amd?define(a,b):c[a]=b()})("$script",function(){function p(a,b){for(var c=0,d=a.length;c<d;++c)if(!b(a[c]))return j;return 1}function q(a,b){p(a,function(a){return!b(a)})}function r(a,b,i){function o(a){return a.call?a():d[a]}function t(){if(!--n){d[m]=1,l&&l();for(var a in f)p(a.split("|"),o)&&!q(f[a],o)&&(f[a]=[])}}a=a[k]?a:[a];var j=b&&b.call,l=j?b:i,m=j?a.join(""):b,n=a.length;return setTimeout(function(){q(a,function(a){if(h[a])return m&&(e[m]=1),h[a]==2&&t();h[a]=1,m&&(e[m]=1),s(!c.test(a)&&g?g+a+".js":a,t)})},0),r}function s(c,d){var e=a.createElement("script"),f=j;e.onload=e.onerror=e[o]=function(){if(e[m]&&!/^c|loade/.test(e[m])||f)return;e.onload=e[o]=null,f=1,h[c]=2,d()},e.async=1,e.src=c,b.insertBefore(e,b.firstChild)}var a=document,b=a.getElementsByTagName("head")[0],c=/^https?:\/\//,d={},e={},f={},g,h={},i="string",j=!1,k="push",l="DOMContentLoaded",m="readyState",n="addEventListener",o="onreadystatechange";return!a[m]&&a[n]&&(a[n](l,function t(){a.removeEventListener(l,t,j),a[m]="complete"},j),a[m]="loading"),r.get=s,r.order=function(a,b,c){(function d(e){e=a.shift(),a.length?r(e,d):r(e,b,c)})()},r.path=function(a){g=a},r.ready=function(a,b,c){a=a[k]?a:[a];var e=[];return!q(a,function(a){d[a]||e[k](a)})&&p(a,function(a){return d[a]})?b():!function(a){f[a]=f[a]||[],f[a][k](b),c&&c(e)}(a.join("|")),r},r},this)
+  var _gaq=[
+    ['_setAccount','100000-1'],
+    ['_setDomainName', '.ibm.com'],
+    ['_trackPageview'],['_trackPageLoadTime']
+  ];
+  $script('http://www.google-analytics.com/ga.js');
+  $script('https://apis.google.com/js/plusone.js');
+  $script("//platform.twitter.com/widgets.js");
+</script>
+
+    
+  </div>
+</body>
+</html>

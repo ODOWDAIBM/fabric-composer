@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta charset="utf-8">
+
+  
+    <title>Release the Kraken! - Announcing Yeoman 1.0 | IBM Blockchain Framework</title>
+  
+  <meta name="viewport" content="width=device-width">
+  <link rel="icon" type="image/x-icon" href="/favicon.ico">
+
+  <meta name="google-site-verification" content="fBQRJ6h7MV7_TJ7grbgq4P-d-07NRfDWPe4pqEEoH5w">
+
+  <link href="//fonts.googleapis.com/css?family=Roboto+Slab:400,700%7CRoboto:400,700,700italic,400italic" rel="stylesheet" type="text/css">
+
+
+  
+    <link href="assets/css/normalize.css" rel="stylesheet">
+    <link href="assets/css/main.css" rel="stylesheet">
+    <link href="assets/css/footer.css" rel="stylesheet">
+    <link href="assets/css/prettify.css" rel="stylesheet">
+  
+
+  
+
+  <link href="/blog/atom.xml" type="application/atom+xml" rel="alternate" title="Concerto Blog Atom Feed">
+</head>
+
+<body class="">
+
+  
+  
+
+
+
+
+<header class="page-header">
+  <div class="container">
+    <div class="mobile-bar">
+      <h1 class="logo">
+        <a href="/Blockchain-WW-Labs/Concerto/index.html"><img src="/Blockchain-WW-Labs/Concerto/assets/img/logo.png" alt=""></a>
+      </h1>
+      <button class="mobile-menu-toggle ir">open</button>
+    </div>
+    <nav class="main-menu">
+      <ul class="main-nav">
+        <li>
+          <a href="/Blockchain-WW-Labs/Concerto/overview/overview.html">Overview</a>
+        </li>
+        <li>
+          <a href="/Blockchain-WW-Labs/Concerto/start/getting-started.html">Getting Started</a>
+        </li>
+        <li>
+          <a href="/Blockchain-WW-Labs/Concerto/concepts/">Concepts</a>
+          <ul>
+<li><a href="/Blockchain-WW-Labs/Concerto/concepts/businessnetwork.html">Business Network</a></li>
+<li><a href="/Blockchain-WW-Labs/Concerto/concepts/businessnetworkdefinition.html">Business Network Definition</a></li>
+<li><a href="/Blockchain-WW-Labs/Concerto/concepts/participantsandidentities.html">Participants and Identities</a></li>
+</ul>
+
+        </li>
+        <li>
+          <a href="/Blockchain-WW-Labs/Concerto/tasks/">Tasks</a>
+          <ul>
+<li><a href="/Blockchain-WW-Labs/Concerto/tasks/prerequisites.html">Installing Pre-requisites</a></li>
+<li><a href="/Blockchain-WW-Labs/Concerto/tasks/deploybusinessnetwork.html">Deploy Business Network</a></li>
+<li><a href="/Blockchain-WW-Labs/Concerto/tasks/createconnectionprofile.html">Create Connection Profile</a></li>
+<li><a href="/Blockchain-WW-Labs/Concerto/tasks/bnd-define.html">Create a Business Network Definition</a></li>
+<li><a href="/Blockchain-WW-Labs/Concerto/tasks/bnd-publish.html">Publish a Business Network Definition</a></li>
+<li><a href="/Blockchain-WW-Labs/Concerto/tasks/genapp.html">Generating an Application</a></li>
+<li><a href="/Blockchain-WW-Labs/Concerto/tasks/model-define.html">Create a Business Domain Model</a></li>
+<li><a href="/Blockchain-WW-Labs/Concerto/tasks/model-publish.html">Publish a Business Domain Model</a></li>
+<li><a href="/Blockchain-WW-Labs/Concerto/tasks/runtime-start.html">Start a Fabric Runtime</a></li>
+<li><a href="/Blockchain-WW-Labs/Concerto/tasks/testing.html">Test a Business Network Definition</a></li>
+<li><a href="/Blockchain-WW-Labs/Concerto/tasks/runtime-update.html">Update a Business Network Definition on Fabric</a></li>
+<li><a href="/Blockchain-WW-Labs/Concerto/tasks/participant-add.html">Add a Participant</a></li>
+<li><a href="/Blockchain-WW-Labs/Concerto/tasks/identity-issue.html">Issue an Identity for a Participant</a></li>
+<li><a href="/Blockchain-WW-Labs/Concerto/tasks/identity-revoke.html">Revoke an Identity for a Participant</a></li>
+<li><a href="/Blockchain-WW-Labs/Concerto/tasks/current-participant.html">Implementing access control using the current Participant</a></li>
+<li><a href="/Blockchain-WW-Labs/Concerto/tasks/diagnostics.html">Diagnosing Problems</a></li>
+</ul>
+
+        </li>
+        <li>
+          <a href="/Blockchain-WW-Labs/Concerto/reference/">Reference</a>
+          <ul>
+<li><a href="/Blockchain-WW-Labs/Concerto/reference/MeetTheModules.html">Meet the Modules</a></li>
+<li><a href="/Blockchain-WW-Labs/Concerto/reference/platforms.html">Supported Platforms</a></li>
+<li><a href="/Blockchain-WW-Labs/Concerto/reference/cto_language.html">Concerto Modeling Language</a></li>
+<li><a href="/Blockchain-WW-Labs/Concerto/reference/connectionprofile.html">Connection Profile</a></li>
+<li><a href="/Blockchain-WW-Labs/Concerto/reference/js_scripts.html">Transaction Processor Functions</a></li>
+<li><a href="/Blockchain-WW-Labs/Concerto/reference/commands.html">Concerto Command Line</a></li>
+<li><a href="/Blockchain-WW-Labs/Concerto/reference/concerto.generator.tests.html">Concerto Generator</a></li>
+<li><a href="/Blockchain-WW-Labs/Concerto/reference/concerto.participant.add.html">Concerto CLI Add Participant</a></li>
+<li><a href="/Blockchain-WW-Labs/Concerto/reference/concerto.identity.issue.html">Concerto CLI Issue Identity</a></li>
+<li><a href="/Blockchain-WW-Labs/Concerto/reference/concerto.identity.revoke.html">Concerto CLI Revoke Identity</a></li>
+<li><a target="_blank" href="/Blockchain-WW-Labs/Concerto/jsdoc/develop/index.html">API Documentation</a></li>
+<li><a href="/Blockchain-WW-Labs/Concerto/reference/glossary.html">Glossary</a></li>
+</ul>
+
+        </li>
+        <li>
+          <a href="/Blockchain-WW-Labs/Concerto/support/index.html">Support</a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+<!-- /.container -->
+</header><!-- /.page-header -->
+
+  
+
+  <div class="SiteWrapper">
+    
+      <div id="content">
+  <h2 class="page-title">
+    <span class="container">Release the Kraken! - Announcing Yeoman 1.0</span>
+  </h2>
+
+  <div class="container clearfix">
+    
+
+    <article class="main">
+      
+
+      <section class="content-chunk">
+        
+          <section>
+  <div class="blog-post-meta clearfix">
+    <p class="date">23 Aug 2013</p>
+    <div class="social">
+  <!--twitter-->
+  <a href="https://twitter.com/share" class="twitter-share-button" data-text="" data-url="">Tweet</a>
+  <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+  <!--twitter-->
+
+  <!--plus-->
+  <script src="https://apis.google.com/js/plusone.js"></script><plus action="share"></plus>
+  <!--plus-->
+
+</div>
+
+  </div>
+
+  <div class="post">
+    <p>Your favorite top-hat-and-mustache man has hit the shelves. Head to your nearest npm today and update to Yeoman 1.0!</p>
+
+<p><img alt="The Yeoman 1.0 Team" src="http://i.imgur.com/ckKa3jC.jpg"></p>
+
+<p>For those who haven't tried Yeoman yet, or have been waiting for 1.0, just tell your terminal:</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text"><span></span>npm install -g yo
+</code></pre></div>
+<p>If you've already used any of the 1.0 Release Candidates, you'll feel right at home with this upgrade. You're in for more of the same stable, happy relationships you've had with yo and your favorite generators.</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text"><span></span>npm update -g yo
+</code></pre></div>
+<p><strong>Note:</strong> Remember, you'll need to install a generator using <code>yo</code> or <code>yo</code> followed by a generator name like <code>yo angular</code> before you see the options below :)</p>
+
+<h2 id="whats-new-in-1-0">What's New In 1.0?</h2>
+
+<p><img alt="A new `yo` helpful prompt system" src="http://i.imgur.com/TY9OpoC.png"></p>
+
+<p>Some of the interesting developments over the past year have included:</p>
+
+<ul>
+<li><p>Separating out <code>yo</code> from <code>yeoman</code>, positioning it as a first-class scaffolding solution for the web.</p></li>
+<li><p>A completely rewritten generator system with rich prompts (checkbox, list, etc. thanks to <a href="https://github.com/SBoudrias/Inquirer.js">Inquirer.js</a>, file utilities and more.</p></li>
+<li><p><a href="https://github.com/yeoman/generator/pull/311">Major performance improvements</a> and an <a href="https://github.com/yeoman/generator/issues/305">automation of install steps</a>. Generators can now install all their peer dependencies, meaning you can just run: <code>npm install generator-angular</code>.</p></li>
+<li><p>A new <code>yo</code> <a href="https://github.com/yeoman/yo/pull/36">helpful prompt system</a>. Just running <code>yo</code> without specifying a generator will let you easily update your generators, search for and install new generators, and find help.</p></li>
+</ul>
+
+<h2 id="why-yeoman">Why Yeoman?</h2>
+
+<p>If you're new to Yeoman, you'll have <em>a lot</em> of power at your fingertips with just one <code>yo ____</code> command. For help getting started, try out these resources:</p>
+
+<ul>
+<li><p>The Yeoman <a href="http://yeoman.io/learning/index.html">Getting Started Guide</a> will help understand how to use Yo, Grunt, and Bower together efficiently.</p></li>
+<li><p>Addy's <a href="https://www.youtube.com/watch?v=iUQ1fvdO9GY">Video</a> will walk you through using Yeoman to build an application with AngularJS.</p></li>
+<li><p>Stephen's <a href="http://code.tutsplus.com/tutorials/building-apps-with-the-yeoman-workflow--net-33254">Building Apps With The Yeoman Workflow</a> will show you how to build a Backbone.js application.</p></li>
+</ul>
+
+<p>Even for experienced developers, Yeoman will still improve your workflow. One of the ways Yeoman helps out of the box is by providing a finely-tuned Grunt configuration. What can take hours to setup-- LiveReload, Sass, Uglify, CoffeeScript-- is done in under a minute. If you wish to customize this even futher, nothing is stopping you!</p>
+
+<h2 id="whos-using-yeoman">Who's Using Yeoman?</h2>
+
+<p>These days, Yeoman powers the tooling behind popular open-source projects like <a href="https://github.com/yeoman/generator-angular">Angular</a>, can scaffold out <a href="https://github.com/yeoman/generator-jquery">jQuery plugins</a>, full-stack solutions with <a href="https://github.com/hoodiehq/generator-hoodie">Hood.ie</a> and <a href="https://github.com/petecoop/generator-express">Express</a> and is now even used to create complete <a href="https://github.com/wesleytodd/YeoPress">Wordpress</a> and <a href="https://github.com/robwierzbowski/generator-jekyllrb">Jekyll</a> sites.</p>
+
+<p>Yeoman can be used for applications of any size-- from <a href="http://gifalicious.net/">a gif maker</a> to <a href="https://www.slidecaptain.com/">a slide deck</a>, <a href="http://rdbk.net/">a news site</a> or even <a href="http://vim.rtorr.com/">a VIM cheat sheet</a>.</p>
+
+<p><em>Have your own? Leave us a message and show it off!</em></p>
+
+<h2 id="whats-next-for-yeoman">What's Next For Yeoman?</h2>
+
+<p>Yeoman will continue to grow. We have big plans that are all based around making your development workflow easier. Addy paints a lovely picture of the future in his video, <a href="https://www.youtube.com/watch?v=MTYZzs8ud3E">The Future Of Yeoman</a>.</p>
+
+<div class="video-container">
+<iframe width="640" height="480" src="//www.youtube.com/embed/MTYZzs8ud3E" frameborder="0" allowfullscreen></iframe>
+</div>
+
+<p>To recap, here are some of the things you can look forward to:</p>
+
+<ul>
+<li><p>Generators extending from other generators.</p></li>
+<li><p>Less scaffolding prompts. Your preferences will be remembered.</p></li>
+<li><p>Less flags. <code>yo</code> can be all you need to remember.</p></li>
+<li><p>Drop-in features. Need CoffeeScript?</p></li>
+</ul>
+
+<p>Many more improvements for generator authors also await. You can follow and contribute to the discussion about where we're headed at <a href="https://github.com/yeoman/yo.next">yo.next</a> on GitHub.</p>
+
+<h2 id="a-busy-year">A Busy Year</h2>
+
+<p>Since this time last year…</p>
+
+<ul>
+<li>Addy's family moved to London.</li>
+<li>Brian moved to California to work on Angular full-time.</li>
+<li>Pascal is going to make his big announcement next week or so.</li>
+<li>Stephen had a baby lady.</li>
+<li>Sindre got a <a href="https://si0.twimg.com/profile_images/378800000290468360/624c082d4ee22bd6806e58dfe7239fa1.jpeg">mustache</a>.</li>
+</ul>
+
+<p>…and yet here we are with the release of a massive project. How could we possibly have done this?</p>
+
+<p>You guys! This simply wouldn't have been possibly without the help of the enormous open source community. If you had a pull request merged, created an issue, or just made a suggestion, leave a comment! This day is all of ours!</p>
+
+<p>Here are some of us...</p>
+
+<p><img alt="Addy, Brian, and Sindre" src="http://i.imgur.com/MoBqhEQ.png"></p>
+
+<p>...but, thank you from all of us.</p>
+
+<p>Stephen Sawchuk { <a href="https://twitter.com/stephenplusplus">@stephenplusplus</a> },
+<br>Addy Osmani { <a href="https://twitter.com/addyosmani">@addyosmani</a> },
+<br>Sindre Sorhus { <a href="https://twitter.com/sindresorhus">@sindresorhus</a> },
+<br>Brian Ford { <a href="https://twitter.com/briantford">@briantford</a> },
+<br>Pascal Hartig { <a href="https://twitter.com/passy">@passy</a> },
+<br>Paul Irish { <a href="https://twitter.com/paul_irish">@paul_irish</a> },
+<br>Frederick Ros { <a href="https://twitter.com/sl33p3r">@sl33p3r</a> },
+<br>Mickael Daniel { <a href="https://twitter.com/mklabs">@mklabs</a> },
+<br>Eric Bidelman { <a href="https://twitter.com/ebidel">@ebidel</a> }</p>
+
+<p>and the rest of the <a href="https://github.com/orgs/yeoman/people">Yeoman</a> team.</p>
+
+  </div>
+
+  <hr>
+
+  <a href="blog">« View More Posts</a>
+</section>
+
+        
+
+        
+      </section>
+    </article>
+  </div>
+</div>
+
+    
+
+    
+    
+<footer class="SiteFooter">
+  <ul class="SiteFooter-links">
+    <li>
+      <a href="https://twitter.com/ibmblockchain" class="icon">
+        <img src="assets/img/social-twitter.svg" class="SiteFooter-icon" alt="Twitter">
+      </a>
+    </li>
+    <li>
+      <a href="https://github.ibm.com/Blockchain-WW-Labs/Concerto/" class="icon">
+        <img src="assets/img/social-github.svg" class="SiteFooter-icon" alt="Github">
+      </a>
+    </li>
+    <li>
+      <a href="/blog/atom.xml" class="icon">
+        <img src="assets/img/social-feed.svg" class="SiteFooter-icon" alt="Feed">
+      </a>
+    </li>
+    <li class="mobile-ln">
+    </li>
+<li>
+      <a href="https://pages.github.ibm.com/Blockchain-WW-Labs/Concerto/jsdoc/develop/index.html" class="SiteFooter-button SiteFooter-button--light">APIs</a>
+    </li>
+  </ul>
+</footer><!-- /.footer-links -->
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>
+
+<script src="assets/js/libs/prettify.js"></script>
+<script src="assets/js/script.js"></script>
+
+
+
+<script>
+  // $script.js - github.com/ded/script.js
+  (function(a,b,c){typeof c["module"]!="undefined"&&c.module.exports?c.module.exports=b():typeof c["define"]!="undefined"&&c["define"]=="function"&&c.define.amd?define(a,b):c[a]=b()})("$script",function(){function p(a,b){for(var c=0,d=a.length;c<d;++c)if(!b(a[c]))return j;return 1}function q(a,b){p(a,function(a){return!b(a)})}function r(a,b,i){function o(a){return a.call?a():d[a]}function t(){if(!--n){d[m]=1,l&&l();for(var a in f)p(a.split("|"),o)&&!q(f[a],o)&&(f[a]=[])}}a=a[k]?a:[a];var j=b&&b.call,l=j?b:i,m=j?a.join(""):b,n=a.length;return setTimeout(function(){q(a,function(a){if(h[a])return m&&(e[m]=1),h[a]==2&&t();h[a]=1,m&&(e[m]=1),s(!c.test(a)&&g?g+a+".js":a,t)})},0),r}function s(c,d){var e=a.createElement("script"),f=j;e.onload=e.onerror=e[o]=function(){if(e[m]&&!/^c|loade/.test(e[m])||f)return;e.onload=e[o]=null,f=1,h[c]=2,d()},e.async=1,e.src=c,b.insertBefore(e,b.firstChild)}var a=document,b=a.getElementsByTagName("head")[0],c=/^https?:\/\//,d={},e={},f={},g,h={},i="string",j=!1,k="push",l="DOMContentLoaded",m="readyState",n="addEventListener",o="onreadystatechange";return!a[m]&&a[n]&&(a[n](l,function t(){a.removeEventListener(l,t,j),a[m]="complete"},j),a[m]="loading"),r.get=s,r.order=function(a,b,c){(function d(e){e=a.shift(),a.length?r(e,d):r(e,b,c)})()},r.path=function(a){g=a},r.ready=function(a,b,c){a=a[k]?a:[a];var e=[];return!q(a,function(a){d[a]||e[k](a)})&&p(a,function(a){return d[a]})?b():!function(a){f[a]=f[a]||[],f[a][k](b),c&&c(e)}(a.join("|")),r},r},this)
+  var _gaq=[
+    ['_setAccount','100000-1'],
+    ['_setDomainName', '.ibm.com'],
+    ['_trackPageview'],['_trackPageLoadTime']
+  ];
+  $script('http://www.google-analytics.com/ga.js');
+  $script('https://apis.google.com/js/plusone.js');
+  $script("//platform.twitter.com/widgets.js");
+</script>
+
+    
+  </div>
+</body>
+</html>

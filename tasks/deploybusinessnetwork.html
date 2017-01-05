@@ -1,0 +1,251 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  
+    <title>Task - Deploy a Business Network | IBM Blockchain Framework</title>
+  
+  <meta name="viewport" content="width=device-width">
+  <link rel="icon" type="image/x-icon" href="/favicon.ico">
+
+  <meta name="google-site-verification" content="fBQRJ6h7MV7_TJ7grbgq4P-d-07NRfDWPe4pqEEoH5w">
+
+  <link href="//fonts.googleapis.com/css?family=Roboto+Slab:400,700%7CRoboto:400,700,700italic,400italic" rel="stylesheet" type="text/css">
+
+
+  
+    <link href="assets/css/normalize.css" rel="stylesheet">
+    <link href="assets/css/main.css" rel="stylesheet">
+    <link href="assets/css/footer.css" rel="stylesheet">
+    <link href="assets/css/prettify.css" rel="stylesheet">
+  
+
+  
+
+  <link href="/blog/atom.xml" type="application/atom+xml" rel="alternate" title="Concerto Blog Atom Feed">
+</head>
+
+<body class="">
+
+  
+  
+
+
+
+
+<header class="page-header">
+  <div class="container">
+    <div class="mobile-bar">
+      <h1 class="logo">
+        <a href="/Blockchain-WW-Labs/Concerto/index.html"><img src="/Blockchain-WW-Labs/Concerto/assets/img/logo.png" alt=""></a>
+      </h1>
+      <button class="mobile-menu-toggle ir">open</button>
+    </div>
+    <nav class="main-menu">
+      <ul class="main-nav">
+        <li>
+          <a  href="/Blockchain-WW-Labs/Concerto/overview/overview.html" >Overview</a>
+        </li>
+        <li>
+          <a  href="/Blockchain-WW-Labs/Concerto/start/getting-started.html" >Getting Started</a>
+        </li>
+        <li>
+          <a  href="/Blockchain-WW-Labs/Concerto/concepts/" >Concepts</a>
+          <ul>
+<li><a  href="/Blockchain-WW-Labs/Concerto/concepts/businessnetwork.html" >Business Network</a></li>
+<li><a  href="/Blockchain-WW-Labs/Concerto/concepts/businessnetworkdefinition.html" >Business Network Definition</a></li>
+<li><a  href="/Blockchain-WW-Labs/Concerto/concepts/participantsandidentities.html" >Participants and Identities</a></li>
+</ul>
+
+        </li>
+        <li>
+          <a  href="/Blockchain-WW-Labs/Concerto/tasks/" >Tasks</a>
+          <ul>
+<li><a  href="/Blockchain-WW-Labs/Concerto/tasks/prerequisites.html" >Installing Pre-requisites</a></li>
+<li><a  href="/Blockchain-WW-Labs/Concerto/tasks/deploybusinessnetwork.html" >Deploy Business Network</a></li>
+<li><a  href="/Blockchain-WW-Labs/Concerto/tasks/createconnectionprofile.html" >Create Connection Profile</a></li>
+<li><a  href="/Blockchain-WW-Labs/Concerto/tasks/bnd-define.html" >Create a Business Network Definition</a></li>
+<li><a  href="/Blockchain-WW-Labs/Concerto/tasks/bnd-publish.html" >Publish a Business Network Definition</a></li>
+<li><a  href="/Blockchain-WW-Labs/Concerto/tasks/genapp.html" >Generating an Application</a></li>
+<li><a  href="/Blockchain-WW-Labs/Concerto/tasks/model-define.html" >Create a Business Domain Model</a></li>
+<li><a  href="/Blockchain-WW-Labs/Concerto/tasks/model-publish.html" >Publish a Business Domain Model</a></li>
+<li><a  href="/Blockchain-WW-Labs/Concerto/tasks/runtime-start.html" >Start a Fabric Runtime</a></li>
+<li><a  href="/Blockchain-WW-Labs/Concerto/tasks/testing.html" >Test a Business Network Definition</a></li>
+<li><a  href="/Blockchain-WW-Labs/Concerto/tasks/runtime-update.html" >Update a Business Network Definition on Fabric</a></li>
+<li><a  href="/Blockchain-WW-Labs/Concerto/tasks/participant-add.html" >Add a Participant</a></li>
+<li><a  href="/Blockchain-WW-Labs/Concerto/tasks/identity-issue.html" >Issue an Identity for a Participant</a></li>
+<li><a  href="/Blockchain-WW-Labs/Concerto/tasks/identity-revoke.html" >Revoke an Identity for a Participant</a></li>
+<li><a  href="/Blockchain-WW-Labs/Concerto/tasks/current-participant.html" >Implementing access control using the current Participant</a></li>
+<li><a  href="/Blockchain-WW-Labs/Concerto/tasks/diagnostics.html" >Diagnosing Problems</a></li>
+</ul>
+
+        </li>
+        <li>
+          <a  href="/Blockchain-WW-Labs/Concerto/reference/" >Reference</a>
+          <ul>
+<li><a  href="/Blockchain-WW-Labs/Concerto/reference/MeetTheModules.html" >Meet the Modules</a></li>
+<li><a  href="/Blockchain-WW-Labs/Concerto/reference/platforms.html" >Supported Platforms</a></li>
+<li><a  href="/Blockchain-WW-Labs/Concerto/reference/cto_language.html" >Concerto Modeling Language</a></li>
+<li><a  href="/Blockchain-WW-Labs/Concerto/reference/connectionprofile.html" >Connection Profile</a></li>
+<li><a  href="/Blockchain-WW-Labs/Concerto/reference/js_scripts.html" >Transaction Processor Functions</a></li>
+<li><a  href="/Blockchain-WW-Labs/Concerto/reference/commands.html" >Concerto Command Line</a></li>
+<li><a  href="/Blockchain-WW-Labs/Concerto/reference/concerto.generator.tests.html" >Concerto Generator</a></li>
+<li><a  href="/Blockchain-WW-Labs/Concerto/reference/concerto.participant.add.html" >Concerto CLI Add Participant</a></li>
+<li><a  href="/Blockchain-WW-Labs/Concerto/reference/concerto.identity.issue.html" >Concerto CLI Issue Identity</a></li>
+<li><a  href="/Blockchain-WW-Labs/Concerto/reference/concerto.identity.revoke.html" >Concerto CLI Revoke Identity</a></li>
+<li><a target='_blank' href="/Blockchain-WW-Labs/Concerto/jsdoc/develop/index.html" >API Documentation</a></li>
+<li><a  href="/Blockchain-WW-Labs/Concerto/reference/glossary.html" >Glossary</a></li>
+</ul>
+
+        </li>
+        <li>
+          <a  href="/Blockchain-WW-Labs/Concerto/support/index.html" >Support</a>
+        </li>
+      </ul>
+    </nav>
+  </div><!-- /.container -->
+</header><!-- /.page-header -->
+
+  
+
+  <div class="SiteWrapper">
+    
+      <div id="content">
+  <h2 class="page-title">
+    <span class="container">Task - Deploy a Business Network</span>
+  </h2>
+
+  <div class="container clearfix has-sidebar">
+    
+      <nav class="context-nav">
+        
+        
+          <ul>
+<li><a  href="/Blockchain-WW-Labs/Concerto/tasks/prerequisites.html" >Installing Pre-requisites</a></li>
+<li><a  href="/Blockchain-WW-Labs/Concerto/tasks/deploybusinessnetwork.html" >Deploy Business Network</a></li>
+<li><a  href="/Blockchain-WW-Labs/Concerto/tasks/createconnectionprofile.html" >Create Connection Profile</a></li>
+<li><a  href="/Blockchain-WW-Labs/Concerto/tasks/bnd-define.html" >Create a Business Network Definition</a></li>
+<li><a  href="/Blockchain-WW-Labs/Concerto/tasks/bnd-publish.html" >Publish a Business Network Definition</a></li>
+<li><a  href="/Blockchain-WW-Labs/Concerto/tasks/genapp.html" >Generating an Application</a></li>
+<li><a  href="/Blockchain-WW-Labs/Concerto/tasks/model-define.html" >Create a Business Domain Model</a></li>
+<li><a  href="/Blockchain-WW-Labs/Concerto/tasks/model-publish.html" >Publish a Business Domain Model</a></li>
+<li><a  href="/Blockchain-WW-Labs/Concerto/tasks/runtime-start.html" >Start a Fabric Runtime</a></li>
+<li><a  href="/Blockchain-WW-Labs/Concerto/tasks/testing.html" >Test a Business Network Definition</a></li>
+<li><a  href="/Blockchain-WW-Labs/Concerto/tasks/runtime-update.html" >Update a Business Network Definition on Fabric</a></li>
+<li><a  href="/Blockchain-WW-Labs/Concerto/tasks/participant-add.html" >Add a Participant</a></li>
+<li><a  href="/Blockchain-WW-Labs/Concerto/tasks/identity-issue.html" >Issue an Identity for a Participant</a></li>
+<li><a  href="/Blockchain-WW-Labs/Concerto/tasks/identity-revoke.html" >Revoke an Identity for a Participant</a></li>
+<li><a  href="/Blockchain-WW-Labs/Concerto/tasks/current-participant.html" >Implementing access control using the current Participant</a></li>
+<li><a  href="/Blockchain-WW-Labs/Concerto/tasks/diagnostics.html" >Diagnosing Problems</a></li>
+</ul>
+
+        
+      </nav>
+    
+
+    <article class="main">
+      
+
+      <section class="content-chunk">
+        
+          <h1 id="deploying-a-business-network">Deploying a Business Network</h1>
+
+<p>A business network is deployed using the <code>concerto network deploy</code> command.</p>
+
+<h2 id="procedure">Procedure</h2>
+
+<ol>
+<li><p>Before deploying a business network, a <a href="">Business Network Definition</a> is needed as a <code>zip</code> file with the following structure:</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text"><span></span>BusinessNetworkArchive.zip
+├── lib
+│   └── mozart.cto.js
+├── models
+│   └── mozart.cto
+└── package.json
+</code></pre></div></li>
+</ol>
+<div class="highlight"><pre><code class="language-text" data-lang="text"><span></span>-   **lib** contains all of the transactions processor functions
+-   **models** contains all of the model files written in the [Concerto Language](../reference/cto_language.html).
+-   **package.json** is required, and is used to create the [Business Network Definition](../reference/businessnetworkdefinition.html)&#39;s identifier
+
+You can use the `concerto archive` command to create an archive with the correct format.
+
+**NOTE**: *Do not zip a a folder containing **lib**, **models**, and **package.json** to create an Business Network Archive, zip the contents themselves*
+</code></pre></div>
+<ol>
+<li><p>Start <a href="">Hyperledger Fabric Peer and Membership Service</a></p></li>
+<li><p><a href="createconnectionprofile.html">Create a Connection Profile</a> or do <em>not</em> use <code>-p</code> and allow Concerto to create a <code>Default Connection Profile</code> for you.</p></li>
+<li><p>Enter the command on a single line. For example:</p>
+
+<p><code>concerto network deploy -a &lt;BusinessNetworkDefinition&gt;.zip -i &lt;Your EnrollmentID&gt;</code></p></li>
+<li><p>Enter your Enrollment Secret when prompted.</p>
+
+<p><code>prompt: What is the enrollment secret of the user?:</code></p></li>
+<li><p>When you see</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text"><span></span>Deploying business network definition. This may take a little time.
+Command completed successfully.
+</code></pre></div>
+<p>you have successfully deployed a business network!</p></li>
+</ol>
+
+        
+
+        
+      </section>
+    </article>
+  </div>
+</div>
+
+    
+
+    
+    
+<footer class="SiteFooter">
+  <ul class="SiteFooter-links">
+    <li>
+      <a href="https://twitter.com/ibmblockchain" class="icon">
+        <img src="assets/img/social-twitter.svg" class="SiteFooter-icon" alt="Twitter">
+      </a>
+    </li>
+    <li>
+      <a href="https://github.ibm.com/Blockchain-WW-Labs/Concerto/" class="icon">
+        <img src="assets/img/social-github.svg" class="SiteFooter-icon" alt="Github">
+      </a>
+    </li>
+    <li>
+      <a href="/blog/atom.xml" class="icon">
+        <img src="assets/img/social-feed.svg" class="SiteFooter-icon" alt="Feed">
+      </a>
+    </li>
+    <li class="mobile-ln"></li>
+    <li>
+      <a href="https://pages.github.ibm.com/Blockchain-WW-Labs/Concerto/jsdoc/develop/index.html" class="SiteFooter-button SiteFooter-button--light">APIs</a>
+    </li>
+  </ul>
+</footer><!-- /.footer-links -->
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>
+
+<script src="assets/js/libs/prettify.js"></script>
+<script src="assets/js/script.js"></script>
+
+
+
+<script>
+  // $script.js - github.com/ded/script.js
+  (function(a,b,c){typeof c["module"]!="undefined"&&c.module.exports?c.module.exports=b():typeof c["define"]!="undefined"&&c["define"]=="function"&&c.define.amd?define(a,b):c[a]=b()})("$script",function(){function p(a,b){for(var c=0,d=a.length;c<d;++c)if(!b(a[c]))return j;return 1}function q(a,b){p(a,function(a){return!b(a)})}function r(a,b,i){function o(a){return a.call?a():d[a]}function t(){if(!--n){d[m]=1,l&&l();for(var a in f)p(a.split("|"),o)&&!q(f[a],o)&&(f[a]=[])}}a=a[k]?a:[a];var j=b&&b.call,l=j?b:i,m=j?a.join(""):b,n=a.length;return setTimeout(function(){q(a,function(a){if(h[a])return m&&(e[m]=1),h[a]==2&&t();h[a]=1,m&&(e[m]=1),s(!c.test(a)&&g?g+a+".js":a,t)})},0),r}function s(c,d){var e=a.createElement("script"),f=j;e.onload=e.onerror=e[o]=function(){if(e[m]&&!/^c|loade/.test(e[m])||f)return;e.onload=e[o]=null,f=1,h[c]=2,d()},e.async=1,e.src=c,b.insertBefore(e,b.firstChild)}var a=document,b=a.getElementsByTagName("head")[0],c=/^https?:\/\//,d={},e={},f={},g,h={},i="string",j=!1,k="push",l="DOMContentLoaded",m="readyState",n="addEventListener",o="onreadystatechange";return!a[m]&&a[n]&&(a[n](l,function t(){a.removeEventListener(l,t,j),a[m]="complete"},j),a[m]="loading"),r.get=s,r.order=function(a,b,c){(function d(e){e=a.shift(),a.length?r(e,d):r(e,b,c)})()},r.path=function(a){g=a},r.ready=function(a,b,c){a=a[k]?a:[a];var e=[];return!q(a,function(a){d[a]||e[k](a)})&&p(a,function(a){return d[a]})?b():!function(a){f[a]=f[a]||[],f[a][k](b),c&&c(e)}(a.join("|")),r},r},this)
+  var _gaq=[
+    ['_setAccount','100000-1'],
+    ['_setDomainName', '.ibm.com'],
+    ['_trackPageview'],['_trackPageLoadTime']
+  ];
+  $script('http://www.google-analytics.com/ga.js');
+  $script('https://apis.google.com/js/plusone.js');
+  $script("//platform.twitter.com/widgets.js");
+</script>
+
+    
+  </div>
+</body>
+</html>

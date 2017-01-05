@@ -1,0 +1,26 @@
+@startuml
+!include ./assetregistry.uml
+!include ./factory.uml
+!include ./modelmanager.uml
+!include ./modelregistry.uml
+!include ./securitycontext.uml
+!include ./serializer.uml
+!include ./util.uml
+!include ./globalize.uml
+class Concerto{
+   + void constructor(Object,boolean)
+   + string getVersion()
+   + Promise getAllAssetRegistries(SecurityContext)
+   + Promise getAssetRegistry(SecurityContext,string)
+   + Promise addAssetRegistry(SecurityContext,string,string)
+   + Promise getModelRegistry(SecurityContext)
+   + Factory getFactory(SecurityContext)
+   + ModelManager getModelManager(SecurityContext)
+   + Serializer getSerializer(SecurityContext)
+   + Promise connect(Object,string,string,string)
+   + Promise login(string,string)
+   + Promise deploy(SecurityContext)
+   + Promise loadModels(SecurityContext)
+   + Promise saveModels(SecurityContext)
+}
+@enduml

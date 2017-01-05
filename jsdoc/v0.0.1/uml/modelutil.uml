@@ -1,0 +1,8 @@
+@startuml
+class ModelUtil{
+   - string getShortName(string)
+   - string getNamespace(string)
+   - boolean isPrimitiveType(string)
+   - string capitalizeFirstLetter(string)
+}
+@enduml

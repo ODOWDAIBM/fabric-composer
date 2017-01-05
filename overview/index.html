@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta charset="utf-8">
+
+  
+    <title>Concerto - Overview | IBM Blockchain Framework</title>
+  
+  <meta name="viewport" content="width=device-width">
+  <link rel="icon" type="image/x-icon" href="/favicon.ico">
+
+  <meta name="google-site-verification" content="fBQRJ6h7MV7_TJ7grbgq4P-d-07NRfDWPe4pqEEoH5w">
+
+  <link href="//fonts.googleapis.com/css?family=Roboto+Slab:400,700%7CRoboto:400,700,700italic,400italic" rel="stylesheet" type="text/css">
+
+
+  
+    <link href="assets/css/normalize.css" rel="stylesheet">
+    <link href="assets/css/main.css" rel="stylesheet">
+    <link href="assets/css/footer.css" rel="stylesheet">
+    <link href="assets/css/prettify.css" rel="stylesheet">
+  
+
+  
+
+  <link href="/blog/atom.xml" type="application/atom+xml" rel="alternate" title="Concerto Blog Atom Feed">
+</head>
+
+<body class="">
+
+  
+  
+
+
+
+
+<header class="page-header">
+  <div class="container">
+    <div class="mobile-bar">
+      <h1 class="logo">
+        <a href="/Blockchain-WW-Labs/Concerto/index.html"><img src="/Blockchain-WW-Labs/Concerto/assets/img/logo.png" alt="Concerto - Solution Framework"></a>
+      </h1>
+      <button class="mobile-menu-toggle ir">open</button>
+    </div>
+    <nav class="main-menu">
+      <ul class="main-nav">
+        <li>
+          <a href="/Blockchain-WW-Labs/Concerto/overview/overview.html">Overview</a>
+        </li>
+        <li>
+          <a href="/Blockchain-WW-Labs/Concerto/start/getting-started.html">Getting Started</a>
+        </li>
+        <li>
+          <a href="/Blockchain-WW-Labs/Concerto/concepts/">Concepts</a>
+          <ul>
+<li><a href="/Blockchain-WW-Labs/Concerto/concepts/businessnetwork.html">Business Network</a></li>
+<li><a href="/Blockchain-WW-Labs/Concerto/concepts/businessnetworkdefinition.html">Business Network Definition</a></li>
+</ul>
+
+        </li>
+        <li>
+          <a href="/Blockchain-WW-Labs/Concerto/tasks/">Tasks</a>
+          <ul>
+<li><a href="/Blockchain-WW-Labs/Concerto/tasks/prerequisites.html">Installing Pre-requisites</a></li>
+<li><a href="/Blockchain-WW-Labs/Concerto/tasks/createconnectionprofile.html">Create Connection Profile</a></li>
+<li><a href="/Blockchain-WW-Labs/Concerto/tasks/deploybusinessnetwork.html">Deploy Business Network</a></li>
+</ul>
+
+        </li>
+        <li>
+          <a href="/Blockchain-WW-Labs/Concerto/reference/">Reference</a>
+          <ul>
+<li><a href="/Blockchain-WW-Labs/Concerto/reference/MeetTheModules.html">Meet the Modules</a></li>
+<li><a href="/Blockchain-WW-Labs/Concerto/reference/scenarioCommandWalkthrough.html">Concerto Scenario Walkthrough</a></li>
+<li><a href="/Blockchain-WW-Labs/Concerto/jsdoc/develop/index.html">Concerto JSDocs</a></li>
+<li><a href="/Blockchain-WW-Labs/Concerto/reference/glossary.html">Glossary</a></li>
+</ul>
+
+        </li>
+        <li>
+          <a href="/Blockchain-WW-Labs/Concerto/support/index.html">Support</a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+<!-- /.container -->
+</header><!-- /.page-header -->
+
+  
+
+  <div class="SiteWrapper">
+    
+      <div id="content">
+  <h2 class="page-title">
+    <span class="container">Concerto - Overview</span>
+  </h2>
+
+  <div class="container clearfix has-sidebar">
+    
+      <nav class="context-nav">
+        
+        
+          <ul>
+<li><a href="/Blockchain-WW-Labs/Concerto/overview/overview.html">Overview</a></li>
+</ul>
+
+        
+      </nav>
+    
+
+    <article class="main">
+      
+
+      <section class="content-chunk">
+        
+          <h2 id="overview">Overview</h2>
+
+<p>IBM Concerto is an application development framework for building blockchain
+applications based on Hyperledger.</p>
+
+<p>The major components of Concerto are:</p>
+
+<ol>
+<li>The Concerto language for describing the structure of resources (assets, participants
+and transactions) that participate in a blockchain-mediated business network.</li>
+<li>Javascript APIs to query, create, update and delete resources and submit transactions
+from client applications. Concerto resources are stored on the blockchain.</li>
+<li>Javascript transaction processor functions that runs on Hyperledger when transactions are
+submitted for processing. These functions may update the state of resources
+stored on the blockchain via server-side Concerto APIs.</li>
+<li>The Composer utility and tools to interactively test Concerto-based
+solutions.</li>
+</ol>
+
+<p><img src="assets/img/concerto_stack.png" alt="Concerto architecture stack"></p>
+
+<h2 id="concerto-language">Concerto Language</h2>
+
+<p>The Concerto language is a strongly-typed object-oriented modeling language.
+It is used to describe the structure of resources as well as to write
+transaction processor functions that are invoked on the server when transactions are submitted.</p>
+
+<p>A Concerto file is composed of the following elements:</p>
+
+<ol>
+<li>A single namespace. All resource declarations within the file are implicitly
+in this namespace.</li>
+<li>Optional import declarations that imported resources from other namespaces.</li>
+<li>A set of resource definitions (see below).</li>
+</ol>
+
+<h3 id="declarations-of-enumerated-types">Declarations of enumerated types</h3>
+
+<div class="highlight"><pre><code class="language-text" data-lang="text"><span></span>    ```
+    /**
+     * The types of animals that could be moved
+     */
+    enum AnimalType {
+      o SHEEP_GOAT
+      o CATTLE
+      o PIG
+      o DEER_OTHER
+    }
+    ```
+</code></pre></div>
+
+<h3 id="declarations-of-assets-participants-transactions">Declarations of Assets, Participants, Transactions</h3>
+
+<p>Assets, Participants and Transactions are class definitions. The
+concepts of Asset, Participant and Transaction may be considered to be different
+stereotypes of the class type.</p>
+
+<p>A class in Concerto is referred to as a Resource Definition. Therefore an
+Asset (instance) has-a Asset Definition.</p>
+
+<p>A resource definition has the following properties:</p>
+
+<ol>
+<li>A name</li>
+<li>A namespace defined by the namespace of its parent file</li>
+<li>An identifying field. For example, the Vehicle asset might be identified by
+the vin field. Identifying fields must be Strings.</li>
+<li>An optional super-type, which the resource definition extends.</li>
+<li>An optional 'abstract' declaration, to indicate that this type cannot be created</li>
+<li>A set of named fields (data owned by the resource, using a has-a relationship)</li>
+<li>
+<p>A set of relationships to other concerto types that are not owned by the resource
+but that may be referenced from the resource. Relationships are unidirectional.</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text"><span></span>/**
+ * A Field asset. A Field is related to a list of animals
+ */
+asset Field identified by fieldId {
+  o String fieldId
+  o String name
+  --&gt; Animal[] animals
+}
+</code></pre></div>
+<div class="highlight"><pre><code class="language-text" data-lang="text"><span></span>/**
+ * A Farmer participant
+ */
+participant Farmer identified by farmerId {
+    o String farmerId
+    o String firstName
+    o String lastName
+    o String address1
+    o String address2
+    o String county
+    o String postcode
+}
+</code></pre></div>
+<div class="highlight"><pre><code class="language-text" data-lang="text"><span></span>/**
+ * An abstract transaction type for animal movements
+ */
+abstract transaction AnimalMovement identified by transactionId {
+  o String transactionId
+    --&gt; Animal animal
+    --&gt; Holding from
+    --&gt; Holding to
+}
+</code></pre></div>
+<div class="highlight"><pre><code class="language-text" data-lang="text"><span></span>/**
+ * A transaction type for an animal leaving a farm
+ */
+transaction AnimalMovementDeparture extends AnimalMovement {
+}
+</code></pre></div>
+</li>
+</ol>
+
+<h3 id="primitive-types">Primitive types</h3>
+
+<p>Concerto resources are defined in terms of the following primitive types:</p>
+
+<ol>
+<li>String : a UTF8 encoded String</li>
+<li>Double : a double precision 64 bit numeric value</li>
+<li>Integer : a 32 bit signed whole number</li>
+<li>Long : a 64 bit signed whole number</li>
+<li>DateTime : an ISO-8601 compatible time instance, with optional time zone
+and UTZ offset</li>
+<li>Boolean : a Boolean value, either true or false.</li>
+</ol>
+
+<h3 id="arrays">Arrays</h3>
+
+<p>All types in Concerto may be declared as arrays using the [] notation. Hence</p>
+
+<div class="highlight"><pre><code class="language-text" data-lang="text"><span></span>`Integer[] integerArray`
+</code></pre></div>
+
+<p>Is an array of Integers stored in a field called 'integerArray'. While</p>
+
+<div class="highlight"><pre><code class="language-text" data-lang="text"><span></span>`--&gt; Animal[] incoming`
+</code></pre></div>
+
+<p>Is an array of relationships to the Animal type, stored in t a field called
+'incoming'.</p>
+
+<h3 id="relationships">Relationships</h3>
+
+<p>A relationship in the Concerto language is a tuple composed of:</p>
+
+<ol>
+<li>The namespace of the type being referenced</li>
+<li>The type name of the type being referenced</li>
+<li>The identifier of the instance being referenced</li>
+</ol>
+
+<p>Hence a relationship could be to:
+    org.acme.Vehicle/123456</p>
+
+<p>This would be a relationship to the Vehicle type declared in the org.acme
+namespace with the identifier 123456.</p>
+
+<p>Relationships must be <em>resolved</em> to retrieve an instance of the object being
+referenced. The act of resolution may result in null, if the object no longer
+exists or the information in the relationship is invalid.</p>
+
+<p>NOT YET IMPLEMENTED: relationship resolution.</p>
+
+<h3 id="functions">Functions</h3>
+
+<p>A Concerto file may contain utility and transaction processing functions,
+written in the Javascript language. These functions are automatically invoked
+by the Concerto framework chaincode when transactions are submitted for processing.</p>
+
+<p>Example:</p>
+
+<div class="highlight"><pre><code class="language-text" data-lang="text"><span></span>```
+/**
+ * A transaction processor for AnimalMovementDeparture
+ */
+function onAnimalMovementDeparture(movementDeparture) {
+  // mark the animal as IN_TRANSIT
+  movementDeparture.animal.resolve().movementStatus = 'IN_TRANSIT';
+
+  // tell the 'to' Holder the animal is incoming
+  movementDeparture.to.resolve().incoming.add(animalMovement.animal);
+
+  // remove the animal from the field
+  movementDeparture.animal.resolve().location.remove(animalMovement.animal);
+
+  // set the animal location to null
+  movementDeparture.animal.resolve().location = null;
+}
+```
+</code></pre></div>
+
+<p>The code above declares a function that processes AnimalMovementDeparture
+transactions. The function must be named using the convention "on" + the
+type of the transaction. The transaction type must be declared in the
+current concerto file, or must be an imported type.</p>
+
+<p>Any functions whose names do not start with the 'on' prefix are utility
+functions that may be invoked from transaction processing functions.</p>
+
+<p>STATUS: functions may be declared in a Concerto file but are not yet executed
+on the server. The API calls that are available to functions (and the implied)
+execution environment is still TBD.</p>
+
+<h2 id="start-contributing-to-the-concerto-project">Start contributing to the Concerto project</h2>
+
+<p>The <a href="../contributing/index.html">following guide</a> will walk you through getting started as a contributor to the Concerto project.</p>
+
+<h2 id="installation">Installation</h2>
+
+<p>Releases of Concerto are currently pushed to a private npm registry, that is
+hosted by the IBM Whitewater team. You must authenticate to that private npm
+registry with your w3id before you can install the Concerto module:</p>
+
+<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span></span>    $ npm login --registry<span class="o">=</span>https://npm-registry.whitewater.ibm.com --scope<span class="o">=</span>@ibm
+    Username: fredbloggs
+    Password: xxxxxxxx
+    Email: <span class="o">(</span>this IS public<span class="o">)</span> fredbloggs@xx.ibm.com
+    Logged in as fredbloggs to scope @ibm on https://npm-registry.whitewater.ibm.com/.
+</code></pre></div>
+
+<p>It will ask you for a name (w3id without the @xx.ibm.com), password (w3 password),
+and e-mail (w3id). After you have logged in, you must complete the two stage
+w3id authentication process. When you run an npm command, it will fail and give
+you a link to access in a browser:</p>
+
+<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span></span>    $ npm install @ibm/ibm-concerto
+    npm ERR! Linux <span class="m">4</span>.4.0-36-generic
+    npm ERR! argv <span class="s2">"/usr/bin/nodejs"</span> <span class="s2">"/usr/bin/npm"</span> <span class="s2">"install"</span> <span class="s2">"@ibm/ibm-concerto"</span>
+    npm ERR! node v6.5.0
+    npm ERR! npm  v3.10.3
+    npm ERR! code E401
+
+    npm ERR! visit https://github.ibm.com/login/oauth/authorize to validate your session : @ibm/ibm-concerto
+</code></pre></div>
+
+<p>Once you have clicked the link and completed the two stage w3id authentication
+process, you can re-run the npm command:</p>
+
+<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span></span>    npm install @ibm/ibm-concerto --save
+</code></pre></div>
+
+<h2 id="usage">Usage</h2>
+
+<p>Please see the Mozart and Handel projects for typical usage. Mozart uses
+  Concerto from an Express-based Node.js application while Handel uses it from
+  a command line Node.js application.</p>
+
+<h2 id="tests">Tests</h2>
+
+<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span></span>  npm <span class="nb">test</span>
+</code></pre></div>
+
+<h2 id="contributing">Contributing</h2>
+
+<p>To read more about the community and guidelines for submitting pull requests,
+please read the <a href="../contributing.html">Contributing document</a>.</p>
+
+<h2 id="release-history">Release History</h2>
+
+<ul>
+<li>0.0.1 Initial release</li>
+</ul>
+
+        
+
+        
+      </section>
+    </article>
+  </div>
+</div>
+
+    
+
+    
+    
+<footer class="SiteFooter">
+  <ul class="SiteFooter-links">
+    <li>
+      <a href="https://plus.google.com/101063139999404044459/posts" class="icon">
+        <img src="assets/img/social-gplus.svg" class="SiteFooter-icon" alt="Google+">
+      </a>
+    </li>
+    <li>
+      <a href="https://twitter.com/ibmblockchain" class="icon">
+        <img src="assets/img/social-twitter.svg" class="SiteFooter-icon" alt="Twitter">
+      </a>
+    </li>
+    <li>
+      <a href="https://github.ibm.com/Blockchain-WW-Labs/Concerto/" class="icon">
+        <img src="assets/img/social-github.svg" class="SiteFooter-icon" alt="Github">
+      </a>
+    </li>
+    <li>
+      <a href="/blog/atom.xml" class="icon">
+        <img src="assets/img/social-feed.svg" class="SiteFooter-icon" alt="Feed">
+      </a>
+    </li>
+    <li class="mobile-ln">
+    </li>
+<li>
+      <a href="https://pages.github.ibm.com/Blockchain-WW-Labs/Concerto/jsdoc/develop/index.html" class="SiteFooter-button SiteFooter-button--light">APIs</a>
+    </li>
+  </ul>
+</footer><!-- /.footer-links -->
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>
+
+<script src="assets/js/libs/prettify.js"></script>
+<script src="assets/js/script.js"></script>
+
+
+
+<script>
+  // $script.js - github.com/ded/script.js
+  (function(a,b,c){typeof c["module"]!="undefined"&&c.module.exports?c.module.exports=b():typeof c["define"]!="undefined"&&c["define"]=="function"&&c.define.amd?define(a,b):c[a]=b()})("$script",function(){function p(a,b){for(var c=0,d=a.length;c<d;++c)if(!b(a[c]))return j;return 1}function q(a,b){p(a,function(a){return!b(a)})}function r(a,b,i){function o(a){return a.call?a():d[a]}function t(){if(!--n){d[m]=1,l&&l();for(var a in f)p(a.split("|"),o)&&!q(f[a],o)&&(f[a]=[])}}a=a[k]?a:[a];var j=b&&b.call,l=j?b:i,m=j?a.join(""):b,n=a.length;return setTimeout(function(){q(a,function(a){if(h[a])return m&&(e[m]=1),h[a]==2&&t();h[a]=1,m&&(e[m]=1),s(!c.test(a)&&g?g+a+".js":a,t)})},0),r}function s(c,d){var e=a.createElement("script"),f=j;e.onload=e.onerror=e[o]=function(){if(e[m]&&!/^c|loade/.test(e[m])||f)return;e.onload=e[o]=null,f=1,h[c]=2,d()},e.async=1,e.src=c,b.insertBefore(e,b.firstChild)}var a=document,b=a.getElementsByTagName("head")[0],c=/^https?:\/\//,d={},e={},f={},g,h={},i="string",j=!1,k="push",l="DOMContentLoaded",m="readyState",n="addEventListener",o="onreadystatechange";return!a[m]&&a[n]&&(a[n](l,function t(){a.removeEventListener(l,t,j),a[m]="complete"},j),a[m]="loading"),r.get=s,r.order=function(a,b,c){(function d(e){e=a.shift(),a.length?r(e,d):r(e,b,c)})()},r.path=function(a){g=a},r.ready=function(a,b,c){a=a[k]?a:[a];var e=[];return!q(a,function(a){d[a]||e[k](a)})&&p(a,function(a){return d[a]})?b():!function(a){f[a]=f[a]||[],f[a][k](b),c&&c(e)}(a.join("|")),r},r},this)
+  var _gaq=[
+    ['_setAccount','UA-32956520-1'],
+    ['_setDomainName', '.concerto.io'],
+    ['_trackPageview'],['_trackPageLoadTime']
+  ];
+  $script('http://www.google-analytics.com/ga.js');
+  $script('https://apis.google.com/js/plusone.js');
+  $script("//platform.twitter.com/widgets.js");
+</script>
+
+    
+  </div>
+</body>
+</html>

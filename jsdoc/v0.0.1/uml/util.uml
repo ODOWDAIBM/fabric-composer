@@ -1,0 +1,9 @@
+@startuml
+!include ./securityexception.uml
+class Util{
+   + void securityCheck(SecurityContext)
+   + Promise queryChainCode(SecurityContext,string,string[])
+   + Promise invokeChainCode(SecurityContext,string,string[])
+   + Promise deployChainCode(SecurityContext,string,string,string[])
+}
+@enduml

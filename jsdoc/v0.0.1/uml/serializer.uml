@@ -1,0 +1,8 @@
+@startuml
+!include ./model/cobject.uml
+class Serializer{
+   + void constructor(Factory,ModelManager)
+   + string toJSON(CObject)
+   + CObject fromJSON(string)
+}
+@enduml

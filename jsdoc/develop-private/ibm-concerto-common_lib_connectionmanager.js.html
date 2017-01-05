@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
+	<title>IBM Concerto Source: ibm-concerto-common/lib/connectionmanager.js</title>
+
+	<!--[if lt IE 9]>
+	<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+	<link type="text/css" rel="stylesheet" href="styles/sunlight.default.css">
+
+	<link type="text/css" rel="stylesheet" href="styles/site.spacelab.css">
+
+</head>
+
+<body>
+
+<div class="navbar navbar-default navbar-fixed-top navbar-inverse">
+<div class="container">
+	<div class="navbar-header">
+		<a class="navbar-brand" href="index.html">IBM Concerto</a>
+		<button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#topNavigation">
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+        </button>
+	</div>
+	<div class="navbar-collapse collapse" id="topNavigation">
+		<ul class="nav navbar-nav">
+			
+			<li class="dropdown">
+				<a href="modules.list.html" class="dropdown-toggle" data-toggle="dropdown">Modules<b class="caret"></b></a>
+				<ul class="dropdown-menu ">
+					<li><a href="module-ibm-concerto-admin.html">ibm-concerto-admin</a></li><li><a href="module-ibm-concerto-client.html">ibm-concerto-client</a></li><li><a href="module-ibm-concerto-common.html">ibm-concerto-common</a></li><li><a href="module-ibm-concerto-runtime.html">ibm-concerto-runtime</a></li>
+				</ul>
+			</li>
+			
+			<li class="dropdown">
+				<a href="classes.list.html" class="dropdown-toggle" data-toggle="dropdown">Classes<b class="caret"></b></a>
+				<ul class="dropdown-menu ">
+					<li><a href="AssetRegistry.html">AssetRegistry</a></li><li><a href="Factory.html">Factory</a></li><li><a href="IdentityManager.html">IdentityManager</a></li><li><a href="module-ibm-concerto-admin.AdminConnection.html">ibm-concerto-admin.AdminConnection</a></li><li><a href="module-ibm-concerto-client.AssetRegistry.html">ibm-concerto-client.AssetRegistry</a></li><li><a href="module-ibm-concerto-client.BusinessNetworkConnection.html">ibm-concerto-client.BusinessNetworkConnection</a></li><li><a href="module-ibm-concerto-client.ParticipantRegistry.html">ibm-concerto-client.ParticipantRegistry</a></li><li><a href="module-ibm-concerto-client.Registry.html">ibm-concerto-client.Registry</a></li><li><a href="module-ibm-concerto-client.TransactionRegistry.html">ibm-concerto-client.TransactionRegistry</a></li><li><a href="module-ibm-concerto-common.AclFile.html">ibm-concerto-common.AclFile</a></li><li><a href="module-ibm-concerto-common.AclRule.html">ibm-concerto-common.AclRule</a></li><li><a href="module-ibm-concerto-common.APISignatureGenerator.html">ibm-concerto-common.APISignatureGenerator</a></li><li><a href="module-ibm-concerto-common.AssetDeclaration.html">ibm-concerto-common.AssetDeclaration</a></li><li><a href="module-ibm-concerto-common.BaseException.html">ibm-concerto-common.BaseException</a></li><li><a href="module-ibm-concerto-common.BusinessNetworkDefinition.html">ibm-concerto-common.BusinessNetworkDefinition</a></li><li><a href="module-ibm-concerto-common.ClassDeclaration.html">ibm-concerto-common.ClassDeclaration</a></li><li><a href="module-ibm-concerto-common.Connection.html">ibm-concerto-common.Connection</a></li><li><a href="module-ibm-concerto-common.ConnectionManager.html">ibm-concerto-common.ConnectionManager</a></li><li><a href="module-ibm-concerto-common.ConnectionProfileManager.html">ibm-concerto-common.ConnectionProfileManager</a></li><li><a href="module-ibm-concerto-common.ConnectionProfileStore.html">ibm-concerto-common.ConnectionProfileStore</a></li><li><a href="module-ibm-concerto-common.EnumDeclaration.html">ibm-concerto-common.EnumDeclaration</a></li><li><a href="module-ibm-concerto-common.EnumValueDeclaration.html">ibm-concerto-common.EnumValueDeclaration</a></li><li><a href="module-ibm-concerto-common.Factory.html">ibm-concerto-common.Factory</a></li><li><a href="module-ibm-concerto-common.Field.html">ibm-concerto-common.Field</a></li><li><a href="module-ibm-concerto-common.FileWriter.html">ibm-concerto-common.FileWriter</a></li><li><a href="module-ibm-concerto-common.FSConnectionProfileStore.html">ibm-concerto-common.FSConnectionProfileStore</a></li><li><a href="module-ibm-concerto-common.FunctionDeclaration.html">ibm-concerto-common.FunctionDeclaration</a></li><li><a href="module-ibm-concerto-common.GoLangVisitor.html">ibm-concerto-common.GoLangVisitor</a></li><li><a href="module-ibm-concerto-common.Identifiable.html">ibm-concerto-common.Identifiable</a></li><li><a href="module-ibm-concerto-common.IllegalModelException.html">ibm-concerto-common.IllegalModelException</a></li><li><a href="module-ibm-concerto-common.Introspector.html">ibm-concerto-common.Introspector</a></li><li><a href="module-ibm-concerto-common.JavaScriptParser.html">ibm-concerto-common.JavaScriptParser</a></li><li><a href="module-ibm-concerto-common.JSONGenerator.html">ibm-concerto-common.JSONGenerator</a></li><li><a href="module-ibm-concerto-common.JSONPopulator.html">ibm-concerto-common.JSONPopulator</a></li><li><a href="module-ibm-concerto-common.JSONSchemaVisitor.html">ibm-concerto-common.JSONSchemaVisitor</a></li><li><a href="module-ibm-concerto-common.JSONWriter.html">ibm-concerto-common.JSONWriter</a></li><li><a href="module-ibm-concerto-common.Logger.html">ibm-concerto-common.Logger</a></li><li><a href="module-ibm-concerto-common.LoopbackVisitor.html">ibm-concerto-common.LoopbackVisitor</a></li><li><a href="module-ibm-concerto-common.MemoryConnectionProfileStore.html">ibm-concerto-common.MemoryConnectionProfileStore</a></li><li><a href="module-ibm-concerto-common.ModelBinding.html">ibm-concerto-common.ModelBinding</a></li><li><a href="module-ibm-concerto-common.ModelFile.html">ibm-concerto-common.ModelFile</a></li><li><a href="module-ibm-concerto-common.ModelManager.html">ibm-concerto-common.ModelManager</a></li><li><a href="module-ibm-concerto-common.ModelUtil.html">ibm-concerto-common.ModelUtil</a></li><li><a href="module-ibm-concerto-common.Node.html">ibm-concerto-common.Node</a></li><li><a href="module-ibm-concerto-common.ParseException.html">ibm-concerto-common.ParseException</a></li><li><a href="module-ibm-concerto-common.ParticipantDeclaration.html">ibm-concerto-common.ParticipantDeclaration</a></li><li><a href="module-ibm-concerto-common.PlantUMLGenerator.html">ibm-concerto-common.PlantUMLGenerator</a></li><li><a href="module-ibm-concerto-common.PlantUMLVisitor.html">ibm-concerto-common.PlantUMLVisitor</a></li><li><a href="module-ibm-concerto-common.Predicate.html">ibm-concerto-common.Predicate</a></li><li><a href="module-ibm-concerto-common.Property.html">ibm-concerto-common.Property</a></li><li><a href="module-ibm-concerto-common.Relationship.html">ibm-concerto-common.Relationship</a></li><li><a href="module-ibm-concerto-common.RelationshipDeclaration.html">ibm-concerto-common.RelationshipDeclaration</a></li><li><a href="module-ibm-concerto-common.Resource.html">ibm-concerto-common.Resource</a></li><li><a href="module-ibm-concerto-common.ResourceValidator.html">ibm-concerto-common.ResourceValidator</a></li><li><a href="module-ibm-concerto-common.Script.html">ibm-concerto-common.Script</a></li><li><a href="module-ibm-concerto-common.ScriptManager.html">ibm-concerto-common.ScriptManager</a></li><li><a href="module-ibm-concerto-common.SecurityContext.html">ibm-concerto-common.SecurityContext</a></li><li><a href="module-ibm-concerto-common.SecurityException.html">ibm-concerto-common.SecurityException</a></li><li><a href="module-ibm-concerto-common.Serializer.html">ibm-concerto-common.Serializer</a></li><li><a href="module-ibm-concerto-common.TransactionDeclaration.html">ibm-concerto-common.TransactionDeclaration</a></li><li><a href="module-ibm-concerto-common.TypedStack.html">ibm-concerto-common.TypedStack</a></li><li><a href="module-ibm-concerto-common.TypescriptVisitor.html">ibm-concerto-common.TypescriptVisitor</a></li><li><a href="module-ibm-concerto-common.Util.html">ibm-concerto-common.Util</a></li><li><a href="module-ibm-concerto-common.ValidatedResource.html">ibm-concerto-common.ValidatedResource</a></li><li><a href="module-ibm-concerto-common.ValidationException.html">ibm-concerto-common.ValidationException</a></li><li><a href="module-ibm-concerto-common.VersionChecker.html">ibm-concerto-common.VersionChecker</a></li><li><a href="module-ibm-concerto-common.Writer.html">ibm-concerto-common.Writer</a></li><li><a href="module-ibm-concerto-runtime.Api.html">ibm-concerto-runtime.Api</a></li><li><a href="module-ibm-concerto-runtime.AssetRegistry.html">ibm-concerto-runtime.AssetRegistry</a></li><li><a href="module-ibm-concerto-runtime.Container.html">ibm-concerto-runtime.Container</a></li><li><a href="module-ibm-concerto-runtime.Context.html">ibm-concerto-runtime.Context</a></li><li><a href="module-ibm-concerto-runtime.DataCollection.html">ibm-concerto-runtime.DataCollection</a></li><li><a href="module-ibm-concerto-runtime.DataService.html">ibm-concerto-runtime.DataService</a></li><li><a href="module-ibm-concerto-runtime.Engine.html">ibm-concerto-runtime.Engine</a></li><li><a href="module-ibm-concerto-runtime.EngineBusinessNetworks.html">ibm-concerto-runtime.EngineBusinessNetworks</a></li><li><a href="module-ibm-concerto-runtime.EngineIdentities.html">ibm-concerto-runtime.EngineIdentities</a></li><li><a href="module-ibm-concerto-runtime.EngineRegistries.html">ibm-concerto-runtime.EngineRegistries</a></li><li><a href="module-ibm-concerto-runtime.EngineResources.html">ibm-concerto-runtime.EngineResources</a></li><li><a href="module-ibm-concerto-runtime.EngineTransactions.html">ibm-concerto-runtime.EngineTransactions</a></li><li><a href="module-ibm-concerto-runtime.Factory.html">ibm-concerto-runtime.Factory</a></li><li><a href="module-ibm-concerto-runtime.IdentityService.html">ibm-concerto-runtime.IdentityService</a></li><li><a href="module-ibm-concerto-runtime.LoggingService.html">ibm-concerto-runtime.LoggingService</a></li><li><a href="module-ibm-concerto-runtime.ParticipantRegistry.html">ibm-concerto-runtime.ParticipantRegistry</a></li><li><a href="module-ibm-concerto-runtime.Resolver.html">ibm-concerto-runtime.Resolver</a></li><li><a href="module-ibm-concerto-runtime.TransactionLogger.html">ibm-concerto-runtime.TransactionLogger</a></li><li><a href="ParticipantRegistry.html">ParticipantRegistry</a></li><li><a href="QueryExecutor.html">QueryExecutor</a></li><li><a href="Registry.html">Registry</a></li><li><a href="RegistryManager.html">RegistryManager</a></li>
+				</ul>
+			</li>
+			
+			<li class="dropdown">
+				<a href="events.list.html" class="dropdown-toggle" data-toggle="dropdown">Events<b class="caret"></b></a>
+				<ul class="dropdown-menu ">
+					<li><a href="module-ibm-concerto-client.AssetRegistry.html#event:resourceadded">ibm-concerto-client.AssetRegistry#event:resourceadded</a></li><li><a href="module-ibm-concerto-client.AssetRegistry.html#event:resourceremoved">ibm-concerto-client.AssetRegistry#event:resourceremoved</a></li><li><a href="module-ibm-concerto-client.AssetRegistry.html#event:resourceupdated">ibm-concerto-client.AssetRegistry#event:resourceupdated</a></li><li><a href="module-ibm-concerto-client.ParticipantRegistry.html#event:resourceadded">ibm-concerto-client.ParticipantRegistry#event:resourceadded</a></li><li><a href="module-ibm-concerto-client.ParticipantRegistry.html#event:resourceremoved">ibm-concerto-client.ParticipantRegistry#event:resourceremoved</a></li><li><a href="module-ibm-concerto-client.ParticipantRegistry.html#event:resourceupdated">ibm-concerto-client.ParticipantRegistry#event:resourceupdated</a></li><li><a href="module-ibm-concerto-client.TransactionRegistry.html#event:resourceadded">ibm-concerto-client.TransactionRegistry#event:resourceadded</a></li><li><a href="module-ibm-concerto-client.TransactionRegistry.html#event:resourceremoved">ibm-concerto-client.TransactionRegistry#event:resourceremoved</a></li><li><a href="module-ibm-concerto-client.TransactionRegistry.html#event:resourceupdated">ibm-concerto-client.TransactionRegistry#event:resourceupdated</a></li><li><a href="Registry.html#event:resourceadded">Registry#event:resourceadded</a></li><li><a href="Registry.html#event:resourceremoved">Registry#event:resourceremoved</a></li><li><a href="Registry.html#event:resourceupdated">Registry#event:resourceupdated</a></li><li><a href="RegistryManager.html#event:registryadded">RegistryManager#event:registryadded</a></li>
+				</ul>
+			</li>
+			
+			<li class="dropdown">
+				<a href="global.html" class="dropdown-toggle" data-toggle="dropdown">Global<b class="caret"></b></a>
+				<ul class="dropdown-menu ">
+					<li><a href="global.html#findCommentBefore">findCommentBefore</a></li><li><a href="global.html#formatMessage">formatMessage</a></li><li><a href="global.html#getDecorators">getDecorators</a></li><li><a href="global.html#getExample">getExample</a></li><li><a href="global.html#getLogger">getLogger</a></li><li><a href="global.html#getMethodArguments">getMethodArguments</a></li><li><a href="global.html#getReturnType">getReturnType</a></li><li><a href="global.html#getText">getText</a></li><li><a href="global.html#getThrows">getThrows</a></li><li><a href="global.html#getVisibility">getVisibility</a></li><li><a href="global.html#Globalize">Globalize</a></li><li><a href="global.html#messageFormatter">messageFormatter</a></li><li><a href="global.html#mixin">mixin</a></li><li><a href="global.html#paramsToString">paramsToString</a></li><li><a href="global.html#processDirectory">processDirectory</a></li><li><a href="global.html#processFile">processFile</a></li><li><a href="global.html#toUMLFilename">toUMLFilename</a></li>
+				</ul>
+			</li>
+			
+		</ul>
+        
+            <div class="col-sm-3 col-md-3">
+                <form class="navbar-form" role="search">
+                    <div class="input-group">
+                        <input type="text" class="form-control" placeholder="Search" name="q" id="search-input">
+                        <div class="input-group-btn">
+                            <button class="btn btn-default" id="search-submit"><i class="glyphicon glyphicon-search"></i></button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        
+	</div>
+
+</div>
+</div>
+
+
+<div class="container" id="toc-content">
+<div class="row">
+
+	
+	<div class="col-md-12">
+	
+		<div id="main">
+			
+
+		<h1 class="page-title">Source: ibm-concerto-common/lib/connectionmanager.js</h1>
+    
+<section>
+    <article>
+        <pre
+            class="sunlight-highlight-javascript linenums">/*
+ * IBM Confidential
+ * OCO Source Materials
+ * IBM Concerto - Blockchain Solution Framework
+ * Copyright IBM Corp. 2016
+ * The source code for this program is not published or otherwise
+ * divested of its trade secrets, irrespective of what has
+ * been deposited with the U.S. Copyright Office.
+ */
+
+'use strict';
+
+const ConnectionProfileManager = require('./connectionprofilemanager');
+
+/**
+ * Base class representing a connection manager that establishes and manages
+ * connections to one or more business networks. The ConnectionManager loads
+ * connection profiles using the ConnectionProfileManager.
+ *
+ * @private
+ * @abstract
+ * @class
+ * @memberof module:ibm-concerto-common
+ */
+class ConnectionManager {
+
+  /**
+   * Create the ConnectionManager
+   * @param {ConnectionProfileManager} connectionProfileManager - the ConnectionProfileManager
+   * that controls this instance.
+   */
+    constructor(connectionProfileManager) {
+        if(!(connectionProfileManager instanceof ConnectionProfileManager)) {
+            throw new Error('Must create ConnectionManager with a ConnectionProfileManager implementation.');
+        }
+
+        this.connectionProfileManager = connectionProfileManager;
+    }
+
+    /**
+     * Returns the ConnectionProfileManager associated with this ConnectionManager
+     * @return {ConnectionProfileManager} the connection profile manager for this
+     * connection manager.
+     */
+    getConnectionProfileManager() {
+        return this.connectionProfileManager;
+    }
+
+    /**
+     * Establish a connection to the business network, using connection information
+     * from the connection profile.
+     *
+     * @param {string} connectionProfile The name of the connection profile
+     * @param {string} businessNetworkIdentifier The identifier of the business network, or null if this is an admin connection
+     * @param {object} connectionOptions The connection options loaded from the profile
+     * @return {Promise} A promise that is resolved with a {@link Connection}
+     * object once the connection is established, or rejected with a connection error.
+     * @abstract
+     */
+    connect(connectionProfile, businessNetworkIdentifier, connectionOptions) {
+        return Promise.reject(new Error('abstract function called'));
+    }
+
+    /**
+     * Stop serialization of this object.
+     * @return {Object} An empty object.
+     */
+    toJSON() {
+        return {};
+    }
+}
+
+module.exports = ConnectionManager;
+</pre>
+    </article>
+</section>
+
+
+
+
+
+		</div>
+	</div>
+
+	<div class="clearfix"></div>
+
+	
+
+</div>
+</div>
+
+
+    <div class="modal fade" id="searchResults">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h4 class="modal-title">Search results</h4>
+          </div>
+          <div class="modal-body"></div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          </div>
+        </div><!-- /.modal-content -->
+      </div><!-- /.modal-dialog -->
+    </div>
+
+
+<footer>
+
+
+	<span class="copyright">
+	Copyright IBM Corp. 2016
+	</span>
+
+<span class="jsdoc-message">
+	Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.4.3</a>
+	
+		on Thu Jan 5th 2017
+	
+	using the <a href="https://github.com/docstrap/docstrap">DocStrap template</a>.
+</span>
+</footer>
+
+<script src="scripts/docstrap.lib.js"></script>
+<script src="scripts/toc.js"></script>
+
+    <script type="text/javascript" src="scripts/fulltext-search-ui.js"></script>
+
+
+<script>
+$( function () {
+	$( "[id*='$']" ).each( function () {
+		var $this = $( this );
+
+		$this.attr( "id", $this.attr( "id" ).replace( "$", "__" ) );
+	} );
+
+	$( ".tutorial-section pre, .readme-section pre, pre.prettyprint.source" ).each( function () {
+		var $this = $( this );
+
+		var example = $this.find( "code" );
+		exampleText = example.html();
+		var lang = /{@lang (.*?)}/.exec( exampleText );
+		if ( lang && lang[1] ) {
+			exampleText = exampleText.replace( lang[0], "" );
+			example.html( exampleText );
+			lang = lang[1];
+		} else {
+			var langClassMatch = example.parent()[0].className.match(/lang\-(\S+)/);
+			lang = langClassMatch ? langClassMatch[1] : "javascript";
+		}
+
+		if ( lang ) {
+
+			$this
+			.addClass( "sunlight-highlight-" + lang )
+			.addClass( "linenums" )
+			.html( example.html() );
+
+		}
+	} );
+
+	Sunlight.highlightAll( {
+		lineNumbers : true,
+		showMenu : true,
+		enableDoclinks : true
+	} );
+
+	$.catchAnchorLinks( {
+        navbarOffset: 10
+	} );
+	$( "#toc" ).toc( {
+		anchorName  : function ( i, heading, prefix ) {
+			return $( heading ).attr( "id" ) || ( prefix + i );
+		},
+		selectors   : "#toc-content h1,#toc-content h2,#toc-content h3,#toc-content h4",
+		showAndHide : false,
+		smoothScrolling: true
+	} );
+
+	$( "#main span[id^='toc']" ).addClass( "toc-shim" );
+	$( '.dropdown-toggle' ).dropdown();
+
+    $( "table" ).each( function () {
+      var $this = $( this );
+      $this.addClass('table');
+    } );
+
+} );
+</script>
+
+
+
+<!--Navigation and Symbol Display-->
+
+
+<!--Google Analytics-->
+
+
+
+    <script type="text/javascript">
+        $(document).ready(function() {
+            SearcherDisplay.init();
+        });
+    </script>
+
+
+</body>
+</html>

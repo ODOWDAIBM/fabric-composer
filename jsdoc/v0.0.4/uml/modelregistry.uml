@@ -1,0 +1,17 @@
+@startuml
+!include ./parser/modelfile.uml
+!include ./registry.uml
+!include ./util.uml
+class ModelRegistry{
+   + Promise getAllModelRegistries(SecurityContext,ModelManager)
+   + Promise getModelRegistry(SecurityContext,string,ModelManager)
+   + Promise addModelRegistry(SecurityContext,string,string,ModelManager)
+   + void constructor(string,string,ModelManager)
+   + Promise add(SecurityContext,ModelFile)
+   + Promise update(SecurityContext,ModelFile)
+   + Promise remove(SecurityContext,(ModelFile|string))
+   + Promise getAll(SecurityContext)
+   + Promise get(SecurityContext,string)
+}
+ModelRegistry --|> Registry
+@enduml

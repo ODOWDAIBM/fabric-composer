@@ -1,0 +1,21 @@
+@startuml
+!include ./field.uml
+!include ./enumvaluedeclaration.uml
+!include ./relationshipdeclaration.uml
+!include ./illegalmodelexception.uml
+class ClassDeclaration{
+   + void constructor(ModelFile,string)
+   - Object accept(Object,Object)
+   + ModelFile getModelFile()
+   - void process()
+   - void validate()
+   + string getName()
+   + string getFullyQualifiedName()
+   + string getIdentifierFieldName()
+   + Property getOwnProperty(string)
+   + Property[] getOwnProperties()
+   + string getSuperType()
+   + Property getProperty(string)
+   + Property[] getProperties()
+}
+@enduml

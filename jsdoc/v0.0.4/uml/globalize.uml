@@ -1,0 +1,4 @@
+@startuml
+class globalize << (P,orchid) >> {
+}
+@enduml

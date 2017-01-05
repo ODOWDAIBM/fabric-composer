@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta charset="utf-8">
+
+  
+    <title>IBM Blockchain Framework -  Overview | IBM Blockchain Framework</title>
+  
+  <meta name="viewport" content="width=device-width">
+  <link rel="icon" type="image/x-icon" href="/favicon.ico">
+
+  <meta name="google-site-verification" content="fBQRJ6h7MV7_TJ7grbgq4P-d-07NRfDWPe4pqEEoH5w">
+
+  <link href="//fonts.googleapis.com/css?family=Roboto+Slab:400,700%7CRoboto:400,700,700italic,400italic" rel="stylesheet" type="text/css">
+
+
+  
+    <link href="assets/css/normalize.css" rel="stylesheet">
+    <link href="assets/css/main.css" rel="stylesheet">
+    <link href="assets/css/footer.css" rel="stylesheet">
+    <link href="assets/css/prettify.css" rel="stylesheet">
+  
+
+  
+
+  <link href="/blog/atom.xml" type="application/atom+xml" rel="alternate" title="Concerto Blog Atom Feed">
+</head>
+
+<body class="">
+
+  
+  
+
+
+
+
+<header class="page-header">
+  <div class="container">
+    <div class="mobile-bar">
+      <h1 class="logo">
+        <a href="/Blockchain-WW-Labs/Concerto/index.html"><img src="/Blockchain-WW-Labs/Concerto/assets/img/logo.png" alt=""></a>
+      </h1>
+      <button class="mobile-menu-toggle ir">open</button>
+    </div>
+    <nav class="main-menu">
+      <ul class="main-nav">
+        <li>
+          <a href="/Blockchain-WW-Labs/Concerto/overview/overview.html">Overview</a>
+        </li>
+        <li>
+          <a href="/Blockchain-WW-Labs/Concerto/start/getting-started.html">Getting Started</a>
+        </li>
+        <li>
+          <a href="/Blockchain-WW-Labs/Concerto/concepts/">Concepts</a>
+          <ul>
+<li><a href="/Blockchain-WW-Labs/Concerto/concepts/businessnetwork.html">Business Network</a></li>
+<li><a href="/Blockchain-WW-Labs/Concerto/concepts/businessnetworkdefinition.html">Business Network Definition</a></li>
+<li><a href="/Blockchain-WW-Labs/Concerto/concepts/participantsandidentities.html">Participants and Identities</a></li>
+</ul>
+
+        </li>
+        <li>
+          <a href="/Blockchain-WW-Labs/Concerto/tasks/">Tasks</a>
+          <ul>
+<li><a href="/Blockchain-WW-Labs/Concerto/tasks/prerequisites.html">Installing Pre-requisites</a></li>
+<li><a href="/Blockchain-WW-Labs/Concerto/tasks/deploybusinessnetwork.html">Deploy Business Network</a></li>
+<li><a href="/Blockchain-WW-Labs/Concerto/tasks/createconnectionprofile.html">Create Connection Profile</a></li>
+<li><a href="/Blockchain-WW-Labs/Concerto/tasks/bnd-define.html">Create a Business Network Definition</a></li>
+<li><a href="/Blockchain-WW-Labs/Concerto/tasks/bnd-publish.html">Publish a Business Network Definition</a></li>
+<li><a href="/Blockchain-WW-Labs/Concerto/tasks/genapp.html">Generating an Application</a></li>
+<li><a href="/Blockchain-WW-Labs/Concerto/tasks/model-define.html">Create a Business Domain Model</a></li>
+<li><a href="/Blockchain-WW-Labs/Concerto/tasks/model-publish.html">Publish a Business Domain Model</a></li>
+<li><a href="/Blockchain-WW-Labs/Concerto/tasks/runtime-start.html">Start a Fabric Runtime</a></li>
+<li><a href="/Blockchain-WW-Labs/Concerto/tasks/testing.html">Test a Business Network Definition</a></li>
+<li><a href="/Blockchain-WW-Labs/Concerto/tasks/runtime-update.html">Update a Business Network Definition on Fabric</a></li>
+<li><a href="/Blockchain-WW-Labs/Concerto/tasks/participant-add.html">Add a Participant</a></li>
+<li><a href="/Blockchain-WW-Labs/Concerto/tasks/identity-issue.html">Issue an Identity for a Participant</a></li>
+<li><a href="/Blockchain-WW-Labs/Concerto/tasks/identity-revoke.html">Revoke an Identity for a Participant</a></li>
+<li><a href="/Blockchain-WW-Labs/Concerto/tasks/current-participant.html">Implementing access control using the current Participant</a></li>
+<li><a href="/Blockchain-WW-Labs/Concerto/tasks/diagnostics.html">Diagnosing Problems</a></li>
+</ul>
+
+        </li>
+        <li>
+          <a href="/Blockchain-WW-Labs/Concerto/reference/">Reference</a>
+          <ul>
+<li><a href="/Blockchain-WW-Labs/Concerto/reference/MeetTheModules.html">Meet the Modules</a></li>
+<li><a href="/Blockchain-WW-Labs/Concerto/reference/platforms.html">Supported Platforms</a></li>
+<li><a href="/Blockchain-WW-Labs/Concerto/reference/cto_language.html">Concerto Modeling Language</a></li>
+<li><a href="/Blockchain-WW-Labs/Concerto/reference/connectionprofile.html">Connection Profile</a></li>
+<li><a href="/Blockchain-WW-Labs/Concerto/reference/js_scripts.html">Transaction Processor Functions</a></li>
+<li><a href="/Blockchain-WW-Labs/Concerto/reference/commands.html">Concerto Command Line</a></li>
+<li><a href="/Blockchain-WW-Labs/Concerto/reference/concerto.generator.tests.html">Concerto Generator</a></li>
+<li><a href="/Blockchain-WW-Labs/Concerto/reference/concerto.participant.add.html">Concerto CLI Add Participant</a></li>
+<li><a href="/Blockchain-WW-Labs/Concerto/reference/concerto.identity.issue.html">Concerto CLI Issue Identity</a></li>
+<li><a href="/Blockchain-WW-Labs/Concerto/reference/concerto.identity.revoke.html">Concerto CLI Revoke Identity</a></li>
+<li><a target="_blank" href="/Blockchain-WW-Labs/Concerto/jsdoc/develop/index.html">API Documentation</a></li>
+<li><a href="/Blockchain-WW-Labs/Concerto/reference/glossary.html">Glossary</a></li>
+</ul>
+
+        </li>
+        <li>
+          <a href="/Blockchain-WW-Labs/Concerto/support/index.html">Support</a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+<!-- /.container -->
+</header><!-- /.page-header -->
+
+  
+
+  <div class="SiteWrapper">
+    
+      <div id="content">
+  <h2 class="page-title">
+    <span class="container">IBM Blockchain Framework -  Overview</span>
+  </h2>
+
+  <div class="container clearfix has-sidebar">
+    
+      <nav class="context-nav">
+        
+        
+          <ul>
+<li><a href="/Blockchain-WW-Labs/Concerto/overview/overview.html">Overview</a></li>
+</ul>
+
+        
+      </nav>
+    
+
+    <article class="main">
+      
+
+      <section class="content-chunk">
+        
+          <h2 id="overview">Overview</h2>
+
+<p>The IBM Blockchain Framework is a set of APIs, a modeling language and
+a programming model to quickly define and deploy business networks and applications
+that allow <strong>participants</strong> to send <strong>transactions</strong> that exchange <strong>assets</strong>.</p>
+
+<p>The IBM Blockchain, based on Open Source <a href="http://www.hyperledger.org">Hyperledger Fabric</a> technology, is used to store the state of assets in asset registries, while the blockchain consensus protocol ensure that transactions
+are validated by concerned organizations in the business network.</p>
+
+<h2 id="framework-features">Framework Features</h2>
+
+<table>
+<thead>
+<tr>
+<th>:Feature</th>
+<th>:Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Blockchain State Storage</td>
+<td>All state is stored in Hyperledger Fabric, ensuring consensus, immutability etc.</td>
+</tr>
+<tr>
+<td>Assets</td>
+<td>Use Assets and Asset Registries to define the data to be stored and exchanged across the business network</td>
+</tr>
+<tr>
+<td>Participants</td>
+<td>Define Participants and ensure transactions are associated with known and authenticated members of the Hyperledger Fabric</td>
+</tr>
+<tr>
+<td>Transactions</td>
+<td>Define Transactions and provide APIs to submit them for processing</td>
+</tr>
+<tr>
+<td>Transaction Processors</td>
+<td>Write Transaction Processor functions using Javascript, that can update the state of assets and asset registries</td>
+</tr>
+<tr>
+<td>REST APIs</td>
+<td>Provides REST APIs to interact with assets and the transaction registry</td>
+</tr>
+<tr>
+<td>Loopback Connector</td>
+<td>Provides a Loopback Connector to submit transactions from external systems</td>
+</tr>
+<tr>
+<td>Analytics and Monitoring integration</td>
+<td>Provides integration extension points to send transactions to external analytics data stores</td>
+</tr>
+<tr>
+<td>Starter Applications</td>
+<td>Generate starter applications from a Business Network Definition</td>
+</tr>
+</tbody>
+</table>
+
+<h2 id="framework-programming-model">Framework Programming Model</h2>
+
+<p>The IBM Blockchain Framework programming model is based on defining and deploying a Business Network
+Definition, which contains a data model that defines the name and structure of assets, participants
+and transactions in the business network. The business network also specifies <em>transaction processor functions</em>
+(written in ES5 Javascript) that are automatically run on a Hyperledger Fabric when transactions are submitted by clients.</p>
+
+<p>The Framework defines Javascript APIs to submit transactions and to create, retrieve, update and delete assets within asset registries.</p>
+
+<h3 id="roles-responsibilities-and-tasks">Roles, Responsibilities and Tasks</h3>
+
+<p>A typical project using the Framework goes through a lifecycle of:</p>
+
+<p><em>Model -&gt; Define Business Network -&gt; Deploy Runtime -&gt; Deploying Business Network -&gt; Test -&gt; Generate Application</em></p>
+
+<p><img src="../images/framework_taskmap.png" alt="Framework Task Map"></p>
+
+<p>These tasks may all be performed by a single full-stack developer, but are more typically performed by:
+* Business analyst, responsible for defining the data model
+* Technical analyst, responsible for creating the business network definition, including models and writing transaction processor functions, as well as dashboards and analytics to business stakeholders
+* Operations engineer, responsible for operating a set of Hyperledger nodes, ensuring business continuity and security
+* Application developer, responsible for creating web and batch applications and integrating the applications into existing systems</p>
+
+<h2 id="modeling-the-business-domain">Modeling the Business Domain</h2>
+
+<p>Framework includes a powerful Object-Oriented modeling language, used to specify a domain model; the structure of assets, participants and transactions. The domain model is used across the Framework for code generation, type validation, user interface generation, API generation, amongst other things.</p>
+
+<h3 id="sample-framework-domain-model">Sample Framework Domain Model</h3>
+<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span></span><span class="nx">namespace</span> <span class="nx">net</span><span class="p">.</span><span class="nx">biz</span><span class="p">.</span><span class="nx">digitalPropertyNetwork</span>
+
+<span class="nx">asset</span> <span class="nx">LandTitle</span> <span class="nx">identified</span> <span class="nx">by</span> <span class="nx">titleId</span> <span class="p">{</span>
+  <span class="nx">o</span> <span class="nb">String</span>   <span class="nx">titleId</span>
+  <span class="nx">o</span> <span class="nx">Person</span>   <span class="nx">owner</span>
+  <span class="nx">o</span> <span class="nb">String</span>   <span class="nx">information</span>
+  <span class="nx">o</span> <span class="nb">Boolean</span>  <span class="nx">forSale</span>   <span class="nx">optional</span>
+<span class="p">}</span>
+
+<span class="nx">asset</span> <span class="nx">SalesAgreement</span> <span class="nx">identified</span> <span class="nx">by</span> <span class="nx">salesId</span> <span class="p">{</span>
+  <span class="nx">o</span> <span class="nb">String</span>    <span class="nx">salesId</span>
+  <span class="nx">o</span> <span class="nx">Person</span>    <span class="nx">buyer</span>
+  <span class="nx">o</span> <span class="nx">Person</span>    <span class="nx">seller</span>
+  <span class="nx">o</span> <span class="nx">LandTitle</span> <span class="nx">title</span>
+<span class="p">}</span>
+
+<span class="nx">participant</span> <span class="nx">Person</span> <span class="nx">identified</span> <span class="nx">by</span> <span class="nx">personId</span> <span class="p">{</span>
+  <span class="nx">o</span> <span class="nb">String</span> <span class="nx">personId</span>
+  <span class="nx">o</span> <span class="nb">String</span> <span class="nx">firstName</span>
+  <span class="nx">o</span> <span class="nb">String</span> <span class="nx">lastName</span>
+<span class="p">}</span>
+
+
+<span class="nx">transaction</span> <span class="nx">RegisterPropertyForSale</span> <span class="nx">identified</span> <span class="nx">by</span> <span class="nx">transactionId</span><span class="p">{</span>
+  <span class="nx">o</span> <span class="nb">String</span> <span class="nx">transactionId</span>
+  <span class="o">--&gt;</span> <span class="nx">Person</span> <span class="nx">seller</span>
+  <span class="o">--&gt;</span> <span class="nx">LandTitle</span> <span class="nx">title</span>
+<span class="p">}</span>
+</code></pre></div>
+<h2 id="writing-transaction-processor-functions">Writing Transaction Processor functions</h2>
+
+<p>Technical Analysts write transaction processor functions using ES5 Javascript. These scripts are included in a business network definition and will be automatically executed when a transaction is submitted for processing. The transaction processor scripts can create, update, retrieve and delete assets based on the incoming transaction.</p>
+<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span></span><span class="s1">'use strict'</span><span class="p">;</span>
+
+<span class="cm">/** Process a property that is held for sale</span>
+<span class="cm"> * @param {net.biz.digitalPropertyNetwork.LandTitle} propertyForSale the property to be sold</span>
+<span class="cm"> * @transaction</span>
+<span class="cm"> */</span>
+<span class="kd">function</span> <span class="nx">onRegisterPropertyForSale</span><span class="p">(</span><span class="nx">propertyForSale</span><span class="p">){</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">'### onRegisterPropertyForSale '</span><span class="o">+</span><span class="nx">propertyForSale</span><span class="p">.</span><span class="nx">toString</span><span class="p">());</span>
+    <span class="nx">propertyForSale</span><span class="p">.</span><span class="nx">title</span><span class="p">.</span><span class="nx">forSale</span> <span class="o">=</span> <span class="kc">true</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
+<h2 id="rapidly-create-applications">Rapidly Create Applications</h2>
+
+<p>The Framework includes code generators so that web and mid-tier application developers can quickly generate starter applications that interact with a deployed business network definition. These code generators allow application developers to quickly focus on the integration and visual aspects of their projects, rather than writing boilerplate and configuration.</p>
+
+<p>High-level administration and client APIs provide easy access to a deployed business network.</p>
+
+<h3 id="using-the-javascript-client-and-admin-apis">Using the Javascript Client and Admin APIs</h3>
+
+<p>Mid-tier developers use Javascript APIs to interact with the framework. The <code>AdminConnection</code> API exposes administration operations, such as deploying, undeploying and updating a Business Network Definition.</p>
+
+<p>The <code>BusinessNetworkConnection</code> API is used to interact with a deployed business network: retrieving assets from asset registries, or submitting transactions.</p>
+
+<p>The sample below uses both the <code>AdminConnection</code> and <code>BusinessNetworkConnection</code> APIs to deploy a business network definition, and then connects using the client API to retrieve an asset registry.</p>
+<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span></span><span class="s1">'use strict'</span><span class="p">;</span>
+
+<span class="kr">const</span> <span class="nx">AdminConnection</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">'@ibm/ibm-concerto-admin'</span><span class="p">).</span><span class="nx">AdminConnection</span><span class="p">;</span>
+<span class="kr">const</span> <span class="nx">BusinessNetworkConnection</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">'@ibm/ibm-concerto-client'</span><span class="p">).</span><span class="nx">BusinessNetworkConnection</span><span class="p">;</span>
+<span class="kr">const</span> <span class="nx">BusinessNetworkDefinition</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">'@ibm/ibm-concerto-common'</span><span class="p">).</span><span class="nx">BusinessNetworkDefinition</span><span class="p">;</span>
+<span class="kr">const</span> <span class="nx">fs</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">'fs'</span><span class="p">);</span>
+
+<span class="kr">const</span> <span class="nx">admin</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">AdminConnection</span><span class="p">();</span>
+<span class="kr">const</span> <span class="nx">concerto</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">BusinessNetworkConnection</span><span class="p">();</span>
+
+<span class="kr">const</span> <span class="nx">config</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="nx">type</span><span class="o">:</span> <span class="s1">'hlf'</span><span class="p">,</span>
+    <span class="nx">keyValStore</span><span class="o">:</span> <span class="s1">'/tmp/keyValStore'</span><span class="p">,</span>
+    <span class="nx">membershipServicesURL</span><span class="o">:</span> <span class="s1">'grpc://localhost:7054'</span><span class="p">,</span>
+    <span class="nx">peerURL</span><span class="o">:</span> <span class="s1">'grpc://localhost:7051'</span><span class="p">,</span>
+    <span class="nx">eventHubURL</span><span class="o">:</span> <span class="s1">'grpc://localhost:7053'</span>
+<span class="p">};</span>
+
+<span class="kr">const</span> <span class="nx">CONNECTION_PROFILE_NAME</span> <span class="o">=</span> <span class="s1">'testprofile'</span><span class="p">;</span>
+<span class="kd">let</span> <span class="nx">businessNetworkIdentifier</span> <span class="o">=</span> <span class="kc">null</span><span class="p">;</span>
+
+<span class="k">return</span> <span class="nx">admin</span><span class="p">.</span><span class="nx">createProfile</span><span class="p">(</span><span class="s1">'testprofile'</span><span class="p">,</span> <span class="nx">config</span><span class="p">)</span>
+  <span class="p">.</span><span class="nx">then</span><span class="p">(()</span> <span class="o">=&gt;</span> <span class="p">{</span>
+      <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">'Created connection profile'</span><span class="p">);</span>
+      <span class="k">return</span> <span class="nx">admin</span><span class="p">.</span><span class="nx">connect</span><span class="p">(</span><span class="nx">CONNECTION_PROFILE_NAME</span><span class="p">,</span> <span class="s1">'WebAppAdmin'</span><span class="p">,</span> <span class="s1">'DJY27pEnl16d'</span><span class="p">);</span>
+  <span class="p">})</span>
+  <span class="p">.</span><span class="nx">then</span><span class="p">(()</span> <span class="o">=&gt;</span> <span class="p">{</span>
+      <span class="kd">let</span> <span class="nx">readFile</span> <span class="o">=</span> <span class="nx">fs</span><span class="p">.</span><span class="nx">readFileSync</span><span class="p">(</span><span class="nx">__dirname</span> <span class="o">+</span> <span class="s1">'/data/businessnetwork.zip'</span><span class="p">);</span>
+      <span class="k">return</span> <span class="nx">BusinessNetworkDefinition</span><span class="p">.</span><span class="nx">fromArchive</span><span class="p">(</span><span class="nx">readFile</span><span class="p">);</span>
+  <span class="p">})</span>
+  <span class="p">.</span><span class="nx">then</span><span class="p">((</span><span class="nx">businessNetwork</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
+      <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">'Read BusinessNetwork archive: '</span> <span class="o">+</span> <span class="nx">businessNetwork</span><span class="p">.</span><span class="nx">getIdentifier</span><span class="p">()</span> <span class="p">);</span>
+      <span class="nx">businessNetworkIdentifier</span> <span class="o">=</span> <span class="nx">businessNetwork</span><span class="p">.</span><span class="nx">getIdentifier</span><span class="p">();</span>
+
+      <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">'Deploying business network...'</span> <span class="p">);</span>
+      <span class="k">return</span> <span class="nx">admin</span><span class="p">.</span><span class="nx">deploy</span><span class="p">(</span><span class="nx">businessNetwork</span><span class="p">,</span> <span class="kc">false</span><span class="p">);</span>
+  <span class="p">})</span>
+  <span class="p">.</span><span class="nx">then</span><span class="p">(()</span> <span class="o">=&gt;</span> <span class="p">{</span>
+      <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">'Deployed BusinessNetwork archive'</span><span class="p">);</span>
+      <span class="k">return</span> <span class="nx">admin</span><span class="p">.</span><span class="nx">ping</span><span class="p">();</span>
+  <span class="p">})</span>
+  <span class="p">.</span><span class="nx">then</span><span class="p">(()</span> <span class="o">=&gt;</span> <span class="p">{</span>
+      <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">'Pinged server'</span><span class="p">);</span>
+      <span class="k">return</span> <span class="nx">admin</span><span class="p">.</span><span class="nx">disconnect</span><span class="p">();</span>
+  <span class="p">})</span>
+  <span class="p">.</span><span class="nx">then</span><span class="p">(()</span> <span class="o">=&gt;</span> <span class="p">{</span>
+      <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">'Disconnected admin'</span><span class="p">);</span>
+      <span class="k">return</span> <span class="nx">concerto</span><span class="p">.</span><span class="nx">connect</span><span class="p">(</span><span class="nx">CONNECTION_PROFILE_NAME</span><span class="p">,</span> <span class="nx">businessNetworkIdentifier</span><span class="p">,</span> <span class="s1">'WebAppAdmin'</span><span class="p">,</span> <span class="s1">'DJY27pEnl16d'</span><span class="p">);</span>
+  <span class="p">})</span>
+  <span class="p">.</span><span class="nx">then</span><span class="p">(()</span> <span class="o">=&gt;</span> <span class="p">{</span>
+      <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">'Connected client to '</span> <span class="o">+</span> <span class="nx">businessNetworkIdentifier</span> <span class="p">);</span>
+      <span class="k">return</span> <span class="nx">concerto</span><span class="p">.</span><span class="nx">addAssetRegistry</span><span class="p">(</span><span class="s1">'com.ibm.concerto.mozart.Farmer'</span><span class="p">,</span> <span class="s1">'Farmer Registry'</span><span class="p">);</span>
+  <span class="p">})</span>
+  <span class="p">.</span><span class="nx">then</span><span class="p">((</span><span class="nx">registry</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
+      <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">'Found animal asset registry '</span> <span class="o">+</span> <span class="nx">registry</span> <span class="p">);</span>
+  <span class="p">})</span>
+  <span class="p">.</span><span class="nx">then</span><span class="p">(()</span> <span class="o">=&gt;</span> <span class="p">{</span>
+      <span class="k">return</span> <span class="nx">concerto</span><span class="p">.</span><span class="nx">disconnect</span><span class="p">();</span>
+  <span class="p">})</span>
+  <span class="p">.</span><span class="nx">then</span><span class="p">(()</span> <span class="o">=&gt;</span> <span class="p">{</span>
+      <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">'Done'</span><span class="p">);</span>
+      <span class="k">return</span> <span class="kc">true</span><span class="p">;</span>
+  <span class="p">})</span>
+  <span class="p">.</span><span class="k">catch</span><span class="p">((</span><span class="nx">err</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
+      <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">'Failed: '</span> <span class="o">+</span> <span class="nx">err</span><span class="p">);</span>
+  <span class="p">});</span>
+</code></pre></div>
+<h3 id="developing-web-user-interfaces">Developing Web User Interfaces</h3>
+
+<p>Front-end developers use domain-specific (dynamically generated from the domain model for the business network definition) to interact with assets and asset registries.</p>
+
+<p>In addition, if they are building an Angular2 application, they may generate Typescript types from the domain model, ensuring type-safety in the user interface code they are writing.</p>
+
+        
+
+        
+      </section>
+    </article>
+  </div>
+</div>
+
+    
+
+    
+    
+<footer class="SiteFooter">
+  <ul class="SiteFooter-links">
+    <li>
+      <a href="https://twitter.com/ibmblockchain" class="icon">
+        <img src="assets/img/social-twitter.svg" class="SiteFooter-icon" alt="Twitter">
+      </a>
+    </li>
+    <li>
+      <a href="https://github.ibm.com/Blockchain-WW-Labs/Concerto/" class="icon">
+        <img src="assets/img/social-github.svg" class="SiteFooter-icon" alt="Github">
+      </a>
+    </li>
+    <li>
+      <a href="/blog/atom.xml" class="icon">
+        <img src="assets/img/social-feed.svg" class="SiteFooter-icon" alt="Feed">
+      </a>
+    </li>
+    <li class="mobile-ln">
+    </li>
+<li>
+      <a href="https://pages.github.ibm.com/Blockchain-WW-Labs/Concerto/jsdoc/develop/index.html" class="SiteFooter-button SiteFooter-button--light">APIs</a>
+    </li>
+  </ul>
+</footer><!-- /.footer-links -->
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>
+
+<script src="assets/js/libs/prettify.js"></script>
+<script src="assets/js/script.js"></script>
+
+
+
+<script>
+  // $script.js - github.com/ded/script.js
+  (function(a,b,c){typeof c["module"]!="undefined"&&c.module.exports?c.module.exports=b():typeof c["define"]!="undefined"&&c["define"]=="function"&&c.define.amd?define(a,b):c[a]=b()})("$script",function(){function p(a,b){for(var c=0,d=a.length;c<d;++c)if(!b(a[c]))return j;return 1}function q(a,b){p(a,function(a){return!b(a)})}function r(a,b,i){function o(a){return a.call?a():d[a]}function t(){if(!--n){d[m]=1,l&&l();for(var a in f)p(a.split("|"),o)&&!q(f[a],o)&&(f[a]=[])}}a=a[k]?a:[a];var j=b&&b.call,l=j?b:i,m=j?a.join(""):b,n=a.length;return setTimeout(function(){q(a,function(a){if(h[a])return m&&(e[m]=1),h[a]==2&&t();h[a]=1,m&&(e[m]=1),s(!c.test(a)&&g?g+a+".js":a,t)})},0),r}function s(c,d){var e=a.createElement("script"),f=j;e.onload=e.onerror=e[o]=function(){if(e[m]&&!/^c|loade/.test(e[m])||f)return;e.onload=e[o]=null,f=1,h[c]=2,d()},e.async=1,e.src=c,b.insertBefore(e,b.firstChild)}var a=document,b=a.getElementsByTagName("head")[0],c=/^https?:\/\//,d={},e={},f={},g,h={},i="string",j=!1,k="push",l="DOMContentLoaded",m="readyState",n="addEventListener",o="onreadystatechange";return!a[m]&&a[n]&&(a[n](l,function t(){a.removeEventListener(l,t,j),a[m]="complete"},j),a[m]="loading"),r.get=s,r.order=function(a,b,c){(function d(e){e=a.shift(),a.length?r(e,d):r(e,b,c)})()},r.path=function(a){g=a},r.ready=function(a,b,c){a=a[k]?a:[a];var e=[];return!q(a,function(a){d[a]||e[k](a)})&&p(a,function(a){return d[a]})?b():!function(a){f[a]=f[a]||[],f[a][k](b),c&&c(e)}(a.join("|")),r},r},this)
+  var _gaq=[
+    ['_setAccount','100000-1'],
+    ['_setDomainName', '.ibm.com'],
+    ['_trackPageview'],['_trackPageLoadTime']
+  ];
+  $script('http://www.google-analytics.com/ga.js');
+  $script('https://apis.google.com/js/plusone.js');
+  $script("//platform.twitter.com/widgets.js");
+</script>
+
+    
+  </div>
+</body>
+</html>

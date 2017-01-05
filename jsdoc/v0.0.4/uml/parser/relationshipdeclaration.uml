@@ -1,0 +1,9 @@
+@startuml
+!include ./property.uml
+!include ./illegalmodelexception.uml
+class RelationshipDeclaration{
+   + void constructor(Object)
+   - void validate(ClassDeclaration)
+}
+RelationshipDeclaration --|> Property
+@enduml

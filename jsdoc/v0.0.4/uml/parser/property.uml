@@ -1,0 +1,12 @@
+@startuml
+class Property{
+   + void constructor(Object)
+   - Object accept(Object,Object)
+   - void process()
+   - void validate(ClassDeclaration)
+   + string getName()
+   + string getType()
+   + boolean isArray()
+   + boolean isEnum()
+}
+@enduml

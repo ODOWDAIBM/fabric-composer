@@ -1,0 +1,607 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
+	<title>IBM Concerto Source: ibm-concerto-common/lib/introspect/classdeclaration.js</title>
+
+	<!--[if lt IE 9]>
+	<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+	<link type="text/css" rel="stylesheet" href="styles/sunlight.default.css">
+
+	<link type="text/css" rel="stylesheet" href="styles/site.spacelab.css">
+
+</head>
+
+<body>
+
+<div class="navbar navbar-default navbar-fixed-top navbar-inverse">
+<div class="container">
+	<div class="navbar-header">
+		<a class="navbar-brand" href="index.html">IBM Concerto</a>
+		<button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#topNavigation">
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+        </button>
+	</div>
+	<div class="navbar-collapse collapse" id="topNavigation">
+		<ul class="nav navbar-nav">
+			
+			<li class="dropdown">
+				<a href="modules.list.html" class="dropdown-toggle" data-toggle="dropdown">Modules<b class="caret"></b></a>
+				<ul class="dropdown-menu ">
+					<li><a href="module-ibm-concerto-admin.html">ibm-concerto-admin</a></li><li><a href="module-ibm-concerto-client.html">ibm-concerto-client</a></li><li><a href="module-ibm-concerto-common.html">ibm-concerto-common</a></li><li><a href="module-ibm-concerto-runtime.html">ibm-concerto-runtime</a></li>
+				</ul>
+			</li>
+			
+			<li class="dropdown">
+				<a href="classes.list.html" class="dropdown-toggle" data-toggle="dropdown">Classes<b class="caret"></b></a>
+				<ul class="dropdown-menu ">
+					<li><a href="AssetRegistry.html">AssetRegistry</a></li><li><a href="Factory.html">Factory</a></li><li><a href="IdentityManager.html">IdentityManager</a></li><li><a href="module-ibm-concerto-admin.AdminConnection.html">ibm-concerto-admin.AdminConnection</a></li><li><a href="module-ibm-concerto-client.AssetRegistry.html">ibm-concerto-client.AssetRegistry</a></li><li><a href="module-ibm-concerto-client.BusinessNetworkConnection.html">ibm-concerto-client.BusinessNetworkConnection</a></li><li><a href="module-ibm-concerto-client.ParticipantRegistry.html">ibm-concerto-client.ParticipantRegistry</a></li><li><a href="module-ibm-concerto-client.Registry.html">ibm-concerto-client.Registry</a></li><li><a href="module-ibm-concerto-client.TransactionRegistry.html">ibm-concerto-client.TransactionRegistry</a></li><li><a href="module-ibm-concerto-common.AclFile.html">ibm-concerto-common.AclFile</a></li><li><a href="module-ibm-concerto-common.AclRule.html">ibm-concerto-common.AclRule</a></li><li><a href="module-ibm-concerto-common.APISignatureGenerator.html">ibm-concerto-common.APISignatureGenerator</a></li><li><a href="module-ibm-concerto-common.AssetDeclaration.html">ibm-concerto-common.AssetDeclaration</a></li><li><a href="module-ibm-concerto-common.BaseException.html">ibm-concerto-common.BaseException</a></li><li><a href="module-ibm-concerto-common.BusinessNetworkDefinition.html">ibm-concerto-common.BusinessNetworkDefinition</a></li><li><a href="module-ibm-concerto-common.ClassDeclaration.html">ibm-concerto-common.ClassDeclaration</a></li><li><a href="module-ibm-concerto-common.Connection.html">ibm-concerto-common.Connection</a></li><li><a href="module-ibm-concerto-common.ConnectionManager.html">ibm-concerto-common.ConnectionManager</a></li><li><a href="module-ibm-concerto-common.ConnectionProfileManager.html">ibm-concerto-common.ConnectionProfileManager</a></li><li><a href="module-ibm-concerto-common.ConnectionProfileStore.html">ibm-concerto-common.ConnectionProfileStore</a></li><li><a href="module-ibm-concerto-common.EnumDeclaration.html">ibm-concerto-common.EnumDeclaration</a></li><li><a href="module-ibm-concerto-common.EnumValueDeclaration.html">ibm-concerto-common.EnumValueDeclaration</a></li><li><a href="module-ibm-concerto-common.Factory.html">ibm-concerto-common.Factory</a></li><li><a href="module-ibm-concerto-common.Field.html">ibm-concerto-common.Field</a></li><li><a href="module-ibm-concerto-common.FileWriter.html">ibm-concerto-common.FileWriter</a></li><li><a href="module-ibm-concerto-common.FSConnectionProfileStore.html">ibm-concerto-common.FSConnectionProfileStore</a></li><li><a href="module-ibm-concerto-common.FunctionDeclaration.html">ibm-concerto-common.FunctionDeclaration</a></li><li><a href="module-ibm-concerto-common.GoLangVisitor.html">ibm-concerto-common.GoLangVisitor</a></li><li><a href="module-ibm-concerto-common.Identifiable.html">ibm-concerto-common.Identifiable</a></li><li><a href="module-ibm-concerto-common.IllegalModelException.html">ibm-concerto-common.IllegalModelException</a></li><li><a href="module-ibm-concerto-common.Introspector.html">ibm-concerto-common.Introspector</a></li><li><a href="module-ibm-concerto-common.JavaScriptParser.html">ibm-concerto-common.JavaScriptParser</a></li><li><a href="module-ibm-concerto-common.JSONGenerator.html">ibm-concerto-common.JSONGenerator</a></li><li><a href="module-ibm-concerto-common.JSONPopulator.html">ibm-concerto-common.JSONPopulator</a></li><li><a href="module-ibm-concerto-common.JSONSchemaVisitor.html">ibm-concerto-common.JSONSchemaVisitor</a></li><li><a href="module-ibm-concerto-common.JSONWriter.html">ibm-concerto-common.JSONWriter</a></li><li><a href="module-ibm-concerto-common.Logger.html">ibm-concerto-common.Logger</a></li><li><a href="module-ibm-concerto-common.LoopbackVisitor.html">ibm-concerto-common.LoopbackVisitor</a></li><li><a href="module-ibm-concerto-common.MemoryConnectionProfileStore.html">ibm-concerto-common.MemoryConnectionProfileStore</a></li><li><a href="module-ibm-concerto-common.ModelBinding.html">ibm-concerto-common.ModelBinding</a></li><li><a href="module-ibm-concerto-common.ModelFile.html">ibm-concerto-common.ModelFile</a></li><li><a href="module-ibm-concerto-common.ModelManager.html">ibm-concerto-common.ModelManager</a></li><li><a href="module-ibm-concerto-common.ModelUtil.html">ibm-concerto-common.ModelUtil</a></li><li><a href="module-ibm-concerto-common.Node.html">ibm-concerto-common.Node</a></li><li><a href="module-ibm-concerto-common.ParseException.html">ibm-concerto-common.ParseException</a></li><li><a href="module-ibm-concerto-common.ParticipantDeclaration.html">ibm-concerto-common.ParticipantDeclaration</a></li><li><a href="module-ibm-concerto-common.PlantUMLGenerator.html">ibm-concerto-common.PlantUMLGenerator</a></li><li><a href="module-ibm-concerto-common.PlantUMLVisitor.html">ibm-concerto-common.PlantUMLVisitor</a></li><li><a href="module-ibm-concerto-common.Predicate.html">ibm-concerto-common.Predicate</a></li><li><a href="module-ibm-concerto-common.Property.html">ibm-concerto-common.Property</a></li><li><a href="module-ibm-concerto-common.Relationship.html">ibm-concerto-common.Relationship</a></li><li><a href="module-ibm-concerto-common.RelationshipDeclaration.html">ibm-concerto-common.RelationshipDeclaration</a></li><li><a href="module-ibm-concerto-common.Resource.html">ibm-concerto-common.Resource</a></li><li><a href="module-ibm-concerto-common.ResourceValidator.html">ibm-concerto-common.ResourceValidator</a></li><li><a href="module-ibm-concerto-common.Script.html">ibm-concerto-common.Script</a></li><li><a href="module-ibm-concerto-common.ScriptManager.html">ibm-concerto-common.ScriptManager</a></li><li><a href="module-ibm-concerto-common.SecurityContext.html">ibm-concerto-common.SecurityContext</a></li><li><a href="module-ibm-concerto-common.SecurityException.html">ibm-concerto-common.SecurityException</a></li><li><a href="module-ibm-concerto-common.Serializer.html">ibm-concerto-common.Serializer</a></li><li><a href="module-ibm-concerto-common.TransactionDeclaration.html">ibm-concerto-common.TransactionDeclaration</a></li><li><a href="module-ibm-concerto-common.TypedStack.html">ibm-concerto-common.TypedStack</a></li><li><a href="module-ibm-concerto-common.TypescriptVisitor.html">ibm-concerto-common.TypescriptVisitor</a></li><li><a href="module-ibm-concerto-common.Util.html">ibm-concerto-common.Util</a></li><li><a href="module-ibm-concerto-common.ValidatedResource.html">ibm-concerto-common.ValidatedResource</a></li><li><a href="module-ibm-concerto-common.ValidationException.html">ibm-concerto-common.ValidationException</a></li><li><a href="module-ibm-concerto-common.VersionChecker.html">ibm-concerto-common.VersionChecker</a></li><li><a href="module-ibm-concerto-common.Writer.html">ibm-concerto-common.Writer</a></li><li><a href="module-ibm-concerto-runtime.Api.html">ibm-concerto-runtime.Api</a></li><li><a href="module-ibm-concerto-runtime.AssetRegistry.html">ibm-concerto-runtime.AssetRegistry</a></li><li><a href="module-ibm-concerto-runtime.Container.html">ibm-concerto-runtime.Container</a></li><li><a href="module-ibm-concerto-runtime.Context.html">ibm-concerto-runtime.Context</a></li><li><a href="module-ibm-concerto-runtime.DataCollection.html">ibm-concerto-runtime.DataCollection</a></li><li><a href="module-ibm-concerto-runtime.DataService.html">ibm-concerto-runtime.DataService</a></li><li><a href="module-ibm-concerto-runtime.Engine.html">ibm-concerto-runtime.Engine</a></li><li><a href="module-ibm-concerto-runtime.EngineBusinessNetworks.html">ibm-concerto-runtime.EngineBusinessNetworks</a></li><li><a href="module-ibm-concerto-runtime.EngineIdentities.html">ibm-concerto-runtime.EngineIdentities</a></li><li><a href="module-ibm-concerto-runtime.EngineRegistries.html">ibm-concerto-runtime.EngineRegistries</a></li><li><a href="module-ibm-concerto-runtime.EngineResources.html">ibm-concerto-runtime.EngineResources</a></li><li><a href="module-ibm-concerto-runtime.EngineTransactions.html">ibm-concerto-runtime.EngineTransactions</a></li><li><a href="module-ibm-concerto-runtime.Factory.html">ibm-concerto-runtime.Factory</a></li><li><a href="module-ibm-concerto-runtime.IdentityService.html">ibm-concerto-runtime.IdentityService</a></li><li><a href="module-ibm-concerto-runtime.LoggingService.html">ibm-concerto-runtime.LoggingService</a></li><li><a href="module-ibm-concerto-runtime.ParticipantRegistry.html">ibm-concerto-runtime.ParticipantRegistry</a></li><li><a href="module-ibm-concerto-runtime.Resolver.html">ibm-concerto-runtime.Resolver</a></li><li><a href="module-ibm-concerto-runtime.TransactionLogger.html">ibm-concerto-runtime.TransactionLogger</a></li><li><a href="ParticipantRegistry.html">ParticipantRegistry</a></li><li><a href="QueryExecutor.html">QueryExecutor</a></li><li><a href="Registry.html">Registry</a></li><li><a href="RegistryManager.html">RegistryManager</a></li>
+				</ul>
+			</li>
+			
+			<li class="dropdown">
+				<a href="events.list.html" class="dropdown-toggle" data-toggle="dropdown">Events<b class="caret"></b></a>
+				<ul class="dropdown-menu ">
+					<li><a href="module-ibm-concerto-client.AssetRegistry.html#event:resourceadded">ibm-concerto-client.AssetRegistry#event:resourceadded</a></li><li><a href="module-ibm-concerto-client.AssetRegistry.html#event:resourceremoved">ibm-concerto-client.AssetRegistry#event:resourceremoved</a></li><li><a href="module-ibm-concerto-client.AssetRegistry.html#event:resourceupdated">ibm-concerto-client.AssetRegistry#event:resourceupdated</a></li><li><a href="module-ibm-concerto-client.ParticipantRegistry.html#event:resourceadded">ibm-concerto-client.ParticipantRegistry#event:resourceadded</a></li><li><a href="module-ibm-concerto-client.ParticipantRegistry.html#event:resourceremoved">ibm-concerto-client.ParticipantRegistry#event:resourceremoved</a></li><li><a href="module-ibm-concerto-client.ParticipantRegistry.html#event:resourceupdated">ibm-concerto-client.ParticipantRegistry#event:resourceupdated</a></li><li><a href="module-ibm-concerto-client.TransactionRegistry.html#event:resourceadded">ibm-concerto-client.TransactionRegistry#event:resourceadded</a></li><li><a href="module-ibm-concerto-client.TransactionRegistry.html#event:resourceremoved">ibm-concerto-client.TransactionRegistry#event:resourceremoved</a></li><li><a href="module-ibm-concerto-client.TransactionRegistry.html#event:resourceupdated">ibm-concerto-client.TransactionRegistry#event:resourceupdated</a></li><li><a href="Registry.html#event:resourceadded">Registry#event:resourceadded</a></li><li><a href="Registry.html#event:resourceremoved">Registry#event:resourceremoved</a></li><li><a href="Registry.html#event:resourceupdated">Registry#event:resourceupdated</a></li><li><a href="RegistryManager.html#event:registryadded">RegistryManager#event:registryadded</a></li>
+				</ul>
+			</li>
+			
+			<li class="dropdown">
+				<a href="global.html" class="dropdown-toggle" data-toggle="dropdown">Global<b class="caret"></b></a>
+				<ul class="dropdown-menu ">
+					<li><a href="global.html#findCommentBefore">findCommentBefore</a></li><li><a href="global.html#formatMessage">formatMessage</a></li><li><a href="global.html#getDecorators">getDecorators</a></li><li><a href="global.html#getExample">getExample</a></li><li><a href="global.html#getLogger">getLogger</a></li><li><a href="global.html#getMethodArguments">getMethodArguments</a></li><li><a href="global.html#getReturnType">getReturnType</a></li><li><a href="global.html#getText">getText</a></li><li><a href="global.html#getThrows">getThrows</a></li><li><a href="global.html#getVisibility">getVisibility</a></li><li><a href="global.html#Globalize">Globalize</a></li><li><a href="global.html#messageFormatter">messageFormatter</a></li><li><a href="global.html#mixin">mixin</a></li><li><a href="global.html#paramsToString">paramsToString</a></li><li><a href="global.html#processDirectory">processDirectory</a></li><li><a href="global.html#processFile">processFile</a></li><li><a href="global.html#toUMLFilename">toUMLFilename</a></li>
+				</ul>
+			</li>
+			
+		</ul>
+        
+            <div class="col-sm-3 col-md-3">
+                <form class="navbar-form" role="search">
+                    <div class="input-group">
+                        <input type="text" class="form-control" placeholder="Search" name="q" id="search-input">
+                        <div class="input-group-btn">
+                            <button class="btn btn-default" id="search-submit"><i class="glyphicon glyphicon-search"></i></button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        
+	</div>
+
+</div>
+</div>
+
+
+<div class="container" id="toc-content">
+<div class="row">
+
+	
+	<div class="col-md-12">
+	
+		<div id="main">
+			
+
+		<h1 class="page-title">Source: ibm-concerto-common/lib/introspect/classdeclaration.js</h1>
+    
+<section>
+    <article>
+        <pre
+            class="sunlight-highlight-javascript linenums">/*
+ * IBM Confidential
+ * OCO Source Materials
+ * IBM Concerto - Blockchain Solution Framework
+ * Copyright IBM Corp. 2016
+ * The source code for this program is not published or otherwise
+ * divested of its trade secrets, irrespective of what has
+ * been deposited with the U.S. Copyright Office.
+ */
+
+'use strict';
+
+const Field = require('./field');
+const EnumValueDeclaration = require('./enumvaluedeclaration');
+const RelationshipDeclaration = require('./relationshipdeclaration');
+const IllegalModelException = require('./illegalmodelexception');
+const Globalize = require('../globalize');
+
+/**
+ * ClassDeclaration defines the structure (model/schema) of composite data.
+ * It is composed of a set of Properties, may have an identifying field, and may
+ * have a super-type.
+ * A ClassDeclaration is conceptually owned with a ModelFile which
+ * defines all the classes that are part of a namespace.
+ *
+ * This class is abstract and should not be instantiated.
+ * @private
+ * @abstract
+ * @class
+ * @memberof module:ibm-concerto-common
+ */
+class ClassDeclaration {
+
+    /**
+     * Create a ClassDeclaration from an Abstract Syntax Tree. The AST is the
+     * result of parsing.
+     *
+     * @param {ModelFile} modelFile - the ModelFile for this class
+     * @param {string} ast - the AST created by the parser
+     * @throws {IllegalModelException}
+     */
+    constructor(modelFile, ast) {
+        if(!modelFile || !ast) {
+            throw new IllegalModelException(Globalize.formatMessage('classdeclaration-constructor-modelastreq'));
+        }
+
+        this.ast = ast;
+        this.modelFile = modelFile;
+        this.process();
+    }
+
+    /**
+     * Visitor design pattern
+     * @param {Object} visitor - the visitor
+     * @param {Object} parameters  - the parameter
+     * @return {Object} the result of visiting or null
+     * @private
+     */
+    accept(visitor,parameters) {
+        return visitor.visit(this, parameters);
+    }
+
+    /**
+     * Returns the ModelFile that defines this class.
+     *
+     * @return {ModelFile} the owning ModelFile
+     */
+    getModelFile() {
+        return this.modelFile;
+    }
+
+    /**
+     * Process the AST and build the model
+     *
+     * @throws {InvalidModelException}
+     * @private
+     */
+    process() {
+        this.name = this.ast.id.name;
+        this.properties = [];
+        this.superType = null;
+        this.idField = null;
+        this.abstract = false;
+
+        if(this.ast.abstract) {
+            this.abstract = true;
+        }
+
+        if(this.ast.classExtension) {
+            this.superType = this.ast.classExtension.class.name;
+        }
+
+        if(this.ast.idField) {
+            this.idField = this.ast.idField.name;
+        }
+
+        for(let n=0; n &lt; this.ast.body.declarations.length; n++ ) {
+            let thing = this.ast.body.declarations[n];
+
+            //console.log('Found: ' + thing.type + ' ' + thing.id.name);
+
+            if(thing.type === 'FieldDeclaration') {
+                this.properties.push( new Field(this, thing) );
+            }
+            else if(thing.type === 'RelationshipDeclaration') {
+                this.properties.push( new RelationshipDeclaration(this, thing) );
+            }
+            else if(thing.type === 'EnumPropertyDeclaration') {
+                this.properties.push( new EnumValueDeclaration(this, thing) );
+            }
+            else {
+                let formatter = Globalize.messageFormatter('classdeclaration-process-unrecmodelelem');
+                throw new IllegalModelException(formatter({
+                    'type': thing.type
+                }));
+            }
+        }
+    }
+
+    /**
+     * Semantic validation of the structure of this class. Subclasses should
+     * override this method to impose additional semantic constraints on the
+     * contents/relations of fields.
+     *
+     * @throws {InvalidModelException}
+     * @private
+     */
+    validate() {
+        // TODO (LG) check that all imported classes exist, rather than just
+        // used imports
+
+        // if we have a super type make sure it exists
+        if(this.superType!==null) {
+            let classDecl = null;
+            if(this.getModelFile().isImportedType(this.superType)) {
+                let fqnSuper = this.getModelFile().resolveImport(this.superType);
+                classDecl = this.modelFile.getModelManager().getType(fqnSuper);
+            }
+            else {
+                classDecl = this.getModelFile().getType(this.superType);
+            }
+
+            if(classDecl===null) {
+                throw new IllegalModelException('Could not find super type ' + this.superType);
+            }
+        }
+
+        // TODO (DCS) we need to validate that the super type is compatible
+        // with this class. e.g. an asset cannot extend a transaction...
+
+        if(this.idField) {
+            const field = this.getProperty(this.idField);
+            if(!field) {
+                let formatter = Globalize('en').messageFormatter('classdeclaration-validate-identifiernotproperty');
+                throw new IllegalModelException(formatter({
+                    'class': this.name,
+                    'idField': this.idField
+                }));
+            }
+            else {
+                // check that identifiers are strings
+                if(field.getType() !== 'String') {
+                    let formatter = Globalize('en').messageFormatter('classdeclaration-validate-identifiernotstring');
+                    throw new IllegalModelException( formatter({
+                        'class': this.name,
+                        'idField': this.idField
+                    }));
+                }
+
+                if(field.isOptional()) {
+                    throw new IllegalModelException('Identifying fields cannot be optional.');
+                }
+            }
+        }
+
+        // we also have to check fields defined in super classes
+        const properties = this.getProperties();
+        for(let n=0; n &lt; properties.length; n++) {
+            let field = properties[n];
+
+            // check we don't have a field with the same name
+            for(let i=n+1; i &lt; properties.length; i++) {
+                let otherField = properties[i];
+                if(field.getName() === otherField.getName()) {
+                    let formatter = Globalize('en').messageFormatter('classdeclaration-validate-duplicatefieldname');
+                    throw new IllegalModelException( formatter({
+                        'class': this.name,
+                        'fieldName': field.getName()
+                    }));
+                }
+            }
+
+            field.validate(this);
+        }
+    }
+
+    /**
+     * Returns true if this class is declared as abstract in the model file
+     *
+     * @return {boolean} true if the class is abstract
+     */
+    isAbstract() {
+        return this.abstract;
+    }
+
+    /**
+     * Returns true if this class is an enumeration.
+     *
+     * @return {boolean} true if the class is an enumerated type
+     */
+    isEnum() {
+        return false;
+    }
+
+    /**
+     * Returns the short name of a class. This name does not include the
+     * namespace from the owning ModelFile.
+     *
+     * @return {string} the short name of this class
+     */
+    getName() {
+        return this.name;
+    }
+
+    /**
+     * Returns the fully qualified name of this class.
+     * The name will include the namespace if present.
+     *
+     * @return {string} the fully-qualified name of this class
+     */
+    getFullyQualifiedName() {
+        return this.modelFile.getNamespace() + '.' + this.name;
+    }
+
+    /**
+     * Returns the name of the identifying field for this class. Note
+     * that the identifying field may come from a super type.
+     *
+     * @return {string} the name of the id field for this class
+     */
+    getIdentifierFieldName() {
+
+        if(this.idField) {
+            return this.idField;
+        }
+        else {
+            let classDecl = this.modelFile.getModelManager().getType(this.getSuperType());
+            return classDecl.getIdentifierFieldName();
+        }
+    }
+
+    /**
+     * Returns the field with a given name or null if it does not exist.
+     * The field must be directly owned by this class -- the super-type is
+     * not introspected.
+     *
+     * @param {string} name the name of the field
+     * @return {Property} the field definition or null if it does not exist.
+     */
+    getOwnProperty(name) {
+        for(let n=0; n &lt; this.properties.length; n++) {
+            const field = this.properties[n];
+            if(field.getName() === name) {
+                return field;
+            }
+        }
+
+        return null;
+    }
+
+    /**
+     * Returns the fields directly defined by this class.
+     *
+     * @return {Property[]} the array of fields
+     */
+    getOwnProperties() {
+        return this.properties;
+    }
+
+    /**
+     * Returns the FQN of the super type for this class or null if this
+     * class does not have a super type.
+     *
+     * @return {string} the FQN name of the super type or null
+     */
+    getSuperType() {
+        if(this.superType) {
+            const type = this.getModelFile().getType(this.superType);
+            if(type === null) {
+                throw new Error('Could not find super type:' + this.superType );
+            }
+            else {
+                return type.getFullyQualifiedName();
+            }
+        }
+
+        return null;
+    }
+
+    /**
+     * Returns the property with a given name or null if it does not exist.
+     * Fields defined in super-types are also introspected.
+     *
+     * @param {string} name the name of the field
+     * @return {Property} the field, or null if it does not exist
+     */
+    getProperty(name) {
+        let result = this.getOwnProperty(name);
+        let classDecl = null;
+
+        if(result === null &amp;&amp; this.superType!==null) {
+            if(this.getModelFile().isImportedType(this.superType)) {
+                let fqnSuper = this.getModelFile().resolveImport(this.superType);
+                classDecl = this.modelFile.getModelManager().getType(fqnSuper);
+            }
+            else {
+                classDecl = this.getModelFile().getType(this.superType);
+            }
+            result = classDecl.getProperty(name);
+        }
+
+        return result;
+    }
+
+    /**
+     * Returns the properties defined in this class and all super classes.
+     *
+     * @return {Property[]} the array of fields
+     */
+    getProperties() {
+        let result = this.getOwnProperties();
+        let classDecl = null;
+        if(this.superType!==null) {
+            if(this.getModelFile().isImportedType(this.superType)) {
+                let fqnSuper = this.getModelFile().resolveImport(this.superType);
+                classDecl = this.modelFile.getModelManager().getType(fqnSuper);
+            }
+            else {
+                classDecl = this.getModelFile().getType(this.superType);
+            }
+
+            if(classDecl===null) {
+                throw new IllegalModelException('Could not find super type ' + this.superType);
+            }
+
+            // go get the fields from the super type
+            result = result.concat(classDecl.getProperties());
+        }
+        else {
+            // console.log('No super type for ' + this.getName() );
+        }
+
+        return result;
+    }
+
+    /**
+     * Stop serialization of this object.
+     * @return {Object} An empty object.
+     */
+    toJSON() {
+        return {};
+    }
+
+    /**
+     * Returns the string representation of this class
+     * @return {String} the string representation of the class
+     */
+    toString() {
+        let superType = '';
+        if(this.superType) {
+            superType = ' super=' + this.superType;
+        }
+        return 'ClassDeclaration {id=' + this.getFullyQualifiedName() + superType + ' enum=' + this.isEnum() + ' abstract=' + this.isAbstract() + '}';
+    }
+}
+
+module.exports = ClassDeclaration;
+</pre>
+    </article>
+</section>
+
+
+
+
+
+		</div>
+	</div>
+
+	<div class="clearfix"></div>
+
+	
+
+</div>
+</div>
+
+
+    <div class="modal fade" id="searchResults">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h4 class="modal-title">Search results</h4>
+          </div>
+          <div class="modal-body"></div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          </div>
+        </div><!-- /.modal-content -->
+      </div><!-- /.modal-dialog -->
+    </div>
+
+
+<footer>
+
+
+	<span class="copyright">
+	Copyright IBM Corp. 2016
+	</span>
+
+<span class="jsdoc-message">
+	Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.4.3</a>
+	
+		on Thu Jan 5th 2017
+	
+	using the <a href="https://github.com/docstrap/docstrap">DocStrap template</a>.
+</span>
+</footer>
+
+<script src="scripts/docstrap.lib.js"></script>
+<script src="scripts/toc.js"></script>
+
+    <script type="text/javascript" src="scripts/fulltext-search-ui.js"></script>
+
+
+<script>
+$( function () {
+	$( "[id*='$']" ).each( function () {
+		var $this = $( this );
+
+		$this.attr( "id", $this.attr( "id" ).replace( "$", "__" ) );
+	} );
+
+	$( ".tutorial-section pre, .readme-section pre, pre.prettyprint.source" ).each( function () {
+		var $this = $( this );
+
+		var example = $this.find( "code" );
+		exampleText = example.html();
+		var lang = /{@lang (.*?)}/.exec( exampleText );
+		if ( lang && lang[1] ) {
+			exampleText = exampleText.replace( lang[0], "" );
+			example.html( exampleText );
+			lang = lang[1];
+		} else {
+			var langClassMatch = example.parent()[0].className.match(/lang\-(\S+)/);
+			lang = langClassMatch ? langClassMatch[1] : "javascript";
+		}
+
+		if ( lang ) {
+
+			$this
+			.addClass( "sunlight-highlight-" + lang )
+			.addClass( "linenums" )
+			.html( example.html() );
+
+		}
+	} );
+
+	Sunlight.highlightAll( {
+		lineNumbers : true,
+		showMenu : true,
+		enableDoclinks : true
+	} );
+
+	$.catchAnchorLinks( {
+        navbarOffset: 10
+	} );
+	$( "#toc" ).toc( {
+		anchorName  : function ( i, heading, prefix ) {
+			return $( heading ).attr( "id" ) || ( prefix + i );
+		},
+		selectors   : "#toc-content h1,#toc-content h2,#toc-content h3,#toc-content h4",
+		showAndHide : false,
+		smoothScrolling: true
+	} );
+
+	$( "#main span[id^='toc']" ).addClass( "toc-shim" );
+	$( '.dropdown-toggle' ).dropdown();
+
+    $( "table" ).each( function () {
+      var $this = $( this );
+      $this.addClass('table');
+    } );
+
+} );
+</script>
+
+
+
+<!--Navigation and Symbol Display-->
+
+
+<!--Google Analytics-->
+
+
+
+    <script type="text/javascript">
+        $(document).ready(function() {
+            SearcherDisplay.init();
+        });
+    </script>
+
+
+</body>
+</html>

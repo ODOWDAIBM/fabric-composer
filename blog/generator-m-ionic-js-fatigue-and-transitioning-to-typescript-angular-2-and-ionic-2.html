@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta charset="utf-8">
+
+  
+    <title>Generator-M-Ionic - JS fatigue and transitioning to Typescript, Angular 2 &amp; Ionic 2 | IBM Blockchain Framework</title>
+  
+  <meta name="viewport" content="width=device-width">
+  <link rel="icon" type="image/x-icon" href="/favicon.ico">
+
+  <meta name="google-site-verification" content="fBQRJ6h7MV7_TJ7grbgq4P-d-07NRfDWPe4pqEEoH5w">
+
+  <link href="//fonts.googleapis.com/css?family=Roboto+Slab:400,700%7CRoboto:400,700,700italic,400italic" rel="stylesheet" type="text/css">
+
+
+  
+    <link href="assets/css/normalize.css" rel="stylesheet">
+    <link href="assets/css/main.css" rel="stylesheet">
+    <link href="assets/css/footer.css" rel="stylesheet">
+    <link href="assets/css/prettify.css" rel="stylesheet">
+  
+
+  
+
+  <link href="/blog/atom.xml" type="application/atom+xml" rel="alternate" title="Concerto Blog Atom Feed">
+</head>
+
+<body class="">
+
+  
+  
+
+
+
+
+<header class="page-header">
+  <div class="container">
+    <div class="mobile-bar">
+      <h1 class="logo">
+        <a href="/Blockchain-WW-Labs/Concerto/index.html"><img src="/Blockchain-WW-Labs/Concerto/assets/img/logo.png" alt=""></a>
+      </h1>
+      <button class="mobile-menu-toggle ir">open</button>
+    </div>
+    <nav class="main-menu">
+      <ul class="main-nav">
+        <li>
+          <a href="/Blockchain-WW-Labs/Concerto/overview/overview.html">Overview</a>
+        </li>
+        <li>
+          <a href="/Blockchain-WW-Labs/Concerto/start/getting-started.html">Getting Started</a>
+        </li>
+        <li>
+          <a href="/Blockchain-WW-Labs/Concerto/concepts/">Concepts</a>
+          <ul>
+<li><a href="/Blockchain-WW-Labs/Concerto/concepts/businessnetwork.html">Business Network</a></li>
+<li><a href="/Blockchain-WW-Labs/Concerto/concepts/businessnetworkdefinition.html">Business Network Definition</a></li>
+<li><a href="/Blockchain-WW-Labs/Concerto/concepts/participantsandidentities.html">Participants and Identities</a></li>
+</ul>
+
+        </li>
+        <li>
+          <a href="/Blockchain-WW-Labs/Concerto/tasks/">Tasks</a>
+          <ul>
+<li><a href="/Blockchain-WW-Labs/Concerto/tasks/prerequisites.html">Installing Pre-requisites</a></li>
+<li><a href="/Blockchain-WW-Labs/Concerto/tasks/deploybusinessnetwork.html">Deploy Business Network</a></li>
+<li><a href="/Blockchain-WW-Labs/Concerto/tasks/createconnectionprofile.html">Create Connection Profile</a></li>
+<li><a href="/Blockchain-WW-Labs/Concerto/tasks/bnd-define.html">Create a Business Network Definition</a></li>
+<li><a href="/Blockchain-WW-Labs/Concerto/tasks/bnd-publish.html">Publish a Business Network Definition</a></li>
+<li><a href="/Blockchain-WW-Labs/Concerto/tasks/genapp.html">Generating an Application</a></li>
+<li><a href="/Blockchain-WW-Labs/Concerto/tasks/model-define.html">Create a Business Domain Model</a></li>
+<li><a href="/Blockchain-WW-Labs/Concerto/tasks/model-publish.html">Publish a Business Domain Model</a></li>
+<li><a href="/Blockchain-WW-Labs/Concerto/tasks/runtime-start.html">Start a Fabric Runtime</a></li>
+<li><a href="/Blockchain-WW-Labs/Concerto/tasks/testing.html">Test a Business Network Definition</a></li>
+<li><a href="/Blockchain-WW-Labs/Concerto/tasks/runtime-update.html">Update a Business Network Definition on Fabric</a></li>
+<li><a href="/Blockchain-WW-Labs/Concerto/tasks/participant-add.html">Add a Participant</a></li>
+<li><a href="/Blockchain-WW-Labs/Concerto/tasks/identity-issue.html">Issue an Identity for a Participant</a></li>
+<li><a href="/Blockchain-WW-Labs/Concerto/tasks/identity-revoke.html">Revoke an Identity for a Participant</a></li>
+<li><a href="/Blockchain-WW-Labs/Concerto/tasks/current-participant.html">Implementing access control using the current Participant</a></li>
+<li><a href="/Blockchain-WW-Labs/Concerto/tasks/diagnostics.html">Diagnosing Problems</a></li>
+</ul>
+
+        </li>
+        <li>
+          <a href="/Blockchain-WW-Labs/Concerto/reference/">Reference</a>
+          <ul>
+<li><a href="/Blockchain-WW-Labs/Concerto/reference/MeetTheModules.html">Meet the Modules</a></li>
+<li><a href="/Blockchain-WW-Labs/Concerto/reference/platforms.html">Supported Platforms</a></li>
+<li><a href="/Blockchain-WW-Labs/Concerto/reference/cto_language.html">Concerto Modeling Language</a></li>
+<li><a href="/Blockchain-WW-Labs/Concerto/reference/connectionprofile.html">Connection Profile</a></li>
+<li><a href="/Blockchain-WW-Labs/Concerto/reference/js_scripts.html">Transaction Processor Functions</a></li>
+<li><a href="/Blockchain-WW-Labs/Concerto/reference/commands.html">Concerto Command Line</a></li>
+<li><a href="/Blockchain-WW-Labs/Concerto/reference/concerto.generator.tests.html">Concerto Generator</a></li>
+<li><a href="/Blockchain-WW-Labs/Concerto/reference/concerto.participant.add.html">Concerto CLI Add Participant</a></li>
+<li><a href="/Blockchain-WW-Labs/Concerto/reference/concerto.identity.issue.html">Concerto CLI Issue Identity</a></li>
+<li><a href="/Blockchain-WW-Labs/Concerto/reference/concerto.identity.revoke.html">Concerto CLI Revoke Identity</a></li>
+<li><a target="_blank" href="/Blockchain-WW-Labs/Concerto/jsdoc/develop/index.html">API Documentation</a></li>
+<li><a href="/Blockchain-WW-Labs/Concerto/reference/glossary.html">Glossary</a></li>
+</ul>
+
+        </li>
+        <li>
+          <a href="/Blockchain-WW-Labs/Concerto/support/index.html">Support</a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+<!-- /.container -->
+</header><!-- /.page-header -->
+
+  
+
+  <div class="SiteWrapper">
+    
+      <div id="content">
+  <h2 class="page-title">
+    <span class="container">Generator-M-Ionic - JS fatigue and transitioning to Typescript, Angular 2 &amp; Ionic 2</span>
+  </h2>
+
+  <div class="container clearfix">
+    
+
+    <article class="main">
+      
+
+      <section class="content-chunk">
+        
+          <section>
+  <div class="blog-post-meta clearfix">
+    <p class="date">13 Jul 2016</p>
+    <div class="social">
+  <!--twitter-->
+  <a href="https://twitter.com/share" class="twitter-share-button" data-text="" data-url="">Tweet</a>
+  <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+  <!--twitter-->
+
+  <!--plus-->
+  <script src="https://apis.google.com/js/plusone.js"></script><plus action="share"></plus>
+  <!--plus-->
+
+</div>
+
+  </div>
+
+  <div class="post">
+    <p align="center">
+  <a href="https://github.com/mwaylabs/generator-m-ionic" alt="Generator-M-Ionic">
+    <img width="175" src="/assets/img/blog/2016-07-13/logo.png">
+  </a>
+</p>
+
+<blockquote>
+<p>This is a guest post by <a href="https://twitter.com/JonathanGrupp">Jonathan Grupp</a></p>
+</blockquote>
+
+<p><a href="https://github.com/mwaylabs/generator-m-ionic">Generator-M-Ionic</a> is an open source collection of advanced workflows for building cross-platform HTML5 mobile apps with Ionic. This article gives a quick introduction into the generator's capabilities and refers to more elaborate resources for those willing to work with it.</p>
+
+<p>As we're transitioning to the next generation technology stack with Typescript, Angular 2 and Ionic 2, we're trying to overcome <a href="https://medium.com/@ericclemmons/javascript-fatigue-48d4011b6fc4#.vh3bssyd7">JS fatigue</a> and JS tooling fatigue and bring the development of the different tools closer together. You can help us by joining the discussion!</p>
+
+<h2 id="whats-generator-m-ionic-for">What's Generator-M-Ionic for?</h2>
+
+<blockquote>
+<p><strong>Advanced workflows for building rock-solid Ionic apps:</strong> develop, prototype, test, build and deliver high quality apps with Yeoman, Gulp, Bower, Angular, Cordova and of course Ionic. All in one sexy generator.</p>
+</blockquote>
+
+<p>The roots of <a href="https://github.com/mwaylabs/generator-m-ionic">Generator-M-Ionic</a> reach back more than two years when my team and I (<a href="https://github.com/gruppjo">@gruppjo</a>) at <a href="http://www.mwaysolutions.com/">M-Way Solutions</a> decided to move our HTML5 mobile app development stack to Angular and Ionic in <a href="http://blog.mwaysolutions.com/2015/03/26/generator-m-the-state-of-html5-mobile-app-development-at-m-way/">early 2014</a>. Since then <a href="https://github.com/mwaylabs/generator-m-ionic">Generator-M-Ionic</a> has grown into a full-fledged collection of development tools for building large-scale enterprise apps with <a href="http://cordova.apache.org/">Cordova</a>, <a href="https://angularjs.org/">Angular</a> and <a href="http://ionicframework.com/">Ionic</a>.</p>
+
+<p>Built on top of the <a href="http://yeoman.io/">Yeoman Ecosystem</a> with <a href="http://gulpjs.com/">Gulp</a>, <a href="https://bower.io/">Bower</a> and <a href="https://www.npmjs.com/">npm</a>, Generator-M-Ionic offers highly efficient workflows for building apps from start to finish by wiring together a complex technology stack and by providing workflows for all important aspects of professional cross-platform HTML5 app development with Cordova, Angular and Ionic.</p>
+
+<p><img src="/assets/img/blog/2016-07-13/tech_stack.png" alt="Generator-M-Ionic technology stack"></p>
+
+<p>Here's a brief overview of Generator-M-Ionic's capabilities:</p>
+
+<h3 id="code-generation">Code Generation</h3>
+
+<ul>
+<li>
+<code>yo m-ionic</code> sets up a fine-tuned project including:
+
+<ul>
+<li>worry-free <a href="https://github.com/mwaylabs/generator-m-ionic/tree/master/docs/guides/git_integration.md">Git integration</a>
+</li>
+<li>a properly configured <a href="https://github.com/mwaylabs/generator-m-ionic/blob/master/docs/guides/development_intro.md#using-the-cordova-cli">Cordova project</a>
+</li>
+<li>an out of the box <a href="https://github.com/mwaylabs/generator-m-ionic/blob/master/docs/guides/questions.md#starter-template">sample app</a>
+</li>
+<li>seamless <a href="https://github.com/mwaylabs/generator-m-ionic/blob/master/docs/guides/sass_integration.md">Sass integration</a>
+</li>
+<li>easy to understand <a href="https://github.com/mwaylabs/generator-m-ionic/blob/master/docs/guides/file_structure.md">file-structure</a>
+</li>
+</ul>
+</li>
+<li>
+<a href="https://github.com/mwaylabs/generator-m-ionic/blob/master/docs/guides/sub_generators.md">sub generators</a> create ready to use components like Angular controllers, templates, services and more</li>
+</ul>
+
+<h3 id="development-workflows">Development Workflows</h3>
+
+<ul>
+<li>
+<code>gulp watch</code> automatically connects the frontend-stack including Angular, Ionic and all other bower components, stylesheets, your own Angular and Ionic components with your app and watches for changes</li>
+<li>
+<code>gulp --livereload "run ios"</code> builds an app for your device and watches for changes on your dev machine using <a href="https://www.browsersync.io/">Browsersync</a>
+</li>
+<li>... discover more useful workflows in our <a href="https://github.com/mwaylabs/generator-m-ionic/blob/master/docs/guides/development_intro.md">Development Introduction</a>
+</li>
+</ul>
+
+<h3 id="code-quality">Code Quality</h3>
+
+<ul>
+<li>
+<a href="http://eslint.org/">ESLint</a> together with other JSONLint runs along with all important development tasks</li>
+<li>
+<code>gulp karma</code> and <code>gulp protractor</code> profit from an out-of-the-box ready-to-use <a href="https://github.com/mwaylabs/generator-m-ionic/blob/master/docs/guides/testing.md">Testing workflow</a>
+</li>
+<li>these integrate nicely into Continuous Integration, precommit and other hooks with <a href="https://github.com/mwaylabs/generator-m-ionic/blob/master/docs/guides/testing_workflow.md">Husky</a>
+</li>
+</ul>
+
+<h3 id="continuous-integration">Continuous Integration</h3>
+
+<p>In addition to our CI-ready build and test workflows, injecting <a href="https://github.com/mwaylabs/generator-m-ionic/blob/master/docs/guides/build_vars.md">Build Vars</a> into your build and other <a href="https://github.com/mwaylabs/generator-m-ionic/blob/master/docs/guides/programmatically_change_configxml.md">CI features</a> complement a successful Continuous Integration setup with Generator-M-Ionic.</p>
+
+<h3 id="advanced-workflows">Advanced Workflows</h3>
+
+<p>Handling <a href="https://github.com/mwaylabs/generator-m-ionic/tree/master/docs/guides/cors_proxy.md">CORS &amp; Proxying</a> issues, managing different sets of <a href="https://github.com/mwaylabs/generator-m-ionic/tree/master/docs/guides/icons_splash_screens.md">App Icons and splash screens</a>, tackling different API endpoints and other things with <a href="https://github.com/mwaylabs/generator-m-ionic/tree/master/docs/guides/environments.md">Environments</a> and much more is part of the <a href="https://github.com/mwaylabs/generator-m-ionic#advanced">Advanced Workflows Section</a> of our Guides.</p>
+
+<h3 id="ecosystems">Ecosystems</h3>
+
+<p>Creating things like backends, push services, user management, build infrastructures and others can be hard. Luckily there's ecosystems like the <a href="http://ionic.io/">Ionic Platform</a>, our own enterprise-targeting <a href="https://www.relution.io/">Relution</a>, which your Generator-M-Ionic project integrates into nicely. <a href="https://github.com/mwaylabs/generator-m-ionic#ecosystems">Read more</a>.</p>
+
+<h2 id="if-that-wasnt-enough">If that wasn't enough</h2>
+
+<p>... check out our <a href="https://github.com/mwaylabs/generator-m-ionic/blob/master/docs/guides/programmatically_change_configxml.md">GitHub repository</a> for the full documentation!</p>
+
+<p>Besides that, we recently had the pleasure of publishing a full blog series about Generator-M-Ionic on the <a href="http://blog.ionic.io/">Ionic Blog</a>. Give it a go for a more tutorial-like approach of getting to know the full value of Generator-M-Ionic:</p>
+
+<ul>
+<li>Advanced workflows for building rock-solid Ionic apps. <a href="http://blog.ionic.io/advanced-workflows-for-building-rock-solid-ionic-apps-part-1/">Part 1: Playground</a>
+</li>
+<li>Advanced workflows for building rock-solid Ionic apps. <a href="http://blog.ionic.io/advanced-workflows-for-building-rock-solid-ionic-apps-part-2/">Part 2: Mountain</a>
+</li>
+<li>Advanced workflows for building rock-solid Ionic apps. <a href="http://blog.ionic.io/advanced-workflows-for-building-rock-solid-ionic-apps-part-3/">Part 3: Orbit</a>
+</li>
+</ul>
+
+<p>We'd love to hear your feedback!</p>
+
+<h2 id="transitioning">Transitioning</h2>
+
+<p>With Angular 2 <a href="http://angularjs.blogspot.de/2016/06/rc4-now-available.html?view=magazine">release candidates</a> and Ionic 2 <a href="http://blog.ionic.io/ionic-2-beta-10-is-live/">betas</a> now being released almost every week <a href="http://blog.mwaysolutions.com/2016/03/23/preparing-for-ionic-2-and-angular-2/">we're preparing to make our transition</a> in a reasonable and educated fashion.</p>
+
+<p><img src="/assets/img/blog/2016-07-13/angular2_ionic2.png" alt="Angular 2 Ionic 2"></p>
+
+<p>The Angular 1 &amp; Ionic 1 ecosystem is huge and many companies like ourselves, or organizations who use our generator have a large number of apps and assets written for this stack. Therefore the Angular 1 / Ionic 1 stack will continue to play a major role for a long time to come, before the majority of the market will have made its transition.</p>
+
+<p>Thus it's especially important for us to provide tools that capitalize on these assets and apps instead of rendering them useless. A smooth transition instead of mindlessly rushing towards the new stack.</p>
+
+<p>For this we need your help.</p>
+
+<h2 id="spark-the-discussion">Spark the discussion</h2>
+
+<p>If you like what you're seeing in our generator you can help us figure out how all of us can build Ionic 2 apps in the future. There's many open ends and a lot of commotion regarding the whole Angular 2 / Ionic 2 stack. Whether to Browserify or to Webpack, to ES6/7 or to Typescript and whether to CLI or to Yeoman?</p>
+
+<p>There's a lot of choices contributing to <a href="https://medium.com/@ericclemmons/javascript-fatigue-48d4011b6fc4#.vh3bssyd7">JS fatigue</a> and from a tooling standpoint this isn't any different.</p>
+
+<p>There is an <a href="https://github.com/angular/angular-cli">Angular 2 CLI prototype</a> from the Angular creators and the <a href="http://ionicframework.com/docs/v2/cli/">Ionic 2 CLI</a> from the Ionic creators. Unfortunately both of them are more or less closed systems which drastically complicates building on top of it to suit your own needs. As of now it's time consuming, partly impossible to get Ionic, Cordova, a proper e2e and unit <a href="https://github.com/mwaylabs/generator-m-ionic/blob/master/docs/guides/testing.md">testing workflow</a>, <a href="https://github.com/mwaylabs/generator-m-ionic/blob/master/docs/guides/eslint.md">linting</a>, <a href="https://github.com/mwaylabs/generator-m-ionic/blob/master/docs/guides/environments.md">environments</a>, <a href="https://github.com/mwaylabs/generator-m-ionic/blob/master/docs/guides/build_vars.md">build vars</a> and many of our other features into each of these tools without forking and largely altering them.</p>
+
+<p>Personally I'm quite intrigued by the flexibility of the <a href="http://fountainjs.io/">FountainJS Generators</a>, which is the next generation of the famous <a href="https://github.com/Swiip/generator-gulp-angular">generator-gulp-angular</a>, both created by <a href="https://twitter.com/Zckrs">@zckrs</a> and <a href="https://twitter.com/Swiip">@Swiip</a>. I hope we can build on top of their architecture. Relying on the <a href="http://yeoman.io/">Yeoman</a> architecture allows tremendous flexibility and extensibility in their and our project. Unfortunately the Angular 2 CLI and the Ionic 2 CLI don't use Yeoman and don't provide easy ways to build on top of their functionality. In fact that's exactly the same problem we had with Angular 1 and Ionic 1 and is the reason <a href="http://blog.mwaysolutions.com/2015/09/21/generator-m-ionic-and-the-search-for-the-holy-grail/">why we started building our generator in the first place</a>.</p>
+
+<h2 id="get-in-touch">Get in touch</h2>
+
+<p>You can help by joining the discussion, tell us which features of Generator-M-Ionic, the Angular 2 CLI and the Ionic 2 CLI you like and hopefully we can bring development of all of them closer together, getting rid of some of that decision fatigue and bring better tools for all of us.</p>
+
+<p>You can start by commenting on <a href="https://github.com/mwaylabs/generator-m-ionic/issues/403">this issue in our repository</a>, or dive deeper into to the corresponding discussion over at the <a href="https://github.com/yeoman/yeoman/issues/1571">yeoman repo</a>, <a href="https://github.com/angular/angular-cli/issues/49#issuecomment-196876545">angular-cli repo</a> or <a href="https://github.com/driftyco/ionic-cli/issues/845">ionic-cli repo</a>.</p>
+
+<p>Let us know what you think and help us build better tools for the next generation of HTML5 mobile app development!</p>
+
+<p>For everything else our <a href="https://github.com/mwaylabs/generator-m-ionic">Github repository</a> and <a href="https://gitter.im/mwaylabs/generator-m-ionic">Gitter channel</a> is the way to go!</p>
+
+  </div>
+
+  <hr>
+
+  <a href="blog">« View More Posts</a>
+</section>
+
+        
+
+        
+      </section>
+    </article>
+  </div>
+</div>
+
+    
+
+    
+    
+<footer class="SiteFooter">
+  <ul class="SiteFooter-links">
+    <li>
+      <a href="https://twitter.com/ibmblockchain" class="icon">
+        <img src="assets/img/social-twitter.svg" class="SiteFooter-icon" alt="Twitter">
+      </a>
+    </li>
+    <li>
+      <a href="https://github.ibm.com/Blockchain-WW-Labs/Concerto/" class="icon">
+        <img src="assets/img/social-github.svg" class="SiteFooter-icon" alt="Github">
+      </a>
+    </li>
+    <li>
+      <a href="/blog/atom.xml" class="icon">
+        <img src="assets/img/social-feed.svg" class="SiteFooter-icon" alt="Feed">
+      </a>
+    </li>
+    <li class="mobile-ln">
+    </li>
+<li>
+      <a href="https://pages.github.ibm.com/Blockchain-WW-Labs/Concerto/jsdoc/develop/index.html" class="SiteFooter-button SiteFooter-button--light">APIs</a>
+    </li>
+  </ul>
+</footer><!-- /.footer-links -->
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>
+
+<script src="assets/js/libs/prettify.js"></script>
+<script src="assets/js/script.js"></script>
+
+
+
+<script>
+  // $script.js - github.com/ded/script.js
+  (function(a,b,c){typeof c["module"]!="undefined"&&c.module.exports?c.module.exports=b():typeof c["define"]!="undefined"&&c["define"]=="function"&&c.define.amd?define(a,b):c[a]=b()})("$script",function(){function p(a,b){for(var c=0,d=a.length;c<d;++c)if(!b(a[c]))return j;return 1}function q(a,b){p(a,function(a){return!b(a)})}function r(a,b,i){function o(a){return a.call?a():d[a]}function t(){if(!--n){d[m]=1,l&&l();for(var a in f)p(a.split("|"),o)&&!q(f[a],o)&&(f[a]=[])}}a=a[k]?a:[a];var j=b&&b.call,l=j?b:i,m=j?a.join(""):b,n=a.length;return setTimeout(function(){q(a,function(a){if(h[a])return m&&(e[m]=1),h[a]==2&&t();h[a]=1,m&&(e[m]=1),s(!c.test(a)&&g?g+a+".js":a,t)})},0),r}function s(c,d){var e=a.createElement("script"),f=j;e.onload=e.onerror=e[o]=function(){if(e[m]&&!/^c|loade/.test(e[m])||f)return;e.onload=e[o]=null,f=1,h[c]=2,d()},e.async=1,e.src=c,b.insertBefore(e,b.firstChild)}var a=document,b=a.getElementsByTagName("head")[0],c=/^https?:\/\//,d={},e={},f={},g,h={},i="string",j=!1,k="push",l="DOMContentLoaded",m="readyState",n="addEventListener",o="onreadystatechange";return!a[m]&&a[n]&&(a[n](l,function t(){a.removeEventListener(l,t,j),a[m]="complete"},j),a[m]="loading"),r.get=s,r.order=function(a,b,c){(function d(e){e=a.shift(),a.length?r(e,d):r(e,b,c)})()},r.path=function(a){g=a},r.ready=function(a,b,c){a=a[k]?a:[a];var e=[];return!q(a,function(a){d[a]||e[k](a)})&&p(a,function(a){return d[a]})?b():!function(a){f[a]=f[a]||[],f[a][k](b),c&&c(e)}(a.join("|")),r},r},this)
+  var _gaq=[
+    ['_setAccount','100000-1'],
+    ['_setDomainName', '.ibm.com'],
+    ['_trackPageview'],['_trackPageLoadTime']
+  ];
+  $script('http://www.google-analytics.com/ga.js');
+  $script('https://apis.google.com/js/plusone.js');
+  $script("//platform.twitter.com/widgets.js");
+</script>
+
+    
+  </div>
+</body>
+</html>

@@ -1,0 +1,12 @@
+@startuml
+class Identifiable{
+   - void constructor(ModelManager,string,string,string)
+   + ModelManager getModelManager()
+   + string getIdentifier()
+   + string getFullyQualifiedIdentifier()
+   + string getType()
+   + string getFullyQualifiedType()
+   + string getNamespace()
+   + boolean isSystemProperty(string)
+}
+@enduml

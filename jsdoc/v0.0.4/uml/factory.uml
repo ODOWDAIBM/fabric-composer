@@ -1,0 +1,11 @@
+@startuml
+!include ./model/resource.uml
+!include ./model/relationship.uml
+!include ./util.uml
+!include ./globalize.uml
+class Factory{
+   + void constructor(ModelManager)
+   + Resource newInstance(SecurityContext,string,string,string)
+   + Relationship newRelationship(SecurityContext,string,string,string)
+}
+@enduml

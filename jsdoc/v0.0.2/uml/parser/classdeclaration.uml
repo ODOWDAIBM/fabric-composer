@@ -1,0 +1,20 @@
+@startuml
+!include ./field.uml
+!include ./relationship.uml
+!include ./illegalmodelexception.uml
+class ClassDeclaration{
+   + void constructor(ModelFile,string)
+   - Object accept(Object,Object)
+   + ModelFile getModelFile()
+   - void process()
+   - void validate()
+   + string getName()
+   + string getFullyQualifiedName()
+   + string getIdentifierFieldName()
+   + Field getOwnField(string)
+   + Field[] getOwnFields()
+   + string getSuperType()
+   + Field getField(string)
+   + Field[] getFields()
+}
+@enduml

@@ -1,0 +1,8 @@
+@startuml
+!include ./classdeclaration.uml
+class TransactionDeclaration{
+   + void constructor(ModelFile,Object)
+   - void getIdentifierFieldName()
+}
+TransactionDeclaration --|> ClassDeclaration
+@enduml

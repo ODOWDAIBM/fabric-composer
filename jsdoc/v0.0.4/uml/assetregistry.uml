@@ -1,0 +1,17 @@
+@startuml
+!include ./model/resource.uml
+!include ./registry.uml
+!include ./util.uml
+class AssetRegistry{
+   + Promise getAllAssetRegistries(SecurityContext,ModelManager,Factory,Serializer)
+   + Promise getAssetRegistry(SecurityContext,string,ModelManager,Factory,Serializer)
+   + Promise addAssetRegistry(SecurityContext,string,string,ModelManager,Factory,Serializer)
+   + void constructor(string,string,ModelManager,Factory,Serializer)
+   + Promise add(SecurityContext,Resource)
+   + Promise update(SecurityContext,Resource)
+   + Promise remove(SecurityContext,(Resource|string))
+   + Promise getAll(SecurityContext)
+   + Promise get(SecurityContext,string)
+}
+AssetRegistry --|> Registry
+@enduml

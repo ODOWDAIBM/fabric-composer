@@ -1,0 +1,6 @@
+@startuml
+!include ./golang/golangvisitor.uml
+!include ./filewriter.uml
+class codegen << (P,orchid) >> {
+}
+@enduml

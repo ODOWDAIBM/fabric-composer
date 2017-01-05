@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta charset="utf-8">
+
+  
+    <title>Concerto - Installing Development Prerequisites | Concerto</title>
+  
+  <meta name="viewport" content="width=device-width">
+  <link rel="icon" type="image/x-icon" href="/favicon.ico">
+
+  <meta name="google-site-verification" content="fBQRJ6h7MV7_TJ7grbgq4P-d-07NRfDWPe4pqEEoH5w">
+
+  <link href="//fonts.googleapis.com/css?family=Roboto+Slab:400,700%7CRoboto:400,700,700italic,400italic" rel="stylesheet" type="text/css">
+
+
+  
+    <link href="assets/css/normalize.css" rel="stylesheet">
+    <link href="assets/css/main.css" rel="stylesheet">
+    <link href="assets/css/footer.css" rel="stylesheet">
+    <link href="assets/css/prettify.css" rel="stylesheet">
+  
+
+  
+
+  <link href="/blog/atom.xml" type="application/atom+xml" rel="alternate" title="Concerto Blog Atom Feed">
+</head>
+
+<body class="">
+
+  
+  
+
+
+
+
+<header class="page-header">
+  <div class="container">
+    <div class="mobile-bar">
+      <h1 class="logo">
+        <a href="/Blockchain-WW-Labs/Concerto/index.html"><img src="/Blockchain-WW-Labs/Concerto/assets/img/logo.png" alt="Concerto - Solution Framework"></a>
+      </h1>
+      <button class="mobile-menu-toggle ir">open</button>
+    </div>
+    <nav class="main-menu">
+      <ul class="main-nav">
+        <li>
+          <a href="/Blockchain-WW-Labs/Concerto/overview/overview.html">Overview</a>
+        </li>
+        <li>
+          <a href="/Blockchain-WW-Labs/Concerto/start/getting-started.html">Getting Started</a>
+        </li>
+        <li>
+          <a href="/Blockchain-WW-Labs/Concerto/concepts/">Concepts</a>
+          <ul>
+<li><a href="/Blockchain-WW-Labs/Concerto/concepts/businessnetwork.html">Business Network</a></li>
+<li><a href="/Blockchain-WW-Labs/Concerto/concepts/businessnetworkdefinition.html">Business Network Definition</a></li>
+</ul>
+
+        </li>
+        <li>
+          <a href="/Blockchain-WW-Labs/Concerto/tasks/">Tasks</a>
+          <ul>
+<li><a href="/Blockchain-WW-Labs/Concerto/tasks/createconnectionprofile.html">Create Connection Profile</a></li>
+<li><a href="/Blockchain-WW-Labs/Concerto/tasks/deploybusinessnetwork.html">Deploy Business Network</a></li>
+</ul>
+
+        </li>
+        <li>
+          <a href="/Blockchain-WW-Labs/Concerto/reference/">Reference</a>
+          <ul>
+<li><a href="/Blockchain-WW-Labs/Concerto/reference/MeetTheModules.html">Meet the Modules</a></li>
+<li><a href="/Blockchain-WW-Labs/Concerto/reference/scenarioCommandWalkthrough.html">Concerto Scenario Walkthrough</a></li>
+<li><a href="/Blockchain-WW-Labs/Concerto/jsdoc/develop/index.html">Concerto JSDocs</a></li>
+<li><a href="/Blockchain-WW-Labs/Concerto/reference/glossary.html">Glossary</a></li>
+</ul>
+
+        </li>
+        <li>
+          <a href="/Blockchain-WW-Labs/Concerto/support/index.html">Support</a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+<!-- /.container -->
+</header><!-- /.page-header -->
+
+  
+
+  <div class="SiteWrapper">
+    
+      <div id="content">
+  <h2 class="page-title">
+    <span class="container">Concerto - Installing Development Prerequisites</span>
+  </h2>
+
+  <div class="container clearfix has-sidebar">
+    
+      <nav class="context-nav">
+        
+        
+          <ul>
+<li><a href="/Blockchain-WW-Labs/Concerto/tasks/createconnectionprofile.html">Create Connection Profile</a></li>
+<li><a href="/Blockchain-WW-Labs/Concerto/tasks/deploybusinessnetwork.html">Deploy Business Network</a></li>
+</ul>
+
+        
+      </nav>
+    
+
+    <article class="main">
+      
+
+      <section class="content-chunk">
+        
+          <h1 id="installing-development-prerequisites">Installing Development Prerequisites</h1>
+
+<p>This guide will help you to install the prerequisites and set up your local environment to get started.</p>
+
+<p>The following steps will walk you through how to manually install all of the prerequisites.
+If you would rather get going straight away, we have included a bash script which will execute all of these commands automatically.</p>
+
+<p>The installation commands for Ubuntu have been tested on Ubuntu 14.04 (trusty), 64-bit</p>
+
+<h3 id="1-installing-an-editor-atom-recommended">1. Installing an editor (Atom recommended)</h3>
+
+<p>The Concerto project allows you to edit its project files with any editor.  <a href="https://atom.io/">Atom</a> is a very popular editor and several <a href="https://github.ibm.com/orgs/Blockchain-WW-Labs/teams/technical-team">contributors</a> use it. Install Atom, and when you have done so, you are required to turn off Google analytics if you work for IBM. Navigate to Atom-&gt;Preferences-&gt;Packages, search and find the <code>metrics</code> package and disable it.</p>
+
+<p><strong>Installation Commands for Ubuntu:</strong>
+```bash</p>
+
+<h1 id="add-atom-repository">Add Atom Repository</h1>
+
+<p>sudo add-apt-repository ppa:webupd8team/atom -y</p>
+
+<h1 id="update-package-lists">Update package lists</h1>
+
+<p>sudo apt-get update</p>
+
+<h1 id="install-atom">Install Atom</h1>
+
+<p>sudo apt-get -y install atom
+```</p>
+
+<p><strong>Installation Commands for MacOS:</strong>
+<code>bash
+</code></p>
+
+<p><strong>Additional Notes:</strong>
+- <a href="http://flight-manual.atom.io/getting-started/sections/installing-atom/">Official Atom installation guide</a></p>
+
+<h3 id="2-installing-git">2. Installing Git</h3>
+
+<p>This is probably already installed on most Linux machines. Setup is well documented on the <a href="https://help.github.com/enterprise/2.7/user/articles/set-up-git/">ibm.git website</a>. Pay particular attention to <a href="https://help.github.com/enterprise/2.7/user/articles/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent/#platform-linux">setting up the SSL keys</a> that are required.</p>
+
+<p><strong>Installation Commands for Ubuntu:</strong>
+```bash</p>
+
+<h1 id="install-git">Install Git</h1>
+
+<p>sudo apt-get -y install git
+```</p>
+
+<p><strong>Installation Commands for MacOS:</strong>
+<code>bash
+</code></p>
+
+<p><strong>Additional Notes:</strong>
+- <a href="https://git-scm.com/book/en/v2/Getting-Started-Installing-Git">Official Git installation guide</a></p>
+
+<h3 id="3-installing-nvm">3. Installing NVM</h3>
+
+<p>We highly recommend installing <a href="https://github.com/creationix/nvm">nvm</a> to easily install and manage versions of <a href="https://nodejs.org/en/">node.js</a> and <a href="https://www.npmjs.com/">npm</a>. The main runtime uses node.js and npm is used for package management and dependency installation.
+The runtime requires a version higher than v4.6.0.</p>
+
+<p><strong>Installation Commands for Ubuntu:</strong>
+```bash</p>
+
+<h1 id="install-nvm-dependencies">Install nvm dependencies</h1>
+
+<p>sudo apt-get -y install build-essential libssl-dev</p>
+
+<h1 id="execute-nvm-installation-script">Execute nvm installation script</h1>
+
+<p>curl -o- <a href="https://raw.githubusercontent.com/creationix/nvm/v0.32.1/install.sh">https://raw.githubusercontent.com/creationix/nvm/v0.32.1/install.sh</a> | bash</p>
+
+<h1 id="update-bash-profile">Update bash profile</h1>
+
+<p>cat &lt;<eof>&gt; ~/.profile
+export NVM_DIR=~/.nvm
+[ -s "\$NVM_DIR/nvm.sh" ] &amp;&amp; . "\$NVM_DIR/nvm.sh"
+EOF</eof></p>
+
+<h1 id="reload-bash-profile">Reload bash profile</h1>
+
+<p>source ~/.profile</p>
+
+<h1 id="install-node-and-npm">Install node and npm</h1>
+
+<p>nvm install 4.6.2</p>
+
+<h1 id="configure-nvm-to-use-version-4-6-2">Configure nvm to use version 4.6.2</h1>
+
+<p>nvm use 4.6.2.
+```</p>
+
+<p><strong>Installation Commands for MacOS:</strong>
+<code>bash
+</code></p>
+
+<p><strong>Additional Notes:</strong>
+- <a href="https://github.com/creationix/nvm">Official nvm Github repository</a></p>
+
+<h3 id="4-installing-docker-engine">4. Installing Docker Engine</h3>
+
+<p>The Docker Engine is essential for running system tests and running the HyperLedger Fabric.</p>
+
+<p><strong>Installation Commands for Ubuntu:</strong>
+```bash</p>
+
+<h1 id="ensure-that-ca-certificates-are-installed">Ensure that CA certificates are installed</h1>
+
+<p>sudo apt-get -y install apt-transport-https ca-certificates</p>
+
+<h1 id="add-new-gpg-key-and-add-it-to-adv-keychain">Add new GPG key and add it to adv keychain</h1>
+
+<p>sudo apt-key adv \
+               --keyserver hkp://ha.pool.sks-keyservers.net:80 \
+               --recv-keys 58118E89F3A912897C070ADBF76221572C52609D</p>
+
+<h1 id="update-where-apt-will-search-for-docker-packages">Update where APT will search for Docker Packages</h1>
+
+<p>echo "deb <a href="https://apt.dockerproject.org/repo">https://apt.dockerproject.org/repo</a> ubuntu-trusty main" | sudo tee /etc/apt/sources.list.d/docker.list</p>
+
+<h1 id="update-package-lists">Update package lists</h1>
+
+<p>sudo apt-get update</p>
+
+<h1 id="verifies-apt-is-pulling-from-the-correct-repository">Verifies APT is pulling from the correct Repository</h1>
+
+<p>sudo apt-cache policy docker-engine</p>
+
+<h1 id="install-kernel-packages-which-allows-us-to-use-aufs-storage-driver">Install kernel packages which allows us to use aufs storage driver</h1>
+
+<p>sudo apt-get -y install linux-image-extra-$(uname -r) linux-image-extra-virtual</p>
+
+<h1 id="install-docker-engine">Install docker-engine</h1>
+
+<p>sudo apt-get -y install docker-engine=1.12.3-0~trusty</p>
+
+<h1 id="modify-user-account">Modify user account</h1>
+
+<p>sudo usermod -aG docker $(whoami)</p>
+
+<h1 id="you-will-need-to-logout-in-order-for-these-changes-to-take-effect">You will need to logout in order for these changes to take effect!</h1>
+<div class="highlight"><pre><code class="language-text" data-lang="text">**Installation Commands for MacOS:**
+```bash
+</code></pre></div>
+<p><strong>Additional Notes:</strong>
+- <a href="https://docs.docker.com/engine/installation/">Official Docker Engine installation guide</a></p>
+
+<h3 id="5-installing-docker-compose">5. Installing Docker Compose</h3>
+
+<p>Docker Compose is used for easily configuring and starting HyperLedger Fabric.</p>
+
+<p><strong>Installation Commands for Ubuntu:</strong>
+```bash</p>
+
+<h1 id="install-python-package-management-system-to-easily-install-docker-compose">Install python package management system to easily install docker-compose</h1>
+
+<p>sudo apt-get -y install python-pip</p>
+
+<h1 id="use-pip-to-install-docker-compose">Use pip to install Docker Compose</h1>
+
+<p>sudo pip install docker-compose
+```</p>
+
+<p><strong>Installation Commands for MacOS:</strong>
+<code>bash
+</code></p>
+
+<p><strong>Additional Notes:</strong>
+- <a href="https://docs.docker.com/compose/install/">Official Docker Compose installation guide</a></p>
+
+<h3 id="6-login-to-npm-whitewater">6. Login to npm Whitewater</h3>
+
+<p>All of the Concerto packages can be found in the IBM Whitewater npm registry</p>
+
+<p><strong>Installation Commands for Ubuntu:</strong>
+```bash</p>
+
+<h1 id="login-to-npm-whitewater-registry">Login to npm Whitewater registry</h1>
+
+<p>npm login --registry=<a href="https://npm-registry.whitewater.ibm.com">https://npm-registry.whitewater.ibm.com</a> --scope=<a href="https://github.com/ibm" class="user-mention">@ibm</a></p>
+
+<h1 id="before-being-able-to-install-npm-modules-your-terminal-will-be-prompt-you-to-visit-a-link-to-verify-your-login-attempt">Before being able to install npm modules, your terminal will be prompt you to visit a link to verify your login attempt</h1>
+<div class="highlight"><pre><code class="language-text" data-lang="text">**Installation Commands for MacOS:**
+```bash
+</code></pre></div>
+<p><strong>Additional Notes:</strong></p>
+
+        
+
+        
+      </section>
+    </article>
+  </div>
+</div>
+
+    
+
+    
+    
+<footer class="SiteFooter">
+  <ul class="SiteFooter-links">
+    <li>
+      <a href="https://plus.google.com/101063139999404044459/posts" class="icon">
+        <img src="assets/img/social-gplus.svg" class="SiteFooter-icon" alt="Google+">
+      </a>
+    </li>
+    <li>
+      <a href="https://twitter.com/ibmblockchain" class="icon">
+        <img src="assets/img/social-twitter.svg" class="SiteFooter-icon" alt="Twitter">
+      </a>
+    </li>
+    <li>
+      <a href="https://github.ibm.com/Blockchain-WW-Labs/Concerto/" class="icon">
+        <img src="assets/img/social-github.svg" class="SiteFooter-icon" alt="Github">
+      </a>
+    </li>
+    <li>
+      <a href="/blog/atom.xml" class="icon">
+        <img src="assets/img/social-feed.svg" class="SiteFooter-icon" alt="Feed">
+      </a>
+    </li>
+    <li class="mobile-ln">
+    </li>
+<li>
+      <a href="https://github.ibm.com/Blockchain-WW-Labs/Concerto/" class="SiteFooter-button SiteFooter-button--light">API</a>
+    </li>
+  </ul>
+</footer><!-- /.footer-links -->
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>
+
+<script src="assets/js/libs/prettify.js"></script>
+<script src="assets/js/script.js"></script>
+
+
+
+<script>
+  // $script.js - github.com/ded/script.js
+  (function(a,b,c){typeof c["module"]!="undefined"&&c.module.exports?c.module.exports=b():typeof c["define"]!="undefined"&&c["define"]=="function"&&c.define.amd?define(a,b):c[a]=b()})("$script",function(){function p(a,b){for(var c=0,d=a.length;c<d;++c)if(!b(a[c]))return j;return 1}function q(a,b){p(a,function(a){return!b(a)})}function r(a,b,i){function o(a){return a.call?a():d[a]}function t(){if(!--n){d[m]=1,l&&l();for(var a in f)p(a.split("|"),o)&&!q(f[a],o)&&(f[a]=[])}}a=a[k]?a:[a];var j=b&&b.call,l=j?b:i,m=j?a.join(""):b,n=a.length;return setTimeout(function(){q(a,function(a){if(h[a])return m&&(e[m]=1),h[a]==2&&t();h[a]=1,m&&(e[m]=1),s(!c.test(a)&&g?g+a+".js":a,t)})},0),r}function s(c,d){var e=a.createElement("script"),f=j;e.onload=e.onerror=e[o]=function(){if(e[m]&&!/^c|loade/.test(e[m])||f)return;e.onload=e[o]=null,f=1,h[c]=2,d()},e.async=1,e.src=c,b.insertBefore(e,b.firstChild)}var a=document,b=a.getElementsByTagName("head")[0],c=/^https?:\/\//,d={},e={},f={},g,h={},i="string",j=!1,k="push",l="DOMContentLoaded",m="readyState",n="addEventListener",o="onreadystatechange";return!a[m]&&a[n]&&(a[n](l,function t(){a.removeEventListener(l,t,j),a[m]="complete"},j),a[m]="loading"),r.get=s,r.order=function(a,b,c){(function d(e){e=a.shift(),a.length?r(e,d):r(e,b,c)})()},r.path=function(a){g=a},r.ready=function(a,b,c){a=a[k]?a:[a];var e=[];return!q(a,function(a){d[a]||e[k](a)})&&p(a,function(a){return d[a]})?b():!function(a){f[a]=f[a]||[],f[a][k](b),c&&c(e)}(a.join("|")),r},r},this)
+  var _gaq=[
+    ['_setAccount','UA-32956520-1'],
+    ['_setDomainName', '.concerto.io'],
+    ['_trackPageview'],['_trackPageLoadTime']
+  ];
+  $script('http://www.google-analytics.com/ga.js');
+  $script('https://apis.google.com/js/plusone.js');
+  $script("//platform.twitter.com/widgets.js");
+</script>
+
+    
+  </div>
+</body>
+</html>

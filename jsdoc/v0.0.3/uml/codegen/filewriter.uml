@@ -1,0 +1,10 @@
+@startuml
+class FileWriter{
+   + void constructor(string)
+   + void openFile(string)
+   + void openRelativeFile(string,string)
+   + void writeBeforeLine(int,string)
+   + void writeLine(int,string)
+   + void closeFile()
+}
+@enduml

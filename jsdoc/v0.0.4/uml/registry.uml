@@ -1,0 +1,14 @@
+@startuml
+!include ./util.uml
+class Registry{
+   + Promise getAllRegistries(SecurityContext,string)
+   + Promise getRegistry(SecurityContext,string,string)
+   + Promise addRegistry(SecurityContext,string,string,string)
+   + void constructor(string,string,string)
+   + Promise add(SecurityContext,string,string)
+   + Promise update(SecurityContext,string,string)
+   + Promise remove(SecurityContext,string)
+   + Promise getAll(SecurityContext)
+   + Promise get(SecurityContext,string)
+}
+@enduml

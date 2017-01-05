@@ -1,0 +1,7 @@
+@startuml
+!include ./classdeclaration.uml
+class AssetDeclaration{
+   + void constructor(ModelFile,Object)
+}
+AssetDeclaration --|> ClassDeclaration
+@enduml

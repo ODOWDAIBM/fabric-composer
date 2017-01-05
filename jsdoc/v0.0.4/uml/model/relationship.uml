@@ -1,0 +1,7 @@
+@startuml
+!include ./identifiable.uml
+class Relationship{
+   - void constructor(ModelManager,string,string,string)
+}
+Relationship --|> Identifiable
+@enduml

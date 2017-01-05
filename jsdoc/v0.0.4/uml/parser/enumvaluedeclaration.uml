@@ -1,0 +1,8 @@
+@startuml
+!include ./property.uml
+class EnumValueDeclaration{
+   + void constructor(Object)
+   - void validate(ClassDeclaration)
+}
+EnumValueDeclaration --|> Property
+@enduml

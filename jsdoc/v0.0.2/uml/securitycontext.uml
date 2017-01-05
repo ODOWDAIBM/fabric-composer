@@ -1,0 +1,11 @@
+@startuml
+class SecurityContext{
+   + void constructor(string,string)
+   + string getUser()
+   + string getPassword()
+   + hfc.Member getEnrolledMember()
+   + void setEnrolledMember(hfc.Member)
+   + string getChaincodeID()
+   + void setChaincodeID(string)
+}
+@enduml

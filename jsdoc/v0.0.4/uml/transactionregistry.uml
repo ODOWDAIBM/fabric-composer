@@ -1,0 +1,16 @@
+@startuml
+!include ./registry.uml
+!include ./util.uml
+class TransactionRegistry{
+   + Promise getAllTransactionRegistries(SecurityContext,ModelManager,Factory,Serializer)
+   + Promise getTransactionRegistry(SecurityContext,string,ModelManager,Factory,Serializer)
+   + Promise addTransactionRegistry(SecurityContext,string,string,ModelManager,Factory,Serializer)
+   + void constructor(string,string,ModelManager,Factory,Serializer)
+   + Promise add(SecurityContext,Resource)
+   + void update(SecurityContext,string,string)
+   + void remove(SecurityContext,string)
+   + Promise getAll(SecurityContext)
+   + Promise get(SecurityContext,string)
+}
+TransactionRegistry --|> Registry
+@enduml

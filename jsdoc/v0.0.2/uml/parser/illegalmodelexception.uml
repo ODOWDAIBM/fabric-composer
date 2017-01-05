@@ -1,0 +1,6 @@
+@startuml
+class IllegalModelException{
+   + void constructor(string)
+}
+IllegalModelException --|> BaseException
+@enduml

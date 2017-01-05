@@ -1,0 +1,16 @@
+@startuml
+!include ./transactiondeclaration.uml
+!include ./illegalmodelexception.uml
+class FunctionDeclaration{
+   + void constructor(ModelFile,string)
+   - Object accept(Object,Object)
+   + ModelFile getModelFile()
+   + string getFunctionText()
+   - void process()
+   - void validate()
+   + string getName()
+   + string getTransactionDeclarationName()
+   + string[] getParameters()
+   + string getFullyQualifiedName()
+}
+@enduml
