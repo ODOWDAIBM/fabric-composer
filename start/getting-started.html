@@ -222,17 +222,9 @@ First, the assets are created and the newly created assets are listed. Then a tr
 <li>A simple transaction was invoked to update the assets</li>
 </ul>
 
-<p>All done! The next sections will cover these steps in some detail and let you run separate parts of this getting started.
-Follow-on tutorials will show you how to start creating your own simple business networks.</p>
+<p>All done! But let's go ahead and make a change to start to show how easy it is to develop with Concerto.</p>
 
-<h1 id="details-of-each-step">Details of each step</h1>
-
-<h2 id="list-the-deployed-business-network-definitions">List the Deployed Business Network Definitions</h2>
-
-<p>You can list the deployed business network definitions using:</p>
-<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span></span>concerto network list -n @ibm/digitalproperty-network --enrollId WebAppAdmin --enrollSecret DJY27pEnl16d
-</code></pre></div>
-<h2 id="modify-the-business-network-definition">Modify the Business Network Definition</h2>
+<h1 id="updating-the-business-network">Updating the Business Network</h1>
 
 <p>We are going to make a simple change to the business logic for the business network definition.</p>
 
@@ -255,6 +247,8 @@ npm install
 <span class="kd">function</span> <span class="nx">onRegisterPropertyForSale</span><span class="p">(</span><span class="nx">propertyForSale</span><span class="p">)</span> <span class="p">{</span>
     <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">'### onRegisterPropertyForSale '</span> <span class="o">+</span> <span class="nx">propertyForSale</span><span class="p">.</span><span class="nx">toString</span><span class="p">());</span>
     <span class="nx">propertyForSale</span><span class="p">.</span><span class="nx">title</span><span class="p">.</span><span class="nx">forSale</span> <span class="o">=</span> <span class="kc">true</span><span class="p">;</span>
+
+    <span class="cm">/* new line is here to update the information */</span>
     <span class="nx">propertyForSale</span><span class="p">.</span><span class="nx">title</span><span class="p">.</span><span class="nx">information</span> <span class="o">=</span> <span class="nx">propertyForSale</span><span class="p">.</span><span class="nx">title</span><span class="p">.</span><span class="nx">information</span> <span class="o">+</span> <span class="s1">' Updated at: '</span> <span class="o">+</span> <span class="k">new</span> <span class="nb">Date</span><span class="p">().</span><span class="nx">toDateString</span><span class="p">();</span>
 
     <span class="k">return</span> <span class="nx">getAssetRegistry</span><span class="p">(</span><span class="s1">'net.biz.digitalPropertyNetwork.LandTitle'</span><span class="p">).</span><span class="nx">then</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">result</span><span class="p">)</span> <span class="p">{</span>
@@ -265,26 +259,86 @@ npm install
 </code></pre></div>
 <h3 id="publish-updated-business-network-definition-to-npm">Publish Updated Business Network Definition to npm</h3>
 
-<p>In a real-life scenario at this point you would edit <code>package.json</code> to increment the version number in the <code>DigitalProperty-Network</code> directory and publish this to npm. However we would like to keep the version in the npm repository at it's current level. So for the moment issue the npm link command to make this update available locallly.</p>
-<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span></span>npm link
+<p>In a real-life scenario at this point you would edit <code>package.json</code> to increment the version number in the <code>DigitalProperty-Network</code> directory and publish this to npm. But please don't publish to the DigitalProperty-Network in npm - otherwise we'll have version numbers in the 1000s :-)</p>
+
+<p>What we'll do therefore is adopt a different approach to create the Business Network Archive that is deployed to the Hyperledger.
+From within the DigitalProperty-Network directory..</p>
+<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span></span>$ concerto archive create --inputDir .
+Creating Business Network Archive
+Looking <span class="k">for</span> package.json of Business Network Definition in /home/matthew/git17/DigitalProperty-Network
+
+Description:Digital Property Network
+Name:@ibm/digitalproperty-network
+Identifier:@ibm/digitalproperty-network-0.0.11
+
+Written Business Network Definition Archive file to @ibm_digitalproperty-network-0.0.11.bna
+Command completed successfully.
 </code></pre></div>
-<h3 id="update-the-dependencies-for-getting-started-and-restart">Update the Dependencies for Getting Started and Restart</h3>
-<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span></span><span class="nb">cd</span> Concerto-GettingStarted
-npm update
-npm install
+<p>We now have a new file that is the digitial business network archive.</p>
+
+<h3 id="update-the-deployed-buesinness-network">Update the deployed buesinness network</h3>
+<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span></span>$ concerto network update --archiveFile @ibm_digitalproperty-network-0.0.11.bna  --enrollId WebAppAdmin --enrollSecret DJY27pEnl16d
+Deploying business network from archive @ibm_digitalproperty-network-0.0.11.bna
+Business network definition:
+    Identifier: @ibm/digitalproperty-network-0.0.11
+    Description: Digital Property Network
+Updating business network definition. This may take a few seconds...
+Command completed successfully.
 </code></pre></div>
 <h3 id="rerun-the-test">Rerun the Test</h3>
-<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span></span>npm <span class="nb">test</span>
+
+<p>If you go back to the getting started directory now - and list all the commands that available, you'll see one called <code>submitTransaction</code></p>
+<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span></span>$ npm run
+Lifecycle scripts included in concerto-gettingstarted:
+  <span class="nb">test</span>
+    mocha --recursive <span class="o">&amp;&amp;</span> npm run bootstrapAssets <span class="o">&amp;&amp;</span> npm run listAssets <span class="o">&amp;&amp;</span> npm run submitTransaction
+  install
+    scripts/download-hyperledger.sh <span class="o">&amp;&amp;</span> scripts/start-hyperledger.sh <span class="o">&amp;&amp;</span> npm run deployNetwork
+
+available via <span class="sb">`</span>npm run-script<span class="sb">`</span>:
+  submitTransaction
+    node cli.js landregistry submit <span class="o">&amp;&amp;</span> node cli.js landregistry list
+  listAssets
+    node cli.js landregistry list
+  bootstrapAssets
+    node cli.js landregistry bootstrap
+  startHLF
+    scripts/start-hyperledger.sh
+  stopHLF
+    scripts/stop-hyperledger.sh
+  teardownHLF
+    scripts/teardown.sh
+  deployNetwork
+    concerto archive create -m @ibm/digitalproperty-network --archiveFile digitalPropertyNetwork.zip <span class="o">&amp;&amp;</span> concerto network deploy --archiveFile digitalPropertyNetwork.zip  --enrollId WebAppAdmin --enrollSecret DJY27pEnl16d <span class="o">&amp;&amp;</span> concerto network list -n @ibm/digitalproperty-network --enrollId WebAppAdmin --enrollSecret DJY27pEnl16d
 </code></pre></div>
-<p>You should now see:</p>
-<div class="highlight"><pre><code class="language-text" data-lang="text"><span></span>info: [Handel]
-┌──────────┬────────────────┬────────────┬─────────┬──────────────────────────────────────────────────────────┬─────────┐
-│ TitleID  │ OwnerID        │ First Name │ Surname │ Description                                              │ ForSale │
-├──────────┼────────────────┼────────────┼─────────┼──────────────────────────────────────────────────────────┼─────────┤
-│ LID:1148 │ PID:1234567890 │ Fred       │ Bloggs  │ A nice house in the country Updated at: Wed, 14 Dec 2016 │ Yes     │
-├──────────┼────────────────┼────────────┼─────────┼──────────────────────────────────────────────────────────┼─────────┤
-│ LID:6789 │ PID:1234567890 │ Fred       │ Bloggs  │ A small flat in the city                                 │ No      │
-└──────────┴────────────────┴────────────┴─────────┴──────────────────────────────────────────────────────────┴─────────┘
+<p>If you issue this command, that will submit a the transaction as was done during the full run - but importantly this is the updated transaction function. You should now see:</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text"><span></span>$ npm run submitTransaction
+
+&gt; concerto-gettingstarted@1.0.0 submitTransaction /home/matthew/git17/Concerto-GettingStarted
+&gt; node cli.js landregistry submit &amp;&amp; node cli.js landregistry list
+
+info: [Handel] IBM Concerto: Handel appliation
+info: [Handel] LandRegistry:&lt;init&gt; businessNetworkDefinition obtained @ibm/digitalproperty-network-0.0.11
+info: [Handel] updateForSale Getting assest from the registry.
+info: [Handel] updateForSale Submitting transaction
+info: [Handel] Transaction Submitted
+undefined
+info: [Handel] Command completed successfully.
+info: [Handel] IBM Concerto: Handel appliation
+info: [Handel] LandRegistry:&lt;init&gt; businessNetworkDefinition obtained @ibm/digitalproperty-network-0.0.11
+info: [Handel] listTitles Getting the asset registry
+info: [Handel] listTitles Getting all assest from the registry.
+info: [Handel] listTitles Current Land Titles
+info: [Handel] Titles listed
+info: [Handel]
+┌──────────┬────────────────┬────────────┬─────────┬───────────────────────────────────────────────────────────────────────────────────────┬─────────┐
+│ TitleID  │ OwnerID        │ First Name │ Surname │ Description                                                                           │ ForSale │
+├──────────┼────────────────┼────────────┼─────────┼───────────────────────────────────────────────────────────────────────────────────────┼─────────┤
+│ LID:1148 │ PID:1234567890 │ Fred       │ Bloggs  │ A nice house in the country Updated at: Wed, 11 Jan 2017 Updated at: Wed, 11 Jan 2017 │ Yes     │
+├──────────┼────────────────┼────────────┼─────────┼───────────────────────────────────────────────────────────────────────────────────────┼─────────┤
+│ LID:6789 │ PID:1234567890 │ Fred       │ Bloggs  │ A small flat in the city                                                              │ No      │
+└──────────┴────────────────┴────────────┴─────────┴───────────────────────────────────────────────────────────────────────────────────────┴─────────┘
+info: [Handel] Command completed successfully.
 </code></pre></div>
 <h2 id="generating-an-application">Generating an Application</h2>
 <div class="highlight"><pre><code class="language-text" data-lang="text"><span></span>git clone git@github.ibm.com:Blockchain-WW-Labs/generator-concerto.git
