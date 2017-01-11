@@ -138,47 +138,48 @@
         
           <h1 id="getting-started-with-concerto-application-development">Getting started with Concerto Application Development</h1>
 
-<p>To help get started with application development using the Concerto Framework, this guide will talk you through downloading Concerto, starting a Fabric, deploying a simple sample business network and submitting transactions. </p>
+<p>To help get started with application development using the Concerto Framework, this guide will talk you through downloading Concerto, starting a Fabric, deploying a simple sample business network and submitting transactions.</p>
 
 <p>This is all done using a simnple business network  <strong>Digitial Property Network</strong></p>
 
 <h1 id="what-is-the-digital-property-network">What is the Digital Property Network?</h1>
 
-<p>This network will be expanded for other tutorials, but for this getting started we'll keep in simple. We going to model Land Titles, each of which has an owner, description, and a boolean saying if this property/land is up for sale.
-<code>
-asset LandTitle identified by titleId {
+<p>This network will be expanded for other tutorials, but for this getting started we'll keep in simple. We going to model Land Titles, each of which has an owner, description, and a boolean saying if this property/land is up for sale.</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text"><span></span>asset LandTitle identified by titleId {
   o String   titleId
   o Person   owner
   o String   information
   o Boolean  forSale   optional
 }
-</code>
-We'll also model the owner as a Person (First,Last name). 
-<code>
-participant Person identified by personId {
+</code></pre></div>
+<p>We'll also model the owner as a Person (First,Last name).
+```</p>
+
+<p>participant Person identified by personId {
   o String personId
   o String firstName
   o String lastName
 }
-</code>
-Finally and also importantly, a transaction that will update the for sale flag.
-<code>
-transaction RegisterPropertyForSale identified by transactionId{
+```</p>
+
+<p>Finally and also importantly, a transaction that will update the for sale flag.</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text"><span></span>transaction RegisterPropertyForSale identified by transactionId{
   o String transactionId
   --&gt; Person seller
   --&gt; LandTitle title
 }
-</code>i</p>
-
+</code></pre></div>
 <p>The applications we're going to look at are going to store a number of (pretend) land titles, and mark them for sale. All this will be using the Concerto Framework backed by a real blockchain in the shape of a locally exceuting HyperLedger.</p>
 
 <h1 id="what-are-we-going-to-do">What are we going to do?</h1>
 
-<p>All the resources and scripts you'll need are in a git repo that we'll clone, this will have the code for the applications along with the scripts to get the hyperledger setup and ready to go. </p>
+<p>All the resources and scripts you'll need are in a git repo that we'll clone, this will have the code for the applications along with the scripts to get the hyperledger setup and ready to go.  </p>
 
-<h2 id="before-we-start-check-the-prerequisites">Before we start - Check the Prerequisites</h2>
+<p>The first thing to do is to ensure that you have a suitable system ready for development.</p>
 
-<p>First check that you are running on a <a href="../reference/platforms.html">supported system</a> and install the required development <a href="../tasks/prerequisites.html">prerequisites</a>.  Essentially this means Linux/MacOS &amp; node.js &amp; docker &amp; docker-compose &amp; git </p>
+<h2 id="development-prerequisites">Development Prerequisites</h2>
+
+<p>First check that you are running on a <a href="../reference/platforms.html">supported system</a> and install the required development <a href="../tasks/prerequisites.html">prerequisites</a>.  Essentially this means Linux/MacOS &amp; node.js &amp; docker &amp; docker-compose &amp; git</p>
 
 <h2 id="install-the-concerto-cli">Install the Concerto CLI</h2>
 
@@ -190,20 +191,42 @@ transaction RegisterPropertyForSale identified by transactionId{
 <p>Next you need to pull down the code for the Getting Started sample.</p>
 <div class="highlight"><pre><code class="language-bash" data-lang="bash"><span></span>git clone git@github.ibm.com:Blockchain-WW-Labs/Concerto-GettingStarted.git
 </code></pre></div>
-<h2 id="install-the-dependencies-start-fabric-and-deploy">Install the Dependencies, Start Fabric and Deploy</h2>
+<h2 id="install-the-dependencies-start-fabric-and-deploy-the-business-network">Install the Dependencies, Start Fabric and Deploy the Business Network</h2>
 
 <p>Next you can run the following commands to install all the dependent Node modules for the sample, pull down the Docker images for Hyperledger Fabric, start the Fabric and then deploy a Business Network Definition.</p>
 <div class="highlight"><pre><code class="language-bash" data-lang="bash"><span></span><span class="nb">cd</span> Concerto-GettingStarted
 npm install
 </code></pre></div>
-<p>This is doing quite a bit of work but at the end of it you will have all the dependant modules, together with a running local Hyperledger instance, and the DigitalProperty Network having been deployed to that HyperLedger. At this point it doesn't contain any assets at all. </p>
+<p>This is doing quite a bit of work but at the end of it you will have all the dependant modules, together with a running local Hyperledger instance, and the DigitalProperty Network will have been deployed to that Hyperledger. At this point it doesn't contain any assets at all.</p>
 
 <h2 id="create-assets-and-submit-a-transaction">Create Assets and Submit a Transaction</h2>
 
 <p>There are some simple applications included that will create some assets, list the current assets and submit a transaction.
-First, the assets are created and the newly created assets are listed. Then a transaction is submited to update one of the assets 'for sale'. A final asset listed is then queried to show the update has taken place.</p>
+First, the assets are created and the newly created assets are listed. Then a transaction is submited to update one of the assets 'for sale'. A final asset listed is then queried to show the update has taken place. To run this end-end sequence issue...</p>
 <div class="highlight"><pre><code class="language-bash" data-lang="bash"><span></span>npm <span class="nb">test</span>
 </code></pre></div>
+<h2 id="thats-it">That's it</h2>
+
+<p>So to recap</p>
+
+<ul>
+<li>You installed Concerto command line tools</li>
+<li>The 'Getting Started' repository was cloned</li>
+<li>All the code dependencies where pulled down, and a docker-hosted Hyperledger instance was Started
+
+<ul>
+<li>and the Digital Property Business Network was deployed to it</li>
+</ul>
+</li>
+<li>A sample set of assets were added</li>
+<li>A simple transaction was invoked to update the assets</li>
+</ul>
+
+<p>All done! The next sections will cover these steps in some detail and let you run separate parts of this getting started.
+Follow-on tutorials will show you how to start creating your own simple business networks.</p>
+
+<h1 id="details-of-each-step">Details of each step</h1>
+
 <h2 id="list-the-deployed-business-network-definitions">List the Deployed Business Network Definitions</h2>
 
 <p>You can list the deployed business network definitions using:</p>
@@ -242,7 +265,7 @@ npm install
 </code></pre></div>
 <h3 id="publish-updated-business-network-definition-to-npm">Publish Updated Business Network Definition to npm</h3>
 
-<p>In a real-life scenario at this point you would edit <code>package.json</code> to increment the version number in the <code>DigitalProperty-Network</code> directory and publish this to npm. However we would like to keep the version in the npm repository at it's current level. So for the moment issue the npm link command to make this update available locallly. </p>
+<p>In a real-life scenario at this point you would edit <code>package.json</code> to increment the version number in the <code>DigitalProperty-Network</code> directory and publish this to npm. However we would like to keep the version in the npm repository at it's current level. So for the moment issue the npm link command to make this update available locallly.</p>
 <div class="highlight"><pre><code class="language-bash" data-lang="bash"><span></span>npm link
 </code></pre></div>
 <h3 id="update-the-dependencies-for-getting-started-and-restart">Update the Dependencies for Getting Started and Restart</h3>
@@ -338,12 +361,6 @@ node index.js
 <h1 id="diving-into-the-code">Diving into the Code</h1>
 
 <p>The file <code>./lib/landregistry.js</code> contains the code for the sample. It uses the <code>BusinessNetworkConnection</code> API to interact with the deployed business network definition (creating assets and submitting transactions.)</p>
-
-<h1 id="useful-references">Useful References</h1>
-
-<p>The following links are helpful for getting up to speed with different technologies used by the Concerto project.  </p>
-
-<p><a href="https://scotch.io/tutorials/understanding-javascript-promises-pt-i-background-basics">JavaScript Promises</a></p>
 
         
 
