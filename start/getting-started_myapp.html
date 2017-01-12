@@ -138,13 +138,13 @@
         
           <h1 id="getting-started-with-concerto-application-development">Getting started with Concerto Application Development</h1>
 
-<p>To help get started with application development using the Concerto Framework, this guide will talk you through downloading Concerto, starting a Fabric, deploying a simple business network and submitting transactions.</p>
+<p>To help get started with application development using the Concerto Framework, this guide will talk you through downloading Concerto, starting a Fabric, deploying a simple sample business network and submitting transactions.</p>
 
-<p>This is all done using a simple business network  <strong>Digitial Property Network</strong></p>
+<p>This is all done using a simnple business network  <strong>Digitial Property Network</strong></p>
 
 <h1 id="what-is-the-digital-property-network">What is the Digital Property Network?</h1>
 
-<p>This network will be expanded for other tutorials, but for this getting started we'll keep it simple. We going to model <em>Land Titles</em>, each of which has an owner, description, and a boolean saying if this property/land is up for sale.</p>
+<p>This network will be expanded for other tutorials, but for this getting started we'll keep in simple. We going to model Land Titles, each of which has an owner, description, and a boolean saying if this property/land is up for sale.</p>
 <div class="highlight"><pre><code class="language-text" data-lang="text"><span></span>asset LandTitle identified by titleId {
   o String   titleId
   o Person   owner
@@ -152,21 +152,24 @@
   o Boolean  forSale   optional
 }
 </code></pre></div>
-<p>We'll also model the <em>Owner</em> as a Person (First,Last name).</p>
-<div class="highlight"><pre><code class="language-text" data-lang="text"><span></span>participant Person identified by personId {
+<p>We'll also model the owner as a Person (First,Last name).
+```</p>
+
+<p>participant Person identified by personId {
   o String personId
   o String firstName
   o String lastName
 }
-</code></pre></div>
-<p>We want to be able to mark one of the titles for sale so we'll create a <em>RegisterPropertyForSale</em> transaction that will update the for sale flag.</p>
+```</p>
+
+<p>Finally and also importantly, a transaction that will update the for sale flag.</p>
 <div class="highlight"><pre><code class="language-text" data-lang="text"><span></span>transaction RegisterPropertyForSale identified by transactionId{
   o String transactionId
   --&gt; Person seller
   --&gt; LandTitle title
 }
 </code></pre></div>
-<p>The applications we're going to look at are going to store a number of (pretend) land titles, and mark them for sale. All this will be using the Concerto Framework backed by a real blockchain in the shape of a locally exceuting Hyperledger Fabric.</p>
+<p>The applications we're going to look at are going to store a number of (pretend) land titles, and mark them for sale. All this will be using the Concerto Framework backed by a real blockchain in the shape of a locally exceuting HyperLedger.</p>
 
 <h1 id="what-are-we-going-to-do">What are we going to do?</h1>
 
@@ -174,21 +177,21 @@
 
 <p>The first thing to do is to ensure that you have a suitable system ready for development.</p>
 
-<h3 id="development-prerequisites">Development Prerequisites</h3>
+<h2 id="development-prerequisites">Development Prerequisites</h2>
 
 <p>First check that you are running on a <a href="../reference/platforms.html">supported system</a> and install the required development <a href="../tasks/prerequisites.html">prerequisites</a>.  Essentially this means Linux/MacOS &amp; node.js &amp; docker &amp; docker-compose &amp; git</p>
 
-<h3 id="install-the-concerto-cli">Install the Concerto CLI</h3>
+<h2 id="install-the-concerto-cli">Install the Concerto CLI</h2>
 
 <p>Installing the Concerto CLI tools module is the first step. This gives you commands to deploy, update and list business networks.</p>
 <div class="highlight"><pre><code class="language-bash" data-lang="bash"><span></span>npm install -g @ibm/concerto-cli
 </code></pre></div>
-<h3 id="clone-the-getting-started-repository">Clone the Getting Started Repository</h3>
+<h2 id="clone-the-getting-started-repository">Clone the Getting Started Repository</h2>
 
 <p>Next you need to pull down the code for the Getting Started sample.</p>
 <div class="highlight"><pre><code class="language-bash" data-lang="bash"><span></span>git clone git@github.ibm.com:Blockchain-WW-Labs/Concerto-GettingStarted.git
 </code></pre></div>
-<h3 id="install-the-dependencies-start-fabric-and-deploy-the-business-network">Install the Dependencies, Start Fabric and Deploy the Business Network</h3>
+<h2 id="install-the-dependencies-start-fabric-and-deploy-the-business-network">Install the Dependencies, Start Fabric and Deploy the Business Network</h2>
 
 <p>Next you can run the following commands to install all the dependent Node modules for the sample, pull down the Docker images for Hyperledger Fabric, start the Fabric and then deploy a Business Network Definition.</p>
 <div class="highlight"><pre><code class="language-bash" data-lang="bash"><span></span><span class="nb">cd</span> Concerto-GettingStarted
@@ -196,13 +199,13 @@ npm install
 </code></pre></div>
 <p>This is doing quite a bit of work but at the end of it you will have all the dependant modules, together with a running local Hyperledger instance, and the DigitalProperty Network will have been deployed to that Hyperledger. At this point it doesn't contain any assets at all.</p>
 
-<h3 id="create-assets-and-submit-a-transaction">Create Assets and Submit a Transaction</h3>
+<h2 id="create-assets-and-submit-a-transaction">Create Assets and Submit a Transaction</h2>
 
 <p>There are some simple applications included that will create some assets, list the current assets and submit a transaction.
 First, the assets are created and the newly created assets are listed. Then a transaction is submited to update one of the assets 'for sale'. A final asset listed is then queried to show the update has taken place. To run this end-end sequence issue...</p>
 <div class="highlight"><pre><code class="language-bash" data-lang="bash"><span></span>npm <span class="nb">test</span>
 </code></pre></div>
-<h3 id="thats-it">That's it</h3>
+<h2 id="thats-it">That's it</h2>
 
 <p>So to recap</p>
 
@@ -219,7 +222,7 @@ First, the assets are created and the newly created assets are listed. Then a tr
 <li>A simple transaction was invoked to update the assets</li>
 </ul>
 
-<p><strong>All done!</strong> But let's go ahead and make a change to start to show how easy it is to develop with Concerto.</p>
+<p>All done! But let's go ahead and make a change to start to show how easy it is to develop with Concerto.</p>
 
 <h1 id="updating-the-business-network">Updating the Business Network</h1>
 
@@ -319,6 +322,7 @@ info: [Handel] LandRegistry:&lt;init&gt; businessNetworkDefinition obtained @ibm
 info: [Handel] updateForSale Getting assest from the registry.
 info: [Handel] updateForSale Submitting transaction
 info: [Handel] Transaction Submitted
+undefined
 info: [Handel] Command completed successfully.
 info: [Handel] IBM Concerto: Handel appliation
 info: [Handel] LandRegistry:&lt;init&gt; businessNetworkDefinition obtained @ibm/digitalproperty-network-0.0.11
@@ -336,49 +340,81 @@ info: [Handel]
 └──────────┴────────────────┴────────────┴─────────┴───────────────────────────────────────────────────────────────────────────────────────┴─────────┘
 info: [Handel] Command completed successfully.
 </code></pre></div>
+<h2 id="generating-an-application">Generating an Application</h2>
+<div class="highlight"><pre><code class="language-text" data-lang="text"><span></span>git clone git@github.ibm.com:Blockchain-WW-Labs/generator-concerto.git
+cd generator-concerto
+npm install
+npm link
+cd ..
+yo concerto
+</code></pre></div>
+<p>Answer the questions... Code is generated, and then to run:</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text"><span></span>cd concerto-sample-app/
+npm install
+node index.js
+</code></pre></div>
+<h2 id="deploying-to-a-remote-server">Deploying to a Remote Server</h2>
+
+<p>Connection Profiles are used to store the connection information required to access a Fabric instance.</p>
+
+<p>Connection profiles are stored in the user home directory under <code>.concerto-connection-profiles</code>. To deploy to a remote server we are going to create a connection profile called <code>hsbn</code>:</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text"><span></span>mkdir ~/.concerto-connection-profiles/hsbn
+</code></pre></div>
+<p>Then copy the following into a file called <code>connection.json</code> and store in the <code>hsbn</code> directory created above.</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text"><span></span>{
+    "type": "hlf",
+    "membershipServicesURL": "grpc://IP_ADD:20000",
+    "peerURL": "grpc://IP_ADD:20002",
+    "eventHubURL": "grpc://IP_ADD:20003",
+    "keyValStore": "~/hsbn-keyValStore",
+    "deployWaitTime": "300",
+    "invokeWaitTime": "100"
+}
+</code></pre></div>
+<p>You can then list the business networks that are deployed on the remote Fabric using:</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text"><span></span>concerto network list -p hsbn -n @ibm/digitalproperty-network --enrollId WebAppAdmin --enrollSecret DJY27pEnl16d
+</code></pre></div>
 <h2 id="digging-deeper">Digging Deeper</h2>
 
 <p>Both <code>npm install</code> and <code>npm test</code> run commands defined in <code>package.json</code>. If you open <code>package.json</code> you will see that it uses the following utility scripts and commands.</p>
-<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span></span><span class="nb">test</span>
-    mocha --recursive <span class="o">&amp;&amp;</span> npm run bootstrapAssets <span class="o">&amp;&amp;</span> npm run listAssets <span class="o">&amp;&amp;</span> npm run submitTransaction
-  install
-    scripts/download-hyperledger.sh <span class="o">&amp;&amp;</span> scripts/start-hyperledger.sh <span class="o">&amp;&amp;</span> npm run deployNetwork
 
-available via <span class="sb">`</span>npm run-script<span class="sb">`</span>:
-  submitTransaction
-    node cli.js landregistry submit <span class="o">&amp;&amp;</span> node cli.js landregistry list
-  listAssets
-    node cli.js landregistry list
-  bootstrapAssets
-    node cli.js landregistry bootstrap
-  startHLF
-    scripts/start-hyperledger.sh
-  stopHLF
-    scripts/stop-hyperledger.sh
-  teardownHLF
-    scripts/teardown.sh
-  deployNetwork
-    concerto archive create -m @ibm/digitalproperty-network --archiveFile digitalPropertyNetwork.zip <span class="o">&amp;&amp;</span> concerto network deploy --archiveFile digitalPropertyNetwork.zip  --enrollId WebAppAdmin --enrollSecret DJY27pEnl16d <span class="o">&amp;&amp;</span> concerto network list -n @ibm/digitalproperty-network --enrollId WebAppAdmin --enrollSecret DJY27pEnl16d
+<h3 id="archive-the-business-network-definition">Archive the Business Network Definition</h3>
+<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span></span>gulp --archiveFile DigitalLandTitle.zip
 </code></pre></div>
-<ul>
-<li>
-<em>npm test</em>  The standard test target runs some mocha based unti tests, then invokes two other npm run commands to store some test assets and submit a simple transaction.</li>
-<li>
-<em>npm install</em> This standard target installs the dependancies and also some some essential setup for the Concerto Framework</li>
-</ul>
+<h3 id="update-the-business-network-on-the-fabric">Update the Business Network on the Fabric</h3>
+<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span></span>concerto network update --archiveFile  DigitalLandTitle.zip  --enrollId WebAppAdmin --enrollSecret DJY27pEnl16d
+</code></pre></div>
+<h3 id="start-and-stop-fabric">Start and Stop Fabric</h3>
 
-<p>Let's look at each of the other scripts and what they do - there are two main shell scripts that we have written that will control Hyperledger, some concerto commands and then the application.</p>
+<p>The <code>./scripts/setup.sh</code> script is used to download the Fabric images and start them using Docker Compose. The <code>./scripts/teardown.sh</code> script is used to stop the Fabric. The <code>/scripts/docker-compose.yml</code> file configures a simple Fabric topology consisting of a single peer node <code>vp0</code> and a single member services node <code>membersrvc</code>.</p>
 
-<ul>
-<li>scripts/download-hyperledger.sh</li>
-<li><p>scripts/start-hyperledger.sh</p></li>
-<li><p>concerto archive create -m @ibm/digitalproperty-network --archiveFile digitalPropertyNetwork.zip</p></li>
-<li><p>concerto network deploy --archiveFile digitalPropertyNetwork.zip  --enrollId WebAppAdmin --enrollSecret DJY27pEnl16d</p></li>
-<li><p>concerto network list -n @ibm/digitalproperty-network --enrollId WebAppAdmin --enrollSecret DJY27pEnl16d</p></li>
-<li><p>node cli.js landregistry submit</p></li>
-<li><p>node cli.js landregistry list</p></li>
-<li><p>node cli.js landregistry bootstrap</p></li>
-</ul>
+<h3 id="deploy-business-network-definition">Deploy Business Network Definition</h3>
+
+<p>The business network definition is deployed to the running Fabric using:</p>
+<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span></span>concerto network deploy --archiveFile  DigitalLandTitle.zip  --enrollId WebAppAdmin --enrollSecret DJY27pEnl16d
+</code></pre></div>
+<h3 id="create-sample-assets">Create Sample Assets</h3>
+
+<p>To create the assets run:</p>
+<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span></span>npm run listAssets
+</code></pre></div>
+<h3 id="list-sample-assets">List Sample Assets</h3>
+<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span></span>node cli.js landregistry list
+</code></pre></div>
+<h3 id="submit-sample-transaction">Submit Sample Transaction</h3>
+
+<p>To submit transactions using the API:</p>
+<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span></span>npm run submitTransaction
+</code></pre></div>
+<p>Or using the CLI:</p>
+<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span></span>concerto transaction submit -n @ibm/digitalproperty-network  --enrollId WebAppAdmin --enrollSecret DJY27pEnl16d -d <span class="s1">'{"$class" : "net.biz.digitalPropertyNetwork.RegisterPropertyForSale", "seller" : "PID:1234567890", "title" : "LID:6789" }'</span>
+</code></pre></div>
+<h1 id="generating-a-test">Generating a Test</h1>
+<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span></span>concerto generator tests -d . -a DigitalLandTitle.zip -i WebAppAdmin -s DJY27pEnl16d
+</code></pre></div>
+<h1 id="diving-into-the-code">Diving into the Code</h1>
+
+<p>The file <code>./lib/landregistry.js</code> contains the code for the sample. It uses the <code>BusinessNetworkConnection</code> API to interact with the deployed business network definition (creating assets and submitting transactions.)</p>
 
         
 
