@@ -1,0 +1,3226 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
+	<title>IBM Concerto Class: BusinessNetworkConnection</title>
+
+	<!--[if lt IE 9]>
+	<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+	<link type="text/css" rel="stylesheet" href="styles/sunlight.default.css">
+
+	<link type="text/css" rel="stylesheet" href="styles/site.spacelab.css">
+
+</head>
+
+<body>
+
+<div class="navbar navbar-default navbar-fixed-top navbar-inverse">
+<div class="container">
+	<div class="navbar-header">
+		<a class="navbar-brand" href="index.html">IBM Concerto</a>
+		<button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#topNavigation">
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+        </button>
+	</div>
+	<div class="navbar-collapse collapse" id="topNavigation">
+		<ul class="nav navbar-nav">
+			
+			<li class="dropdown">
+				<a href="modules.list.html" class="dropdown-toggle" data-toggle="dropdown">Modules<b class="caret"></b></a>
+				<ul class="dropdown-menu ">
+					<li><a href="module-ibm-concerto-admin.html">ibm-concerto-admin</a></li><li><a href="module-ibm-concerto-client.html">ibm-concerto-client</a></li><li><a href="module-ibm-concerto-common.html">ibm-concerto-common</a></li><li><a href="module-ibm-concerto-runtime.html">ibm-concerto-runtime</a></li>
+				</ul>
+			</li>
+			
+			<li class="dropdown">
+				<a href="classes.list.html" class="dropdown-toggle" data-toggle="dropdown">Classes<b class="caret"></b></a>
+				<ul class="dropdown-menu ">
+					<li><a href="AssetRegistry.html">AssetRegistry</a></li><li><a href="Factory.html">Factory</a></li><li><a href="FileWallet.html">FileWallet</a></li><li><a href="IdentityManager.html">IdentityManager</a></li><li><a href="JSTransactionExecutor.html">JSTransactionExecutor</a></li><li><a href="module-ibm-concerto-admin.AdminConnection.html">ibm-concerto-admin.AdminConnection</a></li><li><a href="module-ibm-concerto-client.AssetRegistry.html">ibm-concerto-client.AssetRegistry</a></li><li><a href="module-ibm-concerto-client.BusinessNetworkConnection.html">ibm-concerto-client.BusinessNetworkConnection</a></li><li><a href="module-ibm-concerto-client.ParticipantRegistry.html">ibm-concerto-client.ParticipantRegistry</a></li><li><a href="module-ibm-concerto-client.Registry.html">ibm-concerto-client.Registry</a></li><li><a href="module-ibm-concerto-client.TransactionRegistry.html">ibm-concerto-client.TransactionRegistry</a></li><li><a href="module-ibm-concerto-common.AclFile.html">ibm-concerto-common.AclFile</a></li><li><a href="module-ibm-concerto-common.AclManager.html">ibm-concerto-common.AclManager</a></li><li><a href="module-ibm-concerto-common.AclRule.html">ibm-concerto-common.AclRule</a></li><li><a href="module-ibm-concerto-common.APISignatureGenerator.html">ibm-concerto-common.APISignatureGenerator</a></li><li><a href="module-ibm-concerto-common.AssetDeclaration.html">ibm-concerto-common.AssetDeclaration</a></li><li><a href="module-ibm-concerto-common.BaseException.html">ibm-concerto-common.BaseException</a></li><li><a href="module-ibm-concerto-common.BusinessNetworkDefinition.html">ibm-concerto-common.BusinessNetworkDefinition</a></li><li><a href="module-ibm-concerto-common.ClassDeclaration.html">ibm-concerto-common.ClassDeclaration</a></li><li><a href="module-ibm-concerto-common.Connection.html">ibm-concerto-common.Connection</a></li><li><a href="module-ibm-concerto-common.ConnectionManager.html">ibm-concerto-common.ConnectionManager</a></li><li><a href="module-ibm-concerto-common.ConnectionProfileManager.html">ibm-concerto-common.ConnectionProfileManager</a></li><li><a href="module-ibm-concerto-common.ConnectionProfileStore.html">ibm-concerto-common.ConnectionProfileStore</a></li><li><a href="module-ibm-concerto-common.EnumDeclaration.html">ibm-concerto-common.EnumDeclaration</a></li><li><a href="module-ibm-concerto-common.EnumValueDeclaration.html">ibm-concerto-common.EnumValueDeclaration</a></li><li><a href="module-ibm-concerto-common.Factory.html">ibm-concerto-common.Factory</a></li><li><a href="module-ibm-concerto-common.Field.html">ibm-concerto-common.Field</a></li><li><a href="module-ibm-concerto-common.FileWriter.html">ibm-concerto-common.FileWriter</a></li><li><a href="module-ibm-concerto-common.FSConnectionProfileStore.html">ibm-concerto-common.FSConnectionProfileStore</a></li><li><a href="module-ibm-concerto-common.FunctionDeclaration.html">ibm-concerto-common.FunctionDeclaration</a></li><li><a href="module-ibm-concerto-common.GoLangVisitor.html">ibm-concerto-common.GoLangVisitor</a></li><li><a href="module-ibm-concerto-common.Identifiable.html">ibm-concerto-common.Identifiable</a></li><li><a href="module-ibm-concerto-common.IllegalModelException.html">ibm-concerto-common.IllegalModelException</a></li><li><a href="module-ibm-concerto-common.InstanceGenerator.html">ibm-concerto-common.InstanceGenerator</a></li><li><a href="module-ibm-concerto-common.Introspector.html">ibm-concerto-common.Introspector</a></li><li><a href="module-ibm-concerto-common.JavaScriptParser.html">ibm-concerto-common.JavaScriptParser</a></li><li><a href="module-ibm-concerto-common.JSONGenerator.html">ibm-concerto-common.JSONGenerator</a></li><li><a href="module-ibm-concerto-common.JSONPopulator.html">ibm-concerto-common.JSONPopulator</a></li><li><a href="module-ibm-concerto-common.JSONSchemaVisitor.html">ibm-concerto-common.JSONSchemaVisitor</a></li><li><a href="module-ibm-concerto-common.JSONWriter.html">ibm-concerto-common.JSONWriter</a></li><li><a href="module-ibm-concerto-common.Logger.html">ibm-concerto-common.Logger</a></li><li><a href="module-ibm-concerto-common.LoopbackVisitor.html">ibm-concerto-common.LoopbackVisitor</a></li><li><a href="module-ibm-concerto-common.MemoryConnectionProfileStore.html">ibm-concerto-common.MemoryConnectionProfileStore</a></li><li><a href="module-ibm-concerto-common.ModelBinding.html">ibm-concerto-common.ModelBinding</a></li><li><a href="module-ibm-concerto-common.ModelFile.html">ibm-concerto-common.ModelFile</a></li><li><a href="module-ibm-concerto-common.ModelManager.html">ibm-concerto-common.ModelManager</a></li><li><a href="module-ibm-concerto-common.ModelUtil.html">ibm-concerto-common.ModelUtil</a></li><li><a href="module-ibm-concerto-common.Node.html">ibm-concerto-common.Node</a></li><li><a href="module-ibm-concerto-common.NumberValidator.html">ibm-concerto-common.NumberValidator</a></li><li><a href="module-ibm-concerto-common.ParseException.html">ibm-concerto-common.ParseException</a></li><li><a href="module-ibm-concerto-common.ParticipantDeclaration.html">ibm-concerto-common.ParticipantDeclaration</a></li><li><a href="module-ibm-concerto-common.PlantUMLGenerator.html">ibm-concerto-common.PlantUMLGenerator</a></li><li><a href="module-ibm-concerto-common.PlantUMLVisitor.html">ibm-concerto-common.PlantUMLVisitor</a></li><li><a href="module-ibm-concerto-common.Predicate.html">ibm-concerto-common.Predicate</a></li><li><a href="module-ibm-concerto-common.Property.html">ibm-concerto-common.Property</a></li><li><a href="module-ibm-concerto-common.Relationship.html">ibm-concerto-common.Relationship</a></li><li><a href="module-ibm-concerto-common.RelationshipDeclaration.html">ibm-concerto-common.RelationshipDeclaration</a></li><li><a href="module-ibm-concerto-common.Resource.html">ibm-concerto-common.Resource</a></li><li><a href="module-ibm-concerto-common.ResourceValidator.html">ibm-concerto-common.ResourceValidator</a></li><li><a href="module-ibm-concerto-common.Script.html">ibm-concerto-common.Script</a></li><li><a href="module-ibm-concerto-common.ScriptManager.html">ibm-concerto-common.ScriptManager</a></li><li><a href="module-ibm-concerto-common.SecurityContext.html">ibm-concerto-common.SecurityContext</a></li><li><a href="module-ibm-concerto-common.SecurityException.html">ibm-concerto-common.SecurityException</a></li><li><a href="module-ibm-concerto-common.Serializer.html">ibm-concerto-common.Serializer</a></li><li><a href="module-ibm-concerto-common.StringValidator.html">ibm-concerto-common.StringValidator</a></li><li><a href="module-ibm-concerto-common.TransactionDeclaration.html">ibm-concerto-common.TransactionDeclaration</a></li><li><a href="module-ibm-concerto-common.TypedStack.html">ibm-concerto-common.TypedStack</a></li><li><a href="module-ibm-concerto-common.TypescriptVisitor.html">ibm-concerto-common.TypescriptVisitor</a></li><li><a href="module-ibm-concerto-common.Util.html">ibm-concerto-common.Util</a></li><li><a href="module-ibm-concerto-common.ValidatedResource.html">ibm-concerto-common.ValidatedResource</a></li><li><a href="module-ibm-concerto-common.ValidationException.html">ibm-concerto-common.ValidationException</a></li><li><a href="module-ibm-concerto-common.Validator.html">ibm-concerto-common.Validator</a></li><li><a href="module-ibm-concerto-common.VersionChecker.html">ibm-concerto-common.VersionChecker</a></li><li><a href="module-ibm-concerto-common.Writer.html">ibm-concerto-common.Writer</a></li><li><a href="module-ibm-concerto-runtime.AccessController.html">ibm-concerto-runtime.AccessController</a></li><li><a href="module-ibm-concerto-runtime.AccessException.html">ibm-concerto-runtime.AccessException</a></li><li><a href="module-ibm-concerto-runtime.Api.html">ibm-concerto-runtime.Api</a></li><li><a href="module-ibm-concerto-runtime.AssetRegistry.html">ibm-concerto-runtime.AssetRegistry</a></li><li><a href="module-ibm-concerto-runtime.Container.html">ibm-concerto-runtime.Container</a></li><li><a href="module-ibm-concerto-runtime.Context.html">ibm-concerto-runtime.Context</a></li><li><a href="module-ibm-concerto-runtime.DataCollection.html">ibm-concerto-runtime.DataCollection</a></li><li><a href="module-ibm-concerto-runtime.DataService.html">ibm-concerto-runtime.DataService</a></li><li><a href="module-ibm-concerto-runtime.Engine.html">ibm-concerto-runtime.Engine</a></li><li><a href="module-ibm-concerto-runtime.EngineBusinessNetworks.html">ibm-concerto-runtime.EngineBusinessNetworks</a></li><li><a href="module-ibm-concerto-runtime.EngineIdentities.html">ibm-concerto-runtime.EngineIdentities</a></li><li><a href="module-ibm-concerto-runtime.EngineRegistries.html">ibm-concerto-runtime.EngineRegistries</a></li><li><a href="module-ibm-concerto-runtime.EngineResources.html">ibm-concerto-runtime.EngineResources</a></li><li><a href="module-ibm-concerto-runtime.EngineTransactions.html">ibm-concerto-runtime.EngineTransactions</a></li><li><a href="module-ibm-concerto-runtime.Factory.html">ibm-concerto-runtime.Factory</a></li><li><a href="module-ibm-concerto-runtime.IdentityService.html">ibm-concerto-runtime.IdentityService</a></li><li><a href="module-ibm-concerto-runtime.LoggingService.html">ibm-concerto-runtime.LoggingService</a></li><li><a href="module-ibm-concerto-runtime.ParticipantRegistry.html">ibm-concerto-runtime.ParticipantRegistry</a></li><li><a href="module-ibm-concerto-runtime.Resolver.html">ibm-concerto-runtime.Resolver</a></li><li><a href="module-ibm-concerto-runtime.TransactionLogger.html">ibm-concerto-runtime.TransactionLogger</a></li><li><a href="ParticipantRegistry.html">ParticipantRegistry</a></li><li><a href="QueryExecutor.html">QueryExecutor</a></li><li><a href="Registry.html">Registry</a></li><li><a href="RegistryManager.html">RegistryManager</a></li><li><a href="TransactionExecutor.html">TransactionExecutor</a></li><li><a href="Wallet.html">Wallet</a></li>
+				</ul>
+			</li>
+			
+			<li class="dropdown">
+				<a href="events.list.html" class="dropdown-toggle" data-toggle="dropdown">Events<b class="caret"></b></a>
+				<ul class="dropdown-menu ">
+					<li><a href="module-ibm-concerto-client.AssetRegistry.html#event:resourceadded">ibm-concerto-client.AssetRegistry#event:resourceadded</a></li><li><a href="module-ibm-concerto-client.AssetRegistry.html#event:resourceremoved">ibm-concerto-client.AssetRegistry#event:resourceremoved</a></li><li><a href="module-ibm-concerto-client.AssetRegistry.html#event:resourceupdated">ibm-concerto-client.AssetRegistry#event:resourceupdated</a></li><li><a href="module-ibm-concerto-client.ParticipantRegistry.html#event:resourceadded">ibm-concerto-client.ParticipantRegistry#event:resourceadded</a></li><li><a href="module-ibm-concerto-client.ParticipantRegistry.html#event:resourceremoved">ibm-concerto-client.ParticipantRegistry#event:resourceremoved</a></li><li><a href="module-ibm-concerto-client.ParticipantRegistry.html#event:resourceupdated">ibm-concerto-client.ParticipantRegistry#event:resourceupdated</a></li><li><a href="module-ibm-concerto-client.TransactionRegistry.html#event:resourceadded">ibm-concerto-client.TransactionRegistry#event:resourceadded</a></li><li><a href="module-ibm-concerto-client.TransactionRegistry.html#event:resourceremoved">ibm-concerto-client.TransactionRegistry#event:resourceremoved</a></li><li><a href="module-ibm-concerto-client.TransactionRegistry.html#event:resourceupdated">ibm-concerto-client.TransactionRegistry#event:resourceupdated</a></li><li><a href="Registry.html#event:resourceadded">Registry#event:resourceadded</a></li><li><a href="Registry.html#event:resourceremoved">Registry#event:resourceremoved</a></li><li><a href="Registry.html#event:resourceupdated">Registry#event:resourceupdated</a></li><li><a href="RegistryManager.html#event:registryadded">RegistryManager#event:registryadded</a></li>
+				</ul>
+			</li>
+			
+			<li class="dropdown">
+				<a href="global.html" class="dropdown-toggle" data-toggle="dropdown">Global<b class="caret"></b></a>
+				<ul class="dropdown-menu ">
+					<li><a href="global.html#findCommentBefore">findCommentBefore</a></li><li><a href="global.html#formatMessage">formatMessage</a></li><li><a href="global.html#getDecorators">getDecorators</a></li><li><a href="global.html#getExample">getExample</a></li><li><a href="global.html#getLogger">getLogger</a></li><li><a href="global.html#getMethodArguments">getMethodArguments</a></li><li><a href="global.html#getReturnType">getReturnType</a></li><li><a href="global.html#getText">getText</a></li><li><a href="global.html#getThrows">getThrows</a></li><li><a href="global.html#getVisibility">getVisibility</a></li><li><a href="global.html#Globalize">Globalize</a></li><li><a href="global.html#messageFormatter">messageFormatter</a></li><li><a href="global.html#mixin">mixin</a></li><li><a href="global.html#paramsToString">paramsToString</a></li><li><a href="global.html#processDirectory">processDirectory</a></li><li><a href="global.html#processFile">processFile</a></li><li><a href="global.html#theWallet">theWallet</a></li><li><a href="global.html#toUMLFilename">toUMLFilename</a></li>
+				</ul>
+			</li>
+			
+		</ul>
+        
+            <div class="col-sm-3 col-md-3">
+                <form class="navbar-form" role="search">
+                    <div class="input-group">
+                        <input type="text" class="form-control" placeholder="Search" name="q" id="search-input">
+                        <div class="input-group-btn">
+                            <button class="btn btn-default" id="search-submit"><i class="glyphicon glyphicon-search"></i></button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        
+	</div>
+
+</div>
+</div>
+
+
+<div class="container" id="toc-content">
+<div class="row">
+
+	
+	<div class="col-md-8">
+	
+		<div id="main">
+			
+
+	<h1 class="page-title">Class: BusinessNetworkConnection</h1>
+<section>
+
+<header>
+    
+        <h2>
+            <span class="ancestors"><a href="module-ibm-concerto-client.html">ibm-concerto-client</a>.</span>
+        
+        BusinessNetworkConnection
+        </h2>
+        
+            <div class="class-description">Use this class to connect to and then interact with a deployed BusinessNetworkDefinition.
+Use the AdminConnection class in the ibm-concerto-admin module to deploy BusinessNetworksDefinitions.</div>
+        
+    
+</header>
+
+
+<article>
+    <div class="container-overview">
+    
+        
+<hr>
+<dt>
+    <h4 class="name" id="BusinessNetworkConnection"><span class="type-signature"></span>new BusinessNetworkConnection( [options])</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        Create an instance of the BusinessNetworkConnection class.
+must be called to connect to a deployed BusinessNetworkDefinition.
+    </div>
+    
+
+    
+
+    
+
+    
+    
+        <h5>Parameters:</h5>
+        
+
+<table class="params table table-striped">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+        <th>Argument</th>
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>options</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Object</span>
+
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last">an optional set of options to configure the instance.
+                <h6 class="method-params-label method-subparams-label">Properties</h6>
+                
+
+<table class="params table table-striped">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+        <th>Argument</th>
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>fs</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Object</span>
+
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last">specify an fs implementation to use.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>developmentMode</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">boolean</span>
+
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last">specify whether or not the instance
+is in development mode. Use only for testing purposes!</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+            </td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
+	<dd class="tag-source">
+		<ul class="dummy">
+			<li>
+				<a href="concerto-client_lib_businessnetworkconnection.js.html">concerto-client/lib/businessnetworkconnection.js</a>,
+				 <a href="concerto-client_lib_businessnetworkconnection.js.html#sunlight-1-line-37">line 37</a>
+			</li>
+		</ul>
+	</dd>
+	
+
+	
+
+	
+	<dt class="tag-see method-doc-label method-doc-details-label">See:</dt>
+	<dd class="tag-see">
+		<ul>
+			<li>See EventEmitter</li>
+			</ul>
+	</dd>
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dd>
+
+    
+    </div>
+
+    
+        <h3 class="subsection-title">Extends</h3>
+
+        
+
+
+    <ul>
+        <li>EventEmitter</li>
+    </ul>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+        <h3 class="subsection-title">Methods</h3>
+
+        <dl>
+            
+<hr>
+<dt>
+    <h4 class="name" id="addAssetRegistry"><span class="type-signature"></span>addAssetRegistry(id, name)</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        Add a new asset registry.
+    </div>
+    
+
+    
+
+    
+
+    
+    
+        <h5>Parameters:</h5>
+        
+
+<table class="params table table-striped">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>id</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">The unique identifier of the asset registry</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>name</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">The name of the asset registry</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
+	<dd class="tag-source">
+		<ul class="dummy">
+			<li>
+				<a href="concerto-client_lib_businessnetworkconnection.js.html">concerto-client/lib/businessnetworkconnection.js</a>,
+				 <a href="concerto-client_lib_businessnetworkconnection.js.html#sunlight-1-line-159">line 159</a>
+			</li>
+		</ul>
+	</dd>
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <h5>Returns:</h5>
+    
+            
+<div class="param-desc">
+    - A promise that will be resolved with the new asset
+registry after it has been added.
+</div>
+
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">Promise</span>
+
+
+
+    </dd>
+</dl>
+
+
+        
+
+    
+        <h5>Example</h5>
+        
+    <pre class="sunlight-highlight-javascript">// Add a new asset registry
+var businessNetwork = new BusinessNetworkConnection();
+return businessNetwork.connect(&#x27;testprofile&#x27;, &#x27;businessNetworkIdentifier&#x27;, &#x27;WebAppAdmin&#x27;, &#x27;DJY27pEnl16d&#x27;)
+.then(function(businessNetworkDefinition){
+    return businessNetworkDefinition.addAssetRegistry(&#x27;registryId&#x27;,&#x27;registryName&#x27;);
+});</pre>
+
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt>
+    <h4 class="name" id="addParticipantRegistry"><span class="type-signature"></span>addParticipantRegistry(id, name)</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        Add a new participant registry.
+    </div>
+    
+
+    
+
+    
+
+    
+    
+        <h5>Parameters:</h5>
+        
+
+<table class="params table table-striped">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>id</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">The unique identifier of the participant registry</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>name</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">The name of the participant registry</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
+	<dd class="tag-source">
+		<ul class="dummy">
+			<li>
+				<a href="concerto-client_lib_businessnetworkconnection.js.html">concerto-client/lib/businessnetworkconnection.js</a>,
+				 <a href="concerto-client_lib_businessnetworkconnection.js.html#sunlight-1-line-220">line 220</a>
+			</li>
+		</ul>
+	</dd>
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <h5>Returns:</h5>
+    
+            
+<div class="param-desc">
+    - A promise that will be resolved with the new participant
+registry after it has been added.
+</div>
+
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">Promise</span>
+
+
+
+    </dd>
+</dl>
+
+
+        
+
+    
+        <h5>Example</h5>
+        
+    <pre class="sunlight-highlight-javascript">// Add a new participant registry
+var businessNetwork = new BusinessNetworkConnection();
+return businessNetwork.connect(&#x27;testprofile&#x27;, &#x27;businessNetworkIdentifier&#x27;, &#x27;WebAppAdmin&#x27;, &#x27;DJY27pEnl16d&#x27;)
+.then(function(businessNetworkDefinition){
+    return businessNetworkDefinition.addParticipantRegistry(&#x27;registryId&#x27;,&#x27;registryName&#x27;);
+});</pre>
+
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt>
+    <h4 class="name" id="connect"><span class="type-signature"></span>connect(connectionProfile, businessNetwork, enrollmentID, enrollmentSecret)</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        Connects to a business network using a connection profile, and authenticates to the Hyperledger Fabric.
+    </div>
+    
+
+    
+
+    
+
+    
+    
+        <h5>Parameters:</h5>
+        
+
+<table class="params table table-striped">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>connectionProfile</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">The name of the connection profile</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>businessNetwork</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">The identifier of the business network</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>enrollmentID</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">the enrollment ID of the user</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>enrollmentSecret</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">the enrollment secret of the user</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
+	<dd class="tag-source">
+		<ul class="dummy">
+			<li>
+				<a href="concerto-client_lib_businessnetworkconnection.js.html">concerto-client/lib/businessnetworkconnection.js</a>,
+				 <a href="concerto-client_lib_businessnetworkconnection.js.html#sunlight-1-line-267">line 267</a>
+			</li>
+		</ul>
+	</dd>
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <h5>Returns:</h5>
+    
+            
+<div class="param-desc">
+    A promise to a BusinessNetworkDefinition that indicates the connection is complete
+</div>
+
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">Promise</span>
+
+
+
+    </dd>
+</dl>
+
+
+        
+
+    
+        <h5>Example</h5>
+        
+    <pre class="sunlight-highlight-javascript">// Connect and log in to HLF
+var businessNetwork = new BusinessNetworkConnection();
+return businessNetwork.connect(&#x27;testprofile&#x27;, &#x27;businessNetworkIdentifier&#x27;, &#x27;WebAppAdmin&#x27;, &#x27;DJY27pEnl16d&#x27;)
+.then(function(businessNetworkDefinition){
+    // Connected
+});</pre>
+
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt>
+    <h4 class="name" id="disconnect"><span class="type-signature"></span>disconnect()</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        Disconnects from the Hyperledger Fabric.
+    </div>
+    
+
+    
+
+    
+
+    
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
+	<dd class="tag-source">
+		<ul class="dummy">
+			<li>
+				<a href="concerto-client_lib_businessnetworkconnection.js.html">concerto-client/lib/businessnetworkconnection.js</a>,
+				 <a href="concerto-client_lib_businessnetworkconnection.js.html#sunlight-1-line-306">line 306</a>
+			</li>
+		</ul>
+	</dd>
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <h5>Returns:</h5>
+    
+            
+<div class="param-desc">
+    A promise that will be resolved when the connection is
+terminated.
+</div>
+
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">Promise</span>
+
+
+
+    </dd>
+</dl>
+
+
+        
+
+    
+        <h5>Example</h5>
+        
+    <pre class="sunlight-highlight-javascript">// Disconnects from HLF
+var businessNetwork = new BusinessNetworkConnection();
+return businessNetwork.connect(&#x27;testprofile&#x27;, &#x27;businessNetworkIdentifier&#x27;, &#x27;WebAppAdmin&#x27;, &#x27;DJY27pEnl16d&#x27;)
+.then(function(businessNetworkDefinition){
+    return businessNetworkDefinition.disconnect();
+})
+.then(function(){
+    // Disconnected.
+});</pre>
+
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt>
+    <h4 class="name" id="existsAssetRegistry"><span class="type-signature"></span>existsAssetRegistry(id)</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        Determine whether a asset registry exists.
+    </div>
+    
+
+    
+
+    
+
+    
+    
+        <h5>Parameters:</h5>
+        
+
+<table class="params table table-striped">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>id</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">The unique identifier of the asset registry</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
+	<dd class="tag-source">
+		<ul class="dummy">
+			<li>
+				<a href="concerto-client_lib_businessnetworkconnection.js.html">concerto-client/lib/businessnetworkconnection.js</a>,
+				 <a href="concerto-client_lib_businessnetworkconnection.js.html#sunlight-1-line-140">line 140</a>
+			</li>
+		</ul>
+	</dd>
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <h5>Returns:</h5>
+    
+            
+<div class="param-desc">
+    - A promise that will be resolved with a boolean indicating whether the asset
+registry exists.
+</div>
+
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">Promise</span>
+
+
+
+    </dd>
+</dl>
+
+
+        
+
+    
+        <h5>Example</h5>
+        
+    <pre class="sunlight-highlight-javascript">// Determine whether an asset registry exists
+var businessNetwork = new BusinessNetworkConnection();
+return businessNetwork.connect(&#x27;testprofile&#x27;, &#x27;businessNetworkIdentifier&#x27;, &#x27;WebAppAdmin&#x27;, &#x27;DJY27pEnl16d&#x27;)
+.then(function(businessNetworkDefinition){
+    return businessNetworkDefinition.existsAssetRegistry(&#x27;businessNetworkIdentifier.registryId&#x27;);
+})
+.then(function(exists){
+    // if (exists === true) {
+    // logic here...
+    //}
+});</pre>
+
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt>
+    <h4 class="name" id="getAllAssetRegistries"><span class="type-signature"></span>getAllAssetRegistries(securityContext)</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        Get a list of all existing asset registries.
+    </div>
+    
+
+    
+
+    
+
+    
+    
+        <h5>Parameters:</h5>
+        
+
+<table class="params table table-striped">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>securityContext</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">SecurityContext</span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">The user's security context</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
+	<dd class="tag-source">
+		<ul class="dummy">
+			<li>
+				<a href="concerto-client_lib_businessnetworkconnection.js.html">concerto-client/lib/businessnetworkconnection.js</a>,
+				 <a href="concerto-client_lib_businessnetworkconnection.js.html#sunlight-1-line-96">line 96</a>
+			</li>
+		</ul>
+	</dd>
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <h5>Returns:</h5>
+    
+            
+<div class="param-desc">
+    - A promise that will be resolved with a list of existing
+asset registries
+</div>
+
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">Promise</span>
+
+
+
+    </dd>
+</dl>
+
+
+        
+
+    
+        <h5>Example</h5>
+        
+    <pre class="sunlight-highlight-javascript">// Get all asset registries
+var businessNetwork = new BusinessNetworkConnection();
+return businessNetwork.connect(&#x27;testprofile&#x27;, &#x27;businessNetworkIdentifier&#x27;, &#x27;WebAppAdmin&#x27;, &#x27;DJY27pEnl16d&#x27;)
+.then(function(businessNetworkDefinition){
+    return businessNetworkDefinition.getAllAssetRegistries();
+})
+.then(function(assetRegistries){
+    // Retrieved Asset Registries
+});</pre>
+
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt>
+    <h4 class="name" id="getAllParticipantRegistries"><span class="type-signature"></span>getAllParticipantRegistries(securityContext)</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        Get a list of all existing participant registries.
+    </div>
+    
+
+    
+
+    
+
+    
+    
+        <h5>Parameters:</h5>
+        
+
+<table class="params table table-striped">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>securityContext</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">SecurityContext</span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">The user's security context</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
+	<dd class="tag-source">
+		<ul class="dummy">
+			<li>
+				<a href="concerto-client_lib_businessnetworkconnection.js.html">concerto-client/lib/businessnetworkconnection.js</a>,
+				 <a href="concerto-client_lib_businessnetworkconnection.js.html#sunlight-1-line-180">line 180</a>
+			</li>
+		</ul>
+	</dd>
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <h5>Returns:</h5>
+    
+            
+<div class="param-desc">
+    - A promise that will be resolved with a list of existing
+participant registries
+</div>
+
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">Promise</span>
+
+
+
+    </dd>
+</dl>
+
+
+        
+
+    
+        <h5>Example</h5>
+        
+    <pre class="sunlight-highlight-javascript">// Get all participant registries
+var businessNetwork = new BusinessNetworkConnection();
+return businessNetwork.connect(&#x27;testprofile&#x27;, &#x27;businessNetworkIdentifier&#x27;, &#x27;WebAppAdmin&#x27;, &#x27;DJY27pEnl16d&#x27;)
+.then(function(businessNetworkDefinition){
+    return businessNetworkDefinition.getAllParticipantRegistries();
+})
+.then(function(participantRegistries){
+    // Retrieved Participant Registries
+});</pre>
+
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt>
+    <h4 class="name" id="getAssetRegistry"><span class="type-signature"></span>getAssetRegistry(id)</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        Get an existing asset registry.
+    </div>
+    
+
+    
+
+    
+
+    
+    
+        <h5>Parameters:</h5>
+        
+
+<table class="params table table-striped">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>id</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">The unique identifier of the asset registry</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
+	<dd class="tag-source">
+		<ul class="dummy">
+			<li>
+				<a href="concerto-client_lib_businessnetworkconnection.js.html">concerto-client/lib/businessnetworkconnection.js</a>,
+				 <a href="concerto-client_lib_businessnetworkconnection.js.html#sunlight-1-line-117">line 117</a>
+			</li>
+		</ul>
+	</dd>
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <h5>Returns:</h5>
+    
+            
+<div class="param-desc">
+    - A promise that will be resolved with the existing asset
+registry, or rejected if the asset registry does not exist.
+</div>
+
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">Promise</span>
+
+
+
+    </dd>
+</dl>
+
+
+        
+
+    
+        <h5>Example</h5>
+        
+    <pre class="sunlight-highlight-javascript">// Get a asset registry
+var businessNetwork = new BusinessNetworkConnection();
+return businessNetwork.connect(&#x27;testprofile&#x27;, &#x27;businessNetworkIdentifier&#x27;, &#x27;WebAppAdmin&#x27;, &#x27;DJY27pEnl16d&#x27;)
+.then(function(businessNetworkDefinition){
+    return businessNetworkDefinition.getAssetRegistry(&#x27;businessNetworkIdentifier.registryId&#x27;);
+})
+.then(function(assetRegistry){
+    // Retrieved Asset Registry
+});</pre>
+
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt>
+    <h4 class="name" id="getBusinessNetwork"><span class="type-signature"></span>getBusinessNetwork()</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        Returns the currently connected BusinessNetworkDefinition
+    </div>
+    
+
+    
+
+    
+
+    
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
+	<dd class="tag-source">
+		<ul class="dummy">
+			<li>
+				<a href="concerto-client_lib_businessnetworkconnection.js.html">concerto-client/lib/businessnetworkconnection.js</a>,
+				 <a href="concerto-client_lib_businessnetworkconnection.js.html#sunlight-1-line-76">line 76</a>
+			</li>
+		</ul>
+	</dd>
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <h5>Returns:</h5>
+    
+            
+<div class="param-desc">
+    the business network
+</div>
+
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">BusinessNetworkDefinition</span>
+
+
+
+    </dd>
+</dl>
+
+
+        
+
+    
+        <h5>Example</h5>
+        
+    <pre class="sunlight-highlight-javascript">// Get the Business Network Definition
+var businessNetwork = new BusinessNetworkConnection();
+return businessNetwork.connect(&#x27;testprofile&#x27;, &#x27;businessNetworkIdentifier&#x27;, &#x27;WebAppAdmin&#x27;, &#x27;DJY27pEnl16d&#x27;)
+.then(function(businessNetworkDefinition){
+    return businessNetworkDefinition.getBusinessNetwork();
+})
+.then(function(BusinessNetworkDefinition){
+    // Retrieved Business Network Definition
+});</pre>
+
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt>
+    <h4 class="name" id="getParticipantRegistry"><span class="type-signature"></span>getParticipantRegistry(id)</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        Get an existing participant registry.
+    </div>
+    
+
+    
+
+    
+
+    
+    
+        <h5>Parameters:</h5>
+        
+
+<table class="params table table-striped">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>id</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">The unique identifier of the participant registry</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
+	<dd class="tag-source">
+		<ul class="dummy">
+			<li>
+				<a href="concerto-client_lib_businessnetworkconnection.js.html">concerto-client/lib/businessnetworkconnection.js</a>,
+				 <a href="concerto-client_lib_businessnetworkconnection.js.html#sunlight-1-line-201">line 201</a>
+			</li>
+		</ul>
+	</dd>
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <h5>Returns:</h5>
+    
+            
+<div class="param-desc">
+    - A promise that will be resolved with the existing participant
+registry, or rejected if the participant registry does not exist.
+</div>
+
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">Promise</span>
+
+
+
+    </dd>
+</dl>
+
+
+        
+
+    
+        <h5>Example</h5>
+        
+    <pre class="sunlight-highlight-javascript">// Get a participant registry
+var businessNetwork = new BusinessNetworkConnection();
+return businessNetwork.connect(&#x27;testprofile&#x27;, &#x27;businessNetworkIdentifier&#x27;, &#x27;WebAppAdmin&#x27;, &#x27;DJY27pEnl16d&#x27;)
+.then(function(businessNetworkDefinition){
+    return businessNetworkDefinition.getParticipantRegistry(&#x27;businessNetworkIdentifier.registryId&#x27;);
+})
+.then(function(participantRegistry){
+    // Retrieved Participant Registry
+});</pre>
+
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt>
+    <h4 class="name" id="getTransactionRegistry"><span class="type-signature"></span>getTransactionRegistry()</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        Get the transaction registry.
+    </div>
+    
+
+    
+
+    
+
+    
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
+	<dd class="tag-source">
+		<ul class="dummy">
+			<li>
+				<a href="concerto-client_lib_businessnetworkconnection.js.html">concerto-client/lib/businessnetworkconnection.js</a>,
+				 <a href="concerto-client_lib_businessnetworkconnection.js.html#sunlight-1-line-239">line 239</a>
+			</li>
+		</ul>
+	</dd>
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <h5>Returns:</h5>
+    
+            
+<div class="param-desc">
+    - A promise that will be resolved to the TransactionRegistry
+</div>
+
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">Promise</span>
+
+
+
+    </dd>
+</dl>
+
+
+        
+
+    
+        <h5>Example</h5>
+        
+    <pre class="sunlight-highlight-javascript">// Get the transaction registry
+var businessNetwork = new BusinessNetworkConnection();
+return businessNetwork.connect(&#x27;testprofile&#x27;, &#x27;businessNetworkIdentifier&#x27;, &#x27;WebAppAdmin&#x27;, &#x27;DJY27pEnl16d&#x27;)
+.then(function(businessNetworkDefinition){
+    return businessNetworkDefinition.getTransactionRegistry();
+})
+.then(function(transactionRegistry){
+    // Retrieved Transaction Registry
+});</pre>
+
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt>
+    <h4 class="name" id="issueIdentity"><span class="type-signature"></span>issueIdentity(participant, userID [, options])</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        Issue an identity with the specified user ID and map it to the specified
+participant.
+    </div>
+    
+
+    
+
+    
+
+    
+    
+        <h5>Parameters:</h5>
+        
+
+<table class="params table table-striped">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+        <th>Argument</th>
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>participant</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Resource</span>
+|
+
+<span class="param-type">string</span>
+
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last">The participant, or the fully qualified
+identifier of the participant. The participant must already exist.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>userID</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last">The user ID for the identity.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>options</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">object</span>
+
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last">Options for the new identity.
+                <h6 class="method-params-label method-subparams-label">Properties</h6>
+                
+
+<table class="params table table-striped">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+        <th>Argument</th>
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>issuer</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">boolean</span>
+
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last">Whether or not the new identity should have
+permissions to create additional new identities. False by default.</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+            </td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
+	<dd class="tag-source">
+		<ul class="dummy">
+			<li>
+				<a href="concerto-client_lib_businessnetworkconnection.js.html">concerto-client/lib/businessnetworkconnection.js</a>,
+				 <a href="concerto-client_lib_businessnetworkconnection.js.html#sunlight-1-line-398">line 398</a>
+			</li>
+		</ul>
+	</dd>
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <h5>Returns:</h5>
+    
+            
+<div class="param-desc">
+    A promise that will be fulfilled when the identity has
+been added to the specified participant. The promise will be rejected if
+the participant does not exist, or if the identity is already mapped to
+another participant.
+</div>
+
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">Promise</span>
+
+
+
+    </dd>
+</dl>
+
+
+        
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt>
+    <h4 class="name" id="ping"><span class="type-signature"></span>ping()</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        Test the connection to the runtime and verify that the version of the
+runtime is compatible with this level of the client node.js module.
+    </div>
+    
+
+    
+
+    
+
+    
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
+	<dd class="tag-source">
+		<ul class="dummy">
+			<li>
+				<a href="concerto-client_lib_businessnetworkconnection.js.html">concerto-client/lib/businessnetworkconnection.js</a>,
+				 <a href="concerto-client_lib_businessnetworkconnection.js.html#sunlight-1-line-379">line 379</a>
+			</li>
+		</ul>
+	</dd>
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <h5>Returns:</h5>
+    
+            
+<div class="param-desc">
+    A promise that will be fufilled when the connection has
+been tested. The promise will be rejected if the version is incompatible.
+</div>
+
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">Promise</span>
+
+
+
+    </dd>
+</dl>
+
+
+        
+
+    
+        <h5>Example</h5>
+        
+    <pre class="sunlight-highlight-javascript">// Test the connection to the runtime
+var businessNetwork = new BusinessNetworkConnection();
+return businessNetwork.connect(&#x27;testprofile&#x27;, &#x27;businessNetworkIdentifier&#x27;, &#x27;WebAppAdmin&#x27;, &#x27;DJY27pEnl16d&#x27;)
+.then(function(businessNetworkDefinition){
+    return businessNetworkDefinition.ping();
+})
+.then(function(){
+    // Connection tested.
+});</pre>
+
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt>
+    <h4 class="name" id="revokeIdentity"><span class="type-signature"></span>revokeIdentity(identity)</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        Revoke the specified identity by removing any existing mapping to a participant.
+    </div>
+    
+
+    
+
+    
+
+    
+    
+        <h5>Parameters:</h5>
+        
+
+<table class="params table table-striped">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>identity</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">The identity, for example the enrollment ID.</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
+	<dd class="tag-source">
+		<ul class="dummy">
+			<li>
+				<a href="concerto-client_lib_businessnetworkconnection.js.html">concerto-client/lib/businessnetworkconnection.js</a>,
+				 <a href="concerto-client_lib_businessnetworkconnection.js.html#sunlight-1-line-431">line 431</a>
+			</li>
+		</ul>
+	</dd>
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <h5>Returns:</h5>
+    
+            
+<div class="param-desc">
+    A promise that will be fulfilled when the identity has
+been removed from the specified participant. The promise will be rejected if
+the participant does not exist, or if the identity is not mapped to the
+participant.
+</div>
+
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">Promise</span>
+
+
+
+    </dd>
+</dl>
+
+
+        
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt>
+    <h4 class="name" id="submitTransaction"><span class="type-signature"></span>submitTransaction(transaction)</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        Submit a transaction for processing by the currently connected business network.
+    </div>
+    
+
+    
+
+    
+
+    
+    
+        <h5>Parameters:</h5>
+        
+
+<table class="params table table-striped">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>transaction</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Resource</span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">The transaction to submit. Use newTransaction to create this object.</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
+	<dd class="tag-source">
+		<ul class="dummy">
+			<li>
+				<a href="concerto-client_lib_businessnetworkconnection.js.html">concerto-client/lib/businessnetworkconnection.js</a>,
+				 <a href="concerto-client_lib_businessnetworkconnection.js.html#sunlight-1-line-337">line 337</a>
+			</li>
+		</ul>
+	</dd>
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <h5>Returns:</h5>
+    
+            
+<div class="param-desc">
+    A promise that will be fulfilled when the transaction has
+been processed.
+</div>
+
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">Promise</span>
+
+
+
+    </dd>
+</dl>
+
+
+        
+
+    
+        <h5>Example</h5>
+        
+    <pre class="sunlight-highlight-javascript">// Submits a transaction
+var businessNetwork = new BusinessNetworkConnection();
+return businessNetwork.connect(&#x27;testprofile&#x27;, &#x27;businessNetworkIdentifier&#x27;, &#x27;WebAppAdmin&#x27;, &#x27;DJY27pEnl16d&#x27;)
+.then(function(businessNetworkDefinition){
+    var factory = businessNetworkDefinition.getBusinessNetwork().getFactory();
+    var transaction = factory.newTransaction(&#x27;network.transactions&#x27;, &#x27;TransactionType&#x27;);
+    return businessNetworkDefinition.submitTransaction(transaction);
+})
+.then(function(){
+    // Submitted a transaction.
+});</pre>
+
+
+    
+</dd>
+
+        </dl>
+    
+
+    
+
+    
+</article>
+
+</section>
+
+
+
+
+		</div>
+	</div>
+
+	<div class="clearfix"></div>
+
+	
+		<div class="col-md-3">
+			<div id="toc" class="col-md-3 hidden-xs hidden-sm hidden-md"></div>
+		</div>
+	
+
+</div>
+</div>
+
+
+    <div class="modal fade" id="searchResults">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h4 class="modal-title">Search results</h4>
+          </div>
+          <div class="modal-body"></div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          </div>
+        </div><!-- /.modal-content -->
+      </div><!-- /.modal-dialog -->
+    </div>
+
+
+<footer>
+
+
+	<span class="copyright">
+	Copyright IBM Corp. 2016
+	</span>
+
+<span class="jsdoc-message">
+	Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.4.3</a>
+	
+		on Thu Jan 12th 2017
+	
+	using the <a href="https://github.com/docstrap/docstrap">DocStrap template</a>.
+</span>
+</footer>
+
+<script src="scripts/docstrap.lib.js"></script>
+<script src="scripts/toc.js"></script>
+
+    <script type="text/javascript" src="scripts/fulltext-search-ui.js"></script>
+
+
+<script>
+$( function () {
+	$( "[id*='$']" ).each( function () {
+		var $this = $( this );
+
+		$this.attr( "id", $this.attr( "id" ).replace( "$", "__" ) );
+	} );
+
+	$( ".tutorial-section pre, .readme-section pre, pre.prettyprint.source" ).each( function () {
+		var $this = $( this );
+
+		var example = $this.find( "code" );
+		exampleText = example.html();
+		var lang = /{@lang (.*?)}/.exec( exampleText );
+		if ( lang && lang[1] ) {
+			exampleText = exampleText.replace( lang[0], "" );
+			example.html( exampleText );
+			lang = lang[1];
+		} else {
+			var langClassMatch = example.parent()[0].className.match(/lang\-(\S+)/);
+			lang = langClassMatch ? langClassMatch[1] : "javascript";
+		}
+
+		if ( lang ) {
+
+			$this
+			.addClass( "sunlight-highlight-" + lang )
+			.addClass( "linenums" )
+			.html( example.html() );
+
+		}
+	} );
+
+	Sunlight.highlightAll( {
+		lineNumbers : true,
+		showMenu : true,
+		enableDoclinks : true
+	} );
+
+	$.catchAnchorLinks( {
+        navbarOffset: 10
+	} );
+	$( "#toc" ).toc( {
+		anchorName  : function ( i, heading, prefix ) {
+			return $( heading ).attr( "id" ) || ( prefix + i );
+		},
+		selectors   : "#toc-content h1,#toc-content h2,#toc-content h3,#toc-content h4",
+		showAndHide : false,
+		smoothScrolling: true
+	} );
+
+	$( "#main span[id^='toc']" ).addClass( "toc-shim" );
+	$( '.dropdown-toggle' ).dropdown();
+
+    $( "table" ).each( function () {
+      var $this = $( this );
+      $this.addClass('table');
+    } );
+
+} );
+</script>
+
+
+
+<!--Navigation and Symbol Display-->
+
+
+<!--Google Analytics-->
+
+
+
+    <script type="text/javascript">
+        $(document).ready(function() {
+            SearcherDisplay.init();
+        });
+    </script>
+
+
+</body>
+</html>
