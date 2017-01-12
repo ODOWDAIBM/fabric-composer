@@ -4,7 +4,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width">
-	<title>IBM Concerto Class: AssetRegistry</title>
+	<title>Concerto Class: AssetRegistry</title>
 
 	<!--[if lt IE 9]>
 	<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
@@ -20,7 +20,7 @@
 <div class="navbar navbar-default navbar-fixed-top navbar-inverse">
 <div class="container">
 	<div class="navbar-header">
-		<a class="navbar-brand" href="index.html">IBM Concerto</a>
+		<a class="navbar-brand" href="index.html">Concerto</a>
 		<button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#topNavigation">
 			<span class="icon-bar"></span>
 			<span class="icon-bar"></span>
@@ -90,7 +90,7 @@
         AssetRegistry
         </h2>
         
-            <div class="class-description">An asset registry manages a set of assets.</div>
+            <div class="class-description"><p>An asset registry manages a set of assets.</p></div>
         
     
 </header>
@@ -110,9 +110,7 @@
 
     
     <div class="description">
-        Do not attempt to create an instance of this class.<br>
-You must use the <a href="module-ibm-concerto-runtime.html#getAssetRegistry">getAssetRegistry</a>
-method instead.
+        <p>Do not attempt to create an instance of this class.<br><br>You must use the <a href="module-ibm-concerto-runtime.html#getAssetRegistry">getAssetRegistry</a><br>method instead.</p>
     </div>
     
 
@@ -218,7 +216,7 @@ method instead.
 
     
     <div class="description">
-        Add the specified asset to this asset registry.
+        <p>Add the specified asset to this asset registry.</p>
     </div>
     
 
@@ -270,7 +268,7 @@ method instead.
 
             
 
-            <td class="description last">The assets to add to this asset registry.</td>
+            <td class="description last"><p>The assets to add to this asset registry.</p></td>
         </tr>
 
     
@@ -344,10 +342,7 @@ method instead.
     
             
 <div class="param-desc">
-    A promise. The promise is resolved when the asset has
-been added to this asset registry. If the asset cannot be added to this
-asset registry, or if the asset already exists in the asset registry,
-then the promise will be rejected with an error that describes the problem.
+    <p>A promise. The promise is resolved when the asset has<br>been added to this asset registry. If the asset cannot be added to this<br>asset registry, or if the asset already exists in the asset registry,<br>then the promise will be rejected with an error that describes the problem.</p>
 </div>
 
 
@@ -402,7 +397,7 @@ return getAssetRegistry(&#x27;org.acme.Vehicle&#x27;)
 
     
     <div class="description">
-        Add all of the specified assets to this asset registry.
+        <p>Add all of the specified assets to this asset registry.</p>
     </div>
     
 
@@ -454,7 +449,7 @@ return getAssetRegistry(&#x27;org.acme.Vehicle&#x27;)
 
             
 
-            <td class="description last">The assets to add to this asset registry.</td>
+            <td class="description last"><p>The assets to add to this asset registry.</p></td>
         </tr>
 
     
@@ -528,11 +523,7 @@ return getAssetRegistry(&#x27;org.acme.Vehicle&#x27;)
     
             
 <div class="param-desc">
-    A promise. The promise is resolved when all of the
-assets have been added to this asset registry. If the assets cannot be
-added to this asset registry, or if the assets already exist in the
-asset registry, then the promise will be rejected with an error
-that describes the problem.
+    <p>A promise. The promise is resolved when all of the<br>assets have been added to this asset registry. If the assets cannot be<br>added to this asset registry, or if the assets already exist in the<br>asset registry, then the promise will be rejected with an error<br>that describes the problem.</p>
 </div>
 
 
@@ -590,8 +581,7 @@ return getAssetRegistry(&#x27;org.acme.Vehicle&#x27;)
 
     
     <div class="description">
-        Get the specified asset in this asset registry using the unique identifier
-of the asset.
+        <p>Get the specified asset in this asset registry using the unique identifier<br>of the asset.</p>
     </div>
     
 
@@ -643,7 +633,7 @@ of the asset.
 
             
 
-            <td class="description last">The ID of the asset.</td>
+            <td class="description last"><p>The ID of the asset.</p></td>
         </tr>
 
     
@@ -717,11 +707,7 @@ of the asset.
     
             
 <div class="param-desc">
-    A promise. The promise is resolved with a Resource
-instance representing the specified asset in this asset registry. If the
-specified asset does not exist, or the current user does not have access
-to the specified asset, then the promise will be rejected with an error
-that describes the problem.
+    <p>A promise. The promise is resolved with a Resource<br>instance representing the specified asset in this asset registry. If the<br>specified asset does not exist, or the current user does not have access<br>to the specified asset, then the promise will be rejected with an error<br>that describes the problem.</p>
 </div>
 
 
@@ -775,7 +761,7 @@ return getAssetRegistry(&#x27;org.acme.Vehicle&#x27;)
 
     
     <div class="description">
-        Get a list of all of the existing assets in this asset registry.
+        <p>Get a list of all of the existing assets in this asset registry.</p>
     </div>
     
 
@@ -851,11 +837,7 @@ return getAssetRegistry(&#x27;org.acme.Vehicle&#x27;)
     
             
 <div class="param-desc">
-    A promise. The promise is resolved with an array of
-Resource instances representing all of the assets stored in this
-asset registry. If the asset registry does not exist, or the current
-user does not have access to the asset registry, then the promise will
-be rejected with an error that describes the problem.
+    <p>A promise. The promise is resolved with an array of<br>Resource instances representing all of the assets stored in this<br>asset registry. If the asset registry does not exist, or the current<br>user does not have access to the asset registry, then the promise will<br>be rejected with an error that describes the problem.</p>
 </div>
 
 
@@ -911,7 +893,7 @@ return getAssetRegistry(&#x27;org.acme.Vehicle&#x27;)
 
     
     <div class="description">
-        Remove the specified asset from this asset registry.
+        <p>Remove the specified asset from this asset registry.</p>
     </div>
     
 
@@ -966,8 +948,7 @@ return getAssetRegistry(&#x27;org.acme.Vehicle&#x27;)
 
             
 
-            <td class="description last">The asset, or ID of the asset, to remove
-from this asset registry.</td>
+            <td class="description last"><p>The asset, or ID of the asset, to remove<br>from this asset registry.</p></td>
         </tr>
 
     
@@ -1041,11 +1022,7 @@ from this asset registry.</td>
     
             
 <div class="param-desc">
-    A promise. The promise is resolved when the asset
-has been removed from this asset registry. If the asset cannot be
-removed from this asset registry, or if the asset does not exist in the
-asset registry, then the promise will be rejected with an error that
-describes the problem.
+    <p>A promise. The promise is resolved when the asset<br>has been removed from this asset registry. If the asset cannot be<br>removed from this asset registry, or if the asset does not exist in the<br>asset registry, then the promise will be rejected with an error that<br>describes the problem.</p>
 </div>
 
 
@@ -1099,7 +1076,7 @@ return getAssetRegistry(&#x27;org.acme.Vehicle&#x27;)
 
     
     <div class="description">
-        Remove all of the specified assets from this asset registry.
+        <p>Remove all of the specified assets from this asset registry.</p>
     </div>
     
 
@@ -1154,8 +1131,7 @@ return getAssetRegistry(&#x27;org.acme.Vehicle&#x27;)
 
             
 
-            <td class="description last">The assets, or the IDs of the assets,
-to remove from this asset registry.</td>
+            <td class="description last"><p>The assets, or the IDs of the assets,<br>to remove from this asset registry.</p></td>
         </tr>
 
     
@@ -1229,11 +1205,7 @@ to remove from this asset registry.</td>
     
             
 <div class="param-desc">
-    A promise. The promise is resolved when all of the
-assets have been removed from this asset registry. If the assets cannot be
-removed from this asset registry, or if the assets do not exist in the
-asset registry, then the promise will be rejected with an error that
-describes the problem.
+    <p>A promise. The promise is resolved when all of the<br>assets have been removed from this asset registry. If the assets cannot be<br>removed from this asset registry, or if the assets do not exist in the<br>asset registry, then the promise will be rejected with an error that<br>describes the problem.</p>
 </div>
 
 
@@ -1289,7 +1261,7 @@ return getAssetRegistry(&#x27;org.acme.Vehicle&#x27;)
 
     
     <div class="description">
-        Update the specified asset in this asset registry.
+        <p>Update the specified asset in this asset registry.</p>
     </div>
     
 
@@ -1341,7 +1313,7 @@ return getAssetRegistry(&#x27;org.acme.Vehicle&#x27;)
 
             
 
-            <td class="description last">The asset to update in this asset registry.</td>
+            <td class="description last"><p>The asset to update in this asset registry.</p></td>
         </tr>
 
     
@@ -1415,11 +1387,7 @@ return getAssetRegistry(&#x27;org.acme.Vehicle&#x27;)
     
             
 <div class="param-desc">
-    A promise. The promise is resolved when the asset
-have been updated in this asset registry. If the asset cannot be
-updated in this asset registry, or if the asset does not exist in the
-asset registry, then the promise will be rejected with an error that
-describes the problem.
+    <p>A promise. The promise is resolved when the asset<br>have been updated in this asset registry. If the asset cannot be<br>updated in this asset registry, or if the asset does not exist in the<br>asset registry, then the promise will be rejected with an error that<br>describes the problem.</p>
 </div>
 
 
@@ -1475,7 +1443,7 @@ return getAssetRegistry(&#x27;org.acme.Vehicle&#x27;)
 
     
     <div class="description">
-        Update all of the specified assets in this asset registry.
+        <p>Update all of the specified assets in this asset registry.</p>
     </div>
     
 
@@ -1527,7 +1495,7 @@ return getAssetRegistry(&#x27;org.acme.Vehicle&#x27;)
 
             
 
-            <td class="description last">The assets to update in this asset registry.</td>
+            <td class="description last"><p>The assets to update in this asset registry.</p></td>
         </tr>
 
     
@@ -1601,11 +1569,7 @@ return getAssetRegistry(&#x27;org.acme.Vehicle&#x27;)
     
             
 <div class="param-desc">
-    A promise. The promise is resolved when all of the
-assets have been updated in this asset registry. If the assets cannot be
-updated in this asset registry, or if the assets do not exist in the
-asset registry, then the promise will be rejected with an error that
-describes the problem.
+    <p>A promise. The promise is resolved when all of the<br>assets have been updated in this asset registry. If the assets cannot be<br>updated in this asset registry, or if the assets do not exist in the<br>asset registry, then the promise will be rejected with an error that<br>describes the problem.</p>
 </div>
 
 
@@ -1700,7 +1664,7 @@ return getAssetRegistry(&#x27;org.acme.Vehicle&#x27;)
 
 
 	<span class="copyright">
-	Copyright IBM Corp. 2016
+	Copyright IBM Corp. 2017
 	</span>
 
 <span class="jsdoc-message">

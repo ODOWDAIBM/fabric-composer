@@ -4,7 +4,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width">
-	<title>IBM Concerto Class: Registry</title>
+	<title>Concerto Class: Registry</title>
 
 	<!--[if lt IE 9]>
 	<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
@@ -20,7 +20,7 @@
 <div class="navbar navbar-default navbar-fixed-top navbar-inverse">
 <div class="container">
 	<div class="navbar-header">
-		<a class="navbar-brand" href="index.html">IBM Concerto</a>
+		<a class="navbar-brand" href="index.html">Concerto</a>
 		<button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#topNavigation">
 			<span class="icon-bar"></span>
 			<span class="icon-bar"></span>
@@ -90,7 +90,7 @@
         Registry
         </h2>
         
-            <div class="class-description">Class representing an Abstract Registry.
+            <div class="class-description"><p>Class representing an Abstract Registry.</p>
 <p><a href="./diagrams/registry.svg"><img src="./diagrams/registry.svg" style="width:100%;"/></a></p></div>
         
     
@@ -111,11 +111,8 @@
 
     
     <div class="description">
-        Create a registry.
-
-<strong>Note: Only to be called by framework code. Applications should
-retrieve instances from BusinessNetworkConnection</strong>
-</p>
+        <p>Create a registry.</p>
+<p><strong>Note: Only to be called by framework code. Applications should<br>retrieve instances from BusinessNetworkConnection</strong><br></p></p>
     </div>
     
 
@@ -167,7 +164,7 @@ retrieve instances from BusinessNetworkConnection</strong>
 
             
 
-            <td class="description last">The type of this registry.</td>
+            <td class="description last"><p>The type of this registry.</p></td>
         </tr>
 
     
@@ -191,7 +188,7 @@ retrieve instances from BusinessNetworkConnection</strong>
 
             
 
-            <td class="description last">The unique identifier of the registry.</td>
+            <td class="description last"><p>The unique identifier of the registry.</p></td>
         </tr>
 
     
@@ -215,7 +212,7 @@ retrieve instances from BusinessNetworkConnection</strong>
 
             
 
-            <td class="description last">The display name for the registry.</td>
+            <td class="description last"><p>The display name for the registry.</p></td>
         </tr>
 
     
@@ -239,7 +236,7 @@ retrieve instances from BusinessNetworkConnection</strong>
 
             
 
-            <td class="description last">The users security context.</td>
+            <td class="description last"><p>The users security context.</p></td>
         </tr>
 
     
@@ -263,7 +260,7 @@ retrieve instances from BusinessNetworkConnection</strong>
 
             
 
-            <td class="description last">The ModelManager to use for this registry.</td>
+            <td class="description last"><p>The ModelManager to use for this registry.</p></td>
         </tr>
 
     
@@ -287,7 +284,7 @@ retrieve instances from BusinessNetworkConnection</strong>
 
             
 
-            <td class="description last">The factory to use for this registry.</td>
+            <td class="description last"><p>The factory to use for this registry.</p></td>
         </tr>
 
     
@@ -311,7 +308,7 @@ retrieve instances from BusinessNetworkConnection</strong>
 
             
 
-            <td class="description last">The Serializer to use for this registry.</td>
+            <td class="description last"><p>The Serializer to use for this registry.</p></td>
         </tr>
 
     
@@ -415,7 +412,7 @@ retrieve instances from BusinessNetworkConnection</strong>
 
     
     <div class="description">
-        Adds a new resource to the registry.
+        <p>Adds a new resource to the registry.</p>
     </div>
     
 
@@ -467,7 +464,7 @@ retrieve instances from BusinessNetworkConnection</strong>
 
             
 
-            <td class="description last">The resource to be added to the registry.</td>
+            <td class="description last"><p>The resource to be added to the registry.</p></td>
         </tr>
 
     
@@ -541,8 +538,7 @@ retrieve instances from BusinessNetworkConnection</strong>
     
             
 <div class="param-desc">
-    A promise that will be resolved when the resource is
-added to the registry.
+    <p>A promise that will be resolved when the resource is<br>added to the registry.</p>
 </div>
 
 
@@ -578,7 +574,7 @@ added to the registry.
 
     
     <div class="description">
-        Adds a list of new resources to the registry.
+        <p>Adds a list of new resources to the registry.</p>
     </div>
     
 
@@ -630,7 +626,7 @@ added to the registry.
 
             
 
-            <td class="description last">The resources to be added to the registry.</td>
+            <td class="description last"><p>The resources to be added to the registry.</p></td>
         </tr>
 
     
@@ -704,8 +700,7 @@ added to the registry.
     
             
 <div class="param-desc">
-    A promise that will be resolved when the resource is
-added to the registry.
+    <p>A promise that will be resolved when the resource is<br>added to the registry.</p>
 </div>
 
 
@@ -741,7 +736,7 @@ added to the registry.
 
     
     <div class="description">
-        Determines whether a specific resource exists in the registry.
+        <p>Determines whether a specific resource exists in the registry.</p>
     </div>
     
 
@@ -793,7 +788,7 @@ added to the registry.
 
             
 
-            <td class="description last">The unique identifier of the resource.</td>
+            <td class="description last"><p>The unique identifier of the resource.</p></td>
         </tr>
 
     
@@ -867,7 +862,7 @@ added to the registry.
     
             
 <div class="param-desc">
-    A promise that will be resolved with true/false depending on whether the resource exists.
+    <p>A promise that will be resolved with true/false depending on whether the resource exists.</p>
 </div>
 
 
@@ -903,10 +898,7 @@ added to the registry.
 
     
     <div class="description">
-        Find resources in the registry that match the specified JSONata expression.
-The JSONata expression is applied to each resource in the registry, and
-resources are returned if the JSONata expression returns a truthy value for that
-resource.
+        <p>Find resources in the registry that match the specified JSONata expression.<br>The JSONata expression is applied to each resource in the registry, and<br>resources are returned if the JSONata expression returns a truthy value for that<br>resource.</p>
     </div>
     
 
@@ -958,7 +950,7 @@ resource.
 
             
 
-            <td class="description last">The JSONata expression.</td>
+            <td class="description last"><p>The JSONata expression.</p></td>
         </tr>
 
     
@@ -1032,7 +1024,7 @@ resource.
     
             
 <div class="param-desc">
-    A promise that will be resolved with an array of Resource instances representing the assets that match the query.
+    <p>A promise that will be resolved with an array of {@link<br>Resource} instances representing the assets that match the query.</p>
 </div>
 
 
@@ -1068,7 +1060,7 @@ resource.
 
     
     <div class="description">
-        Get a specific resource in the registry.
+        <p>Get a specific resource in the registry.</p>
     </div>
     
 
@@ -1120,7 +1112,7 @@ resource.
 
             
 
-            <td class="description last">The unique identifier of the resource.</td>
+            <td class="description last"><p>The unique identifier of the resource.</p></td>
         </tr>
 
     
@@ -1194,8 +1186,7 @@ resource.
     
             
 <div class="param-desc">
-    A promise that will be resolved with a JSON object
-representing the resource.
+    <p>A promise that will be resolved with a JSON object<br>representing the resource.</p>
 </div>
 
 
@@ -1231,7 +1222,7 @@ representing the resource.
 
     
     <div class="description">
-        Get all of the resources in the registry.
+        <p>Get all of the resources in the registry.</p>
     </div>
     
 
@@ -1307,8 +1298,7 @@ representing the resource.
     
             
 <div class="param-desc">
-    A promise that will be resolved with an array of JSON
-objects representing the resources.
+    <p>A promise that will be resolved with an array of JSON<br>objects representing the resources.</p>
 </div>
 
 
@@ -1344,12 +1334,7 @@ objects representing the resources.
 
     
     <div class="description">
-        Execute a query against all resources in the registry. The JSONata
-expression is applied to each resource in the registry, and the result
-of the JSONata expression is returned if the result is truthy. The result
-is a JavaScript object, and should only be used for visualization
-purposes. You cannot use the add or update functions with
-data returned by this function.
+        <p>Execute a query against all resources in the registry. The JSONata<br>expression is applied to each resource in the registry, and the result<br>of the JSONata expression is returned if the result is truthy. The result<br>is a JavaScript object, and should only be used for visualization<br>purposes. You cannot use the add or update functions with<br>data returned by this function.</p>
     </div>
     
 
@@ -1401,7 +1386,7 @@ data returned by this function.
 
             
 
-            <td class="description last">The JSONata expression.</td>
+            <td class="description last"><p>The JSONata expression.</p></td>
         </tr>
 
     
@@ -1475,8 +1460,7 @@ data returned by this function.
     
             
 <div class="param-desc">
-    A promise that will be resolved with an array of JavaScript
-objects representing the resources and all of their resolved relationships.
+    <p>A promise that will be resolved with an array of JavaScript<br>objects representing the resources and all of their resolved relationships.</p>
 </div>
 
 
@@ -1512,7 +1496,7 @@ objects representing the resources and all of their resolved relationships.
 
     
     <div class="description">
-        Remove an asset with a given type and id from the registry.
+        <p>Remove an asset with a given type and id from the registry.</p>
     </div>
     
 
@@ -1567,7 +1551,7 @@ objects representing the resources and all of their resolved relationships.
 
             
 
-            <td class="description last">The resource, or the unique identifier of the resource.</td>
+            <td class="description last"><p>The resource, or the unique identifier of the resource.</p></td>
         </tr>
 
     
@@ -1641,8 +1625,7 @@ objects representing the resources and all of their resolved relationships.
     
             
 <div class="param-desc">
-    A promise that will be resolved when the resource is
-removed from the registry.
+    <p>A promise that will be resolved when the resource is<br>removed from the registry.</p>
 </div>
 
 
@@ -1678,7 +1661,7 @@ removed from the registry.
 
     
     <div class="description">
-        Removes a list of resources from the registry.
+        <p>Removes a list of resources from the registry.</p>
     </div>
     
 
@@ -1733,7 +1716,7 @@ removed from the registry.
 
             
 
-            <td class="description last">The resources, or the unique identifiers of the resources.</td>
+            <td class="description last"><p>The resources, or the unique identifiers of the resources.</p></td>
         </tr>
 
     
@@ -1807,8 +1790,7 @@ removed from the registry.
     
             
 <div class="param-desc">
-    A promise that will be resolved when the resource is
-added to the registry.
+    <p>A promise that will be resolved when the resource is<br>added to the registry.</p>
 </div>
 
 
@@ -1844,10 +1826,7 @@ added to the registry.
 
     
     <div class="description">
-        Get a specific resource in the registry, and resolve all of its relationships
-to other assets, participants, and transactions. The result is a JavaScript
-object, and should only be used for visualization purposes. You cannot use
-the add or update functions with a resolved resource.
+        <p>Get a specific resource in the registry, and resolve all of its relationships<br>to other assets, participants, and transactions. The result is a JavaScript<br>object, and should only be used for visualization purposes. You cannot use<br>the add or update functions with a resolved resource.</p>
     </div>
     
 
@@ -1899,7 +1878,7 @@ the add or update functions with a resolved resource.
 
             
 
-            <td class="description last">The unique identifier of the asset.</td>
+            <td class="description last"><p>The unique identifier of the asset.</p></td>
         </tr>
 
     
@@ -1973,8 +1952,7 @@ the add or update functions with a resolved resource.
     
             
 <div class="param-desc">
-    A promise that will be resolved with a JavaScript object
-representing the resource and all of its resolved relationships.
+    <p>A promise that will be resolved with a JavaScript object<br>representing the resource and all of its resolved relationships.</p>
 </div>
 
 
@@ -2010,10 +1988,7 @@ representing the resource and all of its resolved relationships.
 
     
     <div class="description">
-        Get all of the resources in the registry, and resolve all of their relationships
-to other assets, participants, and transactions. The result is a JavaScript
-object, and should only be used for visualization purposes. You cannot use
-the add or update functions with a resolved resource.
+        <p>Get all of the resources in the registry, and resolve all of their relationships<br>to other assets, participants, and transactions. The result is a JavaScript<br>object, and should only be used for visualization purposes. You cannot use<br>the add or update functions with a resolved resource.</p>
     </div>
     
 
@@ -2089,8 +2064,7 @@ the add or update functions with a resolved resource.
     
             
 <div class="param-desc">
-    A promise that will be resolved with an array of JavaScript
-objects representing the resources and all of their resolved relationships.
+    <p>A promise that will be resolved with an array of JavaScript<br>objects representing the resources and all of their resolved relationships.</p>
 </div>
 
 
@@ -2126,7 +2100,7 @@ objects representing the resources and all of their resolved relationships.
 
     
     <div class="description">
-        Updates a resource in the registry.
+        <p>Updates a resource in the registry.</p>
     </div>
     
 
@@ -2178,7 +2152,7 @@ objects representing the resources and all of their resolved relationships.
 
             
 
-            <td class="description last">The resource to be updated in the registry.</td>
+            <td class="description last"><p>The resource to be updated in the registry.</p></td>
         </tr>
 
     
@@ -2252,8 +2226,7 @@ objects representing the resources and all of their resolved relationships.
     
             
 <div class="param-desc">
-    A promise that will be resolved when the resource is
-updated in the registry.
+    <p>A promise that will be resolved when the resource is<br>updated in the registry.</p>
 </div>
 
 
@@ -2289,7 +2262,7 @@ updated in the registry.
 
     
     <div class="description">
-        Updates a list of resources in the registry.
+        <p>Updates a list of resources in the registry.</p>
     </div>
     
 
@@ -2341,7 +2314,7 @@ updated in the registry.
 
             
 
-            <td class="description last">The resources to be updated in the asset registry.</td>
+            <td class="description last"><p>The resources to be updated in the asset registry.</p></td>
         </tr>
 
     
@@ -2415,8 +2388,7 @@ updated in the registry.
     
             
 <div class="param-desc">
-    A promise that will be resolved when the resource is
-added to the registry.
+    <p>A promise that will be resolved when the resource is<br>added to the registry.</p>
 </div>
 
 
@@ -2488,7 +2460,7 @@ added to the registry.
 
 
 	<span class="copyright">
-	Copyright IBM Corp. 2016
+	Copyright IBM Corp. 2017
 	</span>
 
 <span class="jsdoc-message">

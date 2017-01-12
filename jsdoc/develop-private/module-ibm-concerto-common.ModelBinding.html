@@ -4,7 +4,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width">
-	<title>IBM Concerto Class: ModelBinding</title>
+	<title>Concerto Class: ModelBinding</title>
 
 	<!--[if lt IE 9]>
 	<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
@@ -20,7 +20,7 @@
 <div class="navbar navbar-default navbar-fixed-top navbar-inverse">
 <div class="container">
 	<div class="navbar-header">
-		<a class="navbar-brand" href="index.html">IBM Concerto</a>
+		<a class="navbar-brand" href="index.html">Concerto</a>
 		<button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#topNavigation">
 			<span class="icon-bar"></span>
 			<span class="icon-bar"></span>
@@ -97,9 +97,7 @@
         ModelBinding
         </h2>
         
-            <div class="class-description">ModelBinding captures a binding to a model element. A ModelBinding can
-be to a namespace, a class, or an instance of a class, and may optionally
-be bound to a named variable.</div>
+            <div class="class-description"><p>ModelBinding captures a binding to a model element. A ModelBinding can<br>be to a namespace, a class, or an instance of a class, and may optionally<br>be bound to a named variable.</p></div>
         
     
 </header>
@@ -119,8 +117,7 @@ be bound to a named variable.</div>
 
     
     <div class="description">
-        Create an ModelBinding from an Abstract Syntax Tree. The AST is the
-result of parsing.
+        <p>Create an ModelBinding from an Abstract Syntax Tree. The AST is the<br>result of parsing.</p>
     </div>
     
 
@@ -172,7 +169,7 @@ result of parsing.
 
             
 
-            <td class="description last">the AclRule for this ModelBinding</td>
+            <td class="description last"><p>the AclRule for this ModelBinding</p></td>
         </tr>
 
     
@@ -196,7 +193,7 @@ result of parsing.
 
             
 
-            <td class="description last">the AST created by the parser</td>
+            <td class="description last"><p>the AST created by the parser</p></td>
         </tr>
 
     
@@ -300,7 +297,7 @@ result of parsing.
 
     
     <div class="description">
-        Visitor design pattern
+        <p>Visitor design pattern</p>
     </div>
     
 
@@ -352,7 +349,7 @@ result of parsing.
 
             
 
-            <td class="description last">the visitor</td>
+            <td class="description last"><p>the visitor</p></td>
         </tr>
 
     
@@ -376,7 +373,7 @@ result of parsing.
 
             
 
-            <td class="description last">the parameter</td>
+            <td class="description last"><p>the parameter</p></td>
         </tr>
 
     
@@ -450,7 +447,7 @@ result of parsing.
     
             
 <div class="param-desc">
-    the result of visiting or null
+    <p>the result of visiting or null</p>
 </div>
 
 
@@ -486,7 +483,7 @@ result of parsing.
 
     
     <div class="description">
-        Returns the AclRule that owns this ModelBinding.
+        <p>Returns the AclRule that owns this ModelBinding.</p>
     </div>
     
 
@@ -562,7 +559,7 @@ result of parsing.
     
             
 <div class="param-desc">
-    the owning AclRule
+    <p>the owning AclRule</p>
 </div>
 
 
@@ -598,7 +595,7 @@ result of parsing.
 
     
     <div class="description">
-        Returns the fully qualified name of the model element for this ModelBinding.
+        <p>Returns the fully qualified name of the model element for this ModelBinding.</p>
     </div>
     
 
@@ -674,7 +671,7 @@ result of parsing.
     
             
 <div class="param-desc">
-    the fully qualified model name
+    <p>the fully qualified model name</p>
 </div>
 
 
@@ -710,7 +707,7 @@ result of parsing.
 
     
     <div class="description">
-        Returns the identifier of the instance of the model element for this ModelBinding.
+        <p>Returns the identifier of the instance of the model element for this ModelBinding.</p>
     </div>
     
 
@@ -786,7 +783,7 @@ result of parsing.
     
             
 <div class="param-desc">
-    the identifier of the instance, or null
+    <p>the identifier of the instance, or null</p>
 </div>
 
 
@@ -822,7 +819,7 @@ result of parsing.
 
     
     <div class="description">
-        Returns the name of the variable of the model element for this ModelBinding.
+        <p>Returns the name of the variable of the model element for this ModelBinding.</p>
     </div>
     
 
@@ -898,7 +895,7 @@ result of parsing.
     
             
 <div class="param-desc">
-    the name of the variable, or null
+    <p>the name of the variable, or null</p>
 </div>
 
 
@@ -934,7 +931,7 @@ result of parsing.
 
     
     <div class="description">
-        Process the AST and build the model
+        <p>Process the AST and build the model</p>
     </div>
     
 
@@ -1038,8 +1035,7 @@ result of parsing.
 
     
     <div class="description">
-        Returns a new object representing this function declaration that is
-suitable for serializing as JSON.
+        <p>Returns a new object representing this function declaration that is<br>suitable for serializing as JSON.</p>
     </div>
     
 
@@ -1115,7 +1111,7 @@ suitable for serializing as JSON.
     
             
 <div class="param-desc">
-    A new object suitable for serializing as JSON.
+    <p>A new object suitable for serializing as JSON.</p>
 </div>
 
 
@@ -1151,7 +1147,7 @@ suitable for serializing as JSON.
 
     
     <div class="description">
-        Returns strind representation of this object
+        <p>Returns strind representation of this object</p>
     </div>
     
 
@@ -1227,7 +1223,7 @@ suitable for serializing as JSON.
     
             
 <div class="param-desc">
-    the string version of the object
+    <p>the string version of the object</p>
 </div>
 
 
@@ -1263,14 +1259,11 @@ suitable for serializing as JSON.
 
     
     <div class="description">
-        Semantic validation of the structure of this ModelBinding.
-<p>
-Algorithm:
-</p>
-<ul>
-<li>If we have a variableName, then qualifiedName cannot be a namespace
-<li>If we have an instanceId, then qualifiedName cannot be a namespace
-</ul>
+        <p>Semantic validation of the structure of this ModelBinding.</p>
+<p><p><br>Algorithm:<br></p></p>
+<p><ul></p>
+<p><li>If we have a variableName, then qualifiedName cannot be a namespace</p>
+<p><li>If we have an instanceId, then qualifiedName cannot be a namespace<br></ul></p>
 <pre>
 We assume we have ns.class.property and try to resolve the class in ns
 - On success
@@ -1420,7 +1413,7 @@ We assume we have ns.class.property and try to resolve the class in ns
 
 
 	<span class="copyright">
-	Copyright IBM Corp. 2016
+	Copyright IBM Corp. 2017
 	</span>
 
 <span class="jsdoc-message">

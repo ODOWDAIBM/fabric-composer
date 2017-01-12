@@ -4,7 +4,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width">
-	<title>IBM Concerto Class: ClassDeclaration</title>
+	<title>Concerto Class: ClassDeclaration</title>
 
 	<!--[if lt IE 9]>
 	<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
@@ -20,7 +20,7 @@
 <div class="navbar navbar-default navbar-fixed-top navbar-inverse">
 <div class="container">
 	<div class="navbar-header">
-		<a class="navbar-brand" href="index.html">IBM Concerto</a>
+		<a class="navbar-brand" href="index.html">Concerto</a>
 		<button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#topNavigation">
 			<span class="icon-bar"></span>
 			<span class="icon-bar"></span>
@@ -97,13 +97,8 @@
         ClassDeclaration
         </h2>
         
-            <div class="class-description">ClassDeclaration defines the structure (model/schema) of composite data.
-It is composed of a set of Properties, may have an identifying field, and may
-have a super-type.
-A ClassDeclaration is conceptually owned with a ModelFile which
-defines all the classes that are part of a namespace.
-
-This class is abstract and should not be instantiated.</div>
+            <div class="class-description"><p>ClassDeclaration defines the structure (model/schema) of composite data.<br>It is composed of a set of Properties, may have an identifying field, and may<br>have a super-type.<br>A ClassDeclaration is conceptually owned with a ModelFile which<br>defines all the classes that are part of a namespace.</p>
+<p>This class is abstract and should not be instantiated.</p></div>
         
     
 </header>
@@ -123,8 +118,7 @@ This class is abstract and should not be instantiated.</div>
 
     
     <div class="description">
-        Create a ClassDeclaration from an Abstract Syntax Tree. The AST is the
-result of parsing.
+        <p>Create a ClassDeclaration from an Abstract Syntax Tree. The AST is the<br>result of parsing.</p>
     </div>
     
 
@@ -176,7 +170,7 @@ result of parsing.
 
             
 
-            <td class="description last">the ModelFile for this class</td>
+            <td class="description last"><p>the ModelFile for this class</p></td>
         </tr>
 
     
@@ -200,7 +194,7 @@ result of parsing.
 
             
 
-            <td class="description last">the AST created by the parser</td>
+            <td class="description last"><p>the AST created by the parser</p></td>
         </tr>
 
     
@@ -304,7 +298,7 @@ result of parsing.
 
     
     <div class="description">
-        Visitor design pattern
+        <p>Visitor design pattern</p>
     </div>
     
 
@@ -356,7 +350,7 @@ result of parsing.
 
             
 
-            <td class="description last">the visitor</td>
+            <td class="description last"><p>the visitor</p></td>
         </tr>
 
     
@@ -380,7 +374,7 @@ result of parsing.
 
             
 
-            <td class="description last">the parameter</td>
+            <td class="description last"><p>the parameter</p></td>
         </tr>
 
     
@@ -454,7 +448,7 @@ result of parsing.
     
             
 <div class="param-desc">
-    the result of visiting or null
+    <p>the result of visiting or null</p>
 </div>
 
 
@@ -490,8 +484,7 @@ result of parsing.
 
     
     <div class="description">
-        Returns the fully qualified name of this class.
-The name will include the namespace if present.
+        <p>Returns the fully qualified name of this class.<br>The name will include the namespace if present.</p>
     </div>
     
 
@@ -567,7 +560,7 @@ The name will include the namespace if present.
     
             
 <div class="param-desc">
-    the fully-qualified name of this class
+    <p>the fully-qualified name of this class</p>
 </div>
 
 
@@ -603,8 +596,7 @@ The name will include the namespace if present.
 
     
     <div class="description">
-        Returns the name of the identifying field for this class. Note
-that the identifying field may come from a super type.
+        <p>Returns the name of the identifying field for this class. Note<br>that the identifying field may come from a super type.</p>
     </div>
     
 
@@ -680,7 +672,7 @@ that the identifying field may come from a super type.
     
             
 <div class="param-desc">
-    the name of the id field for this class
+    <p>the name of the id field for this class</p>
 </div>
 
 
@@ -716,7 +708,7 @@ that the identifying field may come from a super type.
 
     
     <div class="description">
-        Returns the ModelFile that defines this class.
+        <p>Returns the ModelFile that defines this class.</p>
     </div>
     
 
@@ -792,7 +784,7 @@ that the identifying field may come from a super type.
     
             
 <div class="param-desc">
-    the owning ModelFile
+    <p>the owning ModelFile</p>
 </div>
 
 
@@ -828,8 +820,7 @@ that the identifying field may come from a super type.
 
     
     <div class="description">
-        Returns the short name of a class. This name does not include the
-namespace from the owning ModelFile.
+        <p>Returns the short name of a class. This name does not include the<br>namespace from the owning ModelFile.</p>
     </div>
     
 
@@ -905,7 +896,7 @@ namespace from the owning ModelFile.
     
             
 <div class="param-desc">
-    the short name of this class
+    <p>the short name of this class</p>
 </div>
 
 
@@ -941,7 +932,7 @@ namespace from the owning ModelFile.
 
     
     <div class="description">
-        Returns the fields directly defined by this class.
+        <p>Returns the fields directly defined by this class.</p>
     </div>
     
 
@@ -1017,7 +1008,7 @@ namespace from the owning ModelFile.
     
             
 <div class="param-desc">
-    the array of fields
+    <p>the array of fields</p>
 </div>
 
 
@@ -1053,9 +1044,7 @@ namespace from the owning ModelFile.
 
     
     <div class="description">
-        Returns the field with a given name or null if it does not exist.
-The field must be directly owned by this class -- the super-type is
-not introspected.
+        <p>Returns the field with a given name or null if it does not exist.<br>The field must be directly owned by this class -- the super-type is<br>not introspected.</p>
     </div>
     
 
@@ -1107,7 +1096,7 @@ not introspected.
 
             
 
-            <td class="description last">the name of the field</td>
+            <td class="description last"><p>the name of the field</p></td>
         </tr>
 
     
@@ -1181,7 +1170,7 @@ not introspected.
     
             
 <div class="param-desc">
-    the field definition or null if it does not exist.
+    <p>the field definition or null if it does not exist.</p>
 </div>
 
 
@@ -1217,7 +1206,7 @@ not introspected.
 
     
     <div class="description">
-        Returns the properties defined in this class and all super classes.
+        <p>Returns the properties defined in this class and all super classes.</p>
     </div>
     
 
@@ -1293,7 +1282,7 @@ not introspected.
     
             
 <div class="param-desc">
-    the array of fields
+    <p>the array of fields</p>
 </div>
 
 
@@ -1329,8 +1318,7 @@ not introspected.
 
     
     <div class="description">
-        Returns the property with a given name or null if it does not exist.
-Fields defined in super-types are also introspected.
+        <p>Returns the property with a given name or null if it does not exist.<br>Fields defined in super-types are also introspected.</p>
     </div>
     
 
@@ -1382,7 +1370,7 @@ Fields defined in super-types are also introspected.
 
             
 
-            <td class="description last">the name of the field</td>
+            <td class="description last"><p>the name of the field</p></td>
         </tr>
 
     
@@ -1456,7 +1444,7 @@ Fields defined in super-types are also introspected.
     
             
 <div class="param-desc">
-    the field, or null if it does not exist
+    <p>the field, or null if it does not exist</p>
 </div>
 
 
@@ -1492,8 +1480,7 @@ Fields defined in super-types are also introspected.
 
     
     <div class="description">
-        Returns the FQN of the super type for this class or null if this
-class does not have a super type.
+        <p>Returns the FQN of the super type for this class or null if this<br>class does not have a super type.</p>
     </div>
     
 
@@ -1569,7 +1556,7 @@ class does not have a super type.
     
             
 <div class="param-desc">
-    the FQN name of the super type or null
+    <p>the FQN name of the super type or null</p>
 </div>
 
 
@@ -1605,7 +1592,7 @@ class does not have a super type.
 
     
     <div class="description">
-        Returns true if this class is declared as abstract in the model file
+        <p>Returns true if this class is declared as abstract in the model file</p>
     </div>
     
 
@@ -1681,7 +1668,7 @@ class does not have a super type.
     
             
 <div class="param-desc">
-    true if the class is abstract
+    <p>true if the class is abstract</p>
 </div>
 
 
@@ -1717,7 +1704,7 @@ class does not have a super type.
 
     
     <div class="description">
-        Returns true if this class is an enumeration.
+        <p>Returns true if this class is an enumeration.</p>
     </div>
     
 
@@ -1793,7 +1780,7 @@ class does not have a super type.
     
             
 <div class="param-desc">
-    true if the class is an enumerated type
+    <p>true if the class is an enumerated type</p>
 </div>
 
 
@@ -1829,7 +1816,7 @@ class does not have a super type.
 
     
     <div class="description">
-        Process the AST and build the model
+        <p>Process the AST and build the model</p>
     </div>
     
 
@@ -1933,7 +1920,7 @@ class does not have a super type.
 
     
     <div class="description">
-        Stop serialization of this object.
+        <p>Stop serialization of this object.</p>
     </div>
     
 
@@ -2009,7 +1996,7 @@ class does not have a super type.
     
             
 <div class="param-desc">
-    An empty object.
+    <p>An empty object.</p>
 </div>
 
 
@@ -2045,7 +2032,7 @@ class does not have a super type.
 
     
     <div class="description">
-        Returns the string representation of this class
+        <p>Returns the string representation of this class</p>
     </div>
     
 
@@ -2121,7 +2108,7 @@ class does not have a super type.
     
             
 <div class="param-desc">
-    the string representation of the class
+    <p>the string representation of the class</p>
 </div>
 
 
@@ -2157,9 +2144,7 @@ class does not have a super type.
 
     
     <div class="description">
-        Semantic validation of the structure of this class. Subclasses should
-override this method to impose additional semantic constraints on the
-contents/relations of fields.
+        <p>Semantic validation of the structure of this class. Subclasses should<br>override this method to impose additional semantic constraints on the<br>contents/relations of fields.</p>
     </div>
     
 
@@ -2299,7 +2284,7 @@ contents/relations of fields.
 
 
 	<span class="copyright">
-	Copyright IBM Corp. 2016
+	Copyright IBM Corp. 2017
 	</span>
 
 <span class="jsdoc-message">

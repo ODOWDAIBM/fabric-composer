@@ -4,7 +4,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width">
-	<title>IBM Concerto Class: Factory</title>
+	<title>Concerto Class: Factory</title>
 
 	<!--[if lt IE 9]>
 	<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
@@ -20,7 +20,7 @@
 <div class="navbar navbar-default navbar-fixed-top navbar-inverse">
 <div class="container">
 	<div class="navbar-header">
-		<a class="navbar-brand" href="index.html">IBM Concerto</a>
+		<a class="navbar-brand" href="index.html">Concerto</a>
 		<button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#topNavigation">
 			<span class="icon-bar"></span>
 			<span class="icon-bar"></span>
@@ -90,8 +90,7 @@
         Factory
         </h2>
         
-            <div class="class-description">Use the Factory to create instances of Resource: transactions, participants
-and assets.
+            <div class="class-description"><p>Use the Factory to create instances of Resource: transactions, participants<br>and assets.</p>
 <p><a href="./diagrams/factory.svg"><img src="./diagrams/factory.svg" style="width:100%;"/></a></p></div>
         
     
@@ -112,11 +111,8 @@ and assets.
 
     
     <div class="description">
-        Create the factory.
-<p>
-<strong>Note: Only to be called by framework code. Applications should
-retrieve instances from Concerto</strong>
-</p>
+        <p>Create the factory.</p>
+<p><br><strong>Note: Only to be called by framework code. Applications should<br>retrieve instances from Concerto</strong><br></p>
     </div>
     
 
@@ -168,7 +164,7 @@ retrieve instances from Concerto</strong>
 
             
 
-            <td class="description last">The ModelManager to use for this registry</td>
+            <td class="description last"><p>The ModelManager to use for this registry</p></td>
         </tr>
 
     
@@ -272,7 +268,7 @@ retrieve instances from Concerto</strong>
 
     
     <div class="description">
-        Create a new Resource with a given namespace, type name and id
+        <p>Create a new Resource with a given namespace, type name and id</p>
     </div>
     
 
@@ -334,7 +330,7 @@ retrieve instances from Concerto</strong>
 
             
 
-            <td class="description last">the namespace of the Resource</td>
+            <td class="description last"><p>the namespace of the Resource</p></td>
         </tr>
 
     
@@ -366,7 +362,7 @@ retrieve instances from Concerto</strong>
 
             
 
-            <td class="description last">the type of the Resource</td>
+            <td class="description last"><p>the type of the Resource</p></td>
         </tr>
 
     
@@ -398,7 +394,7 @@ retrieve instances from Concerto</strong>
 
             
 
-            <td class="description last">the identifier</td>
+            <td class="description last"><p>the identifier</p></td>
         </tr>
 
     
@@ -432,7 +428,7 @@ retrieve instances from Concerto</strong>
 
             
 
-            <td class="description last">an optional set of options
+            <td class="description last"><p>an optional set of options</p>
                 <h6 class="method-params-label method-subparams-label">Properties</h6>
                 
 
@@ -487,8 +483,7 @@ retrieve instances from Concerto</strong>
 
             
 
-            <td class="description last">pass true if you want the factory to
-return a Resource instead of a ValidatedResource. Defaults to false.</td>
+            <td class="description last"><p>pass true if you want the factory to<br>return a Resource instead of a ValidatedResource. Defaults to false.</p></td>
         </tr>
 
     
@@ -522,8 +517,7 @@ return a Resource instead of a ValidatedResource. Defaults to false.</td>
 
             
 
-            <td class="description last">pass true if you want the factory to return a
-resource instance with generated sample data.</td>
+            <td class="description last"><p>pass true if you want the factory to return a<br>resource instance with generated sample data.</p></td>
         </tr>
 
     
@@ -605,7 +599,7 @@ resource instance with generated sample data.</td>
 <dl>
     <dt>
         <div class="param-desc">
-        if the type is not registered with the ModelManager
+        <p>if the type is not registered with the ModelManager</p>
         </div>
     </dt>
     <dt>
@@ -632,7 +626,7 @@ resource instance with generated sample data.</td>
     
             
 <div class="param-desc">
-    the new instance
+    <p>the new instance</p>
 </div>
 
 
@@ -668,11 +662,8 @@ resource instance with generated sample data.</td>
 
     
     <div class="description">
-        Create a new Relationship with a given namespace, type and identifier.
-`     * A relationship is a typed pointer to an instance. I.e the relationship
-with namespace = 'org.acme', type = 'Vehicle' and id = 'ABC' creates`
-a pointer that points at an instance of org.acme.Vehicle with the id
-ABC.
+        <p>Create a new Relationship with a given namespace, type and identifier.<br><code>* A relationship is a typed pointer to an instance. I.e the relationship
+with namespace = 'org.acme', type = 'Vehicle' and id = 'ABC' creates</code><br>a pointer that points at an instance of org.acme.Vehicle with the id<br>ABC.</p>
     </div>
     
 
@@ -724,7 +715,7 @@ ABC.
 
             
 
-            <td class="description last">the namespace of the Resource</td>
+            <td class="description last"><p>the namespace of the Resource</p></td>
         </tr>
 
     
@@ -748,7 +739,7 @@ ABC.
 
             
 
-            <td class="description last">the type of the Resource</td>
+            <td class="description last"><p>the type of the Resource</p></td>
         </tr>
 
     
@@ -772,7 +763,7 @@ ABC.
 
             
 
-            <td class="description last">the identifier</td>
+            <td class="description last"><p>the identifier</p></td>
         </tr>
 
     
@@ -847,7 +838,7 @@ ABC.
 <dl>
     <dt>
         <div class="param-desc">
-        if the type is not registered with the ModelManager
+        <p>if the type is not registered with the ModelManager</p>
         </div>
     </dt>
     <dt>
@@ -874,7 +865,9 @@ ABC.
     
             
 <div class="param-desc">
-    - the new relationship instance
+    <ul>
+<li>the new relationship instance</li>
+</ul>
 </div>
 
 
@@ -910,8 +903,7 @@ ABC.
 
     
     <div class="description">
-        Create a new transaction object. The identifier of the transaction is
-set to a UUID.
+        <p>Create a new transaction object. The identifier of the transaction is<br>set to a UUID.</p>
     </div>
     
 
@@ -973,7 +965,7 @@ set to a UUID.
 
             
 
-            <td class="description last">the namespace of the transaction.</td>
+            <td class="description last"><p>the namespace of the transaction.</p></td>
         </tr>
 
     
@@ -1005,7 +997,7 @@ set to a UUID.
 
             
 
-            <td class="description last">the type of the transaction.</td>
+            <td class="description last"><p>the type of the transaction.</p></td>
         </tr>
 
     
@@ -1039,8 +1031,7 @@ set to a UUID.
 
             
 
-            <td class="description last">an optional identifier for the transaction; if you do not specify
-one then an identifier will be automatically generated.</td>
+            <td class="description last"><p>an optional identifier for the transaction; if you do not specify<br>one then an identifier will be automatically generated.</p></td>
         </tr>
 
     
@@ -1074,7 +1065,7 @@ one then an identifier will be automatically generated.</td>
 
             
 
-            <td class="description last">an optional set of options
+            <td class="description last"><p>an optional set of options</p>
                 <h6 class="method-params-label method-subparams-label">Properties</h6>
                 
 
@@ -1129,8 +1120,7 @@ one then an identifier will be automatically generated.</td>
 
             
 
-            <td class="description last">pass true if you want the factory to return a
-resource instance with generated sample data.</td>
+            <td class="description last"><p>pass true if you want the factory to return a<br>resource instance with generated sample data.</p></td>
         </tr>
 
     
@@ -1211,7 +1201,7 @@ resource instance with generated sample data.</td>
     
             
 <div class="param-desc">
-    A resource for the new transaction.
+    <p>A resource for the new transaction.</p>
 </div>
 
 
@@ -1247,7 +1237,7 @@ resource instance with generated sample data.</td>
 
     
     <div class="description">
-        Stop serialization of this object.
+        <p>Stop serialization of this object.</p>
     </div>
     
 
@@ -1323,7 +1313,7 @@ resource instance with generated sample data.</td>
     
             
 <div class="param-desc">
-    An empty object.
+    <p>An empty object.</p>
 </div>
 
 
@@ -1395,7 +1385,7 @@ resource instance with generated sample data.</td>
 
 
 	<span class="copyright">
-	Copyright IBM Corp. 2016
+	Copyright IBM Corp. 2017
 	</span>
 
 <span class="jsdoc-message">

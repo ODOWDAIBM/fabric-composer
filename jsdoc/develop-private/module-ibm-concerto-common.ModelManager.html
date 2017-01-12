@@ -4,7 +4,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width">
-	<title>IBM Concerto Class: ModelManager</title>
+	<title>Concerto Class: ModelManager</title>
 
 	<!--[if lt IE 9]>
 	<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
@@ -20,7 +20,7 @@
 <div class="navbar navbar-default navbar-fixed-top navbar-inverse">
 <div class="container">
 	<div class="navbar-header">
-		<a class="navbar-brand" href="index.html">IBM Concerto</a>
+		<a class="navbar-brand" href="index.html">Concerto</a>
 		<button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#topNavigation">
 			<span class="icon-bar"></span>
 			<span class="icon-bar"></span>
@@ -97,20 +97,7 @@
         ModelManager
         </h2>
         
-            <div class="class-description"><p>
-The structure of Resources (Assets, Transactions, Participants) is modelled
-in a set of Concerto files. The contents of these files are managed
-by the ModelManager. Each Concerto file has a single namespace and contains
-a set of asset, transaction and participant type definitions.
-</p>
-<p>
-Concerto applications load their Concerto files and then call the addModelFile
-method to register the Concerto file(s) with the ModelManager. The ModelManager
-parses the text of the Concerto file and will make all defined types available
-to other Concerto services, such as the Serializer (to convert instances to/from JSON)
-and <a href="Factory.html">Factory</a> (to create instances).
-</p>
-<p><a href="./diagrams-private/modelmanager.svg"><img src="./diagrams-private/modelmanager.svg" style="width:100%;"/></a></p></div>
+            <div class="class-description"><p><br>The structure of Resources (Assets, Transactions, Participants) is modelled<br>in a set of Concerto files. The contents of these files are managed<br>by the ModelManager. Each Concerto file has a single namespace and contains<br>a set of asset, transaction and participant type definitions.<br></p><br><p><br>Concerto applications load their Concerto files and then call the addModelFile<br>method to register the Concerto file(s) with the ModelManager. The ModelManager<br>parses the text of the Concerto file and will make all defined types available<br>to other Concerto services, such as the Serializer (to convert instances to/from JSON)<br>and <a href="Factory.html">Factory</a> (to create instances).<br></p><br><p><a href="./diagrams-private/modelmanager.svg"><img src="./diagrams-private/modelmanager.svg" style="width:100%;"/></a></p></div>
         
     
 </header>
@@ -130,11 +117,8 @@ and <a href="Factory.html">Factory</a> (to create instances).
 
     
     <div class="description">
-        Create the ModelManager.
-<p>
-<strong>Note: Only to be called by framework code. Applications should
-retrieve instances from Concerto</strong>
-</p>
+        <p>Create the ModelManager.</p>
+<p><br><strong>Note: Only to be called by framework code. Applications should<br>retrieve instances from Concerto</strong><br></p>
     </div>
     
 
@@ -240,7 +224,7 @@ retrieve instances from Concerto</strong>
 
     
     <div class="description">
-        Visitor design pattern
+        <p>Visitor design pattern</p>
     </div>
     
 
@@ -292,7 +276,7 @@ retrieve instances from Concerto</strong>
 
             
 
-            <td class="description last">the visitor</td>
+            <td class="description last"><p>the visitor</p></td>
         </tr>
 
     
@@ -316,7 +300,7 @@ retrieve instances from Concerto</strong>
 
             
 
-            <td class="description last">the parameter</td>
+            <td class="description last"><p>the parameter</p></td>
         </tr>
 
     
@@ -390,7 +374,7 @@ retrieve instances from Concerto</strong>
     
             
 <div class="param-desc">
-    the result of visiting or null
+    <p>the result of visiting or null</p>
 </div>
 
 
@@ -426,13 +410,7 @@ retrieve instances from Concerto</strong>
 
     
     <div class="description">
-        Adds a Concerto file (as a string) to the ModelManager.
-Concerto files have a single namespace. If a Concerto file with the
-same namespace has already been added to the ModelManager then it
-will be replaced.
-Note that if there are dependencies between multiple files the files
-must be added in dependency order, or the addModelFiles method can be
-used to add a set of files irrespective of dependencies.
+        <p>Adds a Concerto file (as a string) to the ModelManager.<br>Concerto files have a single namespace. If a Concerto file with the<br>same namespace has already been added to the ModelManager then it<br>will be replaced.<br>Note that if there are dependencies between multiple files the files<br>must be added in dependency order, or the addModelFiles method can be<br>used to add a set of files irrespective of dependencies.</p>
     </div>
     
 
@@ -484,7 +462,7 @@ used to add a set of files irrespective of dependencies.
 
             
 
-            <td class="description last">The Concerto file as a string</td>
+            <td class="description last"><p>The Concerto file as a string</p></td>
         </tr>
 
     
@@ -574,7 +552,7 @@ used to add a set of files irrespective of dependencies.
     
             
 <div class="param-desc">
-    The newly added model file (internal).
+    <p>The newly added model file (internal).</p>
 </div>
 
 
@@ -610,7 +588,7 @@ used to add a set of files irrespective of dependencies.
 
     
     <div class="description">
-        Add a set of Concerto files to the model manager.
+        <p>Add a set of Concerto files to the model manager.</p>
     </div>
     
 
@@ -662,8 +640,7 @@ used to add a set of files irrespective of dependencies.
 
             
 
-            <td class="description last">An array of Concerto files as
-strings.</td>
+            <td class="description last"><p>An array of Concerto files as<br>strings.</p></td>
         </tr>
 
     
@@ -737,7 +714,7 @@ strings.</td>
     
             
 <div class="param-desc">
-    The newly added model files (internal).
+    <p>The newly added model files (internal).</p>
 </div>
 
 
@@ -773,7 +750,7 @@ strings.</td>
 
     
     <div class="description">
-        Remove all registered Concerto files
+        <p>Remove all registered Concerto files</p>
     </div>
     
 
@@ -861,7 +838,7 @@ strings.</td>
 
     
     <div class="description">
-        Remove the Concerto file for a given namespace
+        <p>Remove the Concerto file for a given namespace</p>
     </div>
     
 
@@ -913,8 +890,7 @@ strings.</td>
 
             
 
-            <td class="description last">The namespace of the model file to
-delete.</td>
+            <td class="description last"><p>The namespace of the model file to<br>delete.</p></td>
         </tr>
 
     
@@ -1000,7 +976,7 @@ delete.</td>
 
     
     <div class="description">
-        Get the AssetDeclarations defined in this model manager
+        <p>Get the AssetDeclarations defined in this model manager</p>
     </div>
     
 
@@ -1076,7 +1052,7 @@ delete.</td>
     
             
 <div class="param-desc">
-    the AssetDeclarations defined in the model manager
+    <p>the AssetDeclarations defined in the model manager</p>
 </div>
 
 
@@ -1112,7 +1088,7 @@ delete.</td>
 
     
     <div class="description">
-        Get the EnumDeclarations defined in this model manager
+        <p>Get the EnumDeclarations defined in this model manager</p>
     </div>
     
 
@@ -1188,7 +1164,7 @@ delete.</td>
     
             
 <div class="param-desc">
-    the EnumDeclaration defined in the model manager
+    <p>the EnumDeclaration defined in the model manager</p>
 </div>
 
 
@@ -1224,7 +1200,7 @@ delete.</td>
 
     
     <div class="description">
-        Get the ModelFile associated with a namespace
+        <p>Get the ModelFile associated with a namespace</p>
     </div>
     
 
@@ -1276,7 +1252,7 @@ delete.</td>
 
             
 
-            <td class="description last">the namespace containing the ModelFile</td>
+            <td class="description last"><p>the namespace containing the ModelFile</p></td>
         </tr>
 
     
@@ -1350,7 +1326,7 @@ delete.</td>
     
             
 <div class="param-desc">
-    registered ModelFile for the namespace or null
+    <p>registered ModelFile for the namespace or null</p>
 </div>
 
 
@@ -1386,7 +1362,7 @@ delete.</td>
 
     
     <div class="description">
-        Get the array of model file instances
+        <p>Get the array of model file instances</p>
     </div>
     
 
@@ -1462,7 +1438,7 @@ delete.</td>
     
             
 <div class="param-desc">
-    The ModelFiles registered
+    <p>The ModelFiles registered</p>
 </div>
 
 
@@ -1498,7 +1474,7 @@ delete.</td>
 
     
     <div class="description">
-        Get the namespaces registered with the ModelManager.
+        <p>Get the namespaces registered with the ModelManager.</p>
     </div>
     
 
@@ -1574,7 +1550,7 @@ delete.</td>
     
             
 <div class="param-desc">
-    namespaces - the namespaces that have been registered.
+    <p>namespaces - the namespaces that have been registered.</p>
 </div>
 
 
@@ -1610,7 +1586,7 @@ delete.</td>
 
     
     <div class="description">
-        Get the ParticipantDeclarations defined in this model manager
+        <p>Get the ParticipantDeclarations defined in this model manager</p>
     </div>
     
 
@@ -1686,7 +1662,7 @@ delete.</td>
     
             
 <div class="param-desc">
-    the ParticipantDeclaration defined in the model manager
+    <p>the ParticipantDeclaration defined in the model manager</p>
 </div>
 
 
@@ -1722,7 +1698,7 @@ delete.</td>
 
     
     <div class="description">
-        Get the TransactionDeclarations defined in this model manager
+        <p>Get the TransactionDeclarations defined in this model manager</p>
     </div>
     
 
@@ -1798,7 +1774,7 @@ delete.</td>
     
             
 <div class="param-desc">
-    the TransactionDeclarations defined in the model manager
+    <p>the TransactionDeclarations defined in the model manager</p>
 </div>
 
 
@@ -1834,7 +1810,7 @@ delete.</td>
 
     
     <div class="description">
-        Look up a type in all registered namespaces.
+        <p>Look up a type in all registered namespaces.</p>
     </div>
     
 
@@ -1886,7 +1862,7 @@ delete.</td>
 
             
 
-            <td class="description last">the fully qualified name of a type</td>
+            <td class="description last"><p>the fully qualified name of a type</p></td>
         </tr>
 
     
@@ -1961,7 +1937,9 @@ delete.</td>
 <dl>
     <dt>
         <div class="param-desc">
-        - if the type cannot be found
+        <ul>
+<li>if the type cannot be found</li>
+</ul>
         </div>
     </dt>
     <dt>
@@ -1988,7 +1966,9 @@ delete.</td>
     
             
 <div class="param-desc">
-    - the class declaration or null for primitive types
+    <ul>
+<li>the class declaration or null for primitive types</li>
+</ul>
 </div>
 
 
@@ -2024,7 +2004,7 @@ delete.</td>
 
     
     <div class="description">
-        Check that the type is valid and returns the FQN of the type.
+        <p>Check that the type is valid and returns the FQN of the type.</p>
     </div>
     
 
@@ -2076,7 +2056,7 @@ delete.</td>
 
             
 
-            <td class="description last">error reporting context</td>
+            <td class="description last"><p>error reporting context</p></td>
         </tr>
 
     
@@ -2100,7 +2080,7 @@ delete.</td>
 
             
 
-            <td class="description last">a short type name</td>
+            <td class="description last"><p>a short type name</p></td>
         </tr>
 
     
@@ -2175,7 +2155,9 @@ delete.</td>
 <dl>
     <dt>
         <div class="param-desc">
-        - if the type is not defined
+        <ul>
+<li>if the type is not defined</li>
+</ul>
         </div>
     </dt>
     <dt>
@@ -2202,7 +2184,9 @@ delete.</td>
     
             
 <div class="param-desc">
-    - the resolved type name (fully qualified)
+    <ul>
+<li>the resolved type name (fully qualified)</li>
+</ul>
 </div>
 
 
@@ -2238,7 +2222,7 @@ delete.</td>
 
     
     <div class="description">
-        Stop serialization of this object.
+        <p>Stop serialization of this object.</p>
     </div>
     
 
@@ -2314,7 +2298,7 @@ delete.</td>
     
             
 <div class="param-desc">
-    An empty object.
+    <p>An empty object.</p>
 </div>
 
 
@@ -2350,10 +2334,7 @@ delete.</td>
 
     
     <div class="description">
-        Updates a Concerto file (as a string) on the ModelManager.
-Concerto files have a single namespace. If a Concerto file with the
-same namespace has already been added to the ModelManager then it
-will be replaced.
+        <p>Updates a Concerto file (as a string) on the ModelManager.<br>Concerto files have a single namespace. If a Concerto file with the<br>same namespace has already been added to the ModelManager then it<br>will be replaced.</p>
     </div>
     
 
@@ -2405,7 +2386,7 @@ will be replaced.
 
             
 
-            <td class="description last">The Concerto file as a string</td>
+            <td class="description last"><p>The Concerto file as a string</p></td>
         </tr>
 
     
@@ -2495,7 +2476,7 @@ will be replaced.
     
             
 <div class="param-desc">
-    The newly added model file (internal).
+    <p>The newly added model file (internal).</p>
 </div>
 
 
@@ -2567,7 +2548,7 @@ will be replaced.
 
 
 	<span class="copyright">
-	Copyright IBM Corp. 2016
+	Copyright IBM Corp. 2017
 	</span>
 
 <span class="jsdoc-message">

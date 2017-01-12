@@ -4,7 +4,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width">
-	<title>IBM Concerto Class: AdminConnection</title>
+	<title>Concerto Class: AdminConnection</title>
 
 	<!--[if lt IE 9]>
 	<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
@@ -20,7 +20,7 @@
 <div class="navbar navbar-default navbar-fixed-top navbar-inverse">
 <div class="container">
 	<div class="navbar-header">
-		<a class="navbar-brand" href="index.html">IBM Concerto</a>
+		<a class="navbar-brand" href="index.html">Concerto</a>
 		<button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#topNavigation">
 			<span class="icon-bar"></span>
 			<span class="icon-bar"></span>
@@ -97,16 +97,8 @@
         AdminConnection
         </h2>
         
-            <div class="class-description">This class creates an administration connection to a Concerto runtime. The
-connection can then be used to:
-<ul>
-<li>Deploy BusinessNetworkDefinitions</li>
-<li>Undeploy BusinessNetworkDefinitions</li>
-<li>Update BusinessNetworkDefinitions</li>
-<li>Send a ping message to the runtime to ensure it is running and
-correctly configured.</li>
-<li>Store a connection profile document in the connection profile store</li>
-</ul></div>
+            <div class="class-description"><p>This class creates an administration connection to a Concerto runtime. The<br>connection can then be used to:</p>
+<ul><br><li>Deploy BusinessNetworkDefinitions</li><br><li>Undeploy BusinessNetworkDefinitions</li><br><li>Update BusinessNetworkDefinitions</li><br><li>Send a ping message to the runtime to ensure it is running and<br>correctly configured.</li><br><li>Store a connection profile document in the connection profile store</li><br></ul></div>
         
     
 </header>
@@ -126,7 +118,7 @@ correctly configured.</li>
 
     
     <div class="description">
-        Create an instance of the AdminConnection class.
+        <p>Create an instance of the AdminConnection class.</p>
     </div>
     
 
@@ -190,7 +182,7 @@ correctly configured.</li>
 
             
 
-            <td class="description last">an optional set of options to configure the instance.
+            <td class="description last"><p>an optional set of options to configure the instance.</p>
                 <h6 class="method-params-label method-subparams-label">Properties</h6>
                 
 
@@ -245,7 +237,7 @@ correctly configured.</li>
 
             
 
-            <td class="description last">specify an fs implementation to use.</td>
+            <td class="description last"><p>specify an fs implementation to use.</p></td>
         </tr>
 
     
@@ -356,8 +348,7 @@ correctly configured.</li>
 
     
     <div class="description">
-        Connects and logs in to the Hyperledger Fabric using a named connection
-profile. The connection profile must exist in the profile store.
+        <p>Connects and logs in to the Hyperledger Fabric using a named connection<br>profile. The connection profile must exist in the profile store.</p>
     </div>
     
 
@@ -409,7 +400,7 @@ profile. The connection profile must exist in the profile store.
 
             
 
-            <td class="description last">The name of the connection profile</td>
+            <td class="description last"><p>The name of the connection profile</p></td>
         </tr>
 
     
@@ -433,7 +424,7 @@ profile. The connection profile must exist in the profile store.
 
             
 
-            <td class="description last">the enrollment ID of the user</td>
+            <td class="description last"><p>the enrollment ID of the user</p></td>
         </tr>
 
     
@@ -457,7 +448,7 @@ profile. The connection profile must exist in the profile store.
 
             
 
-            <td class="description last">the enrollment secret of the user</td>
+            <td class="description last"><p>the enrollment secret of the user</p></td>
         </tr>
 
     
@@ -481,7 +472,7 @@ profile. The connection profile must exist in the profile store.
 
             
 
-            <td class="description last">the id of the network (for update) or null</td>
+            <td class="description last"><p>the id of the network (for update) or null</p></td>
         </tr>
 
     
@@ -555,7 +546,7 @@ profile. The connection profile must exist in the profile store.
     
             
 <div class="param-desc">
-    A promise that indicates the connection is complete
+    <p>A promise that indicates the connection is complete</p>
 </div>
 
 
@@ -605,8 +596,7 @@ adminConnection.connect(&#x27;testprofile&#x27;, &#x27;WebAppAdmin&#x27;, &#x27;
 
     
     <div class="description">
-        Stores a connection profile into the profile store being used by this
-AdminConnection.
+        <p>Stores a connection profile into the profile store being used by this<br>AdminConnection.</p>
     </div>
     
 
@@ -658,7 +648,7 @@ AdminConnection.
 
             
 
-            <td class="description last">The name of the connection profile</td>
+            <td class="description last"><p>The name of the connection profile</p></td>
         </tr>
 
     
@@ -682,7 +672,7 @@ AdminConnection.
 
             
 
-            <td class="description last">The connection profile data</td>
+            <td class="description last"><p>The connection profile data</p></td>
         </tr>
 
     
@@ -756,7 +746,7 @@ AdminConnection.
     
             
 <div class="param-desc">
-    A promise that indicates that the connection profile is deployed
+    <p>A promise that indicates that the connection profile is deployed</p>
 </div>
 
 
@@ -813,8 +803,7 @@ return adminConnection.createProfile(&#x27;testprofile&#x27;, adminOptions)
 
     
     <div class="description">
-        Deletes the specified connection profile from the profile store being used by this
-AdminConnection.
+        <p>Deletes the specified connection profile from the profile store being used by this<br>AdminConnection.</p>
     </div>
     
 
@@ -866,7 +855,7 @@ AdminConnection.
 
             
 
-            <td class="description last">The name of the connection profile</td>
+            <td class="description last"><p>The name of the connection profile</p></td>
         </tr>
 
     
@@ -940,7 +929,7 @@ AdminConnection.
     
             
 <div class="param-desc">
-    A promise that indicates that the connection profile is deployed
+    <p>A promise that indicates that the connection profile is deployed</p>
 </div>
 
 
@@ -990,8 +979,7 @@ return adminConnection.deleteProfile(&#x27;testprofile&#x27;)
 
     
     <div class="description">
-        Deploys a new BusinessNetworkDefinition to the fabric. The connection must
-be connected for this method to succeed.
+        <p>Deploys a new BusinessNetworkDefinition to the fabric. The connection must<br>be connected for this method to succeed.</p>
     </div>
     
 
@@ -1043,7 +1031,7 @@ be connected for this method to succeed.
 
             
 
-            <td class="description last">The business network to deploy</td>
+            <td class="description last"><p>The business network to deploy</p></td>
         </tr>
 
     
@@ -1117,8 +1105,7 @@ be connected for this method to succeed.
     
             
 <div class="param-desc">
-    A promise that will be fufilled when the business network has been
-deployed.
+    <p>A promise that will be fufilled when the business network has been<br>deployed.</p>
 </div>
 
 
@@ -1169,7 +1156,7 @@ return adminConnection.deploy(businessNetworkDefinition)
 
     
     <div class="description">
-        Disconnects this connection.
+        <p>Disconnects this connection.</p>
     </div>
     
 
@@ -1245,8 +1232,7 @@ return adminConnection.deploy(businessNetworkDefinition)
     
             
 <div class="param-desc">
-    A promise that will be resolved when the connection is
-terminated.
+    <p>A promise that will be resolved when the connection is<br>terminated.</p>
 </div>
 
 
@@ -1296,8 +1282,7 @@ return adminConnection.disconnect()
 
     
     <div class="description">
-        Retrieve all connection profiles from the profile store being used by this
-AdminConnection.
+        <p>Retrieve all connection profiles from the profile store being used by this<br>AdminConnection.</p>
     </div>
     
 
@@ -1373,7 +1358,7 @@ AdminConnection.
     
             
 <div class="param-desc">
-    A promise that is resolved with the connection profile data.
+    <p>A promise that is resolved with the connection profile data.</p>
 </div>
 
 
@@ -1423,8 +1408,7 @@ return adminConnection.getAllProfiles()
 
     
     <div class="description">
-        Retrieve the specified connection profile from the profile store being
-used by this AdminConnection.
+        <p>Retrieve the specified connection profile from the profile store being<br>used by this AdminConnection.</p>
     </div>
     
 
@@ -1476,7 +1460,7 @@ used by this AdminConnection.
 
             
 
-            <td class="description last">The name of the connection profile</td>
+            <td class="description last"><p>The name of the connection profile</p></td>
         </tr>
 
     
@@ -1550,7 +1534,7 @@ used by this AdminConnection.
     
             
 <div class="param-desc">
-    A promise that is resolved with the connection profile data.
+    <p>A promise that is resolved with the connection profile data.</p>
 </div>
 
 
@@ -1598,8 +1582,7 @@ return adminConnection.getProfile(&#x27;testprofile&#x27;)
 
     
     <div class="description">
-        List all of the deployed business networks. The connection must
-be connected for this method to succeed.
+        <p>List all of the deployed business networks. The connection must<br>be connected for this method to succeed.</p>
     </div>
     
 
@@ -1675,8 +1658,7 @@ be connected for this method to succeed.
     
             
 <div class="param-desc">
-    A promise that will be resolved with an array of
-business network identifiers, or rejected with an error.
+    <p>A promise that will be resolved with an array of<br>business network identifiers, or rejected with an error.</p>
 </div>
 
 
@@ -1729,8 +1711,7 @@ return adminConnection.list()
 
     
     <div class="description">
-        Test the connection to the runtime and verify that the version of the
-runtime is compatible with this level of the node.js module.
+        <p>Test the connection to the runtime and verify that the version of the<br>runtime is compatible with this level of the node.js module.</p>
     </div>
     
 
@@ -1806,8 +1787,7 @@ runtime is compatible with this level of the node.js module.
     
             
 <div class="param-desc">
-    A promise that will be fufilled when the connection has
-been tested. The promise will be rejected if the version is incompatible.
+    <p>A promise that will be fufilled when the connection has<br>been tested. The promise will be rejected if the version is incompatible.</p>
 </div>
 
 
@@ -1857,8 +1837,7 @@ return adminConnection.ping()
 
     
     <div class="description">
-        Undeploys a BusinessNetworkDefinition from the fabric. The business network will no
-longer be able to process transactions.
+        <p>Undeploys a BusinessNetworkDefinition from the fabric. The business network will no<br>longer be able to process transactions.</p>
     </div>
     
 
@@ -1910,7 +1889,7 @@ longer be able to process transactions.
 
             
 
-            <td class="description last">The identifier of the network to undeploy</td>
+            <td class="description last"><p>The identifier of the network to undeploy</p></td>
         </tr>
 
     
@@ -1984,8 +1963,7 @@ longer be able to process transactions.
     
             
 <div class="param-desc">
-    A promise that will be fufilled when the business network has been
-undeployed.
+    <p>A promise that will be fufilled when the business network has been<br>undeployed.</p>
 </div>
 
 
@@ -2035,8 +2013,7 @@ return adminConnection.undeploy(&#x27;identifier&#x27;)
 
     
     <div class="description">
-        Updates an existing BusinessNetworkDefinition on the fabric. The BusinessNetworkDefinition
-must have been previously deployed.
+        <p>Updates an existing BusinessNetworkDefinition on the fabric. The BusinessNetworkDefinition<br>must have been previously deployed.</p>
     </div>
     
 
@@ -2088,7 +2065,7 @@ must have been previously deployed.
 
             
 
-            <td class="description last">The new BusinessNetworkDefinition</td>
+            <td class="description last"><p>The new BusinessNetworkDefinition</p></td>
         </tr>
 
     
@@ -2162,8 +2139,7 @@ must have been previously deployed.
     
             
 <div class="param-desc">
-    A promise that will be fufilled when the business network has been
-updated.
+    <p>A promise that will be fufilled when the business network has been<br>updated.</p>
 </div>
 
 
@@ -2250,7 +2226,7 @@ return adminConnection.update(businessNetworkDefinition)
 
 
 	<span class="copyright">
-	Copyright IBM Corp. 2016
+	Copyright IBM Corp. 2017
 	</span>
 
 <span class="jsdoc-message">

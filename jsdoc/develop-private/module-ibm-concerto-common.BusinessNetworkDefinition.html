@@ -4,7 +4,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width">
-	<title>IBM Concerto Class: BusinessNetworkDefinition</title>
+	<title>Concerto Class: BusinessNetworkDefinition</title>
 
 	<!--[if lt IE 9]>
 	<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
@@ -20,7 +20,7 @@
 <div class="navbar navbar-default navbar-fixed-top navbar-inverse">
 <div class="container">
 	<div class="navbar-header">
-		<a class="navbar-brand" href="index.html">IBM Concerto</a>
+		<a class="navbar-brand" href="index.html">Concerto</a>
 		<button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#topNavigation">
 			<span class="icon-bar"></span>
 			<span class="icon-bar"></span>
@@ -97,11 +97,7 @@
         BusinessNetworkDefinition
         </h2>
         
-            <div class="class-description"><p>
-A BusinessNetworkDefinition defines a set of Participants that exchange Assets by
-sending Transactions. This class manages the metadata and domain-specific types for
-the network as well as a set of executable scripts.
-</p></div>
+            <div class="class-description"><p><br>A BusinessNetworkDefinition defines a set of Participants that exchange Assets by<br>sending Transactions. This class manages the metadata and domain-specific types for<br>the network as well as a set of executable scripts.<br></p></div>
         
     
 </header>
@@ -121,11 +117,8 @@ the network as well as a set of executable scripts.
 
     
     <div class="description">
-        Create the BusinessNetworkDefinition.
-<p>
-<strong>Note: Only to be called by framework code. Applications should
-retrieve instances from BusinessNetworkDefinition.fromArchive</strong>
-</p>
+        <p>Create the BusinessNetworkDefinition.</p>
+<p><br><strong>Note: Only to be called by framework code. Applications should<br>retrieve instances from BusinessNetworkDefinition.fromArchive</strong><br></p>
     </div>
     
 
@@ -177,9 +170,7 @@ retrieve instances from BusinessNetworkDefinition.fromArchive</strong>
 
             
 
-            <td class="description last">the identifier of the business network. The
-identifier is formed from a business network name + '-' + version. The
-version is a major.minor.micro dotted string.</td>
+            <td class="description last"><p>the identifier of the business network. The<br>identifier is formed from a business network name + '-' + version. The<br>version is a major.minor.micro dotted string.</p></td>
         </tr>
 
     
@@ -203,7 +194,7 @@ version is a major.minor.micro dotted string.</td>
 
             
 
-            <td class="description last">the description of the business network</td>
+            <td class="description last"><p>the description of the business network</p></td>
         </tr>
 
     
@@ -307,7 +298,7 @@ version is a major.minor.micro dotted string.</td>
 
     
     <div class="description">
-        Create a BusinessNetworkDefinition from an archive.
+        <p>Create a BusinessNetworkDefinition from an archive.</p>
     </div>
     
 
@@ -359,7 +350,7 @@ version is a major.minor.micro dotted string.</td>
 
             
 
-            <td class="description last">the Buffer to a zip archive</td>
+            <td class="description last"><p>the Buffer to a zip archive</p></td>
         </tr>
 
     
@@ -433,7 +424,7 @@ version is a major.minor.micro dotted string.</td>
     
             
 <div class="param-desc">
-    a Promise to the instantiated business network
+    <p>a Promise to the instantiated business network</p>
 </div>
 
 
@@ -469,27 +460,8 @@ version is a major.minor.micro dotted string.</td>
 
     
     <div class="description">
-        Builds a BusinessNetworkDefintion from the contents of a directory.
-The directory must include a package.json in the root (used to specify
-the name, version and description of the business network). This method
-is designed to work with business networks that refer to external models
-using npm dependencies as well as business networks that statically
-package their model files.
-<p>
-If package.json contains a dependencies property then this method will search for
-model (CTO) files under the node_modules directory for each dependency that
-passes the options.dependencyGlob pattern.
-</p>
-<p>
-In addition all model files will be added that are not under node_modules
-and that pass the options.modelFileGlob pattern. By default you should put
-model files under a directory called 'models'.
-</p>
-<p>
-All script (js) files will be added that are not under node_modules and
-that pass the options.scriptGlob pattern. By default you should put Javascript
-files under the 'lib' directory.
-</p>
+        <p>Builds a BusinessNetworkDefintion from the contents of a directory.<br>The directory must include a package.json in the root (used to specify<br>the name, version and description of the business network). This method<br>is designed to work with business networks that refer to external models<br>using npm dependencies as well as business networks that statically<br>package their model files.</p>
+<p><br>If package.json contains a dependencies property then this method will search for<br>model (CTO) files under the node_modules directory for each dependency that<br>passes the options.dependencyGlob pattern.<br></p><br><p><br>In addition all model files will be added that are not under node_modules<br>and that pass the options.modelFileGlob pattern. By default you should put<br>model files under a directory called 'models'.<br></p><br><p><br>All script (js) files will be added that are not under node_modules and<br>that pass the options.scriptGlob pattern. By default you should put Javascript<br>files under the 'lib' directory.<br></p>
     </div>
     
 
@@ -551,7 +523,7 @@ files under the 'lib' directory.
 
             
 
-            <td class="description last">to a local directory</td>
+            <td class="description last"><p>to a local directory</p></td>
         </tr>
 
     
@@ -585,7 +557,7 @@ files under the 'lib' directory.
 
             
 
-            <td class="description last">an optional set of options to configure the instance.
+            <td class="description last"><p>an optional set of options to configure the instance.</p>
                 <h6 class="method-params-label method-subparams-label">Properties</h6>
                 
 
@@ -640,8 +612,7 @@ files under the 'lib' directory.
 
             
 
-            <td class="description last">specify the glob pattern used to match
-the npm dependencies to process. Defaults to **</td>
+            <td class="description last"><p>specify the glob pattern used to match<br>the npm dependencies to process. Defaults to **</p></td>
         </tr>
 
     
@@ -675,8 +646,7 @@ the npm dependencies to process. Defaults to **</td>
 
             
 
-            <td class="description last">specify the glob pattern used to match
-the model files to include. Defaults to **\/models/**\/*.cto</td>
+            <td class="description last"><p>specify the glob pattern used to match<br>the model files to include. Defaults to <strong>\/models/</strong>\/*.cto</p></td>
         </tr>
 
     
@@ -710,8 +680,7 @@ the model files to include. Defaults to **\/models/**\/*.cto</td>
 
             
 
-            <td class="description last">specify the glob pattern used to match
-the script files to include. Defaults to **\/lib/**\/*.js</td>
+            <td class="description last"><p>specify the glob pattern used to match<br>the script files to include. Defaults to <strong>\/lib/</strong>\/*.js</p></td>
         </tr>
 
     
@@ -792,7 +761,7 @@ the script files to include. Defaults to **\/lib/**\/*.js</td>
     
             
 <div class="param-desc">
-    a Promise to the instantiated business network
+    <p>a Promise to the instantiated business network</p>
 </div>
 
 
@@ -876,7 +845,7 @@ the script files to include. Defaults to **\/lib/**\/*.js</td>
 
             
 
-            <td class="description last">the path to process</td>
+            <td class="description last"><p>the path to process</p></td>
         </tr>
 
     
@@ -900,8 +869,7 @@ the script files to include. Defaults to **\/lib/**\/*.js</td>
 
             
 
-            <td class="description last">the file processor. It must have
-accept and process methods.</td>
+            <td class="description last"><p>the file processor. It must have<br>accept and process methods.</p></td>
         </tr>
 
     
@@ -1035,7 +1003,7 @@ accept and process methods.</td>
 
             
 
-            <td class="description last">the file to process</td>
+            <td class="description last"><p>the file to process</p></td>
         </tr>
 
     
@@ -1059,8 +1027,7 @@ accept and process methods.</td>
 
             
 
-            <td class="description last">the file processor. It must have
-accepts and process methods.</td>
+            <td class="description last"><p>the file processor. It must have<br>accepts and process methods.</p></td>
         </tr>
 
     
@@ -1194,7 +1161,7 @@ accepts and process methods.</td>
 
             
 
-            <td class="description last">the dir to walk</td>
+            <td class="description last"><p>the dir to walk</p></td>
         </tr>
 
     
@@ -1218,7 +1185,7 @@ accepts and process methods.</td>
 
             
 
-            <td class="description last">input files</td>
+            <td class="description last"><p>input files</p></td>
         </tr>
 
     
@@ -1242,8 +1209,7 @@ accepts and process methods.</td>
 
             
 
-            <td class="description last">the file processor. It must have
-accepts and process methods.</td>
+            <td class="description last"><p>the file processor. It must have<br>accepts and process methods.</p></td>
         </tr>
 
     
@@ -1317,7 +1283,7 @@ accepts and process methods.</td>
     
             
 <div class="param-desc">
-    filelist - output files
+    <p>filelist - output files</p>
 </div>
 
 
@@ -1353,7 +1319,7 @@ accepts and process methods.</td>
 
     
     <div class="description">
-        Visitor design pattern
+        <p>Visitor design pattern</p>
     </div>
     
 
@@ -1405,7 +1371,7 @@ accepts and process methods.</td>
 
             
 
-            <td class="description last">the visitor</td>
+            <td class="description last"><p>the visitor</p></td>
         </tr>
 
     
@@ -1429,7 +1395,7 @@ accepts and process methods.</td>
 
             
 
-            <td class="description last">the parameter</td>
+            <td class="description last"><p>the parameter</p></td>
         </tr>
 
     
@@ -1503,7 +1469,7 @@ accepts and process methods.</td>
     
             
 <div class="param-desc">
-    the result of visiting or null
+    <p>the result of visiting or null</p>
 </div>
 
 
@@ -1539,8 +1505,7 @@ accepts and process methods.</td>
 
     
     <div class="description">
-        Provides access to the AclManager for this business network. The AclManager
-manage access to the access conrol rules that have been defined for this business network.
+        <p>Provides access to the AclManager for this business network. The AclManager<br>manage access to the access conrol rules that have been defined for this business network.</p>
     </div>
     
 
@@ -1616,7 +1581,7 @@ manage access to the access conrol rules that have been defined for this busines
     
             
 <div class="param-desc">
-    the AclManager for this business network
+    <p>the AclManager for this business network</p>
 </div>
 
 
@@ -1652,7 +1617,7 @@ manage access to the access conrol rules that have been defined for this busines
 
     
     <div class="description">
-        Returns the description for this business network
+        <p>Returns the description for this business network</p>
     </div>
     
 
@@ -1728,7 +1693,7 @@ manage access to the access conrol rules that have been defined for this busines
     
             
 <div class="param-desc">
-    the description of this business network
+    <p>the description of this business network</p>
 </div>
 
 
@@ -1764,8 +1729,7 @@ manage access to the access conrol rules that have been defined for this busines
 
     
     <div class="description">
-        Provides access to the Factory for this business network. The Factory
-is used to create the types defined in this business network.
+        <p>Provides access to the Factory for this business network. The Factory<br>is used to create the types defined in this business network.</p>
     </div>
     
 
@@ -1841,7 +1805,7 @@ is used to create the types defined in this business network.
     
             
 <div class="param-desc">
-    the Factory for this business network
+    <p>the Factory for this business network</p>
 </div>
 
 
@@ -1877,7 +1841,7 @@ is used to create the types defined in this business network.
 
     
     <div class="description">
-        Returns the identifier for this business network
+        <p>Returns the identifier for this business network</p>
     </div>
     
 
@@ -1953,7 +1917,7 @@ is used to create the types defined in this business network.
     
             
 <div class="param-desc">
-    the identifier of this business network
+    <p>the identifier of this business network</p>
 </div>
 
 
@@ -1989,8 +1953,7 @@ is used to create the types defined in this business network.
 
     
     <div class="description">
-        Provides access to the Introspector for this business network. The Introspector
-is used to reflect on the types defined within this business network.
+        <p>Provides access to the Introspector for this business network. The Introspector<br>is used to reflect on the types defined within this business network.</p>
     </div>
     
 
@@ -2066,7 +2029,7 @@ is used to reflect on the types defined within this business network.
     
             
 <div class="param-desc">
-    the Introspector for this business network
+    <p>the Introspector for this business network</p>
 </div>
 
 
@@ -2102,8 +2065,7 @@ is used to reflect on the types defined within this business network.
 
     
     <div class="description">
-        Provides access to the ModelManager for this business network. The ModelManager
-manage access to the models that have been defined within this business network.
+        <p>Provides access to the ModelManager for this business network. The ModelManager<br>manage access to the models that have been defined within this business network.</p>
     </div>
     
 
@@ -2179,7 +2141,7 @@ manage access to the models that have been defined within this business network.
     
             
 <div class="param-desc">
-    the ModelManager for this business network
+    <p>the ModelManager for this business network</p>
 </div>
 
 
@@ -2215,7 +2177,7 @@ manage access to the models that have been defined within this business network.
 
     
     <div class="description">
-        Returns the name for this business network
+        <p>Returns the name for this business network</p>
     </div>
     
 
@@ -2291,7 +2253,7 @@ manage access to the models that have been defined within this business network.
     
             
 <div class="param-desc">
-    the name of this business network
+    <p>the name of this business network</p>
 </div>
 
 
@@ -2327,8 +2289,7 @@ manage access to the models that have been defined within this business network.
 
     
     <div class="description">
-        Provides access to the ScriptManager for this business network. The ScriptManager
-manage access to the scripts that have been defined within this business network.
+        <p>Provides access to the ScriptManager for this business network. The ScriptManager<br>manage access to the scripts that have been defined within this business network.</p>
     </div>
     
 
@@ -2404,7 +2365,7 @@ manage access to the scripts that have been defined within this business network
     
             
 <div class="param-desc">
-    the ScriptManager for this business network
+    <p>the ScriptManager for this business network</p>
 </div>
 
 
@@ -2440,8 +2401,7 @@ manage access to the scripts that have been defined within this business network
 
     
     <div class="description">
-        Provides access to the Serializer for this business network. The Serializer
-is used to serialize instances of the types defined within this business network.
+        <p>Provides access to the Serializer for this business network. The Serializer<br>is used to serialize instances of the types defined within this business network.</p>
     </div>
     
 
@@ -2517,7 +2477,7 @@ is used to serialize instances of the types defined within this business network
     
             
 <div class="param-desc">
-    the Serializer for this business network
+    <p>the Serializer for this business network</p>
 </div>
 
 
@@ -2553,7 +2513,7 @@ is used to serialize instances of the types defined within this business network
 
     
     <div class="description">
-        Returns the version for this business network
+        <p>Returns the version for this business network</p>
     </div>
     
 
@@ -2629,8 +2589,7 @@ is used to serialize instances of the types defined within this business network
     
             
 <div class="param-desc">
-    the version of this business network. Use semver module
-to parse.
+    <p>the version of this business network. Use semver module<br>to parse.</p>
 </div>
 
 
@@ -2666,7 +2625,7 @@ to parse.
 
     
     <div class="description">
-        Store a BusinessNetworkDefinition as an archive.
+        <p>Store a BusinessNetworkDefinition as an archive.</p>
     </div>
     
 
@@ -2742,7 +2701,7 @@ to parse.
     
             
 <div class="param-desc">
-    buffer  - the zlib buffer
+    <p>buffer  - the zlib buffer</p>
 </div>
 
 
@@ -2814,7 +2773,7 @@ to parse.
 
 
 	<span class="copyright">
-	Copyright IBM Corp. 2016
+	Copyright IBM Corp. 2017
 	</span>
 
 <span class="jsdoc-message">

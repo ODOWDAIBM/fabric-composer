@@ -4,7 +4,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width">
-	<title>IBM Concerto Class: Serializer</title>
+	<title>Concerto Class: Serializer</title>
 
 	<!--[if lt IE 9]>
 	<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
@@ -20,7 +20,7 @@
 <div class="navbar navbar-default navbar-fixed-top navbar-inverse">
 <div class="container">
 	<div class="navbar-header">
-		<a class="navbar-brand" href="index.html">IBM Concerto</a>
+		<a class="navbar-brand" href="index.html">Concerto</a>
 		<button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#topNavigation">
 			<span class="icon-bar"></span>
 			<span class="icon-bar"></span>
@@ -90,8 +90,7 @@
         Serializer
         </h2>
         
-            <div class="class-description">Serialize Resources instances to/from various formats for long-term storage
-(e.g. on the blockchain).
+            <div class="class-description"><p>Serialize Resources instances to/from various formats for long-term storage<br>(e.g. on the blockchain).</p>
 <p><a href="./diagrams/serializer.svg"><img src="./diagrams/serializer.svg" style="width:100%;"/></a></p></div>
         
     
@@ -112,10 +111,7 @@
 
     
     <div class="description">
-        Create a Serializer.
-<strong>Note: Only to be called by framework code. Applications should
-retrieve instances from Concerto</strong>
-</p>
+        <p>Create a Serializer.<br><strong>Note: Only to be called by framework code. Applications should<br>retrieve instances from Concerto</strong><br></p></p>
     </div>
     
 
@@ -167,7 +163,7 @@ retrieve instances from Concerto</strong>
 
             
 
-            <td class="description last">The Factory to use to create instances</td>
+            <td class="description last"><p>The Factory to use to create instances</p></td>
         </tr>
 
     
@@ -191,7 +187,7 @@ retrieve instances from Concerto</strong>
 
             
 
-            <td class="description last">The ModelManager to use for validation etc.</td>
+            <td class="description last"><p>The ModelManager to use for validation etc.</p></td>
         </tr>
 
     
@@ -295,11 +291,8 @@ retrieve instances from Concerto</strong>
 
     
     <div class="description">
-        Create a Resource from a JavaScript Object representation.
-The JavaScript Object should have been created by calling the
-toJSON API.
-
-The Resource is populated based on the JavaScript object.
+        <p>Create a Resource from a JavaScript Object representation.<br>The JavaScript Object should have been created by calling the<br>toJSON API.</p>
+<p>The Resource is populated based on the JavaScript object.</p>
     </div>
     
 
@@ -351,7 +344,7 @@ The Resource is populated based on the JavaScript object.
 
             
 
-            <td class="description last">The JavaScript Object for a Resource</td>
+            <td class="description last"><p>The JavaScript Object for a Resource</p></td>
         </tr>
 
     
@@ -375,7 +368,7 @@ The Resource is populated based on the JavaScript object.
 
             
 
-            <td class="description last">the optional serialization options
+            <td class="description last"><p>the optional serialization options</p>
                 <h6 class="method-params-label method-subparams-label">Properties</h6>
                 
 
@@ -418,8 +411,7 @@ The Resource is populated based on the JavaScript object.
 
             
 
-            <td class="description last">handle JSON objects
-in the place of strings for relationships, defaults to false.</td>
+            <td class="description last"><p>handle JSON objects<br>in the place of strings for relationships, defaults to false.</p></td>
         </tr>
 
     
@@ -500,7 +492,7 @@ in the place of strings for relationships, defaults to false.</td>
     
             
 <div class="param-desc">
-    The new populated resource
+    <p>The new populated resource</p>
 </div>
 
 
@@ -536,10 +528,7 @@ in the place of strings for relationships, defaults to false.</td>
 
     
     <div class="description">
-        <p>
-Convert a Resource to a JavaScript object suitable for long-term
-peristent storage.
-</p>
+        <p><br>Convert a Resource to a JavaScript object suitable for long-term<br>peristent storage.<br></p>
     </div>
     
 
@@ -591,7 +580,7 @@ peristent storage.
 
             
 
-            <td class="description last">The instance to convert to JSON</td>
+            <td class="description last"><p>The instance to convert to JSON</p></td>
         </tr>
 
     
@@ -615,7 +604,7 @@ peristent storage.
 
             
 
-            <td class="description last">the optional serialization options.
+            <td class="description last"><p>the optional serialization options.</p>
                 <h6 class="method-params-label method-subparams-label">Properties</h6>
                 
 
@@ -658,8 +647,7 @@ peristent storage.
 
             
 
-            <td class="description last">validate the structure of the Resource
-with its model prior to serialization (default to true)</td>
+            <td class="description last"><p>validate the structure of the Resource<br>with its model prior to serialization (default to true)</p></td>
         </tr>
 
     
@@ -683,8 +671,7 @@ with its model prior to serialization (default to true)</td>
 
             
 
-            <td class="description last">Convert resources that
-are specified for relationship fields into relationships, false by default.</td>
+            <td class="description last"><p>Convert resources that<br>are specified for relationship fields into relationships, false by default.</p></td>
         </tr>
 
     
@@ -708,8 +695,7 @@ are specified for relationship fields into relationships, false by default.</td>
 
             
 
-            <td class="description last">Permit resources in the
-place of relationships (serializing them as resources), false by default.</td>
+            <td class="description last"><p>Permit resources in the<br>place of relationships (serializing them as resources), false by default.</p></td>
         </tr>
 
     
@@ -791,8 +777,9 @@ place of relationships (serializing them as resources), false by default.</td>
 <dl>
     <dt>
         <div class="param-desc">
-        - throws an exception if resource is not an instance of
-Resource or fails validation.
+        <ul>
+<li>throws an exception if resource is not an instance of<br>Resource or fails validation.</li>
+</ul>
         </div>
     </dt>
     <dt>
@@ -819,7 +806,9 @@ Resource or fails validation.
     
             
 <div class="param-desc">
-    - The Javascript Object that represents the resource
+    <ul>
+<li>The Javascript Object that represents the resource</li>
+</ul>
 </div>
 
 
@@ -891,7 +880,7 @@ Resource or fails validation.
 
 
 	<span class="copyright">
-	Copyright IBM Corp. 2016
+	Copyright IBM Corp. 2017
 	</span>
 
 <span class="jsdoc-message">
