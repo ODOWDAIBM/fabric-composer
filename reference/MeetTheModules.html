@@ -5,7 +5,7 @@
   <meta charset="utf-8">
 
   
-    <title>Concerto -  Meet the Modules | IBM Blockchain Framework</title>
+    <title>Concerto - Meet the Modules and Git Repos | IBM Blockchain Framework</title>
   
   <meta name="viewport" content="width=device-width">
   <link rel="icon" type="image/x-icon" href="/favicon.ico">
@@ -115,7 +115,7 @@
     
       <div id="content">
   <h2 class="page-title">
-    <span class="container">Concerto -  Meet the Modules</span>
+    <span class="container">Concerto - Meet the Modules and Git Repos</span>
   </h2>
 
   <div class="container clearfix has-sidebar">
@@ -147,33 +147,67 @@
 
       <section class="content-chunk">
         
-          <h1 id="meet-the-modules">Meet the Modules</h1>
+          <h1 id="meet-the-npm-modules">Meet the npm Modules</h1>
 
-<p>As part of the Concerto system we have 3 main modules for application developers.</p>
+<p>As part of the Concerto system we have 3 main modules for application developers. If you are writing an application this is your entry point.</p>
 
 <ol>
-<li><p><code>ibm-concerto-client</code></p></li>
-<li><p><code>ibm-concerto-admin</code></p></li>
-<li><p><code>ibm-concerto-cli</code></p></li>
+<li><p><code>concerto-client</code></p></li>
+<li><p><code>concerto-admin</code></p></li>
+<li><p><code>concerto-cli</code></p></li>
 </ol>
 
-<p><code>ibm-concerto-client</code> and <code>ibm-concerto-admin</code> are the two modules that provide APIs for applications.</p>
+<p><code>concerto-client</code> and <code>concerto-admin</code> are the two modules that provide APIs for applications. node.js applications should only use APIs that come from these modules. If there are other APIs that are need please contact us.</p>
 
-<h2 id="ibm-concerto-client">ibm-concerto-client</h2>
+<p>Details of all the APIs have been documented in JSDocs. Please go to the <a href="https://pages.github.ibm.com/Blockchain-WW-Labs/Concerto/jsdoc/develop/index.html">JSDoc API Documentation</a></p>
+
+<h2 id="concerto-client">concerto-client</h2>
 
 <p>This module would usually be installed as a local dependency of an application. It provides the API that is used by business applications to connect to a business network to access <strong>assets</strong>, <strong>participants</strong> and submitting <strong>transactions</strong>. When in production this is only module that needs to be added as a direct dependency of the application.</p>
-<div class="highlight"><pre><code class="language-text" data-lang="text"><span></span>npm install --save @ibm/ibm-concerto-client
+<div class="highlight"><pre><code class="language-text" data-lang="text"><span></span>npm install --save @ibm/concerto-client
 </code></pre></div>
-<h2 id="ibm-concerto-admin">ibm-concerto-admin</h2>
+<h2 id="concerto-admin">concerto-admin</h2>
 
 <p>This module would usually be installed as a local dependency of <strong>administrative</strong> applications. This API permits the creation of and deployment of <strong>business network definitions</strong>.</p>
-<div class="highlight"><pre><code class="language-text" data-lang="text"><span></span>npm install --save @ibm/ibm-concerto-admin
+<div class="highlight"><pre><code class="language-text" data-lang="text"><span></span>npm install --save @ibm/concerto-admin
 </code></pre></div>
-<h2 id="ibm-concerto-cli">ibm-concerto-cli</h2>
+<h2 id="concerto-cli">concerto-cli</h2>
 
 <p>This provides command line tools to provide the ability to deploy and managed business network definitions. This would normally be installed as a global module</p>
-<div class="highlight"><pre><code class="language-text" data-lang="text"><span></span>npm install -g @ibm/ibm-concerto-cli
+<div class="highlight"><pre><code class="language-text" data-lang="text"><span></span>npm install -g @ibm/concerto-cli
 </code></pre></div>
+<p>If you wish however you can instgall this as a local dependancy, but you could need to access the cli.js node class directly rather than used the <code>concerto</code> command.</p>
+
+<h1 id="git-repositories">GIT repositories</h1>
+
+<p>If you want to know more about the implementation, or if you want to contribute to Concerto, then you'll need to be aware of the git repos that are used.
+For information on how these are structured, how to build them and how to contribute, please review the README.md in the relavent repo. Best to start with the Concerto one.</p>
+
+<ol>
+<li>Concerto-Docs</li>
+<li>Concerto</li>
+<li>Composer</li>
+<li>GettingStarted</li>
+<li>DigitalProperty-Network</li>
+<li>DigitalProperty-Model</li>
+</ol>
+
+<h2 id="concerto-docs">Concerto-Docs</h2>
+
+<p>All the documentation for the main concerto website side (The gh-pages branch of concerto) are stored here. The travis build for this repo will also produce the jsdoc for the APIs</p>
+
+<h2 id="concerto">Concerto</h2>
+
+<p>This is the main 'monorepo' that has all the code for the Concerto systems and produces all the npm modules. This uses the lerna tool to manage the monorepo.</p>
+
+<h2 id="composer">Composer</h2>
+
+<p>This is the Web UI for concerto</p>
+
+<h2 id="getting-started-digitalproperty-model-digitalproperty-model">Getting Started/DigitalProperty-Model/DigitalProperty-Model</h2>
+
+<p>This is a dedicated repo for the Getting Started tutorials of Concerto.</p>
+
         
 
         

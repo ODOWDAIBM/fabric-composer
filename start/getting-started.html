@@ -254,7 +254,7 @@ npm install
     <span class="p">);</span>
 <span class="p">}</span>
 </code></pre></div>
-<h3 id="publish-updated-business-network-definition-to-npm">Publish Updated Business Network Definition to npm</h3>
+<h3 id="update-the-business-network-definition">Update the Business Network Definition</h3>
 
 <p>In a real-life scenario at this point you would edit <code>package.json</code> to increment the version number in the <code>DigitalProperty-Network</code> directory and publish this to npm. But please don't publish to the DigitalProperty-Network in npm - otherwise we'll have version numbers in the 1000s :-)</p>
 
@@ -369,16 +369,52 @@ available via <span class="sb">`</span>npm run-script<span class="sb">`</span>:
 
 <p>Let's look at each of the other scripts and what they do - there are two main shell scripts that we have written that will control Hyperledger, some concerto commands and then the application.</p>
 
+<p><strong>Shell scripts to control Hyperledger</strong></p>
+
 <ul>
-<li>scripts/download-hyperledger.sh</li>
-<li><p>scripts/start-hyperledger.sh</p></li>
-<li><p>concerto archive create -m @ibm/digitalproperty-network --archiveFile digitalPropertyNetwork.zip</p></li>
-<li><p>concerto network deploy --archiveFile digitalPropertyNetwork.zip  --enrollId WebAppAdmin --enrollSecret DJY27pEnl16d</p></li>
-<li><p>concerto network list -n @ibm/digitalproperty-network --enrollId WebAppAdmin --enrollSecret DJY27pEnl16d</p></li>
-<li><p>node cli.js landregistry submit</p></li>
-<li><p>node cli.js landregistry list</p></li>
-<li><p>node cli.js landregistry bootstrap</p></li>
+<li>
+<code>scripts/download-hyperledger.sh</code> This is a shell script that will download and tag the docker images for Hyperledger v0.6. It is important to note that this script will also delete the Concerto Connection Profiles. This is important if you have connected to other Hyperledger Fabrics, or have changed the default ports that Hyperledger uses.</li>
 </ul>
+
+<p><code>npm install</code> uses this script.</p>
+
+<ul>
+<li>
+<code>scripts/start-hyperledger.sh</code> This is a shell script that starts the Hyperledger Fabric, this will also wait to make sure the Hyperledger fabric has started.
+<code>npm run startHLF</code> can also be used to call this script.</li>
+<li>
+<code>scripts/stop-hyperledger.sh</code> This is the opposite of the start script, and will stop the Hyperledger Fabric - but it critically does not delete or remove any state. Therefore it canbe restarted with the start script.  <code>npm run stopHLF</code> can also be used to call this script.</li>
+<li>
+<code>scripts/teardown.sh</code> This will stop and remove all the docker images related to Hyperledger fabric. This can be used to do an effective clean-up of the Hyperledger Fabric and the Concerto Connection Profiles.</li>
+</ul>
+
+<p><strong>Concerto CLI</strong></p>
+
+<ul>
+<li><p><code>concerto archive create -m @ibm/digitalproperty-network --archiveFile digitalPropertyNetwork.zip</code>
+This command is used to create a Business Network Archive. <code>--archiveFile</code> is the name of the file. The <code>-m</code> is the npm module name of the business network to use. There is also a -d option to specify the directory the business network is in. Useful whilst developing the business network transactions functions.</p></li>
+<li><p><code>concerto network deploy --archiveFile digitalPropertyNetwork.zip  --enrollId WebAppAdmin --enrollSecret DJY27pEnl16d</code>
+This deploys the business network to the HyperLedger runtime; the archive is specified but also the Hyperledger Entrollment Id and Secret (the secret if not included in the command line will be prompted for)</p></li>
+<li><p><code>concerto network list -n @ibm/digitalproperty-network --enrollId WebAppAdmin --enrollSecret DJY27pEnl16d</code>
+This lists the deployed business network details. <code>-n</code> is the name of the business network. With the same options for the Hyperledger Entrollment Id and Secret (the secret if not included in the command line will be prompted for)</p></li>
+</ul>
+
+<p><strong>Sample Applications</strong></p>
+
+<p>There are 3 sample Javascript applications that use the Concerto Client API to perform operations on the business network. These are applications that specific to the business network that has been defined in this Digital Property Network.</p>
+
+<ul>
+<li>
+<code>node cli.js landregistry submit</code>  This applications connects, and submits a transaction.</li>
+<li>
+<code>node cli.js landregistry list</code>   This lists the contents of the asset registries that have been deifned in the business network.</li>
+<li>
+<code>node cli.js landregistry bootstrap</code> This applications puts some pretend assets into the registries to work with.</li>
+</ul>
+
+<h1 id="where-next">Where next?</h1>
+
+<p>So we have downloaded the hyperledger docker containers and stated a fabric. We have used the Concerto Command line to deploy and update a the DigitalProperty Network. We have used some Javascript applications in node.js to list assets and submit transactions to work on those assets.  A simple change and update has been made to one of the transaction functions.</p>
 
         
 
