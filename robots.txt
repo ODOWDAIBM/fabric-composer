@@ -1,1 +1,1 @@
-Sitemap: http://pages.github.ibm.com/Blockchain-WW-Labs/Concerto/sitemap.xml
+Sitemap: http://pages.github.ibm.com/Blockchain-WW-Labs/Concerto/Blockchain-WW-Labs/Concerto/sitemap.xml

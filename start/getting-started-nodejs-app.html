@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+  
+  
+  
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta charset="utf-8">
+  
+    <title>Getting Started with a Concerto node.js application | IBM Blockchain Framework</title>
+  
+  <meta name="viewport" content="width=device-width">
+  <link rel="icon" type="image/x-icon" href="Blockchain-WW-Labs/Concerto/favicon.ico">
+  <meta name="google-site-verification" content="fBQRJ6h7MV7_TJ7grbgq4P-d-07NRfDWPe4pqEEoH5w">
+  <link href="//fonts.googleapis.com/css?family=Roboto+Slab:400,700%7CRoboto:400,700,700italic,400italic" rel="stylesheet" type="text/css">
+
+  
+    <link href="Blockchain-WW-Labs/Concerto/assets/css/normalize.css" rel="stylesheet">
+    <link href="Blockchain-WW-Labs/Concerto/assets/css/main.css" rel="stylesheet">
+    <link href="Blockchain-WW-Labs/Concerto/assets/css/footer.css" rel="stylesheet">
+    <link href="Blockchain-WW-Labs/Concerto/assets/css/prettify.css" rel="stylesheet">
+  
+
+
+
+  <!--link href="/blog/atom.xml" type="application/atom+xml" rel="alternate" title="Concerto Blog Atom Feed">-->
+</head>
+
+
+<body class="">
+
+  
+  
+
+
+
+
+<header class="page-header">
+  <div class="container">
+    <div class="mobile-bar">
+      <h1 class="logo">
+        <a href="Blockchain-WW-Labs/Concerto/index.html"><img src="Blockchain-WW-Labs/Concerto/assets/img/logo.png" alt=""></a>
+      </h1>
+      <button class="mobile-menu-toggle ir">open</button>
+    </div>
+    <nav class="main-menu">
+      <ul class="main-nav">
+        <li>
+          <a href="Blockchain-WW-Labs/Concerto/overview/overview.html">Overview</a>
+        </li>
+        <li>
+          <a href="Blockchain-WW-Labs/Concerto/start/getting-started.html">Getting Started</a>
+        </li>
+        <li>
+          <a href="Blockchain-WW-Labs/Concerto/concepts/index.html">Concepts</a>
+                    <ul>
+<li><a href="Blockchain-WW-Labs/Concerto/concepts/businessnetwork.html">Business Network</a></li>
+<li><a href="Blockchain-WW-Labs/Concerto/concepts/businessnetworkdefinition.html">Business Network Definition</a></li>
+<li>
+<a href="Blockchain-WW-Labs/Concerto/concepts/participantsandidentities.html">Participants and Transactions</a> </li>
+</ul>
+
+        </li>
+        <li>
+          <a href="Blockchain-WW-Labs/Concerto/tasks/index.html">Tasks</a>
+          <ul>
+<li><a href="Blockchain-WW-Labs/Concerto/tasks/prerequisites.html">Installing Pre-requisites</a></li>
+<li><a href="Blockchain-WW-Labs/Concerto/tasks/deploybusinessnetwork.html">Deploy Business Network</a></li>
+<li><a href="Blockchain-WW-Labs/Concerto/tasks/createconnectionprofile.html">Create Connection Profile</a></li>
+<li><a href="Blockchain-WW-Labs/Concerto/tasks/bnd-define.html">Create a Business Network Definition</a></li>
+<li><a href="Blockchain-WW-Labs/Concerto/tasks/bnd-publish.html"> Publish a Business Network Definition</a></li>
+<li><a href="Blockchain-WW-Labs/Concerto/tasks/genapp.html">Generating an Application</a></li>
+<li><a href="Blockchain-WW-Labs/Concerto/tasks/model-define.html">Create a Business Domain Model</a></li>
+<li><a href="Blockchain-WW-Labs/Concerto/tasks/model-publish.html">Publish a Business Domain Model</a></li>
+<li><a href="Blockchain-WW-Labs/Concerto/tasks/runtime-start.html">Start a Fabric Runtime</a></li>
+<li><a href="Blockchain-WW-Labs/Concerto/tasks/testing.html">Test a Business Network Definition</a></li>
+<li><a href="Blockchain-WW-Labs/Concerto/tasks/runtime-update.html">Update a Business Network Definition on Fabric</a></li>
+<li><a href="Blockchain-WW-Labs/Concerto/tasks/participant-add.html">Add a Participant</a></li>
+<li><a href="Blockchain-WW-Labs/Concerto/tasks/identity-issue.html">Issue an Identity for a Participant</a></li>
+<li><a href="Blockchain-WW-Labs/Concerto/tasks/identity-revoke.html">Revoke an Identity for a Participant</a></li>
+<li><a href="Blockchain-WW-Labs/Concerto/tasks/current-participant.html">Implementing access control using the current Participant</a></li>
+<li><a href="Blockchain-WW-Labs/Concerto/tasks/diagnostics.html">Diagnosing Problems</a></li>
+</ul>
+
+        </li>
+        <li>
+            <a href="Blockchain-WW-Labs/Concerto/reference/index.html">Reference</a>
+            <ul>
+<li><a href="Blockchain-WW-Labs/Concerto/reference/MeetTheModules.html">Meet the Modules</a></li>
+<li><a href="Blockchain-WW-Labs/Concerto/reference/platforms.html">Supported Platforms</a></li>
+<li><a href="Blockchain-WW-Labs/Concerto/reference/cto_language.html">Concerto Modeling Language</a></li>
+<li><a href="Blockchain-WW-Labs/Concertoreference/connectionprofile.html">Connection Profile</a></li>
+<li><a href="Blockchain-WW-Labs/Concerto/reference/js_scripts.html">Transaction Processor Functions</a></li>
+<li><a href="Blockchain-WW-Labs/Concertoreference/commands.html">Concerto Command Line</a></li>
+<li><a href="Blockchain-WW-Labs/Concerto/reference/concerto.generator.tests.html">Concerto Generator</a></li>
+<li><a href="Blockchain-WW-Labs/Concerto/reference/concerto.participant.add.html">Concetio CLI Add Participant</a></li>
+<li><a href="Blockchain-WW-Labs/Concerto/reference/concerto.identity.issue.html">Concerto CLI Issue Identity </a></li>
+<li><a href="Blockchain-WW-Labs/Concerto/reference/concerto.identity.revoke.html">Concerto CLI Revoke Identity</a></li>
+<li><a href="Blockchain-WW-Labs/Concerto/jsdoc/develop/index.html">API Documentation</a></li>
+<li><a href="Blockchain-WW-Labs/Concerto/reference/glossary.html">Glossary</a></li>
+</ul>
+
+        </li>
+        <li>
+            <a href="Blockchain-WW-Labs/Concerto/support/index.html">Support</a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+<!-- /.container -->
+</header><!-- /.page-header -->
+
+  
+
+  <div class="SiteWrapper">
+    
+      <div id="content">
+  <h2 class="page-title">
+    <span class="container">Getting Started with a Concerto node.js application</span>
+  </h2>
+
+  <div class="container clearfix has-sidebar">
+    
+      <nav class="context-nav">
+        
+        
+          <ul>
+<li><a href="Blockchain-WW-Labs/Concerto/start/getting-started.html">Getting Started</a></li>
+<li><a href="Blockchain-WW-Labs/Concerto/start/getting-started-coding-bnd.html">Coding a Network Definition</a></li>
+<li><a href="Blockchain-WW-Labs/Concerto/start/getting-started-nodejs-app.html">Writing a nodejs app</a></li>
+</ul>
+
+        
+      </nav>
+    
+
+    <article class="main">
+      
+
+      <section class="content-chunk">
+        
+          <h1 id="getting-started-with-a-concerto-node-js-application">Getting Started with a Concerto node.js application</h1>
+
+<p>We'll walk through the sample node.js applications here. The git repo is the GettingStarted repo that was cloned for the Getting Started
+The main <a href="https://github.ibm.com/Blockchain-WW-Labs/Concerto-GettingStarted/blob/develop/lib/landRegistry.js">landregsitry.js</a> file is the main file.</p>
+
+<p>The files in the cmd directory use the yargs module to make this into a command line driven appliation.</p>
+
+<p>The <code>landregistry.js</code> file contains a class to the represent the land regsitry and contains methods for listing the land titles, adding default titles, and submitting the transaction.</p>
+
+<p>We'll look at each in turn after first looking at the modules that are required and how to connect to a Concerto hosted application on the Hyper ledger</p>
+
+<h2 id="promises">Promises</h2>
+
+<p>It's worth highlighting that the style of the API is to use promises. Typically Concerto APIs will return a promise that is resolved when the operation has been succesfully completed - with the result of the operation if applicable.</p>
+
+<p>If you're not familar with Promise based development it's worth reviewing some of the tutorials online to get an idea. For example [<a href="https://scotch.io/tutorials/understanding-javascript-promises-pt-i-background-basics">https://scotch.io/tutorials/understanding-javascript-promises-pt-i-background-basics</a>]</p>
+
+<h2 id="modules-required">Modules required</h2>
+<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span></span><span class="kr">const</span> <span class="nx">BusinessNetworkConnection</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">'@ibm/concerto-client'</span><span class="p">).</span><span class="nx">BusinessNetworkConnection</span><span class="p">;</span>
+</code></pre></div>
+<p>For a client application that is only Concerto require needed. The application does also use the <code>cli-table</code> and <code>winston</code> and <code>config</code> modules for support processing.</p>
+
+<p>So for exmaple we need to get the participantID and Pwd that are supplied as command line options and setup the application logging.</p>
+<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span></span><span class="kr">const</span> <span class="nx">winston</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">'winston'</span><span class="p">);</span>
+<span class="kd">let</span> <span class="nx">config</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">'config'</span><span class="p">).</span><span class="nx">get</span><span class="p">(</span><span class="s1">'gettingstarted'</span><span class="p">);</span>
+
+<span class="c1">// these are the credentials to use to connect to the Hyperledger Fabric</span>
+<span class="kd">let</span> <span class="nx">participantId</span> <span class="o">=</span> <span class="nx">config</span><span class="p">.</span><span class="nx">get</span><span class="p">(</span><span class="s1">'participantId'</span><span class="p">);</span>
+<span class="kd">let</span> <span class="nx">participantPwd</span> <span class="o">=</span> <span class="nx">config</span><span class="p">.</span><span class="nx">get</span><span class="p">(</span><span class="s1">'participantPwd'</span><span class="p">);</span>
+<span class="kr">const</span> <span class="nx">LOG</span> <span class="o">=</span> <span class="nx">winston</span><span class="p">.</span><span class="nx">loggers</span><span class="p">.</span><span class="nx">get</span><span class="p">(</span><span class="s1">'application'</span><span class="p">);</span>
+</code></pre></div>
+<h2 id="setup">Setup</h2>
+
+<p>We've split the setup into two parts, part in the constructor part in an init method. This is an implementation decsion made for this code - you are free to structure this in the way that best suits your application.</p>
+<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span></span><span class="nx">constructor</span><span class="p">()</span> <span class="p">{</span>
+    <span class="k">this</span><span class="p">.</span><span class="nx">bizNetworkConnection</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">BusinessNetworkConnection</span><span class="p">();</span>
+    <span class="k">this</span><span class="p">.</span><span class="nx">CONNECTION_PROFILE_NAME</span> <span class="o">=</span> <span class="nx">config</span><span class="p">.</span><span class="nx">get</span><span class="p">(</span><span class="s1">'connectionProfile'</span><span class="p">);</span>
+    <span class="k">this</span><span class="p">.</span><span class="nx">businessNetworkIdentifier</span> <span class="o">=</span> <span class="nx">config</span><span class="p">.</span><span class="nx">get</span><span class="p">(</span><span class="s1">'businessNetworkIdentifier'</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>They key things here is that we need to create a new BusinessNetworkConnection object; and get from the application configuration, the connection profile and the business network identifier needed.</p>
+<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span></span><span class="nx">init</span><span class="p">()</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="k">this</span><span class="p">.</span><span class="nx">bizNetworkConnection</span><span class="p">.</span><span class="nx">connect</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">CONNECTION_PROFILE_NAME</span><span class="p">,</span> <span class="k">this</span><span class="p">.</span><span class="nx">businessNetworkIdentifier</span><span class="p">,</span> <span class="nx">participantId</span><span class="p">,</span> <span class="nx">participantPwd</span><span class="p">)</span>
+  <span class="p">.</span><span class="nx">then</span><span class="p">((</span><span class="nx">result</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
+      <span class="k">this</span><span class="p">.</span><span class="nx">businessNetworkDefinition</span> <span class="o">=</span> <span class="nx">result</span><span class="p">;</span>
+      <span class="nx">LOG</span><span class="p">.</span><span class="nx">info</span><span class="p">(</span><span class="s1">'LandRegistry:&lt;init&gt;'</span><span class="p">,</span> <span class="s1">'businessNetworkDefinition obtained'</span><span class="p">,</span> <span class="k">this</span><span class="p">.</span><span class="nx">businessNetworkDefinition</span><span class="p">.</span><span class="nx">getIdentifier</span><span class="p">());</span>
+  <span class="p">})</span>
+  <span class="c1">// and catch any exceptions that are triggered</span>
+  <span class="p">.</span><span class="k">catch</span><span class="p">(</span><span class="kd">function</span> <span class="p">(</span><span class="nx">error</span><span class="p">)</span> <span class="p">{</span>
+      <span class="k">throw</span> <span class="nx">error</span><span class="p">;</span>
+  <span class="p">});</span>
+
+<span class="p">}</span>
+</code></pre></div>
+<p>The first Concerto API call that we are going to make here, is the connect() API, to establish the connection to the Concerto runtime on the Hyperledger Fabric.
+This API returns the businessNetworkDefinition if succesful - which we hold onto.  The API takes, the connection profile name, business network identifier and participant details.</p>
+
+<p>For a client application this is the essential setup that is required, from this point on it's up to what the application wants to do as to what APIs are called.</p>
+
+<h2 id="adding-assets-to-a-regsitry">Adding assets to a regsitry</h2>
+
+<p>The Concerto runtime will createa  default registry to store assets in. So a LandTitle registry will have been created. What we want to do here is get access to that regsitry and then add some assets.</p>
+<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span></span><span class="k">return</span> <span class="k">this</span><span class="p">.</span><span class="nx">bizNetworkConnection</span><span class="p">.</span><span class="nx">getAssetRegistry</span><span class="p">(</span><span class="s1">'net.biz.digitalPropertyNetwork.LandTitle'</span><span class="p">)</span> <span class="c1">// how do I know what this name is?</span>
+
+    <span class="p">.</span><span class="nx">then</span><span class="p">((</span><span class="nx">result</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
+        <span class="c1">// got the assest registry for land titles</span>
+        <span class="nx">LOG</span><span class="p">.</span><span class="nx">info</span><span class="p">(</span><span class="s1">'LandRegistry:_bootstrapTitles'</span><span class="p">,</span> <span class="s1">'got asset registry'</span><span class="p">);</span>
+        <span class="k">this</span><span class="p">.</span><span class="nx">titlesRegistry</span> <span class="o">=</span> <span class="nx">result</span><span class="p">;</span>
+    <span class="p">})</span>
+</code></pre></div>
+<p>Here we get the asset resgitry based on the fully qualified name of the asset. This is returned via promise which we store. Next step is to create some assets.</p>
+<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span></span><span class="p">.</span><span class="nx">then</span><span class="p">(()</span> <span class="o">=&gt;</span> <span class="p">{</span>
+        <span class="nx">LOG</span><span class="p">.</span><span class="nx">info</span><span class="p">(</span><span class="s1">'LandRegistry:_bootstrapTitles'</span><span class="p">,</span> <span class="s1">'getting factory and adding assets'</span><span class="p">);</span>
+        <span class="kd">let</span> <span class="nx">factory</span> <span class="o">=</span> <span class="k">this</span><span class="p">.</span><span class="nx">businessNetworkDefinition</span><span class="p">.</span><span class="nx">getFactory</span><span class="p">();</span>
+
+        <span class="nx">LOG</span><span class="p">.</span><span class="nx">info</span><span class="p">(</span><span class="s1">'LandRegistry:_bootstrapTitles'</span><span class="p">,</span> <span class="s1">'Creating a person'</span><span class="p">);</span>
+        <span class="nx">owner</span> <span class="o">=</span> <span class="nx">factory</span><span class="p">.</span><span class="nx">newInstance</span><span class="p">(</span><span class="s1">'net.biz.digitalPropertyNetwork'</span><span class="p">,</span> <span class="s1">'Person'</span><span class="p">,</span> <span class="s1">'PID:1234567890'</span><span class="p">);</span>
+        <span class="nx">owner</span><span class="p">.</span><span class="nx">firstName</span> <span class="o">=</span> <span class="s1">'Fred'</span><span class="p">;</span>
+        <span class="nx">owner</span><span class="p">.</span><span class="nx">lastName</span> <span class="o">=</span> <span class="s1">'Bloggs'</span><span class="p">;</span>
+</code></pre></div>
+<p>We use a factory style pattern to be able to create assets - A factory is obtained from the businessNetworkDefinition we got on connect. From this we can create and instance of a 'person'.  Note the use of the namespace and asset name.  The fields of the returned object are set to the values that match the model as defined.</p>
+
+<p>We now have a Person!</p>
+<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span></span>      <span class="nx">LOG</span><span class="p">.</span><span class="nx">info</span><span class="p">(</span><span class="s1">'LandRegistry:_bootstrapTitles'</span><span class="p">,</span> <span class="s1">'Creating a land title#2'</span><span class="p">);</span>
+      <span class="kd">let</span> <span class="nx">landTitle2</span> <span class="o">=</span> <span class="nx">factory</span><span class="p">.</span><span class="nx">newInstance</span><span class="p">(</span><span class="s1">'net.biz.digitalPropertyNetwork'</span><span class="p">,</span> <span class="s1">'LandTitle'</span><span class="p">,</span> <span class="s1">'LID:6789'</span><span class="p">);</span>
+      <span class="nx">landTitle2</span><span class="p">.</span><span class="nx">owner</span> <span class="o">=</span> <span class="nx">owner</span><span class="p">;</span>
+      <span class="nx">landTitle2</span><span class="p">.</span><span class="nx">information</span> <span class="o">=</span> <span class="s1">'A small flat in the city'</span><span class="p">;</span>
+</code></pre></div>
+<p>We now have a Landtitle created - note how the owner is specified as being the person we just created. (in the actual sample code we do this code twice to create landTitle1 and landTitle2). These need to be stored in the registry.</p>
+<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span></span>    <span class="nx">LOG</span><span class="p">.</span><span class="nx">info</span><span class="p">(</span><span class="s1">'LandRegistry:_bootstrapTitles'</span><span class="p">,</span> <span class="s1">'Adding these to the registry'</span><span class="p">);</span>
+    <span class="k">return</span> <span class="k">this</span><span class="p">.</span><span class="nx">titlesRegistry</span><span class="p">.</span><span class="nx">addAll</span><span class="p">([</span><span class="nx">landTitle1</span><span class="p">,</span> <span class="nx">landTitle2</span><span class="p">]);</span>
+</code></pre></div>
+<p>This is using an API to add multiple titles. This returns a promise that is resolved when the assets are added. The last thing we need to do is add the Person, Fred Bloggs. As this is a 'participant', it's added using a different api as follows.</p>
+<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span></span><span class="p">.</span><span class="nx">then</span><span class="p">(()</span> <span class="o">=&gt;</span> <span class="p">{</span>
+        <span class="k">return</span> <span class="k">this</span><span class="p">.</span><span class="nx">bizNetworkConnection</span><span class="p">.</span><span class="nx">getParticipantRegistry</span><span class="p">(</span><span class="s1">'net.biz.digitalPropertyNetwork.Person'</span><span class="p">);</span>
+    <span class="p">})</span>
+      <span class="p">.</span><span class="nx">then</span><span class="p">((</span><span class="nx">personRegistry</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
+          <span class="k">return</span> <span class="nx">personRegistry</span><span class="p">.</span><span class="nx">add</span><span class="p">(</span><span class="nx">owner</span><span class="p">);</span>
+      <span class="p">})</span>
+</code></pre></div>
+<p>Very similar to assets, but this time the getParticipantRegistry API is used.
+That is then it... the assets are in the registry.</p>
+
+<h2 id="listing-assets-in-a-regsitry">Listing assets in a regsitry</h2>
+
+<p>In the sample application is is handled in a different method list().  The same setup as for putting assets is required.</p>
+<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span></span>       <span class="nx">LOG</span><span class="p">.</span><span class="nx">info</span><span class="p">(</span><span class="nx">METHOD</span><span class="p">,</span> <span class="s1">'Getting the asset registry'</span><span class="p">);</span>
+       <span class="c1">// get the land title registry and then get all the files.</span>
+      <span class="k">return</span> <span class="k">this</span><span class="p">.</span><span class="nx">bizNetworkConnection</span><span class="p">.</span><span class="nx">getAssetRegistry</span><span class="p">(</span><span class="s1">'net.biz.digitalPropertyNetwork.LandTitle'</span><span class="p">)</span>
+        <span class="p">.</span><span class="nx">then</span><span class="p">((</span><span class="nx">registry</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
+         <span class="nx">LOG</span><span class="p">.</span><span class="nx">info</span><span class="p">(</span><span class="nx">METHOD</span><span class="p">,</span> <span class="s1">'Getting all assest from the registry.'</span><span class="p">);</span>
+         <span class="k">return</span> <span class="nx">registry</span><span class="p">.</span><span class="nx">getAll</span><span class="p">();</span>
+
+     <span class="p">})</span>
+</code></pre></div>
+<p>As before we need to get the asset regsitry, but this tile we call the getAll() API. This returns an array of objects.</p>
+<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span></span><span class="p">.</span><span class="nx">then</span><span class="p">((</span><span class="nx">aResources</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
+
+        <span class="nx">LOG</span><span class="p">.</span><span class="nx">info</span><span class="p">(</span><span class="nx">METHOD</span><span class="p">,</span> <span class="s1">'Current Land Titles'</span><span class="p">);</span>
+      <span class="c1">// instantiate</span>
+        <span class="kd">let</span> <span class="nx">table</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Table</span><span class="p">({</span>
+            <span class="nx">head</span><span class="o">:</span> <span class="p">[</span><span class="s1">'TitleID'</span><span class="p">,</span> <span class="s1">'OwnerID'</span><span class="p">,</span> <span class="s1">'First Name'</span><span class="p">,</span> <span class="s1">'Surname'</span><span class="p">,</span> <span class="s1">'Description'</span><span class="p">,</span> <span class="s1">'ForSale'</span><span class="p">]</span>
+        <span class="p">});</span>
+        <span class="kd">let</span> <span class="nx">arrayLength</span> <span class="o">=</span> <span class="nx">aResources</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span>
+        <span class="k">for</span><span class="p">(</span><span class="kd">let</span> <span class="nx">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">i</span> <span class="o">&lt;</span> <span class="nx">arrayLength</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+            <span class="kd">let</span> <span class="nx">tableLine</span> <span class="o">=</span> <span class="p">[];</span>
+            <span class="nx">tableLine</span><span class="p">.</span><span class="nx">push</span><span class="p">(</span><span class="nx">aResources</span><span class="p">[</span><span class="nx">i</span><span class="p">].</span><span class="nx">titleId</span><span class="p">);</span>
+            <span class="nx">tableLine</span><span class="p">.</span><span class="nx">push</span><span class="p">(</span><span class="nx">aResources</span><span class="p">[</span><span class="nx">i</span><span class="p">].</span><span class="nx">owner</span><span class="p">.</span><span class="nx">personId</span><span class="p">);</span>
+            <span class="nx">tableLine</span><span class="p">.</span><span class="nx">push</span><span class="p">(</span><span class="nx">aResources</span><span class="p">[</span><span class="nx">i</span><span class="p">].</span><span class="nx">owner</span><span class="p">.</span><span class="nx">firstName</span><span class="p">);</span>
+            <span class="nx">tableLine</span><span class="p">.</span><span class="nx">push</span><span class="p">(</span><span class="nx">aResources</span><span class="p">[</span><span class="nx">i</span><span class="p">].</span><span class="nx">owner</span><span class="p">.</span><span class="nx">lastName</span><span class="p">);</span>
+            <span class="nx">tableLine</span><span class="p">.</span><span class="nx">push</span><span class="p">(</span><span class="nx">aResources</span><span class="p">[</span><span class="nx">i</span><span class="p">].</span><span class="nx">information</span><span class="p">);</span>
+            <span class="nx">tableLine</span><span class="p">.</span><span class="nx">push</span><span class="p">(</span><span class="nx">aResources</span><span class="p">[</span><span class="nx">i</span><span class="p">].</span><span class="nx">forSale</span> <span class="o">?</span> <span class="s1">'Yes'</span> <span class="o">:</span> <span class="s1">'No'</span><span class="p">);</span>
+            <span class="nx">table</span><span class="p">.</span><span class="nx">push</span><span class="p">(</span><span class="nx">tableLine</span><span class="p">);</span>
+        <span class="p">}</span>
+
+      <span class="c1">// Put to stdout - as this is really a command line app</span>
+        <span class="k">return</span><span class="p">(</span><span class="nx">table</span><span class="p">);</span>
+    <span class="p">})</span>
+</code></pre></div>
+<p>Most of this isn't Concerto API code - but it shows how to access the details of the objects that have been returned. At this point it's worth just looking again at the model.</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text"><span></span>asset LandTitle identified by titleId {
+  o String   titleId
+  o Person   owner
+  o String   information
+  o Boolean  forSale   optional
+}
+
+participant Person identified by personId {
+  o String personId
+  o String firstName
+  o String lastName
+}
+</code></pre></div>
+<p>You can see how the owner and title information are being accessed in a very simple manner</p>
+
+<h2 id="submitting-a-transactions">Submitting a transactions</h2>
+
+<p>The last thing that we need to do is submit a tranaction. This is model the transaction is to set a land title for sale. Within the model, the transaction is specified as follows.</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text"><span></span>transaction RegisterPropertyForSale identified by transactionId{
+  o String transactionId
+  --&gt; LandTitle title
+}
+</code></pre></div>
+<p>The transaction has two fields here, a trandsactionId, and a reference to the land title that should be submitted for sale. The first step is get access to the regsitry for the landtitle, and get back the specific land title we want to submit for sale.</p>
+<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span></span><span class="k">return</span> <span class="k">this</span><span class="p">.</span><span class="nx">bizNetworkConnection</span><span class="p">.</span><span class="nx">getAssetRegistry</span><span class="p">(</span><span class="s1">'net.biz.digitalPropertyNetwork.LandTitle'</span><span class="p">)</span>
+<span class="p">.</span><span class="nx">then</span><span class="p">((</span><span class="nx">registry</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
+
+  <span class="nx">LOG</span><span class="p">.</span><span class="nx">info</span><span class="p">(</span><span class="nx">METHOD</span><span class="p">,</span> <span class="s1">'Getting assest from the registry.'</span><span class="p">);</span>
+  <span class="k">return</span> <span class="nx">registry</span><span class="p">.</span><span class="nx">get</span><span class="p">(</span><span class="s1">'LID:1148'</span><span class="p">);</span>
+
+<span class="p">})</span>
+</code></pre></div>
+<p>The getAssetRegistry call should now be looking a bit familar, the get API is used to get a specific land title.
+The next step is to create the transaction we want to submit.</p>
+<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span></span>        <span class="p">.</span><span class="nx">then</span><span class="p">((</span><span class="nx">result</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
+
+          <span class="kd">let</span> <span class="nx">serializer</span> <span class="o">=</span> <span class="k">this</span><span class="p">.</span><span class="nx">businessNetworkDefinition</span><span class="p">.</span><span class="nx">getSerializer</span><span class="p">();</span>
+
+          <span class="kd">let</span> <span class="nx">resource</span> <span class="o">=</span> <span class="nx">serializer</span><span class="p">.</span><span class="nx">fromJSON</span><span class="p">({</span>
+              <span class="s1">'$class'</span><span class="o">:</span> <span class="s1">'net.biz.digitalPropertyNetwork.RegisterPropertyForSale'</span><span class="p">,</span>            
+              <span class="s1">'title'</span><span class="o">:</span> <span class="s1">'LID:1148'</span>
+          <span class="p">});</span>
+          <span class="nx">LOG</span><span class="p">.</span><span class="nx">info</span><span class="p">(</span><span class="nx">METHOD</span><span class="p">,</span> <span class="s1">'Submitting transaction'</span><span class="p">);</span>
+
+          <span class="k">return</span> <span class="k">this</span><span class="p">.</span><span class="nx">bizNetworkConnection</span><span class="p">.</span><span class="nx">submitTransaction</span><span class="p">(</span><span class="nx">resource</span><span class="p">);</span>
+      <span class="p">})</span>
+</code></pre></div>
+<p>What we need to do here is create a 'serializer'.  This is able to create a resource - this resouce is then passed to the submitTransaction API.
+Note that the transaction JSON matches the structure specified in the model file.</p>
+
+<p>That's it!</p>
+
+        
+
+        
+      </section>
+    </article>
+  </div>
+</div>
+
+    
+
+    
+    
+<footer class="SiteFooter">
+  <ul class="SiteFooter-links">
+    <li>
+      <a href="https://twitter.com/ibmblockchain" class="icon">
+        <img src="Blockchain-WW-Labs/Concerto/assets/img/social-twitter.svg" class="SiteFooter-icon" alt="Twitter">
+      </a>
+    </li>
+    <li>
+      <a href="https://github.ibm.com/Blockchain-WW-Labs/Concerto/" class="icon">
+        <img src="Blockchain-WW-Labs/Concerto/assets/img/social-github.svg" class="SiteFooter-icon" alt="Github">
+      </a>
+    </li>
+    <li>
+      <a href="Blockchain-WW-Labs/Concerto/blog/atom.xml" class="icon">
+        <img src="Blockchain-WW-Labs/Concerto/assets/img/social-feed.svg" class="SiteFooter-icon" alt="Feed">
+      </a>
+    </li>
+    <li class="mobile-ln">
+    </li>
+<li>
+      <a href="https://pages.github.ibm.com/Blockchain-WW-Labs/Concerto/jsdoc/develop/index.html" class="SiteFooter-button SiteFooter-button--light">APIs</a>
+    </li>
+  </ul>
+</footer><!-- /.footer-links -->
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>
+
+<script src="Blockchain-WW-Labs/Concerto/assets/js/libs/prettify.js"></script>
+<script src="Blockchain-WW-Labs/Concerto/assets/js/script.js"></script>
+
+
+
+    
+  </div>
+</body>
+</html>
