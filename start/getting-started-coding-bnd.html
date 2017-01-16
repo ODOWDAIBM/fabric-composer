@@ -92,7 +92,7 @@
 <li><a href="/Blockchain-WW-Labs/Concerto/reference/cto_language.html">Concerto Modeling Language</a></li>
 <li><a href="/Blockchain-WW-Labs/Concertoreference/connectionprofile.html">Connection Profile</a></li>
 <li><a href="/Blockchain-WW-Labs/Concerto/reference/js_scripts.html">Transaction Processor Functions</a></li>
-<li><a href="/Blockchain-WW-Labs/Concertoreference/commands.html">Concerto Command Line</a></li>
+<li><a href="/Blockchain-WW-Labs/Concerto/reference/commands.html">Concerto Command Line</a></li>
 <li><a href="/Blockchain-WW-Labs/Concerto/reference/concerto.generator.tests.html">Concerto Generator</a></li>
 <li><a href="/Blockchain-WW-Labs/Concerto/reference/concerto.participant.add.html">Concetio CLI Add Participant</a></li>
 <li><a href="/Blockchain-WW-Labs/Concerto/reference/concerto.identity.issue.html">Concerto CLI Issue Identity </a></li>
@@ -175,18 +175,18 @@
 <h2 id="command-line">Command line</h2>
 
 <p><em>Step1:</em>  Create a new NPM module</p>
-<div class="highlight"><pre><code class="language-text" data-lang="text"><span></span>npm init
+<div class="highlight"><pre><code class="language-" data-lang="">npm init
 </code></pre></div>
 <p>There are no mandatory dependancies that are required; the most important features are name and description of the module. The version number is also very important. This will be used when you construct the full Business Network. That will have a dependancy on a specific version of the model.</p>
 
 <p><em>Step2:</em> Edit the model</p>
 
 <p>The files are simple text files following a defined syntax. Within the npm module directory just create a new file, for example if you were creating this DigitalProperty-Network</p>
-<div class="highlight"><pre><code class="language-text" data-lang="text"><span></span>/git/DigitialProperty-Model&gt; touch models/DigitalLandTitle.cto
+<div class="highlight"><pre><code class="language-" data-lang="">/git/DigitialProperty-Model&gt; touch models/DigitalLandTitle.cto
 </code></pre></div>
 <p>Load that file up in any editor and you can then add your model, Again using this Digital Property Network the file might contain
 (aside if you are using the Atom editor, then there is a syntax highlighter plugin available)</p>
-<div class="highlight"><pre><code class="language-text" data-lang="text"><span></span>/**  A 'Getting Started Tutorial' to work with the IBM Concerto Framework
+<div class="highlight"><pre><code class="language-" data-lang="">/**  A 'Getting Started Tutorial' to work with the IBM Concerto Framework
 */
 
 namespace net.biz.digitalPropertyNetwork
@@ -219,7 +219,7 @@ transaction RegisterPropertyForSale identified by transactionId{
 </code></pre></div>
 <p><em>Step3:</em>
 The next step is to publish your module to the NPM repository you are using.  So a command along these lines</p>
-<div class="highlight"><pre><code class="language-text" data-lang="text"><span></span>npm publish
+<div class="highlight"><pre><code class="language-" data-lang="">npm publish
 </code></pre></div>
 <p><strong>That's it... you can now progress to the  DigitalProperty-Network to add the implementation of the the transactions and complete the Business Network Definition creation.</strong></p>
 
@@ -248,23 +248,23 @@ The next step is to publish your module to the NPM repository you are using.  So
 <h2 id="creating-the-businessnetwork">Creating the BusinessNetwork.</h2>
 
 <p><em>Step1:</em> Create a npm module</p>
-<div class="highlight"><pre><code class="language-text" data-lang="text"><span></span>npm init
+<div class="highlight"><pre><code class="language-" data-lang="">npm init
 </code></pre></div>
 <p>The important aspects of this are the name, version and description. The only dependancy that will be required is the NPM module that contains the model - see step 2.</p>
 
 <p><em>Step2:</em> Create the transaction functions</p>
 
 <p>We need to create a standard JavaScript file to contain the transaction functions</p>
-<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span></span><span class="se">\g</span>it<span class="se">\D</span>igitialProperty-Model &gt; touch lib/DigitalLandTitle.js
+<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="se">\g</span>it<span class="se">\D</span>igitialProperty-Model &gt; touch lib/DigitalLandTitle.js
 </code></pre></div>
 <p>In this example the following is the implementation of the <code>registeryPropertyForSale</code> transaction</p>
-<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span></span><span class="s1">'use strict'</span><span class="p">;</span>
+<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="s1">'use strict'</span><span class="p">;</span>
 
-<span class="cm">/**</span>
-<span class="cm"> * Process a property that is held for sale</span>
-<span class="cm"> * @param {net.biz.digitalPropertyNetwork.RegisterPropertyForSale} propertyForSale the property to be sold</span>
-<span class="cm"> * @transaction</span>
-<span class="cm"> */</span>
+<span class="cm">/**
+ * Process a property that is held for sale
+ * @param {net.biz.digitalPropertyNetwork.RegisterPropertyForSale} propertyForSale the property to be sold
+ * @transaction
+ */</span>
 <span class="kd">function</span> <span class="nx">onRegisterPropertyForSale</span><span class="p">(</span><span class="nx">propertyForSale</span><span class="p">)</span> <span class="p">{</span>
     <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">'### onRegisterPropertyForSale '</span> <span class="o">+</span> <span class="nx">propertyForSale</span><span class="p">.</span><span class="nx">toString</span><span class="p">());</span>
     <span class="nx">propertyForSale</span><span class="p">.</span><span class="nx">title</span><span class="p">.</span><span class="nx">forSale</span> <span class="o">=</span> <span class="kc">true</span><span class="p">;</span>
@@ -289,10 +289,10 @@ Create a file to hold the permissions access control inforation - create a <code
 <p>The <code>concerto archive create</code> command is used to create the archive. The <code>--archiveFile</code> option is used to specify the name of the archive file to create. If this is not specified then a default name will be used that is based on the identifier of the business network (sanitized to be suitable as a filename). For example <code>@ibm_digitalPropertyNetwork-0.1.2.bna</code>.</p>
 
 <p>One of either --inputDir or --moduleName must be specified. --inputDir is the directory that contains the <code>package.json</code> file of the Business Network npm module's package.json.</p>
-<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span></span>concerto archive create --archiveFile digitialLandTitle.bna --inputDir . --moduleName DigitalLandTitle
+<div class="highlight"><pre><code class="language-bash" data-lang="bash">concerto archive create --archiveFile digitialLandTitle.bna --inputDir . --moduleName DigitalLandTitle
 </code></pre></div>
 <p>Once you have this archive it can then be deployed to the HLF (which will assuming is all running for the moment)</p>
-<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span></span>concerto network deploy --archiveFile  DigitalLandTitle.zip  --enrollId WebAppAdmin --enrollSecret DJY27pEnl16d
+<div class="highlight"><pre><code class="language-bash" data-lang="bash">concerto network deploy --archiveFile  DigitalLandTitle.zip  --enrollId WebAppAdmin --enrollSecret DJY27pEnl16d
 </code></pre></div>
         
 

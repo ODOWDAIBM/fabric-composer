@@ -92,7 +92,7 @@
 <li><a href="/Blockchain-WW-Labs/Concerto/reference/cto_language.html">Concerto Modeling Language</a></li>
 <li><a href="/Blockchain-WW-Labs/Concertoreference/connectionprofile.html">Connection Profile</a></li>
 <li><a href="/Blockchain-WW-Labs/Concerto/reference/js_scripts.html">Transaction Processor Functions</a></li>
-<li><a href="/Blockchain-WW-Labs/Concertoreference/commands.html">Concerto Command Line</a></li>
+<li><a href="/Blockchain-WW-Labs/Concerto/reference/commands.html">Concerto Command Line</a></li>
 <li><a href="/Blockchain-WW-Labs/Concerto/reference/concerto.generator.tests.html">Concerto Generator</a></li>
 <li><a href="/Blockchain-WW-Labs/Concerto/reference/concerto.participant.add.html">Concetio CLI Add Participant</a></li>
 <li><a href="/Blockchain-WW-Labs/Concerto/reference/concerto.identity.issue.html">Concerto CLI Issue Identity </a></li>
@@ -149,7 +149,7 @@
 <h1 id="what-is-the-digital-property-network">What is the Digital Property Network?</h1>
 
 <p>This network will be expanded for other tutorials, but for this getting started we'll keep it simple. We going to model <em>Land Titles</em>, each of which has an owner, description, and a boolean saying if this property/land is up for sale.</p>
-<div class="highlight"><pre><code class="language-text" data-lang="text"><span></span>asset LandTitle identified by titleId {
+<div class="highlight"><pre><code class="language-" data-lang="">asset LandTitle identified by titleId {
   o String   titleId
   o Person   owner
   o String   information
@@ -157,14 +157,14 @@
 }
 </code></pre></div>
 <p>We'll also model the <em>Owner</em> as a Person (First,Last name).</p>
-<div class="highlight"><pre><code class="language-text" data-lang="text"><span></span>participant Person identified by personId {
+<div class="highlight"><pre><code class="language-" data-lang="">participant Person identified by personId {
   o String personId
   o String firstName
   o String lastName
 }
 </code></pre></div>
 <p>We want to be able to mark one of the titles for sale so we'll create a <em>RegisterPropertyForSale</em> transaction that will update the for sale flag.</p>
-<div class="highlight"><pre><code class="language-text" data-lang="text"><span></span>transaction RegisterPropertyForSale identified by transactionId{
+<div class="highlight"><pre><code class="language-" data-lang="">transaction RegisterPropertyForSale identified by transactionId{
   o String transactionId
   --&gt; Person seller
   --&gt; LandTitle title
@@ -185,17 +185,17 @@
 <h3 id="install-the-concerto-cli">Install the Concerto CLI</h3>
 
 <p>Installing the Concerto CLI tools module is the first step. This gives you commands to deploy, update and list business networks.</p>
-<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span></span>npm install -g @ibm/concerto-cli
+<div class="highlight"><pre><code class="language-bash" data-lang="bash">npm install -g @ibm/concerto-cli
 </code></pre></div>
 <h3 id="clone-the-getting-started-repository">Clone the Getting Started Repository</h3>
 
 <p>Next you need to pull down the code for the Getting Started sample.</p>
-<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span></span>git clone git@github.ibm.com:Blockchain-WW-Labs/Concerto-GettingStarted.git
+<div class="highlight"><pre><code class="language-bash" data-lang="bash">git clone git@github.ibm.com:Blockchain-WW-Labs/Concerto-GettingStarted.git
 </code></pre></div>
 <h3 id="install-the-dependencies-start-fabric-and-deploy-the-business-network">Install the Dependencies, Start Fabric and Deploy the Business Network</h3>
 
 <p>Next you can run the following commands to install all the dependent Node modules for the sample, pull down the Docker images for Hyperledger Fabric, start the Fabric and then deploy a Business Network Definition.</p>
-<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span></span><span class="nb">cd</span> Concerto-GettingStarted
+<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nb">cd </span>Concerto-GettingStarted
 npm install
 </code></pre></div>
 <p>This is doing quite a bit of work but at the end of it you will have all the dependant modules, together with a running local Hyperledger instance, and the DigitalProperty Network will have been deployed to that Hyperledger. At this point it doesn't contain any assets at all.</p>
@@ -204,7 +204,7 @@ npm install
 
 <p>There are some simple applications included that will create some assets, list the current assets and submit a transaction.
 First, the assets are created and the newly created assets are listed. Then a transaction is submited to update one of the assets 'for sale'. A final asset listed is then queried to show the update has taken place. To run this end-end sequence issue...</p>
-<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span></span>npm <span class="nb">test</span>
+<div class="highlight"><pre><code class="language-bash" data-lang="bash">npm <span class="nb">test</span>
 </code></pre></div>
 <h3 id="thats-it">That's it</h3>
 
@@ -232,19 +232,19 @@ First, the assets are created and the newly created assets are listed. Then a tr
 <h3 id="clone-the-repository-and-install-dependencies">Clone the Repository and Install Dependencies</h3>
 
 <p>First clone the repository:</p>
-<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span></span>git clone git@github.ibm.com:Blockchain-WW-Labs/DigitalProperty-Network.git
-<span class="nb">cd</span> DigitalProperty-Network
+<div class="highlight"><pre><code class="language-bash" data-lang="bash">git clone git@github.ibm.com:Blockchain-WW-Labs/DigitalProperty-Network.git
+<span class="nb">cd </span>DigitalProperty-Network
 npm install
 </code></pre></div>
 <h3 id="update-the-transaction-processor-function">Update the Transaction Processor Function</h3>
 
 <p>Open the file <code>lib/DigitalLandTitle.js</code> in a text editor and replace the contents with:</p>
-<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span></span><span class="s1">'use strict'</span><span class="p">;</span>
+<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="s1">'use strict'</span><span class="p">;</span>
 
-<span class="cm">/** Process a property that is held for sale</span>
-<span class="cm"> * @param {net.biz.digitalPropertyNetwork.RegisterPropertyForSale} propertyForSale the property to be sold</span>
-<span class="cm"> * @transaction</span>
-<span class="cm"> */</span>
+<span class="cm">/** Process a property that is held for sale
+ * @param {net.biz.digitalPropertyNetwork.RegisterPropertyForSale} propertyForSale the property to be sold
+ * @transaction
+ */</span>
 <span class="kd">function</span> <span class="nx">onRegisterPropertyForSale</span><span class="p">(</span><span class="nx">propertyForSale</span><span class="p">)</span> <span class="p">{</span>
     <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">'### onRegisterPropertyForSale '</span> <span class="o">+</span> <span class="nx">propertyForSale</span><span class="p">.</span><span class="nx">toString</span><span class="p">());</span>
     <span class="nx">propertyForSale</span><span class="p">.</span><span class="nx">title</span><span class="p">.</span><span class="nx">forSale</span> <span class="o">=</span> <span class="kc">true</span><span class="p">;</span>
@@ -257,6 +257,7 @@ npm install
         <span class="p">}</span>
     <span class="p">);</span>
 <span class="p">}</span>
+
 </code></pre></div>
 <h3 id="update-the-business-network-definition">Update the Business Network Definition</h3>
 
@@ -264,9 +265,9 @@ npm install
 
 <p>What we'll do therefore is adopt a different approach to create the Business Network Archive that is deployed to the Hyperledger.
 From within the DigitalProperty-Network directory..</p>
-<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span></span>$ concerto archive create --inputDir .
+<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="gp">$ </span>concerto archive create --inputDir .
 Creating Business Network Archive
-Looking <span class="k">for</span> package.json of Business Network Definition in /home/matthew/git17/DigitalProperty-Network
+Looking <span class="k">for </span>package.json of Business Network Definition <span class="k">in</span> /home/matthew/git17/DigitalProperty-Network
 
 Description:Digital Property Network
 Name:@ibm/digitalproperty-network
@@ -277,8 +278,8 @@ Command completed successfully.
 </code></pre></div>
 <p>We now have a new file that is the digitial business network archive.</p>
 
-<h3 id="update-the-deployed-buesinness-network">Update the deployed buesinness network</h3>
-<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span></span>$ concerto network update --archiveFile @ibm_digitalproperty-network-0.0.11.bna  --enrollId WebAppAdmin --enrollSecret DJY27pEnl16d
+<h3 id="update-the-deployed-businness-network">Update the deployed businness network</h3>
+<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="gp">$ </span>concerto network update --archiveFile @ibm_digitalproperty-network-0.0.11.bna  --enrollId WebAppAdmin --enrollSecret DJY27pEnl16d
 Deploying business network from archive @ibm_digitalproperty-network-0.0.11.bna
 Business network definition:
     Identifier: @ibm/digitalproperty-network-0.0.11
@@ -289,10 +290,10 @@ Command completed successfully.
 <h3 id="rerun-the-test">Rerun the Test</h3>
 
 <p>If you go back to the getting started directory now - and list all the commands that available, you'll see one called <code>submitTransaction</code></p>
-<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span></span>$ npm run
-Lifecycle scripts included in concerto-gettingstarted:
-  <span class="nb">test</span>
-    mocha --recursive <span class="o">&amp;&amp;</span> npm run bootstrapAssets <span class="o">&amp;&amp;</span> npm run listAssets <span class="o">&amp;&amp;</span> npm run submitTransaction
+<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="gp">$ </span>npm run
+Lifecycle scripts included <span class="k">in </span>concerto-gettingstarted:
+  <span class="nb">test
+    </span>mocha --recursive <span class="o">&amp;&amp;</span> npm run bootstrapAssets <span class="o">&amp;&amp;</span> npm run listAssets <span class="o">&amp;&amp;</span> npm run submitTransaction
   install
     scripts/download-hyperledger.sh <span class="o">&amp;&amp;</span> scripts/start-hyperledger.sh <span class="o">&amp;&amp;</span> npm run deployNetwork
 
@@ -311,9 +312,10 @@ available via <span class="sb">`</span>npm run-script<span class="sb">`</span>:
     scripts/teardown.sh
   deployNetwork
     concerto archive create -m @ibm/digitalproperty-network --archiveFile digitalPropertyNetwork.zip <span class="o">&amp;&amp;</span> concerto network deploy --archiveFile digitalPropertyNetwork.zip  --enrollId WebAppAdmin --enrollSecret DJY27pEnl16d <span class="o">&amp;&amp;</span> concerto network list -n @ibm/digitalproperty-network --enrollId WebAppAdmin --enrollSecret DJY27pEnl16d
+
 </code></pre></div>
 <p>If you issue this command, that will submit a the transaction as was done during the full run - but importantly this is the updated transaction function. You should now see:</p>
-<div class="highlight"><pre><code class="language-text" data-lang="text"><span></span>$ npm run submitTransaction
+<div class="highlight"><pre><code class="language-" data-lang="">$ npm run submitTransaction
 
 &gt; concerto-gettingstarted@1.0.0 submitTransaction /home/matthew/git17/Concerto-GettingStarted
 &gt; node cli.js landregistry submit &amp;&amp; node cli.js landregistry list
@@ -343,8 +345,8 @@ info: [Handel] Command completed successfully.
 <h2 id="digging-deeper">Digging Deeper</h2>
 
 <p>Both <code>npm install</code> and <code>npm test</code> run commands defined in <code>package.json</code>. If you open <code>package.json</code> you will see that it uses the following utility scripts and commands.</p>
-<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span></span><span class="nb">test</span>
-    mocha --recursive <span class="o">&amp;&amp;</span> npm run bootstrapAssets <span class="o">&amp;&amp;</span> npm run listAssets <span class="o">&amp;&amp;</span> npm run submitTransaction
+<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nb">test
+    </span>mocha --recursive <span class="o">&amp;&amp;</span> npm run bootstrapAssets <span class="o">&amp;&amp;</span> npm run listAssets <span class="o">&amp;&amp;</span> npm run submitTransaction
   install
     scripts/download-hyperledger.sh <span class="o">&amp;&amp;</span> scripts/start-hyperledger.sh <span class="o">&amp;&amp;</span> npm run deployNetwork
 

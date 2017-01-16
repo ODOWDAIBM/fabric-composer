@@ -90,7 +90,7 @@
 <li><a href="/Blockchain-WW-Labs/Concerto/reference/cto_language.html">Concerto Modeling Language</a></li>
 <li><a href="/Blockchain-WW-Labs/Concertoreference/connectionprofile.html">Connection Profile</a></li>
 <li><a href="/Blockchain-WW-Labs/Concerto/reference/js_scripts.html">Transaction Processor Functions</a></li>
-<li><a href="/Blockchain-WW-Labs/Concertoreference/commands.html">Concerto Command Line</a></li>
+<li><a href="/Blockchain-WW-Labs/Concerto/reference/commands.html">Concerto Command Line</a></li>
 <li><a href="/Blockchain-WW-Labs/Concerto/reference/concerto.generator.tests.html">Concerto Generator</a></li>
 <li><a href="/Blockchain-WW-Labs/Concerto/reference/concerto.participant.add.html">Concetio CLI Add Participant</a></li>
 <li><a href="/Blockchain-WW-Labs/Concerto/reference/concerto.identity.issue.html">Concerto CLI Issue Identity </a></li>
@@ -163,7 +163,7 @@ Network Definition and deployed it as a Business Network. You must have created
 some instances of those participants, and issued those participants with identities.</p>
 
 <p>The procedure below shows an example using the following participant models:</p>
-<div class="highlight"><pre><code class="language-text" data-lang="text"><span></span>namespace net.biz.digitalPropertyNetwork
+<div class="highlight"><pre><code class="language-" data-lang="">namespace net.biz.digitalPropertyNetwork
 
 participant Person identified by personId {
   o String personId
@@ -181,10 +181,10 @@ participant PrivilegedPerson extends Person {
 <li>In your transaction processor function, verify the type of the current participant
 meets the requirements by using the <code>getCurrentParticipant</code> function:</li>
 </ol>
-<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span></span>   <span class="kd">function</span> <span class="nx">onPrivilegedTransaction</span><span class="p">(</span><span class="nx">privilegedTransaction</span><span class="p">)</span> <span class="p">{</span>
+<div class="highlight"><pre><code class="language-javascript" data-lang="javascript">   <span class="kd">function</span> <span class="nx">onPrivilegedTransaction</span><span class="p">(</span><span class="nx">privilegedTransaction</span><span class="p">)</span> <span class="p">{</span>
        <span class="kd">var</span> <span class="nx">currentParticipant</span> <span class="o">=</span> <span class="nx">getCurrentParticipant</span><span class="p">();</span>
-       <span class="k">if</span> <span class="p">(</span><span class="nx">currentParticipant</span><span class="p">.</span><span class="nx">getFullyQualifiedType</span><span class="p">()</span> <span class="o">!==</span> <span class="s1">&#39;net.biz.digitalPropertyNetwork.PrivilegedPerson&#39;</span><span class="p">)</span> <span class="p">{</span>
-           <span class="k">throw</span> <span class="k">new</span> <span class="nb">Error</span><span class="p">(</span><span class="s1">&#39;Transaction can only be submitted by a privileged person&#39;</span><span class="p">);</span>
+       <span class="k">if</span> <span class="p">(</span><span class="nx">currentParticipant</span><span class="p">.</span><span class="nx">getFullyQualifiedType</span><span class="p">()</span> <span class="o">!==</span> <span class="s1">'net.biz.digitalPropertyNetwork.PrivilegedPerson'</span><span class="p">)</span> <span class="p">{</span>
+           <span class="k">throw</span> <span class="k">new</span> <span class="nb">Error</span><span class="p">(</span><span class="s1">'Transaction can only be submitted by a privileged person'</span><span class="p">);</span>
        <span class="p">}</span>
        <span class="c1">// Current participant must be a privileged person to get here.</span>
    <span class="p">}</span>
@@ -193,10 +193,10 @@ meets the requirements by using the <code>getCurrentParticipant</code> function:
 <li>In your transaction processor function, verify the participant ID of the current
 participant by using the <code>getCurrentParticipant</code> function:</li>
 </ol>
-<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span></span>   <span class="kd">function</span> <span class="nx">onPrivilegedTransaction</span><span class="p">(</span><span class="nx">privilegedTransaction</span><span class="p">)</span> <span class="p">{</span>
+<div class="highlight"><pre><code class="language-javascript" data-lang="javascript">   <span class="kd">function</span> <span class="nx">onPrivilegedTransaction</span><span class="p">(</span><span class="nx">privilegedTransaction</span><span class="p">)</span> <span class="p">{</span>
        <span class="kd">var</span> <span class="nx">currentParticipant</span> <span class="o">=</span> <span class="nx">getCurrentParticipant</span><span class="p">();</span>
-       <span class="k">if</span> <span class="p">(</span><span class="nx">currentParticipant</span><span class="p">.</span><span class="nx">getFullyQualifiedIdentifier</span><span class="p">()</span> <span class="o">!==</span> <span class="s1">&#39;net.biz.digitalPropertyNetwork.Person#PERSON_1&#39;</span><span class="p">)</span> <span class="p">{</span>
-           <span class="k">throw</span> <span class="k">new</span> <span class="nb">Error</span><span class="p">(</span><span class="s1">&#39;Transaction can only be submitted by person 1&#39;</span><span class="p">);</span>
+       <span class="k">if</span> <span class="p">(</span><span class="nx">currentParticipant</span><span class="p">.</span><span class="nx">getFullyQualifiedIdentifier</span><span class="p">()</span> <span class="o">!==</span> <span class="s1">'net.biz.digitalPropertyNetwork.Person#PERSON_1'</span><span class="p">)</span> <span class="p">{</span>
+           <span class="k">throw</span> <span class="k">new</span> <span class="nb">Error</span><span class="p">(</span><span class="s1">'Transaction can only be submitted by person 1'</span><span class="p">);</span>
        <span class="p">}</span>
        <span class="c1">// Current participant must be person 1 to get here.</span>
    <span class="p">}</span>
@@ -204,12 +204,12 @@ participant by using the <code>getCurrentParticipant</code> function:</li>
 <p>The participant ID of the current participant can be compared to a participant
    that is linked to an asset (by a relationship) to verify that the current
    participant has the authority to access or modify an asset:</p>
-<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span></span>   <span class="kd">function</span> <span class="nx">onPrivilegedTransaction</span><span class="p">(</span><span class="nx">privilegedTransaction</span><span class="p">)</span> <span class="p">{</span>
+<div class="highlight"><pre><code class="language-javascript" data-lang="javascript">   <span class="kd">function</span> <span class="nx">onPrivilegedTransaction</span><span class="p">(</span><span class="nx">privilegedTransaction</span><span class="p">)</span> <span class="p">{</span>
        <span class="c1">// Get the owner of the asset in the transaction.</span>
        <span class="kd">var</span> <span class="nx">assetOwner</span> <span class="o">=</span> <span class="nx">privilegedTransaction</span><span class="p">.</span><span class="nx">asset</span><span class="p">.</span><span class="nx">owner</span><span class="p">;</span>
        <span class="kd">var</span> <span class="nx">currentParticipant</span> <span class="o">=</span> <span class="nx">getCurrentParticipant</span><span class="p">();</span>
        <span class="k">if</span> <span class="p">(</span><span class="nx">currentParticipant</span><span class="p">.</span><span class="nx">getFullyQualifiedIdentifier</span><span class="p">()</span> <span class="o">!==</span> <span class="nx">asset</span><span class="p">.</span><span class="nx">owner</span><span class="p">.</span><span class="nx">getFullyQualifiedIdentifier</span><span class="p">())</span> <span class="p">{</span>
-           <span class="k">throw</span> <span class="k">new</span> <span class="nb">Error</span><span class="p">(</span><span class="s1">&#39;Transaction can only be submitted by the owner of the asset&#39;</span><span class="p">);</span>
+           <span class="k">throw</span> <span class="k">new</span> <span class="nb">Error</span><span class="p">(</span><span class="s1">'Transaction can only be submitted by the owner of the asset'</span><span class="p">);</span>
        <span class="p">}</span>
        <span class="c1">// Current participant must be the owner of the asset to get here.</span>
    <span class="p">}</span>

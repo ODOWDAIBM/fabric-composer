@@ -90,7 +90,7 @@
 <li><a href="/Blockchain-WW-Labs/Concerto/reference/cto_language.html">Concerto Modeling Language</a></li>
 <li><a href="/Blockchain-WW-Labs/Concertoreference/connectionprofile.html">Connection Profile</a></li>
 <li><a href="/Blockchain-WW-Labs/Concerto/reference/js_scripts.html">Transaction Processor Functions</a></li>
-<li><a href="/Blockchain-WW-Labs/Concertoreference/commands.html">Concerto Command Line</a></li>
+<li><a href="/Blockchain-WW-Labs/Concerto/reference/commands.html">Concerto Command Line</a></li>
 <li><a href="/Blockchain-WW-Labs/Concerto/reference/concerto.generator.tests.html">Concerto Generator</a></li>
 <li><a href="/Blockchain-WW-Labs/Concerto/reference/concerto.participant.add.html">Concetio CLI Add Participant</a></li>
 <li><a href="/Blockchain-WW-Labs/Concerto/reference/concerto.identity.issue.html">Concerto CLI Issue Identity </a></li>
@@ -128,7 +128,7 @@
 <li><a href="/Blockchain-WW-Labs/Concerto/reference/cto_language.html">Concerto Modeling Language</a></li>
 <li><a href="/Blockchain-WW-Labs/Concertoreference/connectionprofile.html">Connection Profile</a></li>
 <li><a href="/Blockchain-WW-Labs/Concerto/reference/js_scripts.html">Transaction Processor Functions</a></li>
-<li><a href="/Blockchain-WW-Labs/Concertoreference/commands.html">Concerto Command Line</a></li>
+<li><a href="/Blockchain-WW-Labs/Concerto/reference/commands.html">Concerto Command Line</a></li>
 <li><a href="/Blockchain-WW-Labs/Concerto/reference/concerto.generator.tests.html">Concerto Generator</a></li>
 <li><a href="/Blockchain-WW-Labs/Concerto/reference/concerto.participant.add.html">Concetio CLI Add Participant</a></li>
 <li><a href="/Blockchain-WW-Labs/Concerto/reference/concerto.identity.issue.html">Concerto CLI Issue Identity </a></li>
@@ -155,12 +155,12 @@
 <p>For example, if connecting using the &#39;testprofile&#39; Connection Profile, the &#39;<HOMEDIR>/concerto-connection-profiles/testprofile&#39; directory must exist, and must contain a file named &#39;connection.json&#39;.</p>
 
 <p>The contents of the file will depend on the location of the Fabric, but will be similar to the example below:</p>
-<div class="highlight"><pre><code class="language-text" data-lang="text"><span></span>  ``{
-      &quot;type&quot;: &quot;hlf&quot;,
-      &quot;keyValStore&quot;: &quot;/home/&lt;your-username&gt;/.concerto-credentials&quot;,
-      &quot;membershipServicesURL&quot;: &quot;grpc://localhost:7054&quot;,
-      &quot;peerURL&quot;: &quot;grpc://localhost:7051&quot;,
-      &quot;eventHubURL&quot;: &quot;grpc://localhost:7053&quot;
+<div class="highlight"><pre><code class="language-" data-lang="">  ``{
+      "type": "hlf",
+      "keyValStore": "/home/&lt;your-username&gt;/.concerto-credentials",
+      "membershipServicesURL": "grpc://localhost:7054",
+      "peerURL": "grpc://localhost:7051",
+      "eventHubURL": "grpc://localhost:7053"
   }``
 </code></pre></div>
 <p>This connection profile connects to a Fabric instance running on localhost and places the HFC keyValStore under the &#39;/tmp/keyValStore&#39; directory.</p>

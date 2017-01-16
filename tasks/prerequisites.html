@@ -92,7 +92,7 @@
 <li><a href="/Blockchain-WW-Labs/Concerto/reference/cto_language.html">Concerto Modeling Language</a></li>
 <li><a href="/Blockchain-WW-Labs/Concertoreference/connectionprofile.html">Connection Profile</a></li>
 <li><a href="/Blockchain-WW-Labs/Concerto/reference/js_scripts.html">Transaction Processor Functions</a></li>
-<li><a href="/Blockchain-WW-Labs/Concertoreference/commands.html">Concerto Command Line</a></li>
+<li><a href="/Blockchain-WW-Labs/Concerto/reference/commands.html">Concerto Command Line</a></li>
 <li><a href="/Blockchain-WW-Labs/Concerto/reference/concerto.generator.tests.html">Concerto Generator</a></li>
 <li><a href="/Blockchain-WW-Labs/Concerto/reference/concerto.participant.add.html">Concetio CLI Add Participant</a></li>
 <li><a href="/Blockchain-WW-Labs/Concerto/reference/concerto.identity.issue.html">Concerto CLI Issue Identity </a></li>
@@ -169,13 +169,13 @@
 <p>The script to install the pre-requisites can be found in <a href="https://github.ibm.com/Blockchain-WW-Labs/Concerto-GettingStarted">Concerto-GettingStarted</a> under <a href="https://github.ibm.com/Blockchain-WW-Labs/Concerto-GettingStarted/tree/develop/scripts">scripts</a> and is named <a href="https://github.ibm.com/Blockchain-WW-Labs/Concerto-GettingStarted/blob/develop/scripts/prereqs-ubuntu.sh">prereqs-ubuntu.sh</a>.</p>
 
 <p>Usage:</p>
-<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span></span><span class="c1"># First run the script</span>
-ibm@ubuntu:~/Concerto-GettingStarted$ ./scripts/prereqs-ubuntu.sh
+<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="c"># First run the script</span>
+<span class="gp">ibm@ubuntu:~/Concerto-GettingStarted$ </span>./scripts/prereqs-ubuntu.sh
 
-<span class="c1"># IMPORTANT: You will then need to logout and login again before running the next command</span>
+<span class="c"># IMPORTANT: You will then need to logout and login again before running the next command</span>
 
-<span class="c1"># Finishes the installation process</span>
-ibm@ubuntu:~/Concerto-GettingStarted$ ./scripts/prereqs-ubuntu.sh docker
+<span class="c"># Finishes the installation process</span>
+<span class="gp">ibm@ubuntu:~/Concerto-GettingStarted$ </span>./scripts/prereqs-ubuntu.sh docker
 </code></pre></div>
 <p><strong>Additional Notes:</strong></p>
 
@@ -197,13 +197,13 @@ development. We have even created an experimental CTO file syntax highlighting p
 <p><a href="https://atom.io/">Atom</a> is a very popular editor and several <a href="https://github.ibm.com/orgs/Blockchain-WW-Labs/teams/technical-team">contributors</a> use it. Install Atom, and when you have done so, you are required to turn off Google analytics if you work for IBM. Navigate to Atom-&gt;Preferences-&gt;Packages, search and find the <code>metrics</code> package and disable it.</p>
 
 <h4 id="installation-commands-for-ubuntu">Installation Commands for Ubuntu:</h4>
-<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span></span><span class="c1"># Add Atom Repository</span>
+<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="c"># Add Atom Repository</span>
 sudo add-apt-repository ppa:webupd8team/atom -y
 
-<span class="c1"># Update package lists</span>
+<span class="c"># Update package lists</span>
 sudo apt-get update
 
-<span class="c1"># Install Atom</span>
+<span class="c"># Install Atom</span>
 sudo apt-get -y install atom
 </code></pre></div>
 <h4 id="suggested-pluginss">Suggested Pluginss</h4>
@@ -221,7 +221,7 @@ sudo apt-get -y install atom
 </ul>
 
 <h4 id="installation-commands-for-macos">Installation Commands for MacOS:</h4>
-<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span></span>tbd
+<div class="highlight"><pre><code class="language-bash" data-lang="bash">tbd
 </code></pre></div>
 <h4 id="additional-notes">Additional Notes:</h4>
 
@@ -235,17 +235,17 @@ sudo apt-get -y install atom
 <p><a href="https://code.visualstudio.com/">Visual Studio Code</a> is a lightweight and powerful editor.</p>
 
 <p><strong>Installation Commands for Ubuntu:</strong></p>
-<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span></span><span class="c1"># Download vscode .deb file</span>
+<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="c"># Download vscode .deb file</span>
 curl -o vscode.deb https://az764295.vo.msecnd.net/stable/7ba55c5860b152d999dda59393ca3ebeb1b5c85f/code_1.7.2-1479766213_amd64.deb
 
-<span class="c1"># Install vscode</span>
+<span class="c"># Install vscode</span>
 sudo dpkg -i vscode.deb
 
-<span class="c1"># Install dependencies</span>
+<span class="c"># Install dependencies</span>
 sudo apt-get install -f
 </code></pre></div>
 <p><strong>Installation Commands for MacOS:</strong></p>
-<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span></span>tbd
+<div class="highlight"><pre><code class="language-bash" data-lang="bash">tbd
 </code></pre></div>
 <p><strong>Additional Notes:</strong></p>
 
@@ -258,11 +258,11 @@ sudo apt-get install -f
 <p>This is probably already installed on most Linux machines. Setup is well documented on the <a href="https://help.github.com/enterprise/2.7/user/articles/set-up-git/">ibm.git website</a>. Pay particular attention to <a href="https://help.github.com/enterprise/2.7/user/articles/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent/#platform-linux">setting up the SSL keys</a> that are required.</p>
 
 <p><strong>Installation Commands for Ubuntu:</strong></p>
-<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span></span><span class="c1"># Install Git</span>
+<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="c"># Install Git</span>
 sudo apt-get -y install git
 </code></pre></div>
 <p><strong>Installation Commands for MacOS:</strong></p>
-<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span></span>tbd
+<div class="highlight"><pre><code class="language-bash" data-lang="bash">tbd
 </code></pre></div>
 <p><strong>Additional Notes:</strong></p>
 
@@ -276,32 +276,32 @@ sudo apt-get -y install git
 The runtime requires a version higher than v4.6.0.</p>
 
 <p><strong>Installation Commands for Ubuntu:</strong></p>
-<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span></span><span class="c1"># Install nvm dependencies</span>
+<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="c"># Install nvm dependencies</span>
 sudo apt-get -y install build-essential libssl-dev
 
-<span class="c1"># Execute nvm installation script</span>
-curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.32.1/install.sh <span class="p">|</span> bash
+<span class="c"># Execute nvm installation script</span>
+curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.32.1/install.sh | bash
 
-<span class="c1"># Update bash profile</span>
-cat <span class="s">&lt;&lt;EOF &gt;&gt; ~/.profile</span>
-<span class="s">export NVM_DIR=~/.nvm</span>
-<span class="s">[ -s "\$NVM_DIR/nvm.sh" ] &amp;&amp; . "\$NVM_DIR/nvm.sh"</span>
-<span class="s">EOF</span>
+<span class="c"># Update bash profile</span>
+cat <span class="sh">&lt;&lt;EOF &gt;&gt; ~/.profile
+export NVM_DIR=~/.nvm
+[ -s "\$NVM_DIR/nvm.sh" ] &amp;&amp; . "\$NVM_DIR/nvm.sh"
+EOF
 
-<span class="c1"># Reload bash profile</span>
+</span><span class="c"># Reload bash profile</span>
 <span class="nb">source</span> ~/.profile
 
-<span class="c1"># Install node and npm</span>
-nvm install <span class="m">4</span>.6.2
+<span class="c"># Install node and npm</span>
+nvm install 4.6.2
 
-<span class="c1"># Configure nvm to use version 4.6.2</span>
-nvm use <span class="m">4</span>.6.2.
+<span class="c"># Configure nvm to use version 4.6.2</span>
+nvm use 4.6.2.
 
-<span class="c1"># Install the latest version of npm</span>
+<span class="c"># Install the latest version of npm</span>
 npm install npm@latest -g
 </code></pre></div>
 <p><strong>Installation Commands for MacOS:</strong></p>
-<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span></span>tbd
+<div class="highlight"><pre><code class="language-bash" data-lang="bash">tbd
 </code></pre></div>
 <p><strong>Additional Notes:</strong></p>
 
@@ -314,36 +314,36 @@ npm install npm@latest -g
 <p>The Docker Engine is essential for running system tests and running the HyperLedger Fabric.</p>
 
 <p><strong>Installation Commands for Ubuntu:</strong></p>
-<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span></span><span class="c1"># Ensure that CA certificates are installed</span>
+<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="c"># Ensure that CA certificates are installed</span>
 sudo apt-get -y install apt-transport-https ca-certificates
 
-<span class="c1"># Add new GPG key and add it to adv keychain</span>
+<span class="c"># Add new GPG key and add it to adv keychain</span>
 sudo apt-key adv <span class="se">\</span>
                --keyserver hkp://ha.pool.sks-keyservers.net:80 <span class="se">\</span>
                --recv-keys 58118E89F3A912897C070ADBF76221572C52609D
 
-<span class="c1"># Update where APT will search for Docker Packages</span>
-<span class="nb">echo</span> <span class="s2">"deb https://apt.dockerproject.org/repo ubuntu-trusty main"</span> <span class="p">|</span> sudo tee /etc/apt/sources.list.d/docker.list
+<span class="c"># Update where APT will search for Docker Packages</span>
+<span class="nb">echo</span> <span class="s2">"deb https://apt.dockerproject.org/repo ubuntu-trusty main"</span> | sudo tee /etc/apt/sources.list.d/docker.list
 
-<span class="c1"># Update package lists</span>
+<span class="c"># Update package lists</span>
 sudo apt-get update
 
-<span class="c1"># Verifies APT is pulling from the correct Repository</span>
+<span class="c"># Verifies APT is pulling from the correct Repository</span>
 sudo apt-cache policy docker-engine
 
-<span class="c1"># Install kernel packages which allows us to use aufs storage driver</span>
+<span class="c"># Install kernel packages which allows us to use aufs storage driver</span>
 sudo apt-get -y install linux-image-extra-<span class="k">$(</span>uname -r<span class="k">)</span> linux-image-extra-virtual
 
-<span class="c1"># Install docker-engine</span>
-sudo apt-get -y install docker-engine<span class="o">=</span><span class="m">1</span>.12.3-0~trusty
+<span class="c"># Install docker-engine</span>
+sudo apt-get -y install docker-engine<span class="o">=</span>1.12.3-0~trusty
 
-<span class="c1"># Modify user account</span>
+<span class="c"># Modify user account</span>
 sudo usermod -aG docker <span class="k">$(</span>whoami<span class="k">)</span>
 
-<span class="c1"># You will need to logout in order for these changes to take effect!</span>
+<span class="c"># You will need to logout in order for these changes to take effect!</span>
 </code></pre></div>
 <p><strong>Installation Commands for MacOS:</strong></p>
-<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span></span>tbd
+<div class="highlight"><pre><code class="language-bash" data-lang="bash">tbd
 </code></pre></div>
 <p><strong>Additional Notes:</strong></p>
 
@@ -356,14 +356,14 @@ sudo usermod -aG docker <span class="k">$(</span>whoami<span class="k">)</span>
 <p>Docker Compose is used for easily configuring and starting HyperLedger Fabric.</p>
 
 <p><strong>Installation Commands for Ubuntu:</strong></p>
-<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span></span><span class="c1"># Install python package management system to easily install docker-compose</span>
+<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="c"># Install python package management system to easily install docker-compose</span>
 sudo apt-get -y install python-pip
 
-<span class="c1"># Use pip to install Docker Compose</span>
+<span class="c"># Use pip to install Docker Compose</span>
 sudo pip install docker-compose
 </code></pre></div>
 <p><strong>Installation Commands for MacOS:</strong></p>
-<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span></span>tbd
+<div class="highlight"><pre><code class="language-bash" data-lang="bash">tbd
 </code></pre></div>
 <p><strong>Additional Notes:</strong></p>
 
@@ -380,7 +380,7 @@ sudo pip install docker-compose
 <p>Releases of IBM Concerto are currently pushed to a private npm registry, that is
 hosted by the IBM Whitewater team. You must authenticate to that private npm
 registry with your w3id before you can install the Concerto module:</p>
-<div class="highlight"><pre><code class="language-text" data-lang="text"><span></span>$ npm login --registry=https://npm-registry.whitewater.ibm.com --scope=@ibm
+<div class="highlight"><pre><code class="language-" data-lang="">$ npm login --registry=https://npm-registry.whitewater.ibm.com --scope=@ibm
 Username: fredbloggs
 Password: xxxxxxxx
 Email: (this IS public) fredbloggs@xx.ibm.com
@@ -390,7 +390,7 @@ Logged in as fredbloggs to scope @ibm on https://npm-registry.whitewater.ibm.com
 and e-mail (w3id). After you have logged in, you must complete the two stage
 w3id authentication process. When you run an npm command, it will fail and give
 you a link to access in a browser:</p>
-<div class="highlight"><pre><code class="language-text" data-lang="text"><span></span>$ npm view @ibm/ibm-concerto-common
+<div class="highlight"><pre><code class="language-" data-lang="">$ npm view @ibm/ibm-concerto-common
 npm ERR! Linux 4.4.0-36-generic
 npm ERR! argv "/usr/bin/nodejs" "/usr/bin/npm" "view" "@ibm/ibm-concerto-common"
 npm ERR! node v6.5.0
@@ -402,7 +402,7 @@ npm ERR! visit https://github.ibm.com/login/oauth/authorize to validate your ses
 <p>Ensure that you click the link that is displayed and complete the two stage w3id authentication process.</p>
 
 <p><strong>Installation Commands for MacOS:</strong></p>
-<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span></span>tbd
+<div class="highlight"><pre><code class="language-bash" data-lang="bash">tbd
 </code></pre></div>
 <p><strong>Additional Notes:</strong></p>
 

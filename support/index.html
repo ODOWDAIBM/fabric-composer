@@ -92,7 +92,7 @@
 <li><a href="/Blockchain-WW-Labs/Concerto/reference/cto_language.html">Concerto Modeling Language</a></li>
 <li><a href="/Blockchain-WW-Labs/Concertoreference/connectionprofile.html">Connection Profile</a></li>
 <li><a href="/Blockchain-WW-Labs/Concerto/reference/js_scripts.html">Transaction Processor Functions</a></li>
-<li><a href="/Blockchain-WW-Labs/Concertoreference/commands.html">Concerto Command Line</a></li>
+<li><a href="/Blockchain-WW-Labs/Concerto/reference/commands.html">Concerto Command Line</a></li>
 <li><a href="/Blockchain-WW-Labs/Concerto/reference/concerto.generator.tests.html">Concerto Generator</a></li>
 <li><a href="/Blockchain-WW-Labs/Concerto/reference/concerto.participant.add.html">Concetio CLI Add Participant</a></li>
 <li><a href="/Blockchain-WW-Labs/Concerto/reference/concerto.identity.issue.html">Concerto CLI Issue Identity </a></li>
@@ -260,7 +260,7 @@
 <h3 id="answer-13">Answer 13</h3>
 
 <p>We use a JavaScript interpreter written in Go called <a href="https://github.com/robertkrimen/otto">Otto</a> and that handles the execution of our "system" code and the users code. We have developed a Domain Specific Language for Concerto that allows users to model assets, participants, and transactions. That DSL is reasonably simple text that is designed to be easy for developers to hand write, for example:</p>
-<div class="highlight"><pre><code class="language-text" data-lang="text"><span></span>asset Field identified by fieldID {
+<div class="highlight"><pre><code class="language-" data-lang="">asset Field identified by fieldID {
   o String fieldID
   o String name
   --&gt; Business business // a relationship to the owning business

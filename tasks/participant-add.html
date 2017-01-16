@@ -92,7 +92,7 @@
 <li><a href="/Blockchain-WW-Labs/Concerto/reference/cto_language.html">Concerto Modeling Language</a></li>
 <li><a href="/Blockchain-WW-Labs/Concertoreference/connectionprofile.html">Connection Profile</a></li>
 <li><a href="/Blockchain-WW-Labs/Concerto/reference/js_scripts.html">Transaction Processor Functions</a></li>
-<li><a href="/Blockchain-WW-Labs/Concertoreference/commands.html">Concerto Command Line</a></li>
+<li><a href="/Blockchain-WW-Labs/Concerto/reference/commands.html">Concerto Command Line</a></li>
 <li><a href="/Blockchain-WW-Labs/Concerto/reference/concerto.generator.tests.html">Concerto Generator</a></li>
 <li><a href="/Blockchain-WW-Labs/Concerto/reference/concerto.participant.add.html">Concetio CLI Add Participant</a></li>
 <li><a href="/Blockchain-WW-Labs/Concerto/reference/concerto.identity.issue.html">Concerto CLI Issue Identity </a></li>
@@ -165,7 +165,7 @@ Network Definition and deployed it as a Business Network.</p>
 
 <p>The procedure below shows an example using the following model of a participant
 from the Getting Started walkthrough.</p>
-<div class="highlight"><pre><code class="language-text" data-lang="text"><span></span>namespace net.biz.digitalPropertyNetwork
+<div class="highlight"><pre><code class="language-" data-lang="">namespace net.biz.digitalPropertyNetwork
 
 participant Person identified by personId {
   o String personId
@@ -182,7 +182,7 @@ participant Person identified by personId {
 <ul>
 <li>JavaScript API</li>
 </ul>
-<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span></span><span class="kd">let</span> <span class="nx">businessNetworkConnection</span> <span class="o">=</span> <span class="cm">/* TODO: get a business network connection */</span>
+<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="kd">let</span> <span class="nx">businessNetworkConnection</span> <span class="o">=</span> <span class="cm">/* TODO: get a business network connection */</span>
 <span class="nx">businessNetworkConnection</span><span class="p">.</span><span class="nx">getParticipantRegistry</span><span class="p">(</span><span class="s1">'net.biz.digitalPropertyNetwork'</span><span class="p">)</span>
     <span class="p">.</span><span class="nx">then</span><span class="p">((</span><span class="nx">participantRegistry</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
         <span class="kd">let</span> <span class="nx">factory</span> <span class="o">=</span> <span class="nx">businessNetworkConnection</span><span class="p">.</span><span class="nx">getFactory</span><span class="p">();</span>
@@ -194,6 +194,7 @@ participant Person identified by personId {
     <span class="p">.</span><span class="k">catch</span><span class="p">((</span><span class="nx">error</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
         <span class="c1">// TODO: handle errors.</span>
     <span class="p">});</span>
+
 </code></pre></div>
 </li>
 </ol>
@@ -201,7 +202,7 @@ participant Person identified by personId {
 <ul>
 <li>
 <p>Command line</p>
-<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span></span>concerto participant add -n <span class="s1">'@ibm/digitalproperty-network'</span> -i admin -s Xurw3yU9zI0l -d <span class="s1">'{"$class":"net.biz.digitalPropertyNetwork.Person","personId":"mae@biznet.org","firstName":"Mae","lastName":"Smith"}'</span>
+<div class="highlight"><pre><code class="language-bash" data-lang="bash">concerto participant add -n <span class="s1">'@ibm/digitalproperty-network'</span> -i admin -s Xurw3yU9zI0l -d <span class="s1">'{"$class":"net.biz.digitalPropertyNetwork.Person","personId":"mae@biznet.org","firstName":"Mae","lastName":"Smith"}'</span>
 </code></pre></div>
 </li>
 </ul>

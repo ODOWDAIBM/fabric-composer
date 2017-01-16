@@ -92,7 +92,7 @@
 <li><a href="/Blockchain-WW-Labs/Concerto/reference/cto_language.html">Concerto Modeling Language</a></li>
 <li><a href="/Blockchain-WW-Labs/Concertoreference/connectionprofile.html">Connection Profile</a></li>
 <li><a href="/Blockchain-WW-Labs/Concerto/reference/js_scripts.html">Transaction Processor Functions</a></li>
-<li><a href="/Blockchain-WW-Labs/Concertoreference/commands.html">Concerto Command Line</a></li>
+<li><a href="/Blockchain-WW-Labs/Concerto/reference/commands.html">Concerto Command Line</a></li>
 <li><a href="/Blockchain-WW-Labs/Concerto/reference/concerto.generator.tests.html">Concerto Generator</a></li>
 <li><a href="/Blockchain-WW-Labs/Concerto/reference/concerto.participant.add.html">Concetio CLI Add Participant</a></li>
 <li><a href="/Blockchain-WW-Labs/Concerto/reference/concerto.identity.issue.html">Concerto CLI Issue Identity </a></li>
@@ -224,7 +224,7 @@ and transactions in the business network. The business network also specifies <e
 <p>Framework includes a powerful Object-Oriented modeling language, used to specify a domain model; the structure of assets, participants and transactions. The domain model is used across the Framework for code generation, type validation, user interface generation, API generation, amongst other things.</p>
 
 <h3 id="sample-framework-domain-model">Sample Framework Domain Model</h3>
-<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span></span><span class="nx">namespace</span> <span class="nx">net</span><span class="p">.</span><span class="nx">biz</span><span class="p">.</span><span class="nx">digitalPropertyNetwork</span>
+<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="nx">namespace</span> <span class="nx">net</span><span class="p">.</span><span class="nx">biz</span><span class="p">.</span><span class="nx">digitalPropertyNetwork</span>
 
 <span class="nx">asset</span> <span class="nx">LandTitle</span> <span class="nx">identified</span> <span class="nx">by</span> <span class="nx">titleId</span> <span class="p">{</span>
   <span class="nx">o</span> <span class="nb">String</span>   <span class="nx">titleId</span>
@@ -256,12 +256,12 @@ and transactions in the business network. The business network also specifies <e
 <h2 id="writing-transaction-processor-functions">Writing Transaction Processor functions</h2>
 
 <p>Technical Analysts write transaction processor functions using ES5 Javascript. These scripts are included in a business network definition and will be automatically executed when a transaction is submitted for processing. The transaction processor scripts can create, update, retrieve and delete assets based on the incoming transaction.</p>
-<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span></span><span class="s1">'use strict'</span><span class="p">;</span>
+<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="s1">'use strict'</span><span class="p">;</span>
 
-<span class="cm">/** Process a property that is held for sale</span>
-<span class="cm"> * @param {net.biz.digitalPropertyNetwork.LandTitle} propertyForSale the property to be sold</span>
-<span class="cm"> * @transaction</span>
-<span class="cm"> */</span>
+<span class="cm">/** Process a property that is held for sale
+ * @param {net.biz.digitalPropertyNetwork.LandTitle} propertyForSale the property to be sold
+ * @transaction
+ */</span>
 <span class="kd">function</span> <span class="nx">onRegisterPropertyForSale</span><span class="p">(</span><span class="nx">propertyForSale</span><span class="p">){</span>
     <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">'### onRegisterPropertyForSale '</span><span class="o">+</span><span class="nx">propertyForSale</span><span class="p">.</span><span class="nx">toString</span><span class="p">());</span>
     <span class="nx">propertyForSale</span><span class="p">.</span><span class="nx">title</span><span class="p">.</span><span class="nx">forSale</span> <span class="o">=</span> <span class="kc">true</span><span class="p">;</span>
@@ -280,7 +280,7 @@ and transactions in the business network. The business network also specifies <e
 <p>The <code>BusinessNetworkConnection</code> API is used to interact with a deployed business network: retrieving assets from asset registries, or submitting transactions.</p>
 
 <p>The sample below uses both the <code>AdminConnection</code> and <code>BusinessNetworkConnection</code> APIs to deploy a business network definition, and then connects using the client API to retrieve an asset registry.</p>
-<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span></span><span class="s1">'use strict'</span><span class="p">;</span>
+<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="s1">'use strict'</span><span class="p">;</span>
 
 <span class="kr">const</span> <span class="nx">AdminConnection</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">'@ibm/ibm-concerto-admin'</span><span class="p">).</span><span class="nx">AdminConnection</span><span class="p">;</span>
 <span class="kr">const</span> <span class="nx">BusinessNetworkConnection</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">'@ibm/ibm-concerto-client'</span><span class="p">).</span><span class="nx">BusinessNetworkConnection</span><span class="p">;</span>
@@ -291,11 +291,11 @@ and transactions in the business network. The business network also specifies <e
 <span class="kr">const</span> <span class="nx">concerto</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">BusinessNetworkConnection</span><span class="p">();</span>
 
 <span class="kr">const</span> <span class="nx">config</span> <span class="o">=</span> <span class="p">{</span>
-    <span class="nx">type</span><span class="o">:</span> <span class="s1">'hlf'</span><span class="p">,</span>
-    <span class="nx">keyValStore</span><span class="o">:</span> <span class="s1">'/tmp/keyValStore'</span><span class="p">,</span>
-    <span class="nx">membershipServicesURL</span><span class="o">:</span> <span class="s1">'grpc://localhost:7054'</span><span class="p">,</span>
-    <span class="nx">peerURL</span><span class="o">:</span> <span class="s1">'grpc://localhost:7051'</span><span class="p">,</span>
-    <span class="nx">eventHubURL</span><span class="o">:</span> <span class="s1">'grpc://localhost:7053'</span>
+    <span class="na">type</span><span class="p">:</span> <span class="s1">'hlf'</span><span class="p">,</span>
+    <span class="na">keyValStore</span><span class="p">:</span> <span class="s1">'/tmp/keyValStore'</span><span class="p">,</span>
+    <span class="na">membershipServicesURL</span><span class="p">:</span> <span class="s1">'grpc://localhost:7054'</span><span class="p">,</span>
+    <span class="na">peerURL</span><span class="p">:</span> <span class="s1">'grpc://localhost:7051'</span><span class="p">,</span>
+    <span class="na">eventHubURL</span><span class="p">:</span> <span class="s1">'grpc://localhost:7053'</span>
 <span class="p">};</span>
 
 <span class="kr">const</span> <span class="nx">CONNECTION_PROFILE_NAME</span> <span class="o">=</span> <span class="s1">'testprofile'</span><span class="p">;</span>
@@ -346,6 +346,7 @@ and transactions in the business network. The business network also specifies <e
   <span class="p">.</span><span class="k">catch</span><span class="p">((</span><span class="nx">err</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
       <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">'Failed: '</span> <span class="o">+</span> <span class="nx">err</span><span class="p">);</span>
   <span class="p">});</span>
+
 </code></pre></div>
 <h3 id="developing-web-user-interfaces">Developing Web User Interfaces</h3>
 

@@ -92,7 +92,7 @@
 <li><a href="/Blockchain-WW-Labs/Concerto/reference/cto_language.html">Concerto Modeling Language</a></li>
 <li><a href="/Blockchain-WW-Labs/Concertoreference/connectionprofile.html">Connection Profile</a></li>
 <li><a href="/Blockchain-WW-Labs/Concerto/reference/js_scripts.html">Transaction Processor Functions</a></li>
-<li><a href="/Blockchain-WW-Labs/Concertoreference/commands.html">Concerto Command Line</a></li>
+<li><a href="/Blockchain-WW-Labs/Concerto/reference/commands.html">Concerto Command Line</a></li>
 <li><a href="/Blockchain-WW-Labs/Concerto/reference/concerto.generator.tests.html">Concerto Generator</a></li>
 <li><a href="/Blockchain-WW-Labs/Concerto/reference/concerto.participant.add.html">Concetio CLI Add Participant</a></li>
 <li><a href="/Blockchain-WW-Labs/Concerto/reference/concerto.identity.issue.html">Concerto CLI Issue Identity </a></li>
@@ -202,33 +202,33 @@
 <p>The Config module is used to locate information to control how the logs are produced. </p>
 
 <p>For example</p>
-<div class="highlight"><pre><code class="language-text" data-lang="text"><span></span>{
-  "gettingstarted": {
-       "participantId" : "WebAppAdmin",
-       "participantPwd" :"DJY27pEnl16d",
-       "businessNetworkIdentifier" : "@ibm/digitalproperty-network",
-       "connectionProfile" :"defaultProfile"
-    },
-    "ConcertoConfig": {
-       "debug": {
-         "logger": "default",
-         "config": {
-           "console": {
-             "enabledLevel": "info",
-             "alwaysLevel": "none"
+<div class="highlight"><pre><code class="language-" data-lang=""><span class="p">{</span><span class="w">
+  </span><span class="nt">"gettingstarted"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+       </span><span class="nt">"participantId"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"WebAppAdmin"</span><span class="p">,</span><span class="w">
+       </span><span class="nt">"participantPwd"</span><span class="w"> </span><span class="p">:</span><span class="s2">"DJY27pEnl16d"</span><span class="p">,</span><span class="w">
+       </span><span class="nt">"businessNetworkIdentifier"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"@ibm/digitalproperty-network"</span><span class="p">,</span><span class="w">
+       </span><span class="nt">"connectionProfile"</span><span class="w"> </span><span class="p">:</span><span class="s2">"defaultProfile"</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="nt">"ConcertoConfig"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+       </span><span class="nt">"debug"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+         </span><span class="nt">"logger"</span><span class="p">:</span><span class="w"> </span><span class="s2">"default"</span><span class="p">,</span><span class="w">
+         </span><span class="nt">"config"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+           </span><span class="nt">"console"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+             </span><span class="nt">"enabledLevel"</span><span class="p">:</span><span class="w"> </span><span class="s2">"info"</span><span class="p">,</span><span class="w">
+             </span><span class="nt">"alwaysLevel"</span><span class="p">:</span><span class="w"> </span><span class="s2">"none"</span><span class="w">
 
-           },
-           "file": {
-             "filename": "./trace_PID.log",
-             "enabledLevel": "silly",
-             "alwaysLevel": "info"
-           }
-         }
-       }
-      }
+           </span><span class="p">},</span><span class="w">
+           </span><span class="nt">"file"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+             </span><span class="nt">"filename"</span><span class="p">:</span><span class="w"> </span><span class="s2">"./trace_PID.log"</span><span class="p">,</span><span class="w">
+             </span><span class="nt">"enabledLevel"</span><span class="p">:</span><span class="w"> </span><span class="s2">"silly"</span><span class="p">,</span><span class="w">
+             </span><span class="nt">"alwaysLevel"</span><span class="p">:</span><span class="w"> </span><span class="s2">"info"</span><span class="w">
+           </span><span class="p">}</span><span class="w">
+         </span><span class="p">}</span><span class="w">
+       </span><span class="p">}</span><span class="w">
+      </span><span class="p">}</span><span class="w">
 
-}
-</code></pre></div>
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div>
 <p>The first section is specific to the Getting Started application, the second <code>ConcertoConfig</code> section is for the Concerto framework. </p>
 
 <ul>
@@ -241,7 +241,7 @@
 <h2 id="enabling-more-information">Enabling more information</h2>
 
 <p>The standard way of enabling node.js applications for debug is to use the <code>DEBUG</code> environment variable. So therefore</p>
-<div class="highlight"><pre><code class="language-text" data-lang="text"><span></span>DEBUG=concerto:* node myApplication.js
+<div class="highlight"><pre><code class="language-" data-lang="">DEBUG=concerto:* node myApplication.js
 </code></pre></div>
 <p>Will enabled more tracing - this then will use the levels marked as <code>enabledLevel</code> in the configuration above. </p>
 
