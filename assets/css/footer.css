@@ -65,6 +65,13 @@
   background: #3398a9;
 }
 
+.SiteFooter .icon {
+  color: #FFF;
+  width: 30px;
+  height: 30px;
+  font-size: 30px;
+}
+
 @media (max-width: 800px) {
   .SiteFooter {
     display: block;
@@ -74,54 +81,5 @@
 @media (max-width: 500px) {
   .SiteFooter-links .mobile-ln {
     display: block;
-  }
-}
-
-/**
- * Financing Yeoman section
- */
-
-.Donation {
-  display: block;
-  position: relative;
-  padding-left: 160px;
-}
-
-.Donation-sticker {
-  position: absolute;
-  left: 0;
-  top: -100px;
-}
-
-.Donation-text {
-  position: relative;
-  z-index: 1;
-}
-
-.Donation-text a {
-  color: #fff;
-  text-decoration: none;
-}
-
-@media (max-width: 850px) {
-  .Donation {
-    text-align: center;
-    margin-bottom: 20px;
-    padding-left: 0;
-  }
-
-  .Donation-sticker-clipping {
-    position: absolute;
-    left: -20px;
-    right: -20px;
-    bottom: -20px;
-    top: -100px;
-    overflow: hidden;
-  }
-
-  .Donation-sticker {
-    left: 50%;
-    margin-left: -250px;
-    top: 0;
   }
 }

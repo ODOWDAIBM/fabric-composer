@@ -1,0 +1,2165 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
+	<title>Concerto Class: Engine</title>
+
+	<!--[if lt IE 9]>
+	<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+	<link type="text/css" rel="stylesheet" href="styles/sunlight.default.css">
+
+	<link type="text/css" rel="stylesheet" href="styles/site.spacelab.css">
+
+</head>
+
+<body>
+
+<div class="navbar navbar-default navbar-fixed-top navbar-inverse">
+<div class="container">
+	<div class="navbar-header">
+		<a class="navbar-brand" href="index.html">Concerto</a>
+		<button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#topNavigation">
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+        </button>
+	</div>
+	<div class="navbar-collapse collapse" id="topNavigation">
+		<ul class="nav navbar-nav">
+			
+			<li class="dropdown">
+				<a href="modules.list.html" class="dropdown-toggle" data-toggle="dropdown">Modules<b class="caret"></b></a>
+				<ul class="dropdown-menu ">
+					<li><a href="module-ibm-concerto-admin.html">ibm-concerto-admin</a></li><li><a href="module-ibm-concerto-client.html">ibm-concerto-client</a></li><li><a href="module-ibm-concerto-common.html">ibm-concerto-common</a></li><li><a href="module-ibm-concerto-runtime.html">ibm-concerto-runtime</a></li>
+				</ul>
+			</li>
+			
+			<li class="dropdown">
+				<a href="classes.list.html" class="dropdown-toggle" data-toggle="dropdown">Classes<b class="caret"></b></a>
+				<ul class="dropdown-menu ">
+					<li><a href="AssetRegistry.html">AssetRegistry</a></li><li><a href="Factory.html">Factory</a></li><li><a href="FileWallet.html">FileWallet</a></li><li><a href="IdentityManager.html">IdentityManager</a></li><li><a href="JSTransactionExecutor.html">JSTransactionExecutor</a></li><li><a href="module-concerto-admin.AdminConnection.html">concerto-admin.AdminConnection</a></li><li><a href="module-concerto-client.AssetRegistry.html">concerto-client.AssetRegistry</a></li><li><a href="module-concerto-client.BusinessNetworkConnection.html">concerto-client.BusinessNetworkConnection</a></li><li><a href="module-concerto-client.ParticipantRegistry.html">concerto-client.ParticipantRegistry</a></li><li><a href="module-concerto-client.Registry.html">concerto-client.Registry</a></li><li><a href="module-concerto-client.TransactionRegistry.html">concerto-client.TransactionRegistry</a></li><li><a href="module-concerto-common.AclFile.html">concerto-common.AclFile</a></li><li><a href="module-concerto-common.AclManager.html">concerto-common.AclManager</a></li><li><a href="module-concerto-common.AclRule.html">concerto-common.AclRule</a></li><li><a href="module-concerto-common.APISignatureGenerator.html">concerto-common.APISignatureGenerator</a></li><li><a href="module-concerto-common.AssetDeclaration.html">concerto-common.AssetDeclaration</a></li><li><a href="module-concerto-common.BaseException.html">concerto-common.BaseException</a></li><li><a href="module-concerto-common.BusinessNetworkDefinition.html">concerto-common.BusinessNetworkDefinition</a></li><li><a href="module-concerto-common.ClassDeclaration.html">concerto-common.ClassDeclaration</a></li><li><a href="module-concerto-common.Connection.html">concerto-common.Connection</a></li><li><a href="module-concerto-common.ConnectionManager.html">concerto-common.ConnectionManager</a></li><li><a href="module-concerto-common.ConnectionProfileManager.html">concerto-common.ConnectionProfileManager</a></li><li><a href="module-concerto-common.ConnectionProfileStore.html">concerto-common.ConnectionProfileStore</a></li><li><a href="module-concerto-common.EnumDeclaration.html">concerto-common.EnumDeclaration</a></li><li><a href="module-concerto-common.EnumValueDeclaration.html">concerto-common.EnumValueDeclaration</a></li><li><a href="module-concerto-common.Factory.html">concerto-common.Factory</a></li><li><a href="module-concerto-common.Field.html">concerto-common.Field</a></li><li><a href="module-concerto-common.FileWriter.html">concerto-common.FileWriter</a></li><li><a href="module-concerto-common.FSConnectionProfileStore.html">concerto-common.FSConnectionProfileStore</a></li><li><a href="module-concerto-common.FunctionDeclaration.html">concerto-common.FunctionDeclaration</a></li><li><a href="module-concerto-common.GoLangVisitor.html">concerto-common.GoLangVisitor</a></li><li><a href="module-concerto-common.Identifiable.html">concerto-common.Identifiable</a></li><li><a href="module-concerto-common.IllegalModelException.html">concerto-common.IllegalModelException</a></li><li><a href="module-concerto-common.InstanceGenerator.html">concerto-common.InstanceGenerator</a></li><li><a href="module-concerto-common.Introspector.html">concerto-common.Introspector</a></li><li><a href="module-concerto-common.JavaScriptParser.html">concerto-common.JavaScriptParser</a></li><li><a href="module-concerto-common.JSONGenerator.html">concerto-common.JSONGenerator</a></li><li><a href="module-concerto-common.JSONPopulator.html">concerto-common.JSONPopulator</a></li><li><a href="module-concerto-common.JSONSchemaVisitor.html">concerto-common.JSONSchemaVisitor</a></li><li><a href="module-concerto-common.JSONWriter.html">concerto-common.JSONWriter</a></li><li><a href="module-concerto-common.Logger.html">concerto-common.Logger</a></li><li><a href="module-concerto-common.LoopbackVisitor.html">concerto-common.LoopbackVisitor</a></li><li><a href="module-concerto-common.MemoryConnectionProfileStore.html">concerto-common.MemoryConnectionProfileStore</a></li><li><a href="module-concerto-common.ModelBinding.html">concerto-common.ModelBinding</a></li><li><a href="module-concerto-common.ModelFile.html">concerto-common.ModelFile</a></li><li><a href="module-concerto-common.ModelManager.html">concerto-common.ModelManager</a></li><li><a href="module-concerto-common.ModelUtil.html">concerto-common.ModelUtil</a></li><li><a href="module-concerto-common.Node.html">concerto-common.Node</a></li><li><a href="module-concerto-common.NumberValidator.html">concerto-common.NumberValidator</a></li><li><a href="module-concerto-common.ParseException.html">concerto-common.ParseException</a></li><li><a href="module-concerto-common.ParticipantDeclaration.html">concerto-common.ParticipantDeclaration</a></li><li><a href="module-concerto-common.PlantUMLGenerator.html">concerto-common.PlantUMLGenerator</a></li><li><a href="module-concerto-common.PlantUMLVisitor.html">concerto-common.PlantUMLVisitor</a></li><li><a href="module-concerto-common.Predicate.html">concerto-common.Predicate</a></li><li><a href="module-concerto-common.Property.html">concerto-common.Property</a></li><li><a href="module-concerto-common.Relationship.html">concerto-common.Relationship</a></li><li><a href="module-concerto-common.RelationshipDeclaration.html">concerto-common.RelationshipDeclaration</a></li><li><a href="module-concerto-common.Resource.html">concerto-common.Resource</a></li><li><a href="module-concerto-common.ResourceValidator.html">concerto-common.ResourceValidator</a></li><li><a href="module-concerto-common.Script.html">concerto-common.Script</a></li><li><a href="module-concerto-common.ScriptManager.html">concerto-common.ScriptManager</a></li><li><a href="module-concerto-common.SecurityContext.html">concerto-common.SecurityContext</a></li><li><a href="module-concerto-common.SecurityException.html">concerto-common.SecurityException</a></li><li><a href="module-concerto-common.Serializer.html">concerto-common.Serializer</a></li><li><a href="module-concerto-common.StringValidator.html">concerto-common.StringValidator</a></li><li><a href="module-concerto-common.TransactionDeclaration.html">concerto-common.TransactionDeclaration</a></li><li><a href="module-concerto-common.TypedStack.html">concerto-common.TypedStack</a></li><li><a href="module-concerto-common.TypescriptVisitor.html">concerto-common.TypescriptVisitor</a></li><li><a href="module-concerto-common.Util.html">concerto-common.Util</a></li><li><a href="module-concerto-common.ValidatedResource.html">concerto-common.ValidatedResource</a></li><li><a href="module-concerto-common.ValidationException.html">concerto-common.ValidationException</a></li><li><a href="module-concerto-common.Validator.html">concerto-common.Validator</a></li><li><a href="module-concerto-common.VersionChecker.html">concerto-common.VersionChecker</a></li><li><a href="module-concerto-common.Writer.html">concerto-common.Writer</a></li><li><a href="module-concerto-runtime.AccessController.html">concerto-runtime.AccessController</a></li><li><a href="module-concerto-runtime.AccessException.html">concerto-runtime.AccessException</a></li><li><a href="module-concerto-runtime.Api.html">concerto-runtime.Api</a></li><li><a href="module-concerto-runtime.AssetRegistry.html">concerto-runtime.AssetRegistry</a></li><li><a href="module-concerto-runtime.Container.html">concerto-runtime.Container</a></li><li><a href="module-concerto-runtime.Context.html">concerto-runtime.Context</a></li><li><a href="module-concerto-runtime.DataCollection.html">concerto-runtime.DataCollection</a></li><li><a href="module-concerto-runtime.DataService.html">concerto-runtime.DataService</a></li><li><a href="module-concerto-runtime.Engine.html">concerto-runtime.Engine</a></li><li><a href="module-concerto-runtime.EngineBusinessNetworks.html">concerto-runtime.EngineBusinessNetworks</a></li><li><a href="module-concerto-runtime.EngineIdentities.html">concerto-runtime.EngineIdentities</a></li><li><a href="module-concerto-runtime.EngineRegistries.html">concerto-runtime.EngineRegistries</a></li><li><a href="module-concerto-runtime.EngineResources.html">concerto-runtime.EngineResources</a></li><li><a href="module-concerto-runtime.EngineTransactions.html">concerto-runtime.EngineTransactions</a></li><li><a href="module-concerto-runtime.Factory.html">concerto-runtime.Factory</a></li><li><a href="module-concerto-runtime.IdentityService.html">concerto-runtime.IdentityService</a></li><li><a href="module-concerto-runtime.LoggingService.html">concerto-runtime.LoggingService</a></li><li><a href="module-concerto-runtime.ParticipantRegistry.html">concerto-runtime.ParticipantRegistry</a></li><li><a href="module-concerto-runtime.Resolver.html">concerto-runtime.Resolver</a></li><li><a href="module-concerto-runtime.TransactionLogger.html">concerto-runtime.TransactionLogger</a></li><li><a href="ParticipantRegistry.html">ParticipantRegistry</a></li><li><a href="QueryExecutor.html">QueryExecutor</a></li><li><a href="Registry.html">Registry</a></li><li><a href="RegistryManager.html">RegistryManager</a></li><li><a href="TransactionExecutor.html">TransactionExecutor</a></li><li><a href="Wallet.html">Wallet</a></li>
+				</ul>
+			</li>
+			
+			<li class="dropdown">
+				<a href="events.list.html" class="dropdown-toggle" data-toggle="dropdown">Events<b class="caret"></b></a>
+				<ul class="dropdown-menu ">
+					<li><a href="module-concerto-client.AssetRegistry.html#event:resourceadded">concerto-client.AssetRegistry#event:resourceadded</a></li><li><a href="module-concerto-client.AssetRegistry.html#event:resourceremoved">concerto-client.AssetRegistry#event:resourceremoved</a></li><li><a href="module-concerto-client.AssetRegistry.html#event:resourceupdated">concerto-client.AssetRegistry#event:resourceupdated</a></li><li><a href="module-concerto-client.ParticipantRegistry.html#event:resourceadded">concerto-client.ParticipantRegistry#event:resourceadded</a></li><li><a href="module-concerto-client.ParticipantRegistry.html#event:resourceremoved">concerto-client.ParticipantRegistry#event:resourceremoved</a></li><li><a href="module-concerto-client.ParticipantRegistry.html#event:resourceupdated">concerto-client.ParticipantRegistry#event:resourceupdated</a></li><li><a href="module-concerto-client.TransactionRegistry.html#event:resourceadded">concerto-client.TransactionRegistry#event:resourceadded</a></li><li><a href="module-concerto-client.TransactionRegistry.html#event:resourceremoved">concerto-client.TransactionRegistry#event:resourceremoved</a></li><li><a href="module-concerto-client.TransactionRegistry.html#event:resourceupdated">concerto-client.TransactionRegistry#event:resourceupdated</a></li><li><a href="Registry.html#event:resourceadded">Registry#event:resourceadded</a></li><li><a href="Registry.html#event:resourceremoved">Registry#event:resourceremoved</a></li><li><a href="Registry.html#event:resourceupdated">Registry#event:resourceupdated</a></li><li><a href="RegistryManager.html#event:registryadded">RegistryManager#event:registryadded</a></li>
+				</ul>
+			</li>
+			
+			<li class="dropdown">
+				<a href="global.html" class="dropdown-toggle" data-toggle="dropdown">Global<b class="caret"></b></a>
+				<ul class="dropdown-menu ">
+					<li><a href="global.html#findCommentBefore">findCommentBefore</a></li><li><a href="global.html#formatMessage">formatMessage</a></li><li><a href="global.html#getDecorators">getDecorators</a></li><li><a href="global.html#getExample">getExample</a></li><li><a href="global.html#getLogger">getLogger</a></li><li><a href="global.html#getMethodArguments">getMethodArguments</a></li><li><a href="global.html#getReturnType">getReturnType</a></li><li><a href="global.html#getText">getText</a></li><li><a href="global.html#getThrows">getThrows</a></li><li><a href="global.html#getVisibility">getVisibility</a></li><li><a href="global.html#Globalize">Globalize</a></li><li><a href="global.html#messageFormatter">messageFormatter</a></li><li><a href="global.html#mixin">mixin</a></li><li><a href="global.html#paramsToString">paramsToString</a></li><li><a href="global.html#processDirectory">processDirectory</a></li><li><a href="global.html#processFile">processFile</a></li><li><a href="global.html#theWallet">theWallet</a></li><li><a href="global.html#toUMLFilename">toUMLFilename</a></li>
+				</ul>
+			</li>
+			
+		</ul>
+        
+            <div class="col-sm-3 col-md-3">
+                <form class="navbar-form" role="search">
+                    <div class="input-group">
+                        <input type="text" class="form-control" placeholder="Search" name="q" id="search-input">
+                        <div class="input-group-btn">
+                            <button class="btn btn-default" id="search-submit"><i class="glyphicon glyphicon-search"></i></button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        
+	</div>
+
+</div>
+</div>
+
+
+<div class="container" id="toc-content">
+<div class="row">
+
+	
+	<div class="col-md-8">
+	
+		<div id="main">
+			
+
+	<h1 class="page-title">Class: Engine</h1>
+<section>
+
+<header>
+    
+        <h2>
+        Engine
+        </h2>
+        
+            <div class="class-description"><p>The JavaScript engine responsible for processing chaincode commands.</p></div>
+        
+    
+</header>
+
+
+<article>
+    <div class="container-overview">
+    
+        
+<hr>
+<dt>
+    <h4 class="name" id="Engine"><span class="type-signature">&lt;protected> </span>new Engine(container)</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>Constructor.</p>
+    </div>
+    
+
+    
+
+    
+
+    
+    
+        <h5>Parameters:</h5>
+        
+
+<table class="params table table-striped">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>container</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Container</span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>The chaincode container hosting this engine.</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
+	<dd class="tag-source">
+		<ul class="dummy">
+			<li>
+				<a href="concerto-runtime_lib_engine.js.html">concerto-runtime/lib/engine.js</a>,
+				 <a href="concerto-runtime_lib_engine.js.html#sunlight-1-line-30">line 30</a>
+			</li>
+		</ul>
+	</dd>
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dd>
+
+    
+    </div>
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+        <h3 class="subsection-title">Methods</h3>
+
+        <dl>
+            
+<hr>
+<dt>
+    <h4 class="name" id="_init"><span class="type-signature">&lt;private> </span>_init(context, fcn, args, callback)</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>Handle an initialisation (deploy) request.</p>
+    </div>
+    
+
+    
+
+    
+
+    
+    
+        <h5>Parameters:</h5>
+        
+
+<table class="params table table-striped">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>context</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Context</span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>The request context.</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>fcn</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>The name of the chaincode function to invoke.</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>args</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Array.&lt;string></span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>The arguments to pass to the chaincode function.</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>callback</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">function</span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>The callback function to call when complete.</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
+	<dd class="tag-source">
+		<ul class="dummy">
+			<li>
+				<a href="concerto-runtime_lib_engine.js.html">concerto-runtime/lib/engine.js</a>,
+				 <a href="concerto-runtime_lib_engine.js.html#sunlight-1-line-210">line 210</a>
+			</li>
+		</ul>
+	</dd>
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt>
+    <h4 class="name" id="_invoke"><span class="type-signature">&lt;private> </span>_invoke(context, fcn, args, callback)</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>Handle an invoke request.</p>
+    </div>
+    
+
+    
+
+    
+
+    
+    
+        <h5>Parameters:</h5>
+        
+
+<table class="params table table-striped">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>context</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Context</span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>The request context.</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>fcn</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>The name of the chaincode function to invoke.</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>args</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Array.&lt;string></span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>The arguments to pass to the chaincode function.</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>callback</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">function</span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>The callback function to call when complete.</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
+	<dd class="tag-source">
+		<ul class="dummy">
+			<li>
+				<a href="concerto-runtime_lib_engine.js.html">concerto-runtime/lib/engine.js</a>,
+				 <a href="concerto-runtime_lib_engine.js.html#sunlight-1-line-259">line 259</a>
+			</li>
+		</ul>
+	</dd>
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt>
+    <h4 class="name" id="_query"><span class="type-signature">&lt;private> </span>_query(context, fcn, args, callback)</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>Handle a query request.</p>
+    </div>
+    
+
+    
+
+    
+
+    
+    
+        <h5>Parameters:</h5>
+        
+
+<table class="params table table-striped">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>context</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Context</span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>The request context.</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>fcn</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>The name of the chaincode function to invoke.</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>args</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Array.&lt;string></span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>The arguments to pass to the chaincode function.</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>callback</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">function</span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>The callback function to call when complete.</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
+	<dd class="tag-source">
+		<ul class="dummy">
+			<li>
+				<a href="concerto-runtime_lib_engine.js.html">concerto-runtime/lib/engine.js</a>,
+				 <a href="concerto-runtime_lib_engine.js.html#sunlight-1-line-309">line 309</a>
+			</li>
+		</ul>
+	</dd>
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt>
+    <h4 class="name" id="getContainer"><span class="type-signature"></span>getContainer()</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>Get the chaincode container hosting this engine.</p>
+    </div>
+    
+
+    
+
+    
+
+    
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
+	<dd class="tag-source">
+		<ul class="dummy">
+			<li>
+				<a href="concerto-runtime_lib_engine.js.html">concerto-runtime/lib/engine.js</a>,
+				 <a href="concerto-runtime_lib_engine.js.html#sunlight-1-line-48">line 48</a>
+			</li>
+		</ul>
+	</dd>
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <h5>Returns:</h5>
+    
+            
+<div class="param-desc">
+    <p>The chaincode container hosting this engine.</p>
+</div>
+
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">Container</span>
+
+
+
+    </dd>
+</dl>
+
+
+        
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt>
+    <h4 class="name" id="init"><span class="type-signature"></span>init(context, fcn, args)</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>Handle an initialisation (deploy) request.</p>
+    </div>
+    
+
+    
+
+    
+
+    
+    
+        <h5>Parameters:</h5>
+        
+
+<table class="params table table-striped">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>context</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Context</span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>The request context.</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>fcn</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>The name of the chaincode function to invoke.</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>args</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Array.&lt;string></span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>The arguments to pass to the chaincode function.</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
+	<dd class="tag-source">
+		<ul class="dummy">
+			<li>
+				<a href="concerto-runtime_lib_engine.js.html">concerto-runtime/lib/engine.js</a>,
+				 <a href="concerto-runtime_lib_engine.js.html#sunlight-1-line-98">line 98</a>
+			</li>
+		</ul>
+	</dd>
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <h5>Returns:</h5>
+    
+            
+<div class="param-desc">
+    <p>A promise that will be resolved when complete, or rejected<br>with an error.</p>
+</div>
+
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">Promise</span>
+
+
+
+    </dd>
+</dl>
+
+
+        
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt>
+    <h4 class="name" id="installLogger"><span class="type-signature"></span>installLogger()</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>Install the runtime logger into the common module.</p>
+    </div>
+    
+
+    
+
+    
+
+    
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
+	<dd class="tag-source">
+		<ul class="dummy">
+			<li>
+				<a href="concerto-runtime_lib_engine.js.html">concerto-runtime/lib/engine.js</a>,
+				 <a href="concerto-runtime_lib_engine.js.html#sunlight-1-line-55">line 55</a>
+			</li>
+		</ul>
+	</dd>
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt>
+    <h4 class="name" id="invoke"><span class="type-signature"></span>invoke(context, fcn, args)</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>Handle an invoke request.</p>
+    </div>
+    
+
+    
+
+    
+
+    
+    
+        <h5>Parameters:</h5>
+        
+
+<table class="params table table-striped">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>context</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Context</span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>The request context.</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>fcn</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>The name of the chaincode function to invoke.</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>args</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Array.&lt;string></span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>The arguments to pass to the chaincode function.</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
+	<dd class="tag-source">
+		<ul class="dummy">
+			<li>
+				<a href="concerto-runtime_lib_engine.js.html">concerto-runtime/lib/engine.js</a>,
+				 <a href="concerto-runtime_lib_engine.js.html#sunlight-1-line-228">line 228</a>
+			</li>
+		</ul>
+	</dd>
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <h5>Returns:</h5>
+    
+            
+<div class="param-desc">
+    <p>A promise that will be resolved when complete, or rejected<br>with an error.</p>
+</div>
+
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">Promise</span>
+
+
+
+    </dd>
+</dl>
+
+
+        
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt>
+    <h4 class="name" id="ping"><span class="type-signature"></span>ping(context, args)</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>Handle a ping request.</p>
+    </div>
+    
+
+    
+
+    
+
+    
+    
+        <h5>Parameters:</h5>
+        
+
+<table class="params table table-striped">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>context</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Context</span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>The request context.</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>args</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Array.&lt;string></span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>The arguments to pass to the chaincode function.</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
+	<dd class="tag-source">
+		<ul class="dummy">
+			<li>
+				<a href="concerto-runtime_lib_engine.js.html">concerto-runtime/lib/engine.js</a>,
+				 <a href="concerto-runtime_lib_engine.js.html#sunlight-1-line-326">line 326</a>
+			</li>
+		</ul>
+	</dd>
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <h5>Returns:</h5>
+    
+            
+<div class="param-desc">
+    <p>A promise that will be resolved when complete, or rejected<br>with an error.</p>
+</div>
+
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">Promise</span>
+
+
+
+    </dd>
+</dl>
+
+
+        
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt>
+    <h4 class="name" id="query"><span class="type-signature"></span>query(context, fcn, args)</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>Handle a query request.</p>
+    </div>
+    
+
+    
+
+    
+
+    
+    
+        <h5>Parameters:</h5>
+        
+
+<table class="params table table-striped">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>context</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Context</span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>The request context.</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>fcn</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>The name of the chaincode function to invoke.</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>args</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Array.&lt;string></span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>The arguments to pass to the chaincode function.</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
+	<dd class="tag-source">
+		<ul class="dummy">
+			<li>
+				<a href="concerto-runtime_lib_engine.js.html">concerto-runtime/lib/engine.js</a>,
+				 <a href="concerto-runtime_lib_engine.js.html#sunlight-1-line-277">line 277</a>
+			</li>
+		</ul>
+	</dd>
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <h5>Returns:</h5>
+    
+            
+<div class="param-desc">
+    <p>A promise that will be resolved when complete, or rejected<br>with an error.</p>
+</div>
+
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">Promise</span>
+
+
+
+    </dd>
+</dl>
+
+
+        
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt>
+    <h4 class="name" id="toJSON"><span class="type-signature"></span>toJSON()</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>Stop serialization of this object.</p>
+    </div>
+    
+
+    
+
+    
+
+    
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
+	<dd class="tag-source">
+		<ul class="dummy">
+			<li>
+				<a href="concerto-runtime_lib_engine.js.html">concerto-runtime/lib/engine.js</a>,
+				 <a href="concerto-runtime_lib_engine.js.html#sunlight-1-line-350">line 350</a>
+			</li>
+		</ul>
+	</dd>
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <h5>Returns:</h5>
+    
+            
+<div class="param-desc">
+    <p>An empty object.</p>
+</div>
+
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">Object</span>
+
+
+
+    </dd>
+</dl>
+
+
+        
+
+    
+</dd>
+
+        </dl>
+    
+
+    
+
+    
+</article>
+
+</section>
+
+
+
+
+		</div>
+	</div>
+
+	<div class="clearfix"></div>
+
+	
+		<div class="col-md-3">
+			<div id="toc" class="col-md-3 hidden-xs hidden-sm hidden-md"></div>
+		</div>
+	
+
+</div>
+</div>
+
+
+    <div class="modal fade" id="searchResults">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h4 class="modal-title">Search results</h4>
+          </div>
+          <div class="modal-body"></div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          </div>
+        </div><!-- /.modal-content -->
+      </div><!-- /.modal-dialog -->
+    </div>
+
+
+<footer>
+
+
+	<span class="copyright">
+	Copyright IBM Corp. 2017
+	</span>
+
+<span class="jsdoc-message">
+	Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.4.3</a>
+	
+		on Tue Jan 17th 2017
+	
+	using the <a href="https://github.com/docstrap/docstrap">DocStrap template</a>.
+</span>
+</footer>
+
+<script src="scripts/docstrap.lib.js"></script>
+<script src="scripts/toc.js"></script>
+
+    <script type="text/javascript" src="scripts/fulltext-search-ui.js"></script>
+
+
+<script>
+$( function () {
+	$( "[id*='$']" ).each( function () {
+		var $this = $( this );
+
+		$this.attr( "id", $this.attr( "id" ).replace( "$", "__" ) );
+	} );
+
+	$( ".tutorial-section pre, .readme-section pre, pre.prettyprint.source" ).each( function () {
+		var $this = $( this );
+
+		var example = $this.find( "code" );
+		exampleText = example.html();
+		var lang = /{@lang (.*?)}/.exec( exampleText );
+		if ( lang && lang[1] ) {
+			exampleText = exampleText.replace( lang[0], "" );
+			example.html( exampleText );
+			lang = lang[1];
+		} else {
+			var langClassMatch = example.parent()[0].className.match(/lang\-(\S+)/);
+			lang = langClassMatch ? langClassMatch[1] : "javascript";
+		}
+
+		if ( lang ) {
+
+			$this
+			.addClass( "sunlight-highlight-" + lang )
+			.addClass( "linenums" )
+			.html( example.html() );
+
+		}
+	} );
+
+	Sunlight.highlightAll( {
+		lineNumbers : true,
+		showMenu : true,
+		enableDoclinks : true
+	} );
+
+	$.catchAnchorLinks( {
+        navbarOffset: 10
+	} );
+	$( "#toc" ).toc( {
+		anchorName  : function ( i, heading, prefix ) {
+			return $( heading ).attr( "id" ) || ( prefix + i );
+		},
+		selectors   : "#toc-content h1,#toc-content h2,#toc-content h3,#toc-content h4",
+		showAndHide : false,
+		smoothScrolling: true
+	} );
+
+	$( "#main span[id^='toc']" ).addClass( "toc-shim" );
+	$( '.dropdown-toggle' ).dropdown();
+
+    $( "table" ).each( function () {
+      var $this = $( this );
+      $this.addClass('table');
+    } );
+
+} );
+</script>
+
+
+
+<!--Navigation and Symbol Display-->
+
+
+<!--Google Analytics-->
+
+
+
+    <script type="text/javascript">
+        $(document).ready(function() {
+            SearcherDisplay.init();
+        });
+    </script>
+
+
+</body>
+</html>
