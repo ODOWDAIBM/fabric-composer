@@ -190,8 +190,8 @@ Logo
   position: absolute;
   top: 0.5em;
   left: 1.3em;
-  right: 1.0em;
-  width: 5.0em;
+  /*right: 1.0em;
+  width: 5.0em;*/
   margin: 0;
   padding: 0;
   line-height: normal;
@@ -199,6 +199,11 @@ Logo
 
 .logo img {
   max-width: 180%;
+}
+
+.logot  {
+  color: #fff;
+  text-decoration: none;
 }
 
 /*
@@ -1533,4 +1538,63 @@ Button,
     border-radius: 3px;
     background-image: url("./assets/img/video-bg-overlay.png") center no-repeat;
     z-index:-1;
+}
+
+
+
+
+/* entire container, keeps perspective */
+.flip-container {
+	perspective: 1000px;
+}
+	/* flip the pane when hovered */
+	.flip-container:hover .flipper, .flip-container.hover .flipper {
+		transform: rotateY(180deg);
+	}
+
+.flip-container, .front, .back {
+	width: 150px;
+	height: 150px;
+}
+
+/* flip speed goes here */
+.flipper {
+	transition: 0.6s;
+	transform-style: preserve-3d;
+
+	position: relative;
+}
+
+/* hide back of pane during swap */
+.front, .back {
+	backface-visibility: hidden;
+
+	position: absolute;
+	top: 0;
+	left: 0;
+  text-align: center;
+
+  color: #fff;
+  display: flex;
+justify-content: center; /* align horizontal */
+align-items: center; /* align vertical */
+}
+
+.front {
+  background: #302560;
+  font-weight: bold;
+}
+.back {
+  background: #785ef0;
+}
+/* front pane, placed above back */
+.front {
+	z-index: 2;
+	/* for firefox 31 */
+	transform: rotateY(0deg);
+}
+
+/* back, initially hidden pane */
+.back {
+	transform: rotateY(180deg);
 }
