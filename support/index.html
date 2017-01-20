@@ -191,7 +191,7 @@
 
 <p>Is the framework a design time only tool, or is it by applications during any transaction invocation, i.e., runtime?</p>
 
-<h3 id="answer-4">Answer 4</h3>
+<h4 id="answer-4">Answer 4</h4>
 
 <p>Both design time and runtime</p>
 
@@ -199,7 +199,7 @@
 
 <p>Is there an outlook on when Fabric v1 will be supported?</p>
 
-<h3 id="answer-5">Answer 5</h3>
+<h4 id="answer-5">Answer 5</h4>
 
 <p>We will start the port as soon as Fabric is stable / approaching GA. It’s the usual balance between being on the cutting edge / early validation of the underlying platform and getting stuff done. We have weekly calls with Jim Zhang (@jzhang, <a href="mailto:jzhang@us.ibm.com">jzhang@us.ibm.com</a>) and Gari Singh (@garisingh, <a href="mailto:garis@us.ibm.com">garis@us.ibm.com</a>) so I’m optimistic it won’t take us too long to port Concerto, and the breakage for Concerto users should be small.</p>
 
@@ -207,7 +207,7 @@
 
 <p>If you aren&#39;t generating go or java code, how do you ensure that different apps have isolated data? If you had just one set of chaincodes interpreting the application description, wouldn&#39;t all endorsers/validators of that chaincode see data for all apps? How would you allow different endorsers for different apps? Do you have a different instance of the runtime for each time?</p>
 
-<h3 id="answer-6">Answer 6</h3>
+<h4 id="answer-6">Answer 6</h4>
 
 <p>There is one instance of the Concerto Go &quot;system&quot; chaincode deployed for each business network (app), so that provides isolation between business networks.</p>
 
@@ -215,7 +215,7 @@
 
 <p>One for each business network or one for each app?</p>
 
-<h3 id="answer-7">Answer 7</h3>
+<h4 id="answer-7">Answer 7</h4>
 
 <p>Business Network Definition is a Concerto concept — is represents a set of participants that want to exchange assets using transactions. The Business Network Definition is isolated from other deployed Business Network Definitions by deploying it to its own chaincode. We are working on docs/glossary etc. for Playback 1 which will make this stuff much clearer… I hope!</p>
 
@@ -223,31 +223,31 @@
 
 <p>Who would be the endorsers for the concerto chaincode(s)?</p>
 
-<h3 id="answer-8">Answer 8</h3>
+<h4 id="answer-8">Answer 8</h4>
 
 <p>We will be updating the Concerto API&#39;s to account for the changes involving endorsers in fabric v1</p>
 
 <h3 id="question-9">Question 9</h3>
 
-<p>Will the “early program” be useful for people who choose not to use Concerto? Does this question even make sense?</p>
+<p>Will the “early program” be useful for people who choose not to use Concerto?</p>
 
-<h3 id="answer-9">Answer 9</h3>
+<h4 id="answer-9">Answer 9</h4>
 
-<p>The early program is really aimed at Concerto.  Now, Concerto layers on top of HL fabric, Concerto works nicely with HSBN already, so it will help you get going with all HL fabric deployments.  What it won&#39;t do is teach you how to write Go chaincode, because the programming model is much simpler.  (see the pinned video at the top of the channel).</p>
+<p>The early program is really aimed at Concerto.  Now, Concerto layers on top of HL fabric, Concerto works nicely with HSBN already, so it will help you get going with all HL fabric deployments.  What it won&#39;t do is teach you how to write Go chaincode, because the programming model is much simpler.  (see the pinned video at the top of the #concerto slack channel within the Blockchain slack team).</p>
 
 <h3 id="question-10">Question 10</h3>
 
 <p>Majority of the BC use cases will be about managing assets and transfers. Use cases like Trade Finance, Logistics, etc., which are about managing records and documents on BC for participating parties and controlling access to these records based on the permission configured for each party and the workflow state, is another class of use cases that can be modelled relatively easily by a simple smart contract program without having support for assets and transfers.  What are your thoughts for such use cases? SC Framework and SCDL is mainly for such use cases.</p>
 
-<h3 id="answer-10">Answer 10</h3>
+<h4 id="answer-10">Answer 10</h4>
 
-<p>The early program is really aimed at Concerto.  Now, Concerto layers on top of HL fabric, Concerto works nicely with HSBN already, so it will help you get going with all HL fabric deployments.  What it won&#39;t do is teach you how to write Go chaincode, because the programming model is much simpler.  (see the pinned video at the top of the channel).</p>
+<p>We chose the term &quot;asset&quot; as it has a real world feeling, and is business meaningful.  Actually, as per the white paper, we consider everything in concerto a &quot;resource&quot;, which is actually a great technical term (URIs etc etc), and economic term (the allocation of scare resources). So, it&#39;s easy to see how we can think of documents as resources, or as assets, because they are valuable.  The key point about the term &quot;asset&quot; or &quot;resource&quot; is that it&#39;s something that&#39;s of value that&#39;s exchanged between counterparties in a business network. Net net, I think it either should be possible to model the documents as assets, or if we need to subclass them from resources. Either way they will work just fine I think.  That&#39;s not to say there isn&#39;t a huge amount of learning to be gained from this exercise, so thanks again for starting the discussion.</p>
 
 <h3 id="question-11">Question 11</h3>
 
 <p>The early program will run on 0.6 but the framework will move to 1.0 as soon as the code is ready. What does this mean to the client given that 1.0 is so different from 0.6?</p>
 
-<h3 id="answer-11">Answer 11</h3>
+<h4 id="answer-11">Answer 11</h4>
 
 <p>You&#39;ll be fine. The thing about concerto is that it abstracts away these issues.  Specifically, for endorser/consenter, we&#39;ll change submit transaction from being against the network to being against a counterparty, Business networks map directly to channels, and concerto already has the concept of linked resources, so different networks will be able to link to each other.  Finally, the new database support will make our queries more efficient. Net is that there will be small application changes on the submitTransaction API. The new stuff in V1 is super btw- the endorser consenter model mirrors what happens in the real wold.  For example, in HL 0.x if I want to do (e.g.) a funds transfer someone else in the network, I submit that transaction to the network.  In V1.x, I submit the transaction to my bank and then it makes sure that the transaction is endorsed appropriately - probably by making sure my bank and my counterparties bank agree the transaction.  Very nice indeed.</p>
 
@@ -255,7 +255,7 @@
 
 <p>Does Concerto generate fully customizable code or are there other ways of extending existing functionality?</p>
 
-<h3 id="answer-12">Answer 12</h3>
+<h4 id="answer-12">Answer 12</h4>
 
 <p>Concerto provides a modelling language and a set APIs for the user to develop applications against. We provide a JavaScript client API for building client applications, and a JavaScript runtime API for building transaction processor functions that run inside the Blockchain. You (the user) is fully in control of developing the JavaScript code that calls those APIs. The only code generation we are doing is generation of REST APIs (using Loopback) and generation of development time accelerators such as TypeScript bindings for the model. We&#39;re happy to hear any feedback we can get, and will be waiting for additional feature requests.</p>
 
@@ -263,7 +263,7 @@
 
 <p>As a chaincode developer I’m curious how you managed to create this, especially without code generation. Does the code run with a different kind of baseimage to enable javascript, or do you interpret the javascript from within a golang or Java chaincode?</p>
 
-<h3 id="answer-13">Answer 13</h3>
+<h4 id="answer-13">Answer 13</h4>
 
 <p>We use a JavaScript interpreter written in Go called <a href="https://github.com/robertkrimen/otto">Otto</a> and that handles the execution of our &quot;system&quot; code and the users code. We have developed a Domain Specific Language for Concerto that allows users to model assets, participants, and transactions. That DSL is reasonably simple text that is designed to be easy for developers to hand write, for example:</p>
 <div class="highlight"><pre><code class="language-" data-lang="">asset Field identified by fieldID {
@@ -276,7 +276,7 @@
 
 <p>Were any thoughts given to using an embedded V8 rather than <a href="https://github.com/robertkrimen/otto">Otto</a>?</p>
 
-<h3 id="answer-14">Answer 14</h3>
+<h4 id="answer-14">Answer 14</h4>
 
 <p>We did <em>briefly</em> consider V8, but it would have meant custom bindings to Go. A full-blown Node runtime seems much more interesting. <a href="https://github.com/robertkrimen/otto">Otto</a> allows us to test the programming model at low cost and then allow customers to drive us.</p>
 
@@ -284,7 +284,7 @@
 
 <p>My understanding is that Concerto facilitates smart contracts in Javascript language on Hyperledger. To achieve this, does it provide some sort of Javascript SDK/APIs for developing smart contracts OR is it open for the developer to write &#39;any&#39; Javascript code using the base language?</p>
 
-<h3 id="answer-15">Answer 15</h3>
+<h4 id="answer-15">Answer 15</h4>
 
 <p>The JS you can write is “substantially” open. You can use ES5 syntax, but you cannot ‘require’ external packages. We provide a server-side JS API to interact with asset registries, create assets etc.</p>
 
@@ -292,7 +292,7 @@
 
 <p>To run Javascript smart contract, is there a separate run time Concerto chaincode for each smart contract; Or is there a single run time Concerto chaincode for all smart contracts?</p>
 
-<h3 id="answer-16">Answer 16</h3>
+<h4 id="answer-16">Answer 16</h4>
 
 <p>There is a generic Concerto chaincode (written in Go) that implements the server-side component of Concerto. When you deploy a Business Network Definition (the deployable artefact for Concerto) we also deploy a new copy of the Concerto chaincode. This is a design choice that was driven by our desire to prevent different Business Networks from potentially seeing each other’s world state.</p>
 
@@ -300,7 +300,7 @@
 
 <p>Is it correct to say that Concerto design is mainly driven to support Assets (and transfers) on blockchain? Can it also support scenarios other than assets and transfers?</p>
 
-<h3 id="answer-17">Answer 17</h3>
+<h4 id="answer-17">Answer 17</h4>
 
 <p>The fundamental programming model is: a transaction occurs on behalf of a participant, and this transaction needs to be stored on the BC, and may alter the state of assets that are being tracked in asset registries on the BC. We believe that this programming model is sufficiently general that it can be applied to a very wide range of BC problems. Time will tell!</p>
 
@@ -308,7 +308,7 @@
 
 <p>What level of chaincode do you touch? Is it mostly JS?</p>
 
-<h3 id="answer-18">Answer 18</h3>
+<h4 id="answer-18">Answer 18</h4>
 
 <p>A small Go &quot;container&quot; layer around mostly JavaScript code.</p>
 
@@ -316,7 +316,7 @@
 
 <p>Is there some JavaScript code that is placed in the chaincode container?  If so, how is it exposed, called, triggered?</p>
 
-<h3 id="answer-19">Answer 19</h3>
+<h4 id="answer-19">Answer 19</h4>
 
 <p>The JavaScript code is running in Go by using a JavaScript interpreter for Go.</p>
 
@@ -324,7 +324,7 @@
 
 <p>Where is the code?</p>
 
-<h3 id="answer-20">Answer 20</h3>
+<h4 id="answer-20">Answer 20</h4>
 
 <p>IBM GitHub Enterprise, part of Whitewater tools.</p>
 
@@ -332,7 +332,7 @@
 
 <p>Where is the code published in npm?</p>
 
-<h3 id="answer-21">Answer 21</h3>
+<h4 id="answer-21">Answer 21</h4>
 
 <p>IBM npm Enterprise, part of Whitewater tools.</p>
 
@@ -340,7 +340,7 @@
 
 <p>Is there a UI to drive the creation of the data model, or is it just editing the text file?</p>
 
-<h3 id="answer-22">Answer 22</h3>
+<h4 id="answer-22">Answer 22</h4>
 
 <p>Just editing text files at the moment.</p>
 
@@ -348,7 +348,7 @@
 
 <p>Are the loopback REST APIs created dynamically based on the data model?</p>
 
-<h3 id="answer-23">Answer 23</h3>
+<h4 id="answer-23">Answer 23</h4>
 
 <p>Yes, the Loopback APIs are created dynamically.</p>
 
@@ -356,7 +356,7 @@
 
 <p>Does the developer enter the text, and the UML view dynamically creates?</p>
 
-<h3 id="answer-24">Answer 24</h3>
+<h4 id="answer-24">Answer 24</h4>
 
 <p>Not yet, the UML is only updated when the model is deployed to the Blockchain.</p>
 
@@ -364,7 +364,7 @@
 
 <p>Is the syntax of the file custom and parsed by Concerto/Composer to break out data model elements and business logic (JS code) based on parsing?</p>
 
-<h3 id="answer-25">Answer 25</h3>
+<h4 id="answer-25">Answer 25</h4>
 
 <p>Yes, but we are working on splitting the data model and business logic into separate files.</p>
 
@@ -372,7 +372,7 @@
 
 <p>I see the business logic JavaScript has syntax highlighting.  How is that implemented?</p>
 
-<h3 id="answer-26">Answer 26</h3>
+<h4 id="answer-26">Answer 26</h4>
 
 <p>Using the open source CodeMirror component.</p>
 
@@ -380,9 +380,113 @@
 
 <p>Will Concerto provide a Java API? Most of what I have seen so far focused on JavaScript.</p>
 
-<h3 id="answer-27">Answer 27</h3>
+<h4 id="answer-27">Answer 27</h4>
 
 <p>Once Fabric has a Java equivalent of HFC then we can wrap it and build a Java API around it.</p>
+
+<h3 id="question-28">Question 28</h3>
+
+<p>I have just started building a blockchain project with a client.  Is there an option to move all this into concerto because that looks a lot easier going forward to use? or do we have to re-create everything in concerto and there is really no Import into Concerto?</p>
+
+<h4 id="answer-28">Answer 28</h4>
+
+<p>The approaches are very different (writing Go code, vs JS, defining a model using the CTO modelling language) etc. so I can’t realistically see a migration path</p>
+
+<h3 id="question-29">Question 29</h3>
+
+<p>1 Perspective - New developers will want to leverage existing libraries at a basic programming model level.  They will feel limited by the inability to do that, but also the current model of having business logic isolated to a monolithic function call that must be completely handled in a single JS file.</p>
+
+<h4 id="answer-29">Answer 29</h4>
+
+<p>We do have plans to improve that experience in the short term by adding support for &quot;utility&quot; functions that can be called from transaction processor functions, and we can look at making those available for use across multiple JS files.</p>
+
+<h3 id="question-30">Question 30</h3>
+
+<p>Why was JavaScript selected as the business/scripting language for the transaction processor functions?</p>
+
+<h4 id="answer-30">Answer 30</h4>
+
+<p>Some reasons: the HFC library used to access the Fabric is a JS library, so JS has to be part of the picture. We wanted to provide an experience that allowed someone to use a single programming language across an entire solution (front-end, mid-tier, and business logic). JS is a dynamic language that has some interesting properties in terms of dynamic deploy, code gen etc. The JS ecosystem is very large, and growing quickly, with lots of interesting 3rd-party libraries that may be of use. Most developers under the age of 25 are familiar with JS… and due to the number of new developers getting trained every year this demographic is very important. The npm package manager has some very interesting capabilities to share and reuse code and models, and it integrates very nicely with JS. </p>
+
+<h3 id="question-31">Question 31</h3>
+
+<p>How can you use 3rd-party libraries without require?</p>
+
+<h4 id="answer-31">Answer 31</h4>
+
+<p>You cannot at this point. When we get to a full Node.js runtime then TX processor functions could require 3rd-party modules.</p>
+
+<h3 id="question-32">Question 32</h3>
+
+<p>I understand that Concerto uses “generic” (might be a better word for it) Go chaincode, and basically presents the interface a user interacts with in ES5. If I’m not mistaken, the fabric was architected to allow chaincode to be implemented in whatever language someone desires, since it just communicates via gRPC (as I understand, anyways). If providing a popular language (agreed, JS is popular and support for it would be good) and some modeling is the end game of Concerto (again, I could be mistaken here), then shouldn&#39;t the focus be on getting native JS chaincode + the modeling piece available as a library to be <code>require</code>‘d by whatever chaincode someone writes in the JS?</p>
+
+<h4 id="answer-32">Answer 32</h4>
+
+<p>Yes, agreed. And given the number of times this has been asked/answered I can sense this would be popular!</p>
+
+<h3 id="question-33">Question 33</h3>
+
+<p>Just working through the getting started doc...on the Publish Updated Business Network Definition to npm step...dumb question...where is this publishing to?  Internal NPM whitewater registry? I&#39;m getting a Failed PUT 403 error...I had logged out for the day yesterday so closed my browser after doing the pre req work...guessing I need to redo that step?</p>
+
+<h4 id="answer-33">Answer 33</h4>
+
+<p>The npm publish is going to the internal whitewater registry. Though you&#39;ve raised a good point in that really that network is an example and if you wanted to try publishing a model/business network youself ideally it would be one to your own namespace or of a different name. I&#39;ll update the documents to be more clear about what publishing means. though to test out the getting started publishing to NPM isn&#39;t a mandatory part of getting a business network deployed.</p>
+
+<h3 id="question-34">Question 34</h3>
+
+<p>When you say my own namespace or different name, where would I make that change?</p>
+
+<h4 id="answer-34">Answer 34</h4>
+
+<p>The @ibm prefix is the namespace that refers to the IBM whitewater NPM.  so, there could be a different @ prefix for difference companies.   Alternatively use a different name for the digitalproperty-network  entirely. What I&#39;m updating the getting started is to describe doing an update to the local digitalproperty-network, then in that module issue <code>npm link</code> and then in the gettingstarted issue `npm link @ibm/digitalproperty-network&#39;.  that will let node use the local copy.</p>
+
+<h3 id="question-35">Question 35</h3>
+
+<p>What&#39;s the concerto connector web for?</p>
+
+<h4 id="answer-35">Answer 35</h4>
+
+<p>Execution/testing in a web page.</p>
+
+<h3 id="question-36">Question 36</h3>
+
+<p>In the getting started I&#39;m trying the &#39;Generating an Application&#39; steps using generator-concerto clone, after running npm install and link commands when I go to run the &#39;yo concerto&#39; command is says yo: command not found.  Anything I can check to see why that wouldn&#39;t be working?  Under node_modules I see several yeoman-xxxx modules, but not exactly sure what they are.</p>
+
+<h4 id="answer-36">Answer 36</h4>
+
+<p>Install the yeoman tool <a href="http://yeoman.io/">http://yeoman.io/</a></p>
+
+<h3 id="question-37">Question 37</h3>
+
+<p>Is npm update specific to a directory where I have a package.json or is that command global?</p>
+
+<h4 id="answer-37">Answer 37</h4>
+
+<p><code>npm update</code> is locally - it&#39;s only global with the -g flag</p>
+
+<h3 id="question-38">Question 38</h3>
+
+<p>When the term asset registry is used, ie animal registry, farm registry, business registry per playback 0...are those registries world state tables?  or is this handle some other way?</p>
+
+<h4 id="answer-38">Answer 38</h4>
+
+<p>They are mapped down to world state tables.</p>
+
+<h3 id="question-39">Question 39</h3>
+
+<p>Angular 2, we use that for our blockchain projects and are just looking into incorporating Loopback. Have you created a Loopback connector to talk to the smart contract? The mean expert angular 2 generators seem to work fine if you want to generate angular services and models.</p>
+
+<h4 id="answer-39">Answer 39</h4>
+
+<p>Yes, we are building a Loopback connector for Concerto, and it will be open sourced along with the rest of Concerto. We demonstrate the power of having such a connector in the playback 0 video. It&#39;s currently not in a usable state though... we&#39;re working on that now.</p>
+
+<h3 id="question-40">Question 40</h3>
+
+<p>Is composer the same thing as concerto but written in ts?</p>
+
+<h4 id="answer-40">Answer 40</h4>
+
+<p>Concerto is the JS Framework, Composer is a web user interface built using Concerto. It allows you to define a business network (chaincode) on a webpage and test it — either against a real Hyperledger Fabric or a simulated Fabric running in the browser.</p>
 
         
 
