@@ -1,11 +1,10 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   
   
   
 
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
   <meta charset="utf-8">
   
     <title>Task - Diagnosing Problems | IBM Blockchain Framework</title>
@@ -38,11 +37,11 @@
 
 
 
+
 <header class="page-header">
   <div class="container">
     <div class="mobile-bar">
-     <h1>
-<a href="/Blockchain-WW-Labs/Concerto/index.html" class="logot">IBM Blockchain Framework</a> </h1>
+     <h1 ><a href="/Blockchain-WW-Labs/Concerto/index.html" class="logot">IBM Blockchain Framework</a> </h1></a>
       <button class="mobile-menu-toggle ir">open</button>
     </div>
     <nav class="main-menu">
@@ -55,14 +54,19 @@
         </li>
         <li>
           <a href="/Blockchain-WW-Labs/Concerto/start/getting-started.html">Getting Started</a>
+          <ul>
+<li><a href="/Blockchain-WW-Labs/Concerto/start/getting-started-cmd-line.html">Running the sample network</a></li>
+<li><a href="/Blockchain-WW-Labs/Concerto/start/getting-started-coding-bnd.html">Coding a Network Definition</a></li>
+<li><a href="/Blockchain-WW-Labs/Concerto/start/getting-started-nodejs-app.html">Writing a nodejs app</a></li>
+</ul>
+
         </li>
         <li>
           <a href="/Blockchain-WW-Labs/Concerto/concepts/index.html">Concepts</a>
                     <ul>
 <li><a href="/Blockchain-WW-Labs/Concerto/concepts/businessnetwork.html">Business Network</a></li>
 <li><a href="/Blockchain-WW-Labs/Concerto/concepts/businessnetworkdefinition.html">Business Network Definition</a></li>
-<li>
-<a href="/Blockchain-WW-Labs/Concerto/concepts/participantsandidentities.html">Participants and Transactions</a> </li>
+<li><a href="/Blockchain-WW-Labs/Concerto/concepts/participantsandidentities.html">Participants and Transactions</a> </li>
 </ul>
 
         </li>
@@ -111,8 +115,7 @@
         </li>
       </ul>
     </nav>
-  </div>
-<!-- /.container -->
+  </div><!-- /.container -->
 </header><!-- /.page-header -->
 
   
@@ -161,11 +164,11 @@
 
 <p>If something should ever go wrong with an application, what should you do about getting diagnostics? </p>
 
-<p>Let's look at the Getting Started application, and use that to explain how to get diagnostics out of the Framework.</p>
+<p>Let&#39;s look at the Getting Started application, and use that to explain how to get diagnostics out of the Framework.</p>
 
-<p>Key Point: This is a framework - so your application will need to have it's own logging framework. Plus, your application could also have configuration information to control Concerto's own logging. Concerto does use the Winston logging module by default - and will use the Config module to look for any configuration information. If none is found, then a set of defaults will be used. </p>
+<p>Key Point: This is a framework - so your application will need to have it&#39;s own logging framework. Plus, your application could also have configuration information to control Concerto&#39;s own logging. Concerto does use the Winston logging module by default - and will use the Config module to look for any configuration information. If none is found, then a set of defaults will be used. </p>
 
-<p>Note that the config module does write out a warning, if there are no configuration files set. Eg. <code>WARNING: No configurations found in configuration directory</code>. This can be suppressed with an environment variable if you are happy with the defaults and don't wish to use config in your application. See more information <a href="https://github.com/lorenwest/node-config/wiki/Environment-Variables#suppress_no_config_warning">here</a>.</p>
+<p>Note that the config module does write out a warning, if there are no configuration files set. Eg. <code>WARNING: No configurations found in configuration directory</code>. This can be suppressed with an environment variable if you are happy with the defaults and don&#39;t wish to use config in your application. See more information <a href="https://github.com/lorenwest/node-config/wiki/Environment-Variables#suppress_no_config_warning">here</a>.</p>
 
 <p>There are two containers that are relevant to logging; </p>
 
@@ -190,7 +193,7 @@
 <li>Debug</li>
 </ul>
 
-<p>The 'Silly' level doesn't get used.</p>
+<p>The &#39;Silly&#39; level doesn&#39;t get used.</p>
 
 <h2 id="locations-of-information">Locations of information</h2>
 
@@ -198,7 +201,7 @@
 
 <ul>
 <li><p>One is a text file that is the location <code>${CurrentWorkingDir}/logs/trace_&lt;processid&gt;.trc</code></p></li>
-<li><p>The other is <code>stdout</code>. By default, <code>stdout</code> will only show any data logged with a level of 'error' and the file will show any data logged with 'info' or above (i.e. info, warn and error).</p></li>
+<li><p>The other is <code>stdout</code>. By default, <code>stdout</code> will only show any data logged with a level of &#39;error&#39; and the file will show any data logged with &#39;info&#39; or above (i.e. info, warn and error).</p></li>
 </ul>
 
 <h2 id="control-of-what-is-produced">Control of what is produced</h2>
@@ -236,10 +239,8 @@
 <p>The first section is specific to the Getting Started application, the second <code>ConcertoConfig</code> section is for the Concerto framework. </p>
 
 <ul>
-<li>
-<code>logger</code> is used to refer the module that does actual logging. default is implying that this is the winston framework</li>
-<li>
-<code>config</code> is passed to the logger to control what it does.  So this section is specific to the logger in use. </li>
+<li><code>logger</code> is used to refer the module that does actual logging. default is implying that this is the winston framework</li>
+<li><code>config</code> is passed to the logger to control what it does.  So this section is specific to the logger in use. </li>
 </ul>
 
 <h2 id="enabling-more-information">Enabling more information</h2>
@@ -278,9 +279,8 @@
       <i class="fa fa-stack-overflow icon" aria-hidden="true"></i>
       </a>
     </li>
-    <li class="mobile-ln">
-    </li>
-<li>
+    <li class="mobile-ln"></li>
+    <li>
       <a href="https://pages.github.ibm.com/Blockchain-WW-Labs/Concerto/jsdoc/develop/index.html" class="SiteFooter-button SiteFooter-button--light">APIs</a>
     </li>
   </ul>

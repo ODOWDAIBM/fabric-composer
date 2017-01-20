@@ -1,11 +1,10 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   
   
   
 
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
   <meta charset="utf-8">
   
     <title>Task - Revoke an Identity from a Participant | IBM Blockchain Framework</title>
@@ -38,11 +37,11 @@
 
 
 
+
 <header class="page-header">
   <div class="container">
     <div class="mobile-bar">
-     <h1>
-<a href="/Blockchain-WW-Labs/Concerto/index.html" class="logot">IBM Blockchain Framework</a> </h1>
+     <h1 ><a href="/Blockchain-WW-Labs/Concerto/index.html" class="logot">IBM Blockchain Framework</a> </h1></a>
       <button class="mobile-menu-toggle ir">open</button>
     </div>
     <nav class="main-menu">
@@ -55,14 +54,19 @@
         </li>
         <li>
           <a href="/Blockchain-WW-Labs/Concerto/start/getting-started.html">Getting Started</a>
+          <ul>
+<li><a href="/Blockchain-WW-Labs/Concerto/start/getting-started-cmd-line.html">Running the sample network</a></li>
+<li><a href="/Blockchain-WW-Labs/Concerto/start/getting-started-coding-bnd.html">Coding a Network Definition</a></li>
+<li><a href="/Blockchain-WW-Labs/Concerto/start/getting-started-nodejs-app.html">Writing a nodejs app</a></li>
+</ul>
+
         </li>
         <li>
           <a href="/Blockchain-WW-Labs/Concerto/concepts/index.html">Concepts</a>
                     <ul>
 <li><a href="/Blockchain-WW-Labs/Concerto/concepts/businessnetwork.html">Business Network</a></li>
 <li><a href="/Blockchain-WW-Labs/Concerto/concepts/businessnetworkdefinition.html">Business Network Definition</a></li>
-<li>
-<a href="/Blockchain-WW-Labs/Concerto/concepts/participantsandidentities.html">Participants and Transactions</a> </li>
+<li><a href="/Blockchain-WW-Labs/Concerto/concepts/participantsandidentities.html">Participants and Transactions</a> </li>
 </ul>
 
         </li>
@@ -111,8 +115,7 @@
         </li>
       </ul>
     </nav>
-  </div>
-<!-- /.container -->
+  </div><!-- /.container -->
 </header><!-- /.page-header -->
 
   
@@ -192,8 +195,7 @@ of that participant has been created and placed into a participant registry.</p>
 <h2 id="procedure">Procedure</h2>
 
 <ol>
-<li>
-<p>Revoke an identity from the participant</p>
+<li><p>Revoke an identity from the participant</p>
 
 <ul>
 <li>JavaScript API</li>
@@ -203,16 +205,13 @@ of that participant has been created and placed into a participant registry.</p>
     <span class="p">.</span><span class="nx">then</span><span class="p">(()</span> <span class="o">=&gt;</span> <span class="p">{</span>
         <span class="c1">// Identity is no longer valid.</span>
     <span class="p">});</span>
-</code></pre></div>
-</li>
+</code></pre></div></li>
 </ol>
 
 <ul>
-<li>
-<p>Command line</p>
+<li><p>Command line</p>
 <div class="highlight"><pre><code class="language-bash" data-lang="bash">concerto identity revoke -n <span class="s1">'@ibm/digitalproperty-network'</span> -i admin -s Xurw3yU9zI0l -u maeid1
-</code></pre></div>
-</li>
+</code></pre></div></li>
 </ul>
 
         
@@ -244,9 +243,8 @@ of that participant has been created and placed into a participant registry.</p>
       <i class="fa fa-stack-overflow icon" aria-hidden="true"></i>
       </a>
     </li>
-    <li class="mobile-ln">
-    </li>
-<li>
+    <li class="mobile-ln"></li>
+    <li>
       <a href="https://pages.github.ibm.com/Blockchain-WW-Labs/Concerto/jsdoc/develop/index.html" class="SiteFooter-button SiteFooter-button--light">APIs</a>
     </li>
   </ul>
