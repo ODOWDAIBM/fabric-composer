@@ -97,14 +97,15 @@
             <ul>
 <li><a href="/Blockchain-WW-Labs/Concerto/reference/MeetTheModules.html">Meet the Modules</a></li>
 <li><a href="/Blockchain-WW-Labs/Concerto/reference/platforms.html">Supported Platforms</a></li>
-<li><a href="/Blockchain-WW-Labs/Concerto/reference/cto_language.html">Concerto Modeling Language</a></li>
+<li><a href="/Blockchain-WW-Labs/Concerto/reference/cto_language.html">Modeling Language</a></li>
+<li><a href="/Blockchain-WW-Labs/Concerto/reference/acl_language.html">Access Control Language</a></li>
 <li><a href="/Blockchain-WW-Labs/Concertoreference/connectionprofile.html">Connection Profile</a></li>
 <li><a href="/Blockchain-WW-Labs/Concerto/reference/js_scripts.html">Transaction Processor Functions</a></li>
-<li><a href="/Blockchain-WW-Labs/Concerto/reference/commands.html">Concerto Command Line</a></li>
-<li><a href="/Blockchain-WW-Labs/Concerto/reference/concerto.generator.tests.html">Concerto Generator</a></li>
-<li><a href="/Blockchain-WW-Labs/Concerto/reference/concerto.participant.add.html">Concetio CLI Add Participant</a></li>
-<li><a href="/Blockchain-WW-Labs/Concerto/reference/concerto.identity.issue.html">Concerto CLI Issue Identity </a></li>
-<li><a href="/Blockchain-WW-Labs/Concerto/reference/concerto.identity.revoke.html">Concerto CLI Revoke Identity</a></li>
+<li><a href="/Blockchain-WW-Labs/Concerto/reference/commands.html">Command Line Interface</a></li>
+<li><a href="/Blockchain-WW-Labs/Concerto/reference/concerto.generator.tests.html">Application Generator</a></li>
+<li><a href="/Blockchain-WW-Labs/Concerto/reference/concerto.participant.add.html">CLI Add Participant</a></li>
+<li><a href="/Blockchain-WW-Labs/Concerto/reference/concerto.identity.issue.html">CLI Issue Identity </a></li>
+<li><a href="/Blockchain-WW-Labs/Concerto/reference/concerto.identity.revoke.html">CLI Revoke Identity</a></li>
 <li><a href="/Blockchain-WW-Labs/Concerto/jsdoc/develop/index.html">API Documentation</a></li>
 <li><a href="/Blockchain-WW-Labs/Concerto/reference/glossary.html">Glossary</a></li>
 </ul>
@@ -135,14 +136,15 @@
           <ul>
 <li><a href="/Blockchain-WW-Labs/Concerto/reference/MeetTheModules.html">Meet the Modules</a></li>
 <li><a href="/Blockchain-WW-Labs/Concerto/reference/platforms.html">Supported Platforms</a></li>
-<li><a href="/Blockchain-WW-Labs/Concerto/reference/cto_language.html">Concerto Modeling Language</a></li>
+<li><a href="/Blockchain-WW-Labs/Concerto/reference/cto_language.html">Modeling Language</a></li>
+<li><a href="/Blockchain-WW-Labs/Concerto/reference/acl_language.html">Access Control Language</a></li>
 <li><a href="/Blockchain-WW-Labs/Concertoreference/connectionprofile.html">Connection Profile</a></li>
 <li><a href="/Blockchain-WW-Labs/Concerto/reference/js_scripts.html">Transaction Processor Functions</a></li>
-<li><a href="/Blockchain-WW-Labs/Concerto/reference/commands.html">Concerto Command Line</a></li>
-<li><a href="/Blockchain-WW-Labs/Concerto/reference/concerto.generator.tests.html">Concerto Generator</a></li>
-<li><a href="/Blockchain-WW-Labs/Concerto/reference/concerto.participant.add.html">Concetio CLI Add Participant</a></li>
-<li><a href="/Blockchain-WW-Labs/Concerto/reference/concerto.identity.issue.html">Concerto CLI Issue Identity </a></li>
-<li><a href="/Blockchain-WW-Labs/Concerto/reference/concerto.identity.revoke.html">Concerto CLI Revoke Identity</a></li>
+<li><a href="/Blockchain-WW-Labs/Concerto/reference/commands.html">Command Line Interface</a></li>
+<li><a href="/Blockchain-WW-Labs/Concerto/reference/concerto.generator.tests.html">Application Generator</a></li>
+<li><a href="/Blockchain-WW-Labs/Concerto/reference/concerto.participant.add.html">CLI Add Participant</a></li>
+<li><a href="/Blockchain-WW-Labs/Concerto/reference/concerto.identity.issue.html">CLI Issue Identity </a></li>
+<li><a href="/Blockchain-WW-Labs/Concerto/reference/concerto.identity.revoke.html">CLI Revoke Identity</a></li>
 <li><a href="/Blockchain-WW-Labs/Concerto/jsdoc/develop/index.html">API Documentation</a></li>
 <li><a href="/Blockchain-WW-Labs/Concerto/reference/glossary.html">Glossary</a></li>
 </ul>
@@ -193,65 +195,12 @@
 <h3 id="examples">Examples</h3>
 
 <p>Example ACL rules (in evaluation order):</p>
-
-<table><thead>
-<tr>
-<th>ID</th>
-<th>NOUN</th>
-<th>VERB</th>
-<th>PARTICIPANT</th>
-<th>PREDICATE</th>
-<th>ACTION</th>
-<th>COMMENT</th>
-</tr>
-</thead><tbody>
-<tr>
-<td>R1</td>
-<td>org.acme.Car#ABC123</td>
-<td>DELETE</td>
-<td>org.acme.Driver#Fred</td>
-<td>NONE</td>
-<td>ALLOW</td>
-<td>Fred can DELETE the car ABC123</td>
-</tr>
-<tr>
-<td>R2</td>
-<td>org.acme.Car</td>
-<td>UPDATE</td>
-<td>org.acme.Regulator#Bill:r</td>
-<td>org.acme.Car.owner == r</td>
-<td>DENY</td>
-<td>regulator with ID Bill can not update a Car if they own it</td>
-</tr>
-<tr>
-<td>R3</td>
-<td>org.acme.Car.owner</td>
-<td>UPDATE</td>
-<td>org.acme.Driver:d</td>
-<td>org.acme.Car.owner == d</td>
-<td>ALLOW</td>
-<td>Driver can change the ownership of a car that they own</td>
-</tr>
-<tr>
-<td>R4</td>
-<td>org.acme.Car</td>
-<td>ALL</td>
-<td>org.acme.Regulator</td>
-<td>TRUE</td>
-<td>ALLOW</td>
-<td>regulators can perform all operations on Cars</td>
-</tr>
-<tr>
-<td>R5</td>
-<td>org.acme</td>
-<td>READ</td>
-<td>EVERYONE</td>
-<td>TRUE</td>
-<td>ALLOW</td>
-<td>Everyone can read all resources in the org.acme namespace</td>
-</tr>
-</tbody></table>
-
+<div class="highlight"><pre><code class="language-" data-lang="">R1 | org.acme.Car#ABC123 | DELETE | org.acme.Driver#Fred | NONE | ALLOW | Fred can DELETE the car ABC123
+R2 | org.acme.Car | UPDATE | org.acme.Regulator#Bill:r | org.acme.Car.owner == r | DENY | regulator with ID Bill can not update a Car if they own it
+R3 | org.acme.Car.owner | UPDATE | org.acme.Driver:d | org.acme.Car.owner == d  | ALLOW | Driver can change the ownership of a car that they own
+R4 | org.acme.Car | ALL | org.acme.Regulator | TRUE | ALLOW | regulators can perform all operations on Cars
+R5 | org.acme | READ | EVERYONE | TRUE | ALLOW | Everyone can read all resources in the org.acme namespace
+</code></pre></div>
 <p>Rules are evaluated from top (most specific) to bottom (least specific). As soon as a the Noun, Verb and Predicate match for a rule then subsequent rules are not evaluated.</p>
 
 <p>This ordering makes the decision table faster to scan for both humans and computers. If no ACL rule fires then the access control decision must be DENY.</p>
