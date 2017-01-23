@@ -207,7 +207,7 @@ Definition, which contains a data model that defines the name and structure of a
 and transactions in the business network. The business network also specifies <em>transaction processor functions</em>
 (written in ES5 Javascript) that are automatically run on a Hyperledger Fabric when transactions are submitted by clients.</p>
 
-<p>The Framework defines Javascript APIs to submit transactions and to create, retrieve, update and delete assets within asset registries.</p>
+<p>The Framework defines <a href="https://pages.github.ibm.com/Blockchain-WW-Labs/Concerto/jsdoc/develop/index.html">Javascript APIs</a>to submit transactions and to create, retrieve, update and delete assets within asset registries.</p>
 
 <h3 id="roles-responsibilities-and-tasks">Roles, Responsibilities and Tasks</h3>
 
@@ -273,7 +273,7 @@ and transactions in the business network. The business network also specifies <e
 </code></pre></div>
 <h2 id="rapidly-create-applications">Rapidly Create Applications</h2>
 
-<p>The Framework includes code generators so that web and mid-tier application developers can quickly generate starter applications that interact with a deployed business network definition. These code generators allow application developers to quickly focus on the integration and visual aspects of their projects, rather than writing boilerplate and configuration.</p>
+<p>The Framework includes <a href="../tasks/genapp.html">code generators</a> so that web and mid-tier application developers can quickly generate starter applications that interact with a deployed business network definition. These code generators allow application developers to quickly focus on the integration and visual aspects of their projects, rather than writing boilerplate and configuration.</p>
 
 <p>High-level administration and client APIs provide easy access to a deployed business network.</p>
 
@@ -286,9 +286,9 @@ and transactions in the business network. The business network also specifies <e
 <p>The sample below uses both the <code>AdminConnection</code> and <code>BusinessNetworkConnection</code> APIs to deploy a business network definition, and then connects using the client API to retrieve an asset registry.</p>
 <div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="s1">'use strict'</span><span class="p">;</span>
 
-<span class="kr">const</span> <span class="nx">AdminConnection</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">'@ibm/ibm-concerto-admin'</span><span class="p">).</span><span class="nx">AdminConnection</span><span class="p">;</span>
-<span class="kr">const</span> <span class="nx">BusinessNetworkConnection</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">'@ibm/ibm-concerto-client'</span><span class="p">).</span><span class="nx">BusinessNetworkConnection</span><span class="p">;</span>
-<span class="kr">const</span> <span class="nx">BusinessNetworkDefinition</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">'@ibm/ibm-concerto-common'</span><span class="p">).</span><span class="nx">BusinessNetworkDefinition</span><span class="p">;</span>
+<span class="kr">const</span> <span class="nx">AdminConnection</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">'@ibm/concerto-admin'</span><span class="p">).</span><span class="nx">AdminConnection</span><span class="p">;</span>
+<span class="kr">const</span> <span class="nx">BusinessNetworkConnection</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">'@ibm/concerto-client'</span><span class="p">).</span><span class="nx">BusinessNetworkConnection</span><span class="p">;</span>
+<span class="kr">const</span> <span class="nx">BusinessNetworkDefinition</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">'@ibm/concerto-common'</span><span class="p">).</span><span class="nx">BusinessNetworkDefinition</span><span class="p">;</span>
 <span class="kr">const</span> <span class="nx">fs</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">'fs'</span><span class="p">);</span>
 
 <span class="kr">const</span> <span class="nx">admin</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">AdminConnection</span><span class="p">();</span>
