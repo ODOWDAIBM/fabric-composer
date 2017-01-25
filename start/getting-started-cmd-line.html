@@ -152,7 +152,7 @@
 
 <p>To help get started with application development using the Concerto Framework, this guide will talk you through downloading Concerto, starting a Fabric, deploying a simple business network and submitting transactions.</p>
 
-<p>This is all done using a simple business network  <strong>Digitial Property Network</strong></p>
+<p>This is all done using a simple business network  <strong>Digital Property Network</strong></p>
 
 <h1 id="what-is-the-digital-property-network">What is the Digital Property Network?</h1>
 
@@ -178,17 +178,17 @@
   --&gt; LandTitle title
 }
 </code></pre></div>
-<p>The applications we&#39;re going to look at are going to store a number of (pretend) land titles, and mark them for sale. All this will be using the Concerto Framework backed by a real blockchain in the shape of a locally exceuting Hyperledger Fabric.</p>
+<p>The applications we&#39;re going to look at are going to store a number of (pretend) land titles, and mark them for sale. All this will be using the Concerto Framework backed by a real blockchain in the shape of a locally executing Hyperledger Fabric.</p>
 
 <h1 id="but-what-is-an-asset">But what is an asset?</h1>
 
 <p>An is a term used to describe things of value both in the physical world and the equally real intangible world. These are stored in Asset Registries. Participants can act on these assets bys submitting transactions. With the features of a blockchain provided by the Hyperledger Fabric, an application using the Concerto Frameowk has a single source of truth for the state of these assets and their history.</p>
 
-<p>It&#39;s worth reading the <a href="../overview/overview.html">Overview</a> page to get an idea of how everything fits together. The <a href="../reference/glossary.html">Glossary</a> provides a detailed description of each term.  </p>
+<p>It&#39;s worth reading the <a href="../overview/overview.html">Overview</a> page to get an idea of how everything fits together. The <a href="../reference/glossary.html">Glossary</a> provides a detailed description of each term.</p>
 
 <h1 id="what-are-we-going-to-do">What are we going to do?</h1>
 
-<p>All the resources and scripts you&#39;ll need are in a git repo that we&#39;ll clone, this will have the code for the applications along with the scripts to get the hyperledger setup and ready to go.  </p>
+<p>All the resources and scripts you&#39;ll need are in a git repository that we&#39;ll clone, this will have the code for the applications along with the scripts to get the Hyperledger setup and ready to go.</p>
 
 <p>The first thing to do is to ensure that you have a suitable system ready for development.</p>
 
@@ -212,12 +212,12 @@
 <div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nb">cd </span>Concerto-GettingStarted
 npm install
 </code></pre></div>
-<p>This is doing quite a bit of work but at the end of it you will have all the dependant modules, together with a running local Hyperledger instance, and the DigitalProperty Network will have been deployed to that Hyperledger. At this point it doesn&#39;t contain any assets at all.</p>
+<p>This is doing quite a bit of work but at the end of it you will have all the dependent modules, together with a running local Hyperledger instance, and the DigitalProperty Network will have been deployed to that Hyperledger. At this point it doesn&#39;t contain any assets at all.</p>
 
 <h3 id="create-assets-and-submit-a-transaction">Create Assets and Submit a Transaction</h3>
 
 <p>There are some simple applications included that will create some assets, list the current assets and submit a transaction.
-First, the assets are created and the newly created assets are listed. Then a transaction is submited to update one of the assets &#39;for sale&#39;. A final asset listed is then queried to show the update has taken place. To run this end-end sequence issue...</p>
+First, the assets are created and the newly created assets are listed. Then a transaction is submitted to update one of the assets &#39;for sale&#39;. A final asset listed is then queried to show the update has taken place. To run this end-end sequence issue...</p>
 <div class="highlight"><pre><code class="language-bash" data-lang="bash">npm <span class="nb">test</span>
 </code></pre></div>
 <h3 id="thats-it">That&#39;s it</h3>
@@ -289,9 +289,9 @@ Identifier:@ibm/digitalproperty-network-0.0.22
 Written Business Network Definition Archive file to @ibm_digitalproperty-network-0.0.22.bna
 Command completed successfully.
 </code></pre></div>
-<p>We now have a new file that is the digitial business network archive.</p>
+<p>We now have a new file that is the digital business network archive.</p>
 
-<h3 id="update-the-deployed-businness-network">Update the deployed businness network</h3>
+<h3 id="update-the-deployed-business-network">Update the deployed business network</h3>
 <div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="gp">$ </span>concerto network update --archiveFile @ibm_digitalproperty-network@0.0.22.bna  --enrollId WebAppAdmin --enrollSecret DJY27pEnl16d
 Deploying business network from archive @ibm_digitalproperty-network-0.0.22.bna
 Business network definition:
@@ -418,13 +418,13 @@ This lists the deployed business network details. <code>-n</code> is the name of
 
 <ul>
 <li><code>node cli.js landregistry submit</code>  This applications connects, and submits a transaction.</li>
-<li><code>node cli.js landregistry list</code>   This lists the contents of the asset registries that have been deifned in the business network.</li>
+<li><code>node cli.js landregistry list</code>   This lists the contents of the asset registries that have been defined in the business network.</li>
 <li><code>node cli.js landregistry bootstrap</code> This applications puts some pretend assets into the registries to work with.</li>
 </ul>
 
 <h1 id="where-next">Where next?</h1>
 
-<p>So we have downloaded the hyperledger docker containers and stated a fabric. We have used the Concerto Command line to deploy and update a the DigitalProperty Network. We have used some Javascript applications in node.js to list assets and submit transactions to work on those assets.  A simple change and update has been made to one of the transaction functions.</p>
+<p>So we have downloaded the Hyperledger docker containers and stated a fabric. We have used the Concerto Command line to deploy and update a the DigitalProperty Network. We have used some Javascript applications in node.js to list assets and submit transactions to work on those assets.  A simple change and update has been made to one of the transaction functions.</p>
 
         
 

@@ -1566,7 +1566,12 @@ Button,
 	position: relative;
 }
 
-/* hide back of pane during swap */
+/* hide back of pane during swap
+display: flex;
+justify-content: center; 
+align-items: center;
+
+*/
 .front, .back {
 	backface-visibility: hidden;
 
@@ -1576,9 +1581,7 @@ Button,
   text-align: center;
 
   color: #fff;
-  display: flex;
-justify-content: center; /* align horizontal */
-align-items: center; /* align vertical */
+
 }
 
 .front {

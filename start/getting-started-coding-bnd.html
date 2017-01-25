@@ -150,9 +150,9 @@
         
           <h1 id="creating-and-coding-a-business-network-definition">Creating and Coding a Business Network Definition</h1>
 
-<p>This turorial will take you through how to code and deploy a Business Network Definition. This is how to put together the files, and code artefacts needed and what to do with them.</p>
+<p>This tutorial will take you through how to code and deploy a Business Network Definition. This is how to put together the files, and code artifacts needed and what to do with them.</p>
 
-<p>This is after the important step of modelling the actual business network and the entities within it.  For this tutorial we are going to continue to use the Digital Property Network. Let&#39;s assume that this has been designed and agree with the relavent business analaysts in the relavent companies. It now needs to be codified.</p>
+<p>This is after the important step of modeling the actual business network and the entities within it.  For this tutorial we are going to continue to use the Digital Property Network. Let&#39;s assume that this has been designed and agree with the relevant business analysts in the relevant companies. It now needs to be codified.</p>
 
 <h2 id="creating-a-business-network-model">Creating a Business Network model</h2>
 
@@ -160,17 +160,17 @@
 
 <p>Defines the Business Network Model for the Digital Property Network.  This is the part of the Business Network Definition that defines the <em>model file</em> that defines the assets, participants, transactions, and relationships that form the Business Network.</p>
 
-<p>This part is encapulsated within (currently) a single file using a defined syntax. This file itself is encapsulated within an NPM module to permit version and distribution control. The transaction definitions, access control and other functional elements are held within a similar structure (npm module) that is dependant on a version of this model.</p>
+<p>This part is encapsulated within (currently) a single file using a defined syntax. This file itself is encapsulated within an NPM module to permit version and distribution control. The transaction definitions, access control and other functional elements are held within a similar structure (npm module) that is dependent on a version of this model.</p>
 
 <h2 id="what-should-i-do-with-this-model">What should I do with this model</h2>
 
-<p>It is expected that the model would be part of the CI pipeline.  It is expected that the model would be held in a source management system, eg github-enterprise. Editted then submitted to a eg TravisCI build. This would then publish the model to the npm-enterpise</p>
+<p>It is expected that the model would be part of the CI pipeline.  It is expected that the model would be held in a source management system, eg github-enterprise. Edited then submitted to a eg TravisCI build. This would then publish the model to the npm-enterpise</p>
 
 <p>This specific DigitalProperty-Model is already published into the private @ibm NPM repository. Therefore the deployment and pipeline has already been done for you.</p>
 
 <h1 id="creating-a-new-model-for-yourself">Creating a new model for yourself</h1>
 
-<p>There are two ways of creating a new model; either using the command line and your favourite editor, or by using the the web Composer UI.</p>
+<p>There are two ways of creating a new model; either using the command line and your favorite editor, or by using the the web Composer UI.</p>
 
 <h2 id="web-composer-ui">Web Composer UI</h2>
 
@@ -181,7 +181,7 @@
 <p><em>Step1:</em>  Create a new NPM module</p>
 <div class="highlight"><pre><code class="language-" data-lang="">npm init
 </code></pre></div>
-<p>There are no mandatory dependancies that are required; the most important features are name and description of the module. The version number is also very important. This will be used when you construct the full Business Network. That will have a dependancy on a specific version of the model.</p>
+<p>There are no mandatory dependencies that are required; the most important features are name and description of the module. The version number is also very important. This will be used when you construct the full Business Network. That will have a dependency on a specific version of the model.</p>
 
 <p><em>Step2:</em> Edit the model</p>
 
@@ -245,16 +245,16 @@ The next step is to publish your module to the NPM repository you are using.  So
 
 <h2 id="what-should-i-do-with-this-npm-module">What should I do with this npm module?</h2>
 
-<p>It is expected that this npm module would be associated with a CI pipeline and tracked as source code in something like GitHub Enterpise. The CI pipeline this would be able to run functional validation on the whole definition, and also be able to published the module to an NPM repository. This allows sharing of the module etc.</p>
+<p>It is expected that this npm module would be associated with a CI pipeline and tracked as source code in something like GitHub Enterprise. The CI pipeline this would be able to run functional validation on the whole definition, and also be able to published the module to an NPM repository. This allows sharing of the module etc.</p>
 
-<p>For a production or QA runtime there are administrative steps (deploy, update, remove etc.) that are performed using this Business Network Definition on a running Hyperledger Fabric. The lifecycle at it&#39;s simplest is <em>deploy a network definition</em>, <em>update a network definition</em> and (potentially) <em>remove the network definition</em>. These actions are performed using the Business Network Archive - which is a single file that encapsulates all aspects of the Business Network Definition. It is the &#39;deployable unit&#39;.</p>
+<p>For a production or QA runtime there are administrative steps (deploy, update, remove etc.) that are performed using this Business Network Definition on a running Hyperledger Fabric. The life-cycle at it&#39;s simplest is <em>deploy a network definition</em>, <em>update a network definition</em> and (potentially) <em>remove the network definition</em>. These actions are performed using the Business Network Archive - which is a single file that encapsulates all aspects of the Business Network Definition. It is the &#39;deployable unit&#39;.</p>
 
 <h2 id="creating-the-businessnetwork">Creating the BusinessNetwork.</h2>
 
 <p><em>Step1:</em> Create a npm module</p>
 <div class="highlight"><pre><code class="language-" data-lang="">npm init
 </code></pre></div>
-<p>The important aspects of this are the name, version and description. The only dependancy that will be required is the NPM module that contains the model - see step 2.</p>
+<p>The important aspects of this are the name, version and description. The only dependency that will be required is the NPM module that contains the model - see step 2.</p>
 
 <p><em>Step2:</em> Create the transaction functions</p>
 
@@ -279,12 +279,9 @@ The next step is to publish your module to the NPM repository you are using.  So
     <span class="p">);</span>
 <span class="p">}</span>
 </code></pre></div>
-<p><em>FUTURE</em>
-Create a file to hold the permissions access control inforation - create a <code>permissions.acl</code> file</p>
-
 <h2 id="work-with-the-network">Work with the network</h2>
 
-<p>Once we have the network complete we can create a business network definition arhive. This is the unit will actually be deloyable to the HyperLedger Fabric.</p>
+<p>Once we have the network complete we can create a business network definition archive. This is the unit will actually be deployable to the HyperLedger Fabric.</p>
 
 <p>There is a <code>concerto archive</code> command that can be used to create and inspect these archives. The <code>concerto network</code> command is then used to administer the business network archive on the Hyperledger Fabric.</p>
 
@@ -295,7 +292,7 @@ Create a file to hold the permissions access control inforation - create a <code
 <p>One of either --inputDir or --moduleName must be specified. --inputDir is the directory that contains the <code>package.json</code> file of the Business Network npm module&#39;s package.json.</p>
 <div class="highlight"><pre><code class="language-bash" data-lang="bash">concerto archive create --archiveFile digitialLandTitle.bna --inputDir . --moduleName DigitalLandTitle
 </code></pre></div>
-<p>Once you have this archive it can then be deployed to the HLF (which will assuming is all running for the moment)</p>
+<p>Once you have this archive it can then be deployed to Hyperledger (which will assuming is all running for the moment)</p>
 <div class="highlight"><pre><code class="language-bash" data-lang="bash">concerto network deploy --archiveFile  DigitalLandTitle.zip  --enrollId WebAppAdmin --enrollSecret DJY27pEnl16d
 </code></pre></div>
         

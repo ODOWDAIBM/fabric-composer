@@ -177,7 +177,7 @@ The application is also setup as a command line driven application using yargs (
 </code></pre></div>
 <h2 id="connecting-to-the-concerto-runtime">Connecting to the Concerto Runtime</h2>
 
-<p>We&#39;ve split the code to connect into two parts, part in the constructor of the object and part in an initalization method. This is an implementation decsion made for this example - you are free to structure this in the way that best suits your application. What&#39;s important is the API calls and the data.</p>
+<p>We&#39;ve split the code to connect into two parts, part in the constructor of the object and part in an initialization method. This is an implementation decision made for this example - you are free to structure this in the way that best suits your application. What&#39;s important is the API calls and the data.</p>
 
 <p>The key thing here is that we need to create a new BusinessNetworkConnection object; and get from application configuration, the connection profile and the business network identifier needed.</p>
 <div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="k">this</span><span class="p">.</span><span class="nx">bizNetworkConnection</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">BusinessNetworkConnection</span><span class="p">();</span>
@@ -185,7 +185,7 @@ The application is also setup as a command line driven application using yargs (
 <span class="k">this</span><span class="p">.</span><span class="nx">businessNetworkIdentifier</span> <span class="o">=</span> <span class="nx">config</span><span class="p">.</span><span class="nx">get</span><span class="p">(</span><span class="s1">'businessNetworkIdentifier'</span><span class="p">);</span>
 </code></pre></div>
 <p>The first Concerto API call that we are going to make here, is the connect() API, to establish the connection to the Concerto runtime on the Hyperledger Fabric.
-This API returns the businessNetworkDefinition if succesful - which we hold onto.  The API takes, the connection profile name, business network identifier and participant details.</p>
+This API returns the businessNetworkDefinition if successful - which we hold onto.  The API takes, the connection profile name, business network identifier and participant details.</p>
 <div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="k">this</span><span class="p">.</span><span class="nx">bizNetworkConnection</span><span class="p">.</span><span class="nx">connect</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">CONNECTION_PROFILE_NAME</span><span class="p">,</span> <span class="k">this</span><span class="p">.</span><span class="nx">businessNetworkIdentifier</span><span class="p">,</span> <span class="nx">participantId</span><span class="p">,</span> <span class="nx">participantPwd</span><span class="p">)</span>
 <span class="p">.</span><span class="nx">then</span><span class="p">((</span><span class="nx">result</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
   <span class="k">this</span><span class="p">.</span><span class="nx">businessNetworkDefinition</span> <span class="o">=</span> <span class="nx">result</span><span class="p">;</span>
@@ -203,7 +203,7 @@ This API returns the businessNetworkDefinition if succesful - which we hold onto
 </code></pre></div>
 <p>Next step is to create some assets (look for the method <code>_bootstrapTitles</code> in the code )</p>
 
-<p>We use a factory style pattern to be able to create assets. A factory is obtained from the businessNetworkDefinition we got early. From this we can create an instance of a &#39;person&#39;.  Note the use of the namespace and asset name.  Then we can set the properties of this asset. The indentifiers here (firstName lastName) matches with the indentifiers in the model.</p>
+<p>We use a factory style pattern to be able to create assets. A factory is obtained from the businessNetworkDefinition we got early. From this we can create an instance of a &#39;person&#39;.  Note the use of the namespace and asset name.  Then we can set the properties of this asset. The indentifiers here (firstName lastName) matches with the identifiers in the model.</p>
 <div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="kd">let</span> <span class="nx">factory</span> <span class="o">=</span> <span class="k">this</span><span class="p">.</span><span class="nx">businessNetworkDefinition</span><span class="p">.</span><span class="nx">getFactory</span><span class="p">();</span>
 <span class="nx">owner</span> <span class="o">=</span> <span class="nx">factory</span><span class="p">.</span><span class="nx">newInstance</span><span class="p">(</span><span class="s1">'net.biz.digitalPropertyNetwork'</span><span class="p">,</span> <span class="s1">'Person'</span><span class="p">,</span> <span class="s1">'PID:1234567890'</span><span class="p">);</span>
 <span class="nx">owner</span><span class="p">.</span><span class="nx">firstName</span> <span class="o">=</span> <span class="s1">'Fred'</span><span class="p">;</span>
@@ -225,7 +225,7 @@ This API returns the businessNetworkDefinition if succesful - which we hold onto
 </code></pre></div>
 <h2 id="listing-assets-in-a-regsitry">Listing assets in a regsitry</h2>
 
-<p>In the sample application this is handled in a different method <code>list()</code>.  The same setup as for putting assets is required, so as before we need to get the asset regsitry but this tile we call the getAll() API. This returns an array of objects.</p>
+<p>In the sample application this is handled in a different method <code>list()</code>.  The same setup as for putting assets is required, so as before we need to get the asset registry but this tile we call the getAll() API. This returns an array of objects.</p>
 <div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="k">this</span><span class="p">.</span><span class="nx">bizNetworkConnection</span><span class="p">.</span><span class="nx">getAssetRegistry</span><span class="p">(</span><span class="s1">'net.biz.digitalPropertyNetwork.LandTitle'</span><span class="p">)</span>
 <span class="p">.</span><span class="nx">then</span><span class="p">((</span><span class="nx">registry</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
    <span class="k">return</span> <span class="nx">registry</span><span class="p">.</span><span class="nx">getAll</span><span class="p">();</span>
@@ -268,13 +268,13 @@ participant Person identified by personId {
 
 <h2 id="submitting-a-transactions">Submitting a transactions</h2>
 
-<p>The last thing that we need to do is submit a tranaction. This is the definition of the transaction in the model file:</p>
+<p>The last thing that we need to do is submit a transaction. This is the definition of the transaction in the model file:</p>
 <div class="highlight"><pre><code class="language-" data-lang="">transaction RegisterPropertyForSale identified by transactionId{
   o String transactionId
   --&gt; LandTitle title
 }
 </code></pre></div>
-<p>The transaction has two fields here, a trandsactionId, and a reference to the land title that should be submitted for sale. The first step is get access to the regsitry for the landtitle, and get back the specific land title we want to submit for sale.</p>
+<p>The transaction has two fields here, a trandsactionId, and a reference to the land title that should be submitted for sale. The first step is get access to the registry for the landtitle, and get back the specific land title we want to submit for sale.</p>
 <div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="k">this</span><span class="p">.</span><span class="nx">bizNetworkConnection</span><span class="p">.</span><span class="nx">getAssetRegistry</span><span class="p">(</span><span class="s1">'net.biz.digitalPropertyNetwork.LandTitle'</span><span class="p">)</span>
 <span class="p">.</span><span class="nx">then</span><span class="p">((</span><span class="nx">registry</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
   <span class="k">return</span> <span class="nx">registry</span><span class="p">.</span><span class="nx">get</span><span class="p">(</span><span class="s1">'LID:1148'</span><span class="p">);</span>
@@ -285,14 +285,14 @@ The next step is to create the transaction we want to submit.</p>
 <div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="kd">let</span> <span class="nx">serializer</span> <span class="o">=</span> <span class="k">this</span><span class="p">.</span><span class="nx">businessNetworkDefinition</span><span class="p">.</span><span class="nx">getSerializer</span><span class="p">();</span>
 
 <span class="kd">let</span> <span class="nx">resource</span> <span class="o">=</span> <span class="nx">serializer</span><span class="p">.</span><span class="nx">fromJSON</span><span class="p">({</span>
-  <span class="s1">'$class'</span><span class="p">:</span> <span class="s1">'net.biz.digitalPropertyNetwork.RegisterPropertyForSale'</span><span class="p">,</span>            
+  <span class="s1">'$class'</span><span class="p">:</span> <span class="s1">'net.biz.digitalPropertyNetwork.RegisterPropertyForSale'</span><span class="p">,</span>
   <span class="s1">'title'</span><span class="p">:</span> <span class="s1">'LID:1148'</span>
 <span class="p">});</span>
 
 <span class="k">return</span> <span class="k">this</span><span class="p">.</span><span class="nx">bizNetworkConnection</span><span class="p">.</span><span class="nx">submitTransaction</span><span class="p">(</span><span class="nx">resource</span><span class="p">);</span>
 
 </code></pre></div>
-<p>What we need to do here is create a &#39;serializer&#39;.  This is able to create a resource - this resouce is then passed to the submitTransaction API.
+<p>What we need to do here is create a &#39;serializer&#39;.  This is able to create a resource - this resource is then passed to the submitTransaction API.
 Note that the transaction JSON matches the structure specified in the model file.</p>
 
 <p>That&#39;s it!</p>
