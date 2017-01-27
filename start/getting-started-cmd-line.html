@@ -7,14 +7,14 @@
 <head>
   <meta charset="utf-8">
   
-    <title>Getting Started with the IBM Blockchain Framework | IBM Blockchain Framework</title>
+    <title>Getting Started with the IBM Blockchain Framework | Fabric Composer</title>
   
   <meta name="viewport" content="width=device-width">
   <link rel="icon" type="image/x-icon" href="/Blockchain-WW-Labs/Concerto/favicon.ico">
   <meta name="google-site-verification" content="fBQRJ6h7MV7_TJ7grbgq4P-d-07NRfDWPe4pqEEoH5w">
   <link href="//fonts.googleapis.com/css?family=Roboto+Slab:400,700%7CRoboto:400,700,700italic,400italic" rel="stylesheet" type="text/css">
   <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
-
+  <script src="/Blockchain-WW-Labs/Concerto/assets/js/clipboard.min.js"></script>
 
   
     <link href="/Blockchain-WW-Labs/Concerto/assets/css/normalize.css" rel="stylesheet">
@@ -58,6 +58,7 @@
 <li><a href="/Blockchain-WW-Labs/Concerto/start/getting-started-cmd-line.html">Running the sample network</a></li>
 <li><a href="/Blockchain-WW-Labs/Concerto/start/getting-started-coding-bnd.html">Coding a Network Definition</a></li>
 <li><a href="/Blockchain-WW-Labs/Concerto/start/getting-started-nodejs-app.html">Writing a nodejs app</a></li>
+<li><a href="/Blockchain-WW-Labs/Concerto/start/getting-started-rest-api.html">Adding a REST api</a></li>
 </ul>
 
         </li>
@@ -137,6 +138,7 @@
 <li><a href="/Blockchain-WW-Labs/Concerto/start/getting-started-cmd-line.html">Running the sample network</a></li>
 <li><a href="/Blockchain-WW-Labs/Concerto/start/getting-started-coding-bnd.html">Coding a Network Definition</a></li>
 <li><a href="/Blockchain-WW-Labs/Concerto/start/getting-started-nodejs-app.html">Writing a nodejs app</a></li>
+<li><a href="/Blockchain-WW-Labs/Concerto/start/getting-started-rest-api.html">Adding a REST api</a></li>
 </ul>
 
         
@@ -252,7 +254,16 @@ npm install
 <h3 id="update-the-transaction-processor-function">Update the Transaction Processor Function</h3>
 
 <p>Open the file <code>lib/DigitalLandTitle.js</code> in a text editor and replace the contents with:</p>
-<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="s1">'use strict'</span><span class="p">;</span>
+
+<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="p">{</span>
+
+<span class="p">}</span></code></pre></figure> 
+
+<p>&lt;button class=&quot;btn&quot; data-clipboard-text=&quot;&#123;</p>
+
+<p>&#125;&quot;&gt;Copy to clipboard</button></p>
+
+<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="s1">'use strict'</span><span class="p">;</span>
 
 <span class="cm">/** Process a property that is held for sale
  * @param {net.biz.digitalPropertyNetwork.RegisterPropertyForSale} propertyForSale the property to be sold
@@ -269,9 +280,27 @@ npm install
             <span class="k">return</span> <span class="nx">result</span><span class="p">.</span><span class="nx">update</span><span class="p">(</span><span class="nx">propertyForSale</span><span class="p">.</span><span class="nx">title</span><span class="p">);</span>
         <span class="p">}</span>
     <span class="p">);</span>
-<span class="p">}</span>
+<span class="p">}</span></code></pre></figure> 
 
+<p>&lt;button class=&quot;btn&quot; data-clipboard-text=&quot;&#39;use strict&#39;;</p>
+
+<p>/** Process a property that is held for sale
+ * @param &#123;net.biz.digitalPropertyNetwork.RegisterPropertyForSale&#125; propertyForSale the property to be sold
+ * @transaction
+ */
+function onRegisterPropertyForSale(propertyForSale) &#123;
+    console.log(&#39;### onRegisterPropertyForSale &#39; + propertyForSale.toString());
+    propertyForSale.title.forSale = true;</p>
+<div class="highlight"><pre><code class="language-" data-lang="">/* new line is here to update the information */
+propertyForSale.title.information = propertyForSale.title.information + ' Updated at: ' + new Date().toDateString();
+
+return getAssetRegistry('net.biz.digitalPropertyNetwork.LandTitle').then(function(result) &amp;#123;
+        return result.update(propertyForSale.title);
+    &amp;#125;
+);
 </code></pre></div>
+<p>&#125;&quot;&gt;Copy to clipboard</button></p>
+
 <h3 id="update-the-business-network-definition">Update the Business Network Definition</h3>
 
 <p>In a real-life scenario at this point you would edit <code>package.json</code> to increment the version number in the <code>DigitalProperty-Network</code> directory and publish this to npm. But please don&#39;t publish to the DigitalProperty-Network in npm - otherwise we&#39;ll have version numbers in the 1000s :-)</p>

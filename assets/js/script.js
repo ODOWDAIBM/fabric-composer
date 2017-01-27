@@ -2,6 +2,8 @@
 (function (win, $) {
   'use strict';
 
+  new Clipboard('.btn');
+
   $(function() {
     // Define page elements
     var $win = $(window);

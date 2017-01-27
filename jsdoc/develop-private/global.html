@@ -2771,144 +2771,6 @@
             
 <hr>
 <dt>
-    <h4 class="name" id="processDirectory"><span class="type-signature">&lt;private> </span>processDirectory(path)</h4>
-    
-    
-</dt>
-<dd>
-
-    
-    <div class="description">
-        <p>Processes all the Javascript files within a directory.</p>
-    </div>
-    
-
-    
-
-    
-
-    
-    
-        <h5>Parameters:</h5>
-        
-
-<table class="params table table-striped">
-    <thead>
-    <tr>
-        
-        <th>Name</th>
-        
-
-        <th>Type</th>
-
-        
-
-        
-
-        <th class="last">Description</th>
-    </tr>
-    </thead>
-
-    <tbody>
-    
-
-        <tr>
-            
-                <td class="name"><code>path</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">string</span>
-
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last"><p>the path to process</p></td>
-        </tr>
-
-    
-    </tbody>
-</table>
-
-    
-
-    
-<dl class="details">
-    
-
-	
-
-	
-
-	
-
-    
-
-    
-
-    
-
-    
-
-	
-
-	
-
-	
-
-	
-
-	
-
-
-
-	
-	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
-	<dd class="tag-source">
-		<ul class="dummy">
-			<li>
-				<a href="concerto-common_lib_tools_plantumltoimage.js.html">concerto-common/lib/tools/plantumltoimage.js</a>,
-				 <a href="concerto-common_lib_tools_plantumltoimage.js.html#sunlight-1-line-46">line 46</a>
-			</li>
-		</ul>
-	</dd>
-	
-
-	
-
-	
-
-	
-</dl>
-
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-</dd>
-
-        
-            
-<hr>
-<dt>
     <h4 class="name" id="processDirectory"><span class="type-signature">&lt;private> </span>processDirectory(path, fileProcessor)</h4>
     
     
@@ -3071,7 +2933,7 @@
             
 <hr>
 <dt>
-    <h4 class="name" id="processFile"><span class="type-signature">&lt;private> </span>processFile(file, fileProcessor)</h4>
+    <h4 class="name" id="processDirectory"><span class="type-signature">&lt;private> </span>processDirectory(path)</h4>
     
     
 </dt>
@@ -3079,7 +2941,7 @@
 
     
     <div class="description">
-        <p>Processes a single Javascript file (.js extension)</p>
+        <p>Processes all the Javascript files within a directory.</p>
     </div>
     
 
@@ -3114,7 +2976,7 @@
 
         <tr>
             
-                <td class="name"><code>file</code></td>
+                <td class="name"><code>path</code></td>
             
 
             <td class="type">
@@ -3131,31 +2993,7 @@
 
             
 
-            <td class="description last"><p>the file to process</p></td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>fileProcessor</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">Object</span>
-
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last"><p>the processor instance to use to generate code</p></td>
+            <td class="description last"><p>the path to process</p></td>
         </tr>
 
     
@@ -3199,8 +3037,8 @@
 	<dd class="tag-source">
 		<ul class="dummy">
 			<li>
-				<a href="concerto-common_lib_codegen_parsejs.js.html">concerto-common/lib/codegen/parsejs.js</a>,
-				 <a href="concerto-common_lib_codegen_parsejs.js.html#sunlight-1-line-89">line 89</a>
+				<a href="concerto-common_lib_tools_plantumltoimage.js.html">concerto-common/lib/tools/plantumltoimage.js</a>,
+				 <a href="concerto-common_lib_tools_plantumltoimage.js.html#sunlight-1-line-46">line 46</a>
 			</li>
 		</ul>
 	</dd>
@@ -3339,6 +3177,168 @@
 			<li>
 				<a href="concerto-common_lib_tools_plantumltoimage.js.html">concerto-common/lib/tools/plantumltoimage.js</a>,
 				 <a href="concerto-common_lib_tools_plantumltoimage.js.html#sunlight-1-line-71">line 71</a>
+			</li>
+		</ul>
+	</dd>
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt>
+    <h4 class="name" id="processFile"><span class="type-signature">&lt;private> </span>processFile(file, fileProcessor)</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>Processes a single Javascript file (.js extension)</p>
+    </div>
+    
+
+    
+
+    
+
+    
+    
+        <h5>Parameters:</h5>
+        
+
+<table class="params table table-striped">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>file</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>the file to process</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>fileProcessor</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Object</span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>the processor instance to use to generate code</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+	<dt class="tag-source method-doc-label method-doc-details-label">Source:</dt>
+	<dd class="tag-source">
+		<ul class="dummy">
+			<li>
+				<a href="concerto-common_lib_codegen_parsejs.js.html">concerto-common/lib/codegen/parsejs.js</a>,
+				 <a href="concerto-common_lib_codegen_parsejs.js.html#sunlight-1-line-89">line 89</a>
 			</li>
 		</ul>
 	</dd>
@@ -5271,7 +5271,7 @@
 <span class="jsdoc-message">
 	Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.4.3</a>
 	
-		on Wed Jan 25th 2017
+		on Fri Jan 27th 2017
 	
 	using the <a href="https://github.com/docstrap/docstrap">DocStrap template</a>.
 </span>
